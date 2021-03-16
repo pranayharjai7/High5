@@ -1,33 +1,23 @@
-package Login;
+package Survey5;
 
-import Register.Data;
+import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
-public class LoginController implements Initializable {
+public class LoginController {
 
     Data data = new Data();
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-    }
-
+    
     @FXML
     private TextField usernameTextField;
     @FXML
     private PasswordField passwordField;
-
-
+    
     @FXML
-    private void loginButtonClicked(ActionEvent actionEvent) {
+    public void loginButtonClicked(ActionEvent event){
         if(data.checkUsername(usernameTextField.getText())){
             if(data.checkPassword(passwordField.getText())){
                 System.out.println("Login Successful!");
@@ -38,6 +28,15 @@ public class LoginController implements Initializable {
         }
         else{
             System.out.println("Entered Username Doesn't Exist!");
+        }
+    }
+    
+    @FXML
+    public void registerClassOpenerClicked(ActionEvent event){
+        try {
+            App.setRoot("RegisterScene");
+        } catch (IOException ex) {
+            ex.printStackTrace();
         }
     }
 }

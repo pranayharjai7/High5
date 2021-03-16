@@ -1,19 +1,10 @@
-package Register;
+package Survey5;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
-public class RegisterController implements Initializable {
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
-
+public class RegisterController {
     private Data d1 = new Data();
 
     @FXML

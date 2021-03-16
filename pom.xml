@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.example</groupId>
+    <groupId>Survey5</groupId>
     <artifactId>High5</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
@@ -39,7 +39,7 @@
                     <execution>
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>org.example.App</mainClass>
+                            <mainClass>Survey5.App</mainClass>
                         </configuration>
                     </execution>
                     <execution>
@@ -48,7 +48,7 @@
                             <options>
                                 <option>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</option>
                             </options>
-                            <mainClass>org.example.App</mainClass>
+                            <mainClass>Survey5.App</mainClass>
                         </configuration>
                     </execution>
                 </executions>

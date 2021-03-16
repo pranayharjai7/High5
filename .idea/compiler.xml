@@ -9,5 +9,8 @@
         <module name="High5" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="High5" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

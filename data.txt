@@ -1,3 +1,1 @@
-name email username password
-Pranay pranay@gmail.com pranay7 pra
 Pranay pranay@gmail.com pranay7 pra

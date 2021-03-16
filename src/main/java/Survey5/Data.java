@@ -1,6 +1,10 @@
-package Register;
+package Survey5;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Data {
@@ -75,7 +79,7 @@ public class Data {
             fos.close();
 
         } catch (FileNotFoundException e) {
-            System.err.println("File not found in addToFile");
+            System.err.println("File not found");
         } catch (IOException e) {
             System.err.println("File Handling error");
         }
