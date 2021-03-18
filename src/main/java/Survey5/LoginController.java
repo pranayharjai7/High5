@@ -3,13 +3,16 @@ package Survey5;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 
 public class LoginController {
 
-    Data data = new Data();
+    private Data data = new Data();
+    private Alert warn = new Alert(Alert.AlertType.WARNING);
+    private Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
     
     @FXML
     private TextField usernameTextField;
@@ -20,14 +23,17 @@ public class LoginController {
     public void loginButtonClicked(ActionEvent event){
         if(data.checkUsername(usernameTextField.getText())){
             if(data.checkPassword(passwordField.getText())){
-                System.out.println("Login Successful!");
+                confirm.setContentText("Login Successful!");
+                confirm.showAndWait();
             }
             else{
-                System.out.println("Password Entered is incorrect..Try Again.");
+                warn.setContentText("Password entered is incorrect.. Please try again.");
+                warn.showAndWait();
             }
         }
         else{
-            System.out.println("Entered Username Doesn't Exist!");
+            warn.setContentText("Entered Username Doesn't Exist!");
+            warn.showAndWait();
         }
     }
     
