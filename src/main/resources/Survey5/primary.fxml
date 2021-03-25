@@ -10,7 +10,7 @@
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
          <image>
-            <Image url="@../../../../SurveyLogo.gif" />
+            <Image url="@img/SurveyLogo.gif" />
          </image>
       </ImageView>
       <Button fx:id="startButton" layoutX="267.0" layoutY="343.0" mnemonicParsing="false" onAction="#startButtonClicked" text="START">
