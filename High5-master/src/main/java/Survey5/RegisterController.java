@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 import java.io.IOException;
 
 public class RegisterController {
+     
     private Data d1 = new Data();
     private Alert warn = new Alert(Alert.AlertType.WARNING);
     private Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);

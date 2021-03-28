@@ -21,9 +21,9 @@
             <Image url="@img/cover.jpg" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" layoutX="56.0" prefHeight="107.0" prefWidth="530.0" text="Survey5" AnchorPane.leftAnchor="56.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="0.0">
+      <Label alignment="CENTER" layoutX="56.0" prefHeight="117.0" prefWidth="530.0" text="Survey5" textFill="#75fdff" AnchorPane.leftAnchor="56.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="0.0">
          <font>
-            <Font name="HP Simplified Jpan Regular" size="53.0" />
+            <Font size="47.0" />
          </font>
       </Label>
       <Label fx:id="usernameLabel" layoutX="114.0" layoutY="134.0" text="Username:" AnchorPane.rightAnchor="406.0" AnchorPane.topAnchor="134.0">
