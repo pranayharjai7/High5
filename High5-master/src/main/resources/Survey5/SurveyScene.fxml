@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <content>
+    <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="703.0" prefWidth="803.0">
+         <children>
+            <Label layoutX="48.0" layoutY="46.0" prefHeight="27.0" prefWidth="656.0" text="1. What do you think about the lockdown measures and restrictions in Hungary ?">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <RadioButton layoutX="53.0" layoutY="200.0" mnemonicParsing="false" text="Agree">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group1" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="512.0" layoutY="119.0" mnemonicParsing="false" text="Strongly Disagree" toggleGroup="$group1" />
+            <RadioButton layoutX="512.0" layoutY="200.0" mnemonicParsing="false" text="Disagree" toggleGroup="$group1" />
+            <RadioButton layoutX="57.0" layoutY="119.0" mnemonicParsing="false" text="Strongly Agree" toggleGroup="$group1" />
+            <Label layoutX="47.0" layoutY="264.0" prefHeight="27.0" prefWidth="609.0" text="2. How was your mental health affected in the lockdown period ?">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <RadioButton layoutX="47.0" layoutY="343.0" mnemonicParsing="false" text="More short tempered than ever" toggleGroup="$group1" />
+            <RadioButton layoutX="49.0" layoutY="419.0" mnemonicParsing="false" text="More Stressful" toggleGroup="$group1" />
+            <RadioButton layoutX="510.0" layoutY="343.0" mnemonicParsing="false" text="More Lonely" toggleGroup="$group1" />
+            <RadioButton layoutX="509.0" layoutY="419.0" mnemonicParsing="false" text="No Major Changes" toggleGroup="$group1" />
+            <Label layoutX="47.0" layoutY="506.0" prefHeight="27.0" prefWidth="609.0" text="3. What do you think of the Hungarian Health care ?">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <RadioButton layoutX="48.0" layoutY="565.0" mnemonicParsing="false" text="Excellent " toggleGroup="$group1" />
+            <RadioButton layoutX="512.0" layoutY="586.0" mnemonicParsing="false" text="Good" toggleGroup="$group1" />
+            <RadioButton layoutX="47.0" layoutY="623.0" mnemonicParsing="false" text="Fair" toggleGroup="$group1" />
+            <RadioButton layoutX="509.0" layoutY="634.0" mnemonicParsing="false" text="Bad" toggleGroup="$group1" />
+            <Button layoutX="704.0" layoutY="640.0" mnemonicParsing="false" text="next -&gt;" />
+         </children></AnchorPane>
+  </content>
+</ScrollPane>
