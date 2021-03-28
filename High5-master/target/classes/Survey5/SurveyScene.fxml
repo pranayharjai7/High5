@@ -28,19 +28,25 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <RadioButton layoutX="47.0" layoutY="343.0" mnemonicParsing="false" text="More short tempered than ever" toggleGroup="$group1" />
-            <RadioButton layoutX="49.0" layoutY="419.0" mnemonicParsing="false" text="More Stressful" toggleGroup="$group1" />
-            <RadioButton layoutX="510.0" layoutY="343.0" mnemonicParsing="false" text="More Lonely" toggleGroup="$group1" />
-            <RadioButton layoutX="509.0" layoutY="419.0" mnemonicParsing="false" text="No Major Changes" toggleGroup="$group1" />
+            <RadioButton layoutX="47.0" layoutY="343.0" mnemonicParsing="false" text="More short tempered than ever">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group2" />
+               </toggleGroup></RadioButton>
+            <RadioButton layoutX="49.0" layoutY="419.0" mnemonicParsing="false" text="More Stressful" toggleGroup="$group2" />
+            <RadioButton layoutX="510.0" layoutY="343.0" mnemonicParsing="false" text="More Lonely" toggleGroup="$group2" />
+            <RadioButton layoutX="509.0" layoutY="419.0" mnemonicParsing="false" text="No Major Changes" toggleGroup="$group2" />
             <Label layoutX="47.0" layoutY="506.0" prefHeight="27.0" prefWidth="609.0" text="3. What do you think of the Hungarian Health care ?">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <RadioButton layoutX="48.0" layoutY="565.0" mnemonicParsing="false" text="Excellent " toggleGroup="$group1" />
-            <RadioButton layoutX="512.0" layoutY="586.0" mnemonicParsing="false" text="Good" toggleGroup="$group1" />
-            <RadioButton layoutX="47.0" layoutY="623.0" mnemonicParsing="false" text="Fair" toggleGroup="$group1" />
-            <RadioButton layoutX="509.0" layoutY="634.0" mnemonicParsing="false" text="Bad" toggleGroup="$group1" />
+            <RadioButton layoutX="48.0" layoutY="565.0" mnemonicParsing="false" text="Excellent ">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group3" />
+               </toggleGroup></RadioButton>
+            <RadioButton layoutX="512.0" layoutY="586.0" mnemonicParsing="false" text="Good" toggleGroup="$group3" />
+            <RadioButton layoutX="47.0" layoutY="623.0" mnemonicParsing="false" text="Fair" toggleGroup="$group3" />
+            <RadioButton layoutX="509.0" layoutY="634.0" mnemonicParsing="false" text="Bad" toggleGroup="$group3" />
             <Button layoutX="704.0" layoutY="640.0" mnemonicParsing="false" text="next -&gt;" />
          </children></AnchorPane>
   </content>
