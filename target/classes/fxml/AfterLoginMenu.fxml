@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Survey5.controller.AfterLoginMenuController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label layoutX="231.0" layoutY="48.0" text="SURVEY 5" AnchorPane.leftAnchor="231.0" AnchorPane.topAnchor="48.0">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Label>
+        <Button fx:id="savedSurveyButton" layoutX="343.0" layoutY="163.0" mnemonicParsing="false" onAction="#savedSurveyButtonClicked" prefHeight="44.0" prefWidth="173.0" text="Saved Surveys">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="profileButton" layoutX="82.0" layoutY="163.0" mnemonicParsing="false" onAction="#profileButtonClicked" prefHeight="44.0" prefWidth="166.0" text="My Profile">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="answerSurveyButton" layoutX="343.0" layoutY="255.0" mnemonicParsing="false" onAction="#AnswerSurveyButtonClicked" text="Answer a Survey">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="createSurveyButton" layoutX="82.0" layoutY="255.0" mnemonicParsing="false" onAction="#createSurveyButtonClicked" text="Create a Survey">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
