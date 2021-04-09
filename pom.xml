@@ -100,6 +100,7 @@
             <artifactId>testfx-core</artifactId>
             <version>4.0.16-alpha</version>
             <scope>test</scope>
+            <type>jar</type>
         </dependency>
         
         <dependency>
@@ -107,6 +108,16 @@
             <artifactId>hamcrest</artifactId>
             <version>2.1</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testfx</groupId>
+            <artifactId>testfx-junit5</artifactId>
+            <version>4.0.16-alpha</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testfx</groupId>
+            <artifactId>testfx-internal-java8</artifactId>
+            <version>4.0.12-alpha</version>
         </dependency>
     </dependencies>
     <build>
@@ -139,6 +150,11 @@
             <groupId>org.jacoco</groupId>
             <artifactId>jacoco-maven-plugin</artifactId>
             <version>0.8.7-SNAPSHOT</version>
+            </plugin>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-surefire-plugin</artifactId>
+              <version>2.22.2</version>
             </plugin>
         </plugins>
     </build>

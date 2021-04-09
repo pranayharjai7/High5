@@ -4,12 +4,11 @@ import Survey5.MainApp;
 import Survey5.model.Data;
 import Survey5.model.DataDaoInterface;
 import Survey5.model.DataManager;
+import java.util.List;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
-
-import java.util.List;
 
 public class RegisterController{
 
