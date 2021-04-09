@@ -1,10 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: Survey5.test.RegisterControllerTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.212 s <<< FAILURE! - in Survey5.test.RegisterControllerTest
-testInput{FxRobot}  Time elapsed: 2.446 s  <<< ERROR!
-java.lang.RuntimeException: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-Caused by: java.lang.reflect.InvocationTargetException
-Caused by: java.lang.NullPointerException: Cannot invoke "javafx.scene.Scene.setRoot(javafx.scene.Parent)" because "Survey5.MainApp.scene" is null
-
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.526 s - in Survey5.test.RegisterControllerTest

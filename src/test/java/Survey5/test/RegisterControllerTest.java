@@ -5,11 +5,13 @@
  */
 package Survey5.test;
 import java.io.IOException;
+import java.util.concurrent.TimeoutException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -20,6 +22,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.testfx.api.FxRobot;
+import org.testfx.api.FxToolkit;
 import org.testfx.framework.junit5.ApplicationExtension;
 import org.testfx.framework.junit5.Start;
 
@@ -27,12 +30,16 @@ import org.testfx.framework.junit5.Start;
 @ExtendWith(ApplicationExtension.class)
 class RegisterControllerTest{
     @Start
-        public void start(Stage stage) throws Exception {
-        Scene scene = new Scene(loadFXML("/fxml/RegisterScene.fxml"));
+        public void startRegisterController(Stage stage) throws Exception {
+        Scene scene = new Scene(loadFXMLRegisterController("/fxml/RegisterScene.fxml"));
         stage.setTitle("Survey5");
         stage.setScene(scene);
         stage.show();
-
+    }
+        
+        public Parent loadFXMLRegisterController(String fxml) throws IOException{
+            FXMLLoader loader = new FXMLLoader(RegisterControllerTest.class.getResource(fxml));
+            return loader.load();
     }
 
     @Test
@@ -52,28 +59,28 @@ class RegisterControllerTest{
     }
     
     @Test
-    public void testNameField(FxRobot robot) {
+    public void testNameFieldRegisterController(FxRobot robot) {
     assertNotNull(robot.lookup("#nameField"));
     }
 
     @Test
-    public void testEmailField(FxRobot robot) {
+    public void testEmailFieldRegisterController(FxRobot robot) {
     assertNotNull(robot.lookup("#emailField"));
     }
     
     @Test
-    public void testUserNameField(FxRobot robot) {
+    public void testUserNameFieldRegisterController(FxRobot robot) {
     assertNotNull(robot.lookup("#usernameField"));
     }   
 
     @Test
-    public void testPasswordField(FxRobot robot) {
+    public void testPasswordFieldRegisterController(FxRobot robot) {
     assertNotNull(robot.lookup("#passwordField"));
     }  
     
     
     @Test
-    public void testInput(FxRobot robot){
+    public void testInputRegisterController(FxRobot robot){
         TextField testNameInput =  robot.lookup("#nameField").queryAs(TextField.class);
         TextField testUserNameInput =  robot.lookup("#usernameField").queryAs(TextField.class);
         TextField testEmailInput =  robot.lookup("#emailField").queryAs(TextField.class);
@@ -114,17 +121,16 @@ class RegisterControllerTest{
     }
     
     @AfterEach
-    public void tearDown() {
+    public void tearDown(FxRobot robot) throws TimeoutException {
+        FxToolkit.hideStage();
+        robot.release(new KeyCode[0]);
+        robot.release(new javafx.scene.input.MouseButton[0]);
     }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
 
-
-    private static Parent loadFXML(String fxml) throws IOException{
-        FXMLLoader loader = new FXMLLoader(RegisterControllerTest.class.getResource(fxml));
-        return loader.load();
-    }    
+    
 
 }

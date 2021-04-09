@@ -5,12 +5,14 @@
  */
 package Survey5.test;
 import java.io.IOException;
+import java.util.concurrent.TimeoutException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -21,6 +23,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.testfx.api.FxRobot;
+import org.testfx.api.FxToolkit;
 import org.testfx.framework.junit5.ApplicationExtension;
 import org.testfx.framework.junit5.Start;
 
@@ -28,16 +31,19 @@ import org.testfx.framework.junit5.Start;
 @ExtendWith(ApplicationExtension.class)
 class LoginControllerTest{
     @Start
-        public void start(Stage stage) throws Exception {
-        Scene scene = new Scene(loadFXML("/fxml/LoginScene.fxml"));
+        public void startLoginController(Stage stage) throws Exception {
+        Scene scene = new Scene(loadFXMLLoginController("/fxml/LoginScene.fxml"));
         stage.setTitle("Survey5");
         stage.setScene(scene);
         stage.show();
-
     }
+        public Parent loadFXMLLoginController(String fxml) throws IOException{
+        FXMLLoader loader = new FXMLLoader(LoginControllerTest.class.getResource(fxml));
+        return loader.load();
+    } 
 
     @Test
-    public void testUserNameFieldIfExist(FxRobot robot) {
+    public void testUserNameFieldLoginController(FxRobot robot) {
     Label UserNameLable = robot.lookup("#usernameLabel").queryAs(Label.class);
     assertNotNull(robot.lookup("#usernameTextField")); 
     assertEquals("User Name:", UserNameLable.getText());
@@ -45,7 +51,7 @@ class LoginControllerTest{
     
 
     @Test
-    public void testPasswordFiedlIfExist(FxRobot robot) {
+    public void testPasswordFiedLoginController(FxRobot robot) {
     Label PasswordLable = robot.lookup("#passwordLabel").queryAs(Label.class);
     assertNotNull(robot.lookup("#passwordField")); 
     assertEquals("Password:", PasswordLable.getText());
@@ -57,7 +63,7 @@ class LoginControllerTest{
     }
 
     @Test
-    public void testInput(FxRobot robot){
+    public void testInputLoginController(FxRobot robot){
         TextField UserNameField =  robot.lookup("#usernameTextField").queryAs(TextField.class);
         PasswordField PasswordField =  robot.lookup("#passwordField").queryAs(PasswordField.class);
         robot.clickOn("#usernameTextField");
@@ -89,7 +95,10 @@ class LoginControllerTest{
     }
     
     @AfterEach
-    public void tearDown() {
+    public void tearDown(FxRobot robot) throws TimeoutException {
+        FxToolkit.hideStage();
+        robot.release(new KeyCode[0]);
+        robot.release(new javafx.scene.input.MouseButton[0]);
     }
 
     // TODO add test methods here.
@@ -97,9 +106,6 @@ class LoginControllerTest{
     //
 
 
-    private static Parent loadFXML(String fxml) throws IOException{
-        FXMLLoader loader = new FXMLLoader(LoginControllerTest.class.getResource(fxml));
-        return loader.load();
-    }    
+   
 
 }
