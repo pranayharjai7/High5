@@ -1,58 +1,77 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>Survey5</groupId>
+
+    <groupId>com.mycompany</groupId>
     <artifactId>High5</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>High5</name>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <mainClass>Survey5.MainApp</mainClass>
     </properties>
+
+    <organization>
+        <!-- Used as the 'Vendor' for JNLP generation -->
+        <name>Your Organisation</name>
+    </organization>
+
     <dependencies>
+        <!-- JPA/Hibernate -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>5.4.4.Final</version>
+        </dependency>
+
+        <!-- Database -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.199</version>
+        </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>13</version>
+            <version>16</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>13</version>
+            <version>16</version>
         </dependency>
     </dependencies>
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
-                <configuration>
-                    <release>11</release>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.4</version>
+                <configuration>
+                    <mainClass>Survey5.MainApp</mainClass>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
                 <executions>
                     <execution>
-                        <id>default-cli</id>
-                        <configuration>
-                            <mainClass>Survey5.App</mainClass>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>debug</id>
-                        <configuration>
-                            <options>
-                                <option>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</option>
-                            </options>
-                            <mainClass>Survey5.App</mainClass>
-                        </configuration>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <mainClass>Survey5.MainApp</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
+
 </project>
