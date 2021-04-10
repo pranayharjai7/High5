@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane id="AnchorPane" prefHeight="375.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.RegisterController">
+    <children>
+      <ImageView fitHeight="397.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/2674365.jpg" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="22.0" layoutY="72.0" prefHeight="239.0" prefWidth="517.0" AnchorPane.bottomAnchor="89.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="61.0" AnchorPane.topAnchor="72.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="254.20001220703125" minWidth="10.0" prefWidth="153.4000244140625" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="374.79998779296875" minWidth="10.0" prefWidth="363.5999755859375" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Name:" textFill="#49ff3d" GridPane.halignment="RIGHT">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="Email ID:" textFill="#548dff" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="Set password:" textFill="#ff0e09" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="Set UserName:" textFill="#eaf200" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameField" promptText="Enter Your Name" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="emailField" promptText="Enter Email ID" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="usernameField" promptText="Set a Username" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="passwordField" promptText="Set a Password" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+      <Button fx:id="registerButton" layoutX="250.0" layoutY="323.0" mnemonicParsing="false" onAction="#registerButtonClicked" text="Register" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="205.0" layoutY="27.0" text="Register to Survey5 !" textFill="#fda4ff" AnchorPane.leftAnchor="205.0" AnchorPane.rightAnchor="88.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
