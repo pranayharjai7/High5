@@ -1,2 +1,3 @@
-Survey5\test\RegisterControllerTest.class
-Survey5\test\LoginControllerTest.class
+Survey5\controller\LoginControllerTest.class
+Survey5\controller\RegisterControllerTest.class
+Survey5\model\DataManagerTest.class

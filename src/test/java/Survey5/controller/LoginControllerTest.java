@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Survey5.test;
+package Survey5.controller;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 import javafx.fxml.FXMLLoader;
@@ -86,8 +86,10 @@ class LoginControllerTest{
     }
     
     @AfterAll
-    public static void tearDownClass() {
-    
+    public static void tearDownClass(FxRobot robot) throws TimeoutException {
+        FxToolkit.hideStage();
+        robot.release(new KeyCode[0]);
+        robot.release(new javafx.scene.input.MouseButton[0]);
     }
     
     @BeforeEach
@@ -95,10 +97,7 @@ class LoginControllerTest{
     }
     
     @AfterEach
-    public void tearDown(FxRobot robot) throws TimeoutException {
-        FxToolkit.hideStage();
-        robot.release(new KeyCode[0]);
-        robot.release(new javafx.scene.input.MouseButton[0]);
+    public void tearDown() throws TimeoutException {
     }
 
     // TODO add test methods here.

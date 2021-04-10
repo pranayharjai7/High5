@@ -34,7 +34,7 @@ public class RegisterController{
     @FXML
     private void registerButtonClicked(ActionEvent actionEvent) throws Exception {
         flag = 0;
-        dList = dm.getAllData();
+        dList = dm.getAllDataByEmail(emailField.getText());
         for (Data data:dList) {
             if(data.getEmail().equals(emailField.getText())){
                 warn.setContentText("The Email you entered already exists!");

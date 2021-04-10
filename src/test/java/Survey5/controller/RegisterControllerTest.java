@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Survey5.test;
+
+package Survey5.controller;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 import javafx.fxml.FXMLLoader;
@@ -46,16 +47,6 @@ class RegisterControllerTest{
     public void testRegisterButton(FxRobot robot) {
     Button registerButtonTest = robot.lookup("#registerButton").queryAs(Button.class);
     assertNotNull(registerButtonTest);
-    /*robot.clickOn("#nameField");
-    robot.write("testName");
-    robot.clickOn("#emailField");
-    robot.write("email");
-    robot.clickOn("#usernameField");
-    robot.write("Unique username");
-    robot.clickOn("#passwordField");
-    robot.write("passwordField");
-    robot.clickOn("#registerButton");
-    //assertEquals("testName", controltester.getNameField());*/
     }
     
     @Test
@@ -112,7 +103,10 @@ class RegisterControllerTest{
     }
     
     @AfterAll
-    public static void tearDownClass() {
+    public static void tearDownClass(FxRobot robot) throws TimeoutException {
+        FxToolkit.hideStage();
+        robot.release(new KeyCode[0]);
+        robot.release(new javafx.scene.input.MouseButton[0]);
     
     }
     
@@ -121,10 +115,7 @@ class RegisterControllerTest{
     }
     
     @AfterEach
-    public void tearDown(FxRobot robot) throws TimeoutException {
-        FxToolkit.hideStage();
-        robot.release(new KeyCode[0]);
-        robot.release(new javafx.scene.input.MouseButton[0]);
+    public void tearDown() throws TimeoutException {
     }
 
     // TODO add test methods here.
