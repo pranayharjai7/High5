@@ -1,0 +1,58 @@
+
+
+.bodybg{
+    -fx-background-image:url("../com/mycompany/IMAGES/sports4.jpg");
+    -fx-background-size: 100% 100%;
+   
+}
+.buisnessbody
+{
+    -fx-background-image:url("../com/mycompany/IMAGES/buisness.jpg");
+    -fx-background-size: 100% 100%;
+   
+    
+}
+.healthbody
+{
+    -fx-background-image:url("../com/mycompany/IMAGES/health.jpeg");
+    -fx-background-size: 100% 100%;
+   
+    
+}
+.HealthTemplate3
+{
+ -fx-background-image:url("../com/mycompany/IMAGES/coronaSurvey.jpg");
+  -fx-background-size: 100% 100%;
+}
+.fxml
+{
+-fx-background-image:url("../com/mycompany/IMAGES/food.jpg");
+-fx-background-size:100% 100%;
+}
+
+.WorkHealthSurvey
+{
+    -fx-background-image:url("../com/mycompany/IMAGES/454656-purple-and-black-background-1920x1080-for-iphone-5s.jpg")
+
+}
+
+.SurveyButtons{
+    -fx-border-color: #dba2c7;
+}
+
+.SurveyButtonsNew{
+    -fx-border-color: #29a76c;
+}
+.DrugsSurveyBorder{
+    -fx-background-image: url("../com/mycompany/IMAGES/medicines,-nirbhaya-1_647_080916110045.jpg");
+
+}
+.DrugsSurveyAnchor
+{
+    -fx-background-color: rgba(236, 230, 230, 0.97);
+    -fx-background-size:100% 100%;
+}
+.BusinessTemplate
+{
+    -fx-background-image: url("IMAGES/buisnessTemplate2.jpg");
+}

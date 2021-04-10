@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.Rating?>
+
+
+<ScrollPane prefHeight="582.0" prefWidth="627.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.BusinessTemplate1Controller">
+   <content>
+      <AnchorPane id="AnchorPane" fx:id="FeedbackSurveyCanvas" prefHeight="704.0" prefWidth="618.0" styleClass="buisnessbody" stylesheets="@../../Styles/tempcss.css">
+         <children>
+            <Label layoutX="206.0" layoutY="8.0" text="Feedback Survey">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="PhoneLabel" layoutX="119.0" layoutY="138.0" text="Phone:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="EmailLabel" layoutX="122.0" layoutY="99.0" text="Email:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="NameLabel" layoutX="119.0" layoutY="64.0" text="NAME:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="NameTextFeild" layoutX="251.0" layoutY="62.0" onAction="#NameTextFeildClicked" />
+            <TextField fx:id="PhoneTextFeild" layoutX="251.0" layoutY="136.0" onAction="#PhoneTextFeildClicked" />
+            <TextField fx:id="EmailTextFeild" layoutX="251.0" layoutY="97.0" onAction="#EmailTextFeildClicked" />
+            <Text layoutX="75.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How satisfied were you with the following services:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Separator layoutX="195.0" layoutY="41.0" prefWidth="200.0" />
+            <Separator layoutX="27.0" layoutY="8.0" orientation="VERTICAL" prefHeight="158.0" prefWidth="0.0" />
+            <Separator layoutX="45.0" layoutY="176.0" prefHeight="3.0" prefWidth="483.0" />
+            <Text fx:id="ProductQuality" layoutX="68.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Quality">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="DeliverySpeed" layoutX="68.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Speed">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="CustomerService" layoutX="65.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer service">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="Communication" layoutX="66.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Communications">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Rating fx:id="ProductRating" layoutX="312.0" layoutY="251.0" onDragDetected="#ProductRatingClicked" />
+            <Rating fx:id="DeliveryRating" layoutX="312.0" layoutY="289.0" onDragDetected="#DeliveryRatingClicked" />
+            <Rating fx:id="CommunicationRating" layoutX="312.0" layoutY="330.0" onDragDetected="#CommunicationRatingClicked" />
+            <Rating fx:id="CustomerServiceRating" layoutX="312.0" layoutY="369.0" onDragDetected="#CustomerServiceRatingClicked" />
+            <Text fx:id="Review" layoutX="30.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Would you like to say something?">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="ReviewBox" layoutX="77.0" layoutY="479.0" prefHeight="100.0" prefWidth="435.0" />
+            <Separator layoutX="142.0" layoutY="417.0" prefWidth="200.0" />
+            <Text layoutX="164.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(From Lowest to Highest)">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Button fx:id="SubmitButton" layoutX="249.0" layoutY="603.0" mnemonicParsing="false" onAction="#SubmitButtonClicked" prefHeight="32.0" prefWidth="76.0" text="Submit" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
