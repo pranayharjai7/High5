@@ -28,7 +28,7 @@ public class DataManagerTest {
     
     @BeforeAll
     public static void setUpClass() {
-        DataManagerTester = new DataManager("Survey5");
+        DataManagerTester = new DataManager("Survey5Test");
     }
     
     @AfterAll

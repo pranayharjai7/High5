@@ -17144,3 +17144,6 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:E:/Salma/Deb
 	at org.h2.mvstore.FileStore.open(FileStore.java:172)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
 	... 79 more
+2021-04-10 18:10:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "DELETE *[*] FROM DATA"; expected "identifier"; SQL statement:
+DELETE * FROM DATA [42001-199]
