@@ -29,4 +29,5 @@
       <property name="javax.persistence.jdbc.password" value=""/>
     </properties>
   </persistence-unit>
+  
 </persistence>
