@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1000.0" styleClass="WorkHealthSurvey" stylesheets="@../../Styles/tempcss.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.HealthTemplate2Controller">
+   <center>
+      <ScrollPane prefHeight="2026.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2015.0" prefWidth="850.0" style="-fx-border-color: #1052bd; -fx-background-color: #f2cbe1;">
+               <children>
+                  <Label layoutX="235.0" layoutY="35.0" prefHeight="40.0" prefWidth="299.0" text="   Work Health Survey" textFill="#a7296e">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color red="0.40263158082962036" green="0.06934210658073425" blue="0.38596710562705994" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
+                  </Label>
+                  <Text fill="#a7296e" layoutX="28.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. My company cares about my personal well-being :" wrappingWidth="307.199951171875">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#a7296e" layoutX="43.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mental health, defined by the World Health Organization, is &quot;a state of well-being in which the individual realizes his or her own abilities, can cope with the normal stresses of life, can work productively and fruitfully, and is able to make a contribution to his or her community&quot;.This Survey helps us to collect data to help alot of people who might be a victim to a bad work environment.Please answer the question below to be a helping hand. We thank you for your participation." wrappingWidth="726.9193115234375">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="q1Agree" layoutX="70.0" layoutY="294.0" mnemonicParsing="false" onAction="#q1AnswerClicked" prefHeight="34.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="AGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="q1rta" layoutX="469.0" layoutY="320.0" mnemonicParsing="false" onAction="#q1AnswerClicked" prefHeight="30.0" prefWidth="139.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="REFUSE TO ANSWER" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="q1sDisagree" layoutX="268.0" layoutY="296.0" mnemonicParsing="false" onAction="#q1AnswerClicked" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="SOMEWHAT DISAGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="q1sAgree" layoutX="70.0" layoutY="343.0" mnemonicParsing="false" onAction="#q1AnswerClicked" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="SOMEWHAT AGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="q1Disagree" layoutX="268.0" layoutY="343.0" mnemonicParsing="false" onAction="#q1AnswerClicked" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="DISAGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Text fill="#a7296e" layoutX="27.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" 2.My company provides access to mental health training :" wrappingWidth="300.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="70.0" layoutY="461.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text=" AGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="70.0" layoutY="506.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="SOMEWHAT AGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="469.0" layoutY="491.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="REFUSE TO ANSWER" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="268.0" layoutY="461.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="SOMEWHAT DISAGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="268.0" layoutY="510.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text=" DISAGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Text fill="#a7296e" layoutX="32.0" layoutY="588.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3.I am aware of what mental health services I can use when I’m struggling at work :" wrappingWidth="300.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutX="25.0" layoutY="280.0" prefHeight="0.0" prefWidth="291.0" />
+                  <Separator layoutX="245.0" layoutY="86.0" prefHeight="6.0" prefWidth="279.0" />
+                  <Separator layoutX="27.0" layoutY="447.0" prefHeight="7.0" prefWidth="302.0" />
+                  <Button layoutX="70.0" layoutY="650.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text=" AGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="70.0" layoutY="695.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="SOMEWHAT AGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="268.0" layoutY="695.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="DISAGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="268.0" layoutY="650.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="SOMEWHAT DISAGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="469.0" layoutY="673.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="REFUSE TO ANSWER" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Separator layoutX="34.0" layoutY="631.0" prefHeight="0.0" prefWidth="273.0" />
+                  <Text fill="#a7296e" layoutX="32.0" layoutY="806.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4.. I would be comfortable using my company’s services for a mental health concern." wrappingWidth="300.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="70.0" layoutY="860.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="STRONGLY AGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="70.0" layoutY="906.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="SOMEWHAT AGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="268.0" layoutY="906.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="DISAGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="268.0" layoutY="860.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="SOMEWHAT DISAGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="469.0" layoutY="883.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="REFUSE TO ANSWER" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Separator layoutX="24.0" layoutY="834.0" prefHeight="10.0" prefWidth="306.0" />
+                  <Text fill="#a7296e" layoutX="32.0" layoutY="1008.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5. I find it difficult to concentrate at work." wrappingWidth="300.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="70.0" layoutY="1055.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="AGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="70.0" layoutY="1100.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="SOMEWHAT AGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="268.0" layoutY="1100.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="DISAGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="268.0" layoutY="1055.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="SOMEWHAT DISAGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="469.0" layoutY="1078.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="REFUSE TO ANSWER" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Text fill="#a7296e" layoutX="32.0" layoutY="1190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6. The stress from work has led to other mental health concerns (e.g. anxiety, depression, substance use)" wrappingWidth="300.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="70.0" layoutY="1242.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="STRONGLY AGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="70.0" layoutY="1286.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="SOMEWHAT AGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="268.0" layoutY="1286.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="DISAGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="268.0" layoutY="1242.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="SOMEWHAT DISAGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="469.0" layoutY="1263.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="REFUSE TO ANSWER" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Separator layoutX="49.0" layoutY="1013.0" prefHeight="0.0" prefWidth="242.0" />
+                  <Separator layoutX="40.0" layoutY="1220.0" prefHeight="0.0" prefWidth="341.0" />
+                  <Text fill="#a7296e" layoutX="32.0" layoutY="1382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7. The stress from work affects my relationships with friends, family, and coworkers." wrappingWidth="300.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="70.0" layoutY="1429.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="STRONGLY AGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="70.0" layoutY="1475.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="SOMEWHAT AGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="268.0" layoutY="1475.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="DISAGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="268.0" layoutY="1427.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="SOMEWHAT DISAGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="469.0" layoutY="1453.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="REFUSE TO ANSWER" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Separator layoutX="47.0" layoutY="1387.0" prefHeight="2.0" prefWidth="491.0" />
+                  <Text fill="#a7296e" layoutX="32.0" layoutY="1576.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8. My manager actively encourages me to take time off when I need it." wrappingWidth="300.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="83.0" layoutY="1612.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="STRONGLY AGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="83.0" layoutY="1657.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="SOMEWHAT AGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="278.0" layoutY="1657.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="DISAGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="278.0" layoutY="1612.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="SOMEWHAT DISAGREE" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button layoutX="469.0" layoutY="1634.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" styleClass="SurveyButtons" stylesheets="@../../Styles/tempcss.css" text="REFUSE TO ANSWER" textFill="#a7296e">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Separator layoutX="47.0" layoutY="1581.0" prefHeight="0.0" prefWidth="420.0" />
+                  <TextField fx:id="q1TextField" layoutX="343.0" layoutY="243.0" style="-fx-border-color: #b5b4b4;" />
+                  <TextField layoutX="344.0" layoutY="413.0" />
+                  <TextField layoutX="344.0" layoutY="587.0" />
+                  <TextField layoutX="350.0" layoutY="790.0" />
+                  <TextField layoutX="344.0" layoutY="1184.0" />
+                  <TextField layoutX="350.0" layoutY="1002.0" />
+                  <TextField layoutX="344.0" layoutY="1366.0" />
+                  <TextField layoutX="343.0" layoutY="1560.0" prefHeight="0.0" prefWidth="149.0" />
+                  <Text fill="#a7296e" layoutX="32.0" layoutY="1769.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9. Tell us how your workplace is supportive and/or unsupportive. (OPTIONAL)" wrappingWidth="300.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextArea layoutX="82.0" layoutY="1792.0" prefHeight="150.0" prefWidth="584.0" promptText="Please enter your experiences here." />
+                  <Button layoutX="322.0" layoutY="1966.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="103.0" text="Submit" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </center>
+   <top>
+      <VBox prefHeight="94.0" prefWidth="1000.0" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <VBox prefHeight="632.0" prefWidth="114.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <VBox prefHeight="632.0" prefWidth="90.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <VBox prefHeight="149.0" prefWidth="1000.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

@@ -1,0 +1,48 @@
+
+
+.bodybg{
+    -fx-background-image:url("../com/mycompany/IMAGES/sports4.jpg");
+    -fx-background-size: 100% 100%;
+   
+}
+
+.food
+{
+    -fx-background-image:url("../com/mycompany/IMAGES/food1.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+
+.volleybody
+{
+    -fx-background-image:url("../com/mycompany/IMAGES/volley.jpg");
+    -fx-background-size: 100% 100%;
+
+}
+
+.waterpolo{
+
+    -fx-background-image:url("../com/mycompany/IMAGES/water.jpg");
+    -fx-background-size: 100% 100%;
+
+}
+
+
+.cycling{
+
+    -fx-background-image:url("../com/mycompany/IMAGES/cycling.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+.survey{
+
+    -fx-background-image:url("../com/mycompany/IMAGES/survey.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+.obesity{
+
+    -fx-background-image:url("../com/mycompany/IMAGES/obesity.jpg");
+    -fx-background-size: 100% 100%;
+}
+
