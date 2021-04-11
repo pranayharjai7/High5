@@ -4,14 +4,13 @@ import Survey5.MainApp;
 import Survey5.model.Data;
 import Survey5.model.DataDaoInterface;
 import Survey5.model.DataManager;
+import java.io.IOException;
+import java.util.List;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-
-import java.io.IOException;
-import java.util.List;
 
 
 public class LoginController {
@@ -30,7 +29,7 @@ public class LoginController {
     @FXML
     public void loginButtonClicked(ActionEvent event) throws IOException {
         flag = 0;
-        dList = dm.getAllData();
+        dList = dm.getAllDataByUserName(usernameTextField.getText());
         for (Data data: dList) {
             if(data.getUsername().equals(usernameTextField.getText())){
                 if(data.getPassword().equals(passwordField.getText())) {
