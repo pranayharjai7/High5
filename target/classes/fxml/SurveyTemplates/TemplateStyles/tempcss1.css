@@ -1,0 +1,32 @@
+.FoodTemplate2AnchorPaneBackground{
+    -fx-background-image:url("../../img/TemplateImages/FoodTemplate2pic1.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+.SportsTemplate4AnchorPaneBackground{
+    -fx-background-image:url("../../img/TemplateImages/SportsTemplate4pic1.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+.SportsTemplate2AnchorPaneBackground{
+    -fx-background-image:url("../../img/TemplateImages/SportsTemplate2pic1.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+.SportsTemplate3AnchorPaneBackground{
+    -fx-background-image:url("../../img/TemplateImages/SportsTemplate3pic1.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+.FoodTemplate4AnchorpaneBackground{
+
+    -fx-background-image:url("../../img/TemplateImages/FoodTemplate3pic1.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+.FoodTemplate3AnchorpaneBackground{
+
+    -fx-background-image:url("../../img/TemplateImages/FoodTemplate3pic1.jpg");
+    -fx-background-size: 100% 100%;
+}
+

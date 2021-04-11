@@ -1,10 +1,12 @@
 package Survey5.controller;
 
+import Survey5.MainApp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,9 +45,10 @@ public class NewSurveyController {
 
     //For Title
     @FXML
-    void okButtonClicked(ActionEvent event) {
+    private void okButtonClicked(ActionEvent event) {
         if(titleTextField.getText().equals("")){
             warn.setContentText("Title can't be empty..");
+            warn.showAndWait();
         }
         else{
             titleLabel.setText(titleTextField.getText());
@@ -59,7 +62,7 @@ public class NewSurveyController {
 
     //To Add Question in Survey
     @FXML
-    void addQuestionButtonClicked(ActionEvent event) {
+    private void addQuestionButtonClicked(ActionEvent event) {
         questionChoice.getItems().removeAll(qType1,qType2,qType3,qType4);
         questionChoice.getItems().addAll(qType1,qType2,qType3,qType4);
         questionChoice.setValue("Choose Type..");
@@ -248,8 +251,12 @@ public class NewSurveyController {
 
     //Submit Survey
     @FXML
-    void doneButtonClicked(ActionEvent event) {
-
+    private void doneButtonClicked(ActionEvent event) throws IOException {
+        MainApp.setRoot("/fxml/TemplateOrCreate.fxml");
     }
 
+    @FXML
+    private void backButtonClicked(ActionEvent actionEvent) throws IOException {
+        MainApp.setRoot("/fxml/TemplateOrCreate.fxml");
+    }
 }

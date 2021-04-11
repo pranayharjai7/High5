@@ -1,23 +1,23 @@
- package Survey5.model;
+package Survey5.model;
 
-import java.util.List;
 import javax.persistence.*;
+import java.util.List;
 
 public class DataManager implements DataDaoInterface{
 
-    final EntityManagerFactory entityManagerFactory; 
+    final EntityManagerFactory entityManagerFactory;
     final EntityManager entityManager;
+
     public DataManager() {
         this.entityManagerFactory = Persistence.createEntityManagerFactory("Survey5");
         this.entityManager =  entityManagerFactory.createEntityManager();
     }
 
+    //Constructor for Test Case
     public DataManager(String dataBaseName) {
-    this.entityManagerFactory = Persistence.createEntityManagerFactory(dataBaseName);
-    this.entityManager =  entityManagerFactory.createEntityManager();
+        this.entityManagerFactory = Persistence.createEntityManagerFactory(dataBaseName);
+        this.entityManager =  entityManagerFactory.createEntityManager();
     }
-    //I made two constructors to be able to intialize an object 
-    //for the test cases
 
     @Override
     public void setData(Data data) {
@@ -35,17 +35,17 @@ public class DataManager implements DataDaoInterface{
 
     @Override
     public void updateData(Data data) {
-        int id = data.getId();
-        Data data_check = entityManager.find(Data.class, id);
-        if (data_check != null){
         entityManager.getTransaction().begin();
-        data_check.setEmail(data.getEmail());
-        data_check.setName(data.getName());
-        data_check.setUsername(data.getUsername());
-        data_check.setPassword(data.getPassword());
+        entityManager.merge(data);
         entityManager.getTransaction().commit();
-        }
-    }//the old way will create a new record instead of update the existing one
+    }
+
+    @Override
+    public List<Data> getAllData() {
+        TypedQuery<Data> query = entityManager.createQuery("SELECT data FROM Data data",Data.class);
+        List<Data> dataList = query.getResultList();
+        return dataList;
+    }
 
     @Override
     public List<Data> getAllDataByEmail(String email) {
@@ -53,28 +53,29 @@ public class DataManager implements DataDaoInterface{
         List<Data> dataList = query.getResultList();
         return dataList;
     }
-    
+
     @Override
     public List<Data> getAllDataByUserName(String username) {
         TypedQuery<Data> query = entityManager.createQuery("SELECT data FROM Data data where data.username like : username ",Data.class).setParameter("username", username);
         List<Data> dataList = query.getResultList();
         return dataList;
     }
-    
+
     public boolean findDataById(int id){
         Data data_check = entityManager.find(Data.class, id);
         if (data_check == null){
-        return false;
+            return false;
         }
         return true;
+    }
+
+    public void rollBack() throws Exception {
+        entityManager.getTransaction().rollback();
     }
 
     @Override
     public void close() throws Exception {
         entityManager.close();
         entityManagerFactory.close();
-    }
-    public void rollBack() throws Exception {
-        entityManager.getTransaction().rollback();
     }
 }

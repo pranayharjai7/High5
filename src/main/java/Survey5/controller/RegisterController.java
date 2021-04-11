@@ -4,12 +4,13 @@ import Survey5.MainApp;
 import Survey5.model.Data;
 import Survey5.model.DataDaoInterface;
 import Survey5.model.DataManager;
-import java.util.List;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+import java.util.List;
 
 public class RegisterController{
 
@@ -34,7 +35,7 @@ public class RegisterController{
     @FXML
     private void registerButtonClicked(ActionEvent actionEvent) throws Exception {
         flag = 0;
-        dList = dm.getAllDataByEmail(emailField.getText());
+        dList = dm.getAllData();
         for (Data data:dList) {
             if(data.getEmail().equals(emailField.getText())){
                 warn.setContentText("The Email you entered already exists!");
@@ -54,5 +55,10 @@ public class RegisterController{
 
             MainApp.setRoot("/fxml/LoginScene.fxml");
         }
+    }
+
+    @FXML
+    private void backButtonClicked(ActionEvent actionEvent) throws IOException {
+        MainApp.setRoot("/fxml/LoginScene.fxml");
     }
 }

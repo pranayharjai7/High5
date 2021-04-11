@@ -1,10 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package Survey5.controller;
+
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 import javafx.fxml.FXMLLoader;
@@ -69,7 +64,7 @@ class RegisterControllerTest{
     assertNotNull(robot.lookup("#passwordField"));
     }  
     
-    
+    //Some Errors for First Testers
     @Test
     public void testInputRegisterController(FxRobot robot){
         TextField testNameInput =  robot.lookup("#nameField").queryAs(TextField.class);
@@ -118,10 +113,5 @@ class RegisterControllerTest{
     public void tearDown() throws TimeoutException {
     }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-
-    
 
 }

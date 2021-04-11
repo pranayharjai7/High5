@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.Rating?>
+
+<ScrollPane prefHeight="534.0" prefWidth="599.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.FoodTemplate3Controller">
+   <content>
+      
+<AnchorPane id="AnchorPane" prefHeight="530.0" prefWidth="599.0" styleClass="FoodTemplate3AnchorpaneBackground" stylesheets="@/fxml/SurveyTemplates/TemplateStyles/tempcss1.css">
+   <children>
+      <Label fx:id="FoodAndNutritionLabel" layoutX="237.0" layoutY="14.0" style="-fx-background-color: white;" text="Malnutrion">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Text fx:id="AgeFoodSurveyQuestion" layoutX="27.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you have deficiencies in vitamins and minerals ?" wrappingWidth="346.5640869140625">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <Separator layoutX="27.0" layoutY="96.0" prefHeight="0.0" prefWidth="160.0" style="-fx-background-color: black;" />
+      <TextField fx:id="AgeFoodBox" layoutX="338.0" layoutY="73.0" onAction="#agefoodboxclicked" prefHeight="21.0" prefWidth="144.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <Text fx:id="BMIFoodSurveyquestion" layoutX="29.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Does your weight bother you ?">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <TextField fx:id="BMIfieldFoodBox" layoutX="338.0" layoutY="123.0" onAction="#BMIclicked" prefHeight="21.0" prefWidth="144.0" />
+      <Text fx:id="FoodAllergyQuestion" layoutX="27.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are you underweight?" wrappingWidth="255.262451171875">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="FoodAllergyAnswerBox" layoutX="338.0" layoutY="182.0" onAction="#Allergyclicked" prefHeight="21.0" prefWidth="144.0" />
+      <Text fx:id="SupplementsQuestion" layoutX="26.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are you currently on a nourishment program ?" wrappingWidth="192.0859375">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <RadioButton fx:id="VitaminsYes" layoutX="329.0" layoutY="265.0" mnemonicParsing="false" onAction="#supplementsYesClicked" text="YES" />
+      <RadioButton fx:id="VitaminsNo" layoutX="440.0" layoutY="265.0" mnemonicParsing="false" onAction="#supplementsNoClicked" text="NO" />
+      <Text fx:id="ExerciseQuestion" layoutX="30.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How Often do you eat ? (Daily)" wrappingWidth="232.79997863769535">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <Slider fx:id="ExerciseSliderbox" blockIncrement="1.0" layoutX="329.0" layoutY="324.0" max="5.0" onMouseClicked="#sliderclicked" prefHeight="50.0" prefWidth="144.0" showTickLabels="true" showTickMarks="true" style="-fx-background-color: white;" />
+      <Text fx:id="PhysicalSatisfactionQuestion" layoutX="26.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall how would you rate your nourishment?" wrappingWidth="317.5999877929687">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <Separator layoutX="25.0" layoutY="217.0" prefHeight="3.0" prefWidth="475.0" style="-fx-background-color: black;" />
+      <Separator layoutX="29.0" layoutY="308.0" prefHeight="3.0" prefWidth="475.0" style="-fx-background-color: black;" />
+      <Separator layoutX="29.0" layoutY="385.0" prefHeight="3.0" prefWidth="475.0" style="-fx-background-color: black;" />
+      <Separator prefWidth="200.0" />
+      <Separator layoutX="25.0" layoutY="167.0" prefHeight="0.0" prefWidth="288.0" style="-fx-background-color: black;" />
+      <Separator layoutX="232.0" layoutY="52.0" prefHeight="3.0" prefWidth="146.0" style="-fx-background-position: center; -fx-background-color: black;" />
+      <Button fx:id="Back" layoutX="30.0" layoutY="481.0" mnemonicParsing="false" onAction="#BackButtonClicked" prefHeight="26.0" prefWidth="86.0" text="&lt;- back" />
+      <Rating fx:id="stars" layoutX="336.0" layoutY="430.0" onMouseClicked="#starsclicked" prefHeight="26.0" prefWidth="166.0" />
+      <Button fx:id="next1" layoutX="480.0" layoutY="481.0" mnemonicParsing="false" onAction="#next1clicked" prefHeight="26.0" prefWidth="86.0" text="next -&gt;" />
+      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../../styles/Modification.css" />
+
+   </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>

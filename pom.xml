@@ -28,14 +28,7 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>5.4.4.Final</version>
         </dependency>
-        
-        <!--Mockito-->
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>3.8.0</version>
-        </dependency>
-        
+
         <!-- Database -->
         <dependency>
             <groupId>com.h2database</groupId>
@@ -52,24 +45,15 @@
             <artifactId>javafx-fxml</artifactId>
             <version>16</version>
         </dependency>
+
+        <!-- Dependency for Template Rating-->
         <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <scope>test</scope>
-            <version>2.44.0</version>
+            <groupId>org.controlsfx</groupId>
+            <artifactId>controlsfx</artifactId>
+            <version>11.1.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.opera</groupId>
-            <artifactId>operadriver</artifactId>
-            <scope>test</scope>
-            <version>1.5</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.seleniumhq.selenium</groupId>
-                    <artifactId>selenium-remote-driver</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+
+        <!-- Testing Dependencies-->
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-surefire-provider</artifactId>
@@ -94,7 +78,6 @@
             <version>5.6.0</version>
             <scope>test</scope>
         </dependency>
-    
         <dependency>
             <groupId>org.testfx</groupId>
             <artifactId>testfx-core</artifactId>
@@ -102,13 +85,8 @@
             <scope>test</scope>
             <type>jar</type>
         </dependency>
-        
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest</artifactId>
-            <version>2.1</version>
-            <scope>test</scope>
-        </dependency>
+
+
         <dependency>
             <groupId>org.testfx</groupId>
             <artifactId>testfx-junit5</artifactId>
@@ -118,6 +96,11 @@
             <groupId>org.testfx</groupId>
             <artifactId>testfx-internal-java8</artifactId>
             <version>4.0.12-alpha</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>16</version>
         </dependency>
     </dependencies>
     <build>
@@ -144,17 +127,6 @@
                 <configuration>
                     <mainClass>Survey5.MainApp</mainClass>
                 </configuration>
-            </plugin>
-            <!--Jacoco-->
-            <plugin>
-            <groupId>org.jacoco</groupId>
-            <artifactId>jacoco-maven-plugin</artifactId>
-            <version>0.8.7-SNAPSHOT</version>
-            </plugin>
-            <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-surefire-plugin</artifactId>
-              <version>2.22.2</version>
             </plugin>
         </plugins>
     </build>

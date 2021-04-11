@@ -4,33 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b90f9607-f479-402b-b38f-edec38b461cf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b90f9607-f479-402b-b38f-edec38b461cf" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeStyleSettingsInfer">
-    <option name="done" value="true" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1qHNkdyw7GCEEL23tyD5tasPmzb" />
   <component name="ProjectViewState">
@@ -42,12 +32,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Programs/GIT/High5" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Pranay\Projects\IdeaProjects\SOFTWARE_PROJECT\High5\src\main\resources\fxml\img\TemplateImages" />
+      <recent name="C:\Pranay\Programs\GIT\High5\src\main\resources\fxml\img" />
       <recent name="C:\Pranay\Projects\IdeaProjects\SOFTWARE_PROJECT\JavaFX11\src\main\resources\fxml" />
       <recent name="C:\Pranay\Projects\IdeaProjects\SOFTWARE_PROJECT\JavaFX11\src\main\resources\fxml\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Pranay\Projects\IdeaProjects\SOFTWARE_PROJECT\High5\src\main\resources\fxml\SurveyTemplates\Styles" />
+      <recent name="C:\Pranay\Projects\IdeaProjects\SOFTWARE_PROJECT\High5\src\main\resources\styles" />
+      <recent name="C:\Pranay\Projects\IdeaProjects\SOFTWARE_PROJECT\High5\src\main\resources\fxml\SurveyTemplates" />
+      <recent name="C:\Pranay\Programs\GIT\High5\src\main\resources\styles" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -56,20 +55,7 @@
       <recent name="Survey5.controller" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.MainApp">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Survey5.MainApp" />
       <module name="High5" />
@@ -84,9 +70,74 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DataManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="High5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Survey5.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Survey5.model" />
+      <option name="MAIN_CLASS_NAME" value="Survey5.model.DataManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="High5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Survey5.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Survey5.controller" />
+      <option name="MAIN_CLASS_NAME" value="Survey5.controller.LoginControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegisterControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="High5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Survey5.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Survey5.controller" />
+      <option name="MAIN_CLASS_NAME" value="Survey5.controller.RegisterControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegisterControllerTest.testInputRegisterController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="High5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Survey5.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Survey5.controller" />
+      <option name="MAIN_CLASS_NAME" value="Survey5.controller.RegisterControllerTest" />
+      <option name="METHOD_NAME" value="testInputRegisterController(org.testfx.api.FxRobot)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainApp" />
+        <item itemvalue="JUnit.DataManagerTest" />
+        <item itemvalue="JUnit.RegisterControllerTest" />
+        <item itemvalue="JUnit.LoginControllerTest" />
+        <item itemvalue="JUnit.RegisterControllerTest.testInputRegisterController" />
       </list>
     </recent_temporary>
   </component>
@@ -114,10 +165,23 @@
       <workItem from="1617381512604" duration="15000" />
       <workItem from="1617381610694" duration="40000" />
       <workItem from="1617381796580" duration="113000" />
+      <workItem from="1617601203302" duration="1162000" />
+      <workItem from="1617602481309" duration="2287000" />
+      <workItem from="1617604807922" duration="12002000" />
+      <workItem from="1617630723566" duration="11780000" />
+      <workItem from="1617713126223" duration="888000" />
+      <workItem from="1617869290877" duration="110000" />
+      <workItem from="1617869558993" duration="6596000" />
+      <workItem from="1617902783230" duration="23196000" />
+      <workItem from="1618163983127" duration="4940000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
