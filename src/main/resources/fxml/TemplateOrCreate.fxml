@@ -22,5 +22,6 @@
             <Font size="24.0" />
          </font>
       </Button>
+    <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../styles/Modification.css" />
 </children>
 </AnchorPane>

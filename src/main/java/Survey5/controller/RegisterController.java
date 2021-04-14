@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.util.List;
 
 public class RegisterController{
@@ -54,5 +55,10 @@ public class RegisterController{
 
             MainApp.setRoot("/fxml/LoginScene.fxml");
         }
+    }
+
+    @FXML
+    private void backButtonClicked(ActionEvent actionEvent) throws IOException {
+        MainApp.setRoot("/fxml/LoginScene.fxml");
     }
 }

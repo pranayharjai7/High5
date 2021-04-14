@@ -5,8 +5,19 @@ import java.util.List;
 
 public class DataManager implements DataDaoInterface{
 
-    final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Survey5");
-    final EntityManager entityManager = entityManagerFactory.createEntityManager();
+    final EntityManagerFactory entityManagerFactory;
+    final EntityManager entityManager;
+
+    public DataManager() {
+        this.entityManagerFactory = Persistence.createEntityManagerFactory("Survey5");
+        this.entityManager =  entityManagerFactory.createEntityManager();
+    }
+
+    //Constructor for Test Case
+    public DataManager(String dataBaseName) {
+        this.entityManagerFactory = Persistence.createEntityManagerFactory(dataBaseName);
+        this.entityManager =  entityManagerFactory.createEntityManager();
+    }
 
     @Override
     public void setData(Data data) {
@@ -24,7 +35,9 @@ public class DataManager implements DataDaoInterface{
 
     @Override
     public void updateData(Data data) {
-        setData(data);
+        entityManager.getTransaction().begin();
+        entityManager.merge(data);
+        entityManager.getTransaction().commit();
     }
 
     @Override
@@ -32,6 +45,32 @@ public class DataManager implements DataDaoInterface{
         TypedQuery<Data> query = entityManager.createQuery("SELECT data FROM Data data",Data.class);
         List<Data> dataList = query.getResultList();
         return dataList;
+    }
+
+    @Override
+    public List<Data> getAllDataByEmail(String email) {
+        TypedQuery<Data> query = entityManager.createQuery("SELECT data FROM Data data where data.email like : email ",Data.class).setParameter("email", email);
+        List<Data> dataList = query.getResultList();
+        return dataList;
+    }
+
+    @Override
+    public List<Data> getAllDataByUserName(String username) {
+        TypedQuery<Data> query = entityManager.createQuery("SELECT data FROM Data data where data.username like : username ",Data.class).setParameter("username", username);
+        List<Data> dataList = query.getResultList();
+        return dataList;
+    }
+
+    public boolean findDataById(int id){
+        Data data_check = entityManager.find(Data.class, id);
+        if (data_check == null){
+            return false;
+        }
+        return true;
+    }
+
+    public void rollBack() throws Exception {
+        entityManager.getTransaction().rollback();
     }
 
     @Override

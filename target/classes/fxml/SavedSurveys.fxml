@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MySurveysAnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SavedSurveysController">
+   <children>
+      <Label layoutX="225.0" layoutY="28.0" text="My Surveys">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchBarField" layoutX="188.0" layoutY="87.0" promptText="Enter Keywords here" />
+      <Button fx:id="searchButton" layoutX="350.0" layoutY="87.0" mnemonicParsing="false" onAction="#searchButtonClicked" text="Search" />
+       <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../styles/Modification.css" />
+   </children>
+</AnchorPane>

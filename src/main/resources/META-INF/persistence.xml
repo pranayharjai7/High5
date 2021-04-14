@@ -3,6 +3,8 @@
   <persistence-unit name="Survey5">
     <description>Hibernate EntityManager Demo</description>
     <class>Survey5.model.Data</class>
+    <class>Survey5.model.Survey</class>
+    <class>Survey5.model.QnA</class>
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <properties>
       <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
@@ -10,6 +12,20 @@
       <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
       <property name="javax.persistence.jdbc.url" value="jdbc:h2:file:../High5/userdata_db"/>
       <property name="javax.persistence.jdbc.user" value="sa"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="Survey5Test">
+    <description>Hibernate EntityManager Demo</description>
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>Survey5.model.Data</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+      <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+      <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+      <property name="javax.persistence.jdbc.url" value=" jdbc:h2:mem:test"/>
+      <property name="javax.persistence.jdbc.user" value="test"/>
       <property name="javax.persistence.jdbc.password" value=""/>
     </properties>
   </persistence-unit>

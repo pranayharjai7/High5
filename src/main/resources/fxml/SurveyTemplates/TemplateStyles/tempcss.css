@@ -1,0 +1,47 @@
+.SportsTemplate1AnchorPaneBackground{
+    -fx-background-image:url("../../img/TemplateImages/SportsTemplate1pic1.jpg");
+    -fx-background-size: 100% 100%;
+   
+}
+.BusinessTemplate1AnchorPaneBackground{
+    -fx-background-image:url("../../img/TemplateImages/BusinessTemplate1pic1.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+
+.HealthTemplate1AnchorPaneBackground{
+    -fx-background-image:url("../../img/TemplateImages/HealthTemplate1pic1.jpeg");
+    -fx-background-size: 100% 100%;
+   
+    
+}
+.HealthTemplate3BorderPaneBackground{
+ -fx-background-image:url("../../img/TemplateImages/TemplateSurveyHealthTemplateImage3.jpg");
+  -fx-background-size: 100% 100%;
+}
+
+.FoodTemplate1BorderPaneBackground{
+-fx-background-image:url("../../img/TemplateImages/FoodTemplate1pic1.jpg");
+-fx-background-size:100% 100%;
+}
+
+.HealthTemplate2BorderPaneBackground{
+    -fx-background-image:url("../../img/TemplateImages/HealthTemplate2pic1.jpg")
+
+}
+
+.SurveyButtons{
+    -fx-border-color: #dba2c7;
+}
+
+.SurveyButtonsNew{
+    -fx-border-color: #29a76c;
+}
+.HealthTemplate4BorderPaneBackground{
+    -fx-background-image: url("../../img/TemplateImages/HealthTemplate4pic1.jpg");
+
+}
+.DrugsSurveyAnchor{
+    -fx-background-color: rgba(236, 230, 230, 0.97);
+    -fx-background-size:100% 100%;
+}

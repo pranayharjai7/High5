@@ -28,7 +28,7 @@ public class LoginController {
     private PasswordField passwordField;
     
     @FXML
-    public void loginButtonClicked(ActionEvent event) throws IOException {
+    private void loginButtonClicked(ActionEvent event) throws IOException {
         flag = 0;
         dList = dm.getAllData();
         for (Data data: dList) {
@@ -52,7 +52,7 @@ public class LoginController {
     }
     
     @FXML
-    public void registerClassOpenerClicked(ActionEvent event) throws IOException {
+    private void registerClassOpenerClicked(ActionEvent event) throws IOException {
             MainApp.setRoot("/fxml/RegisterScene.fxml");
 
     }

@@ -20,6 +20,17 @@ public class Data {
     @Basic(optional = false)
     private String password;
 
+    public Data() {
+    }
+
+    //Constructor For Testing
+    public Data(String name, String email, String username, String password) {
+        this.name = name;
+        this.email = email;
+        this.username = username;
+        this.password = password;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -60,4 +71,14 @@ public class Data {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "Data{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }
