@@ -11,6 +11,7 @@ public class PrimaryController {
     @FXML
     private Button startButton;
 
+
     @FXML
     private void startButtonClicked(ActionEvent actionEvent) throws IOException {
         MainApp.setRoot("/fxml/LoginScene.fxml");

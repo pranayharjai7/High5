@@ -45,7 +45,7 @@ public class MyProfileController {
     private Button changeButton;
 
     @FXML
-    private void mouseEntered(MouseEvent mouseEvent) {
+    private void initialize(){
         nameLabel.setText(userdata.getName());
         usernameLabel.setText(userdata.getUsername());
         emailLabel.setText(userdata.getEmail());

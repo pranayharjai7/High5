@@ -7,6 +7,7 @@ import Survey5.model.DataManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
@@ -30,7 +31,7 @@ public class RegisterController{
     private TextField usernameField;
 
     @FXML
-    private TextField passwordField;
+    private PasswordField passwordField;
 
     @FXML
     private void registerButtonClicked(ActionEvent actionEvent) throws Exception {
