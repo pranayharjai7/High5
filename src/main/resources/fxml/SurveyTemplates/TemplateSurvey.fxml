@@ -27,7 +27,7 @@
                <graphic>
                   <ImageView fitHeight="136.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/fxml/img/TemplateImages/TemplateSurveyHealthTemplateImage1.jpeg" />
+                        <Image url="@../img/TemplateImages/TemplateSurveyHealthTemplateImage1.jpeg" />
                      </image>
                      <effect>
                         <Reflection topOpacity="0.26" />
@@ -39,7 +39,7 @@
                <graphic>
                   <ImageView fitHeight="147.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/fxml/img/TemplateImages/TemplateSurveyHealthTemplate2.png" />
+                        <Image url="@../img/TemplateImages/TemplateSurveyHealthTemplate2.png" />
                      </image>
                      <effect>
                         <Reflection topOpacity="0.29" />
@@ -51,7 +51,7 @@
                <graphic>
                   <ImageView fitHeight="203.0" fitWidth="219.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/fxml/img/TemplateImages/TemplateSurveyHealthTemplateImage3.jpg" />
+                        <Image url="@../img/TemplateImages/TemplateSurveyHealthTemplateImage3.jpg" />
                      </image>
                      <effect>
                         <Reflection />
@@ -68,7 +68,7 @@
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/fxml/img/TemplateImages/TemplateSurveyHealthTemplateImage4.jpg" />
+                        <Image url="@../img/TemplateImages/TemplateSurveyHealthTemplateImage4.jpg" />
                      </image>
                      <effect>
                         <Reflection topOpacity="0.36" />
@@ -95,7 +95,7 @@
                <graphic>
                   <ImageView fitHeight="128.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/fxml/img/TemplateImages/TemplateSurveyFoodTemplate1.jpg" />
+                        <Image url="@../img/TemplateImages/TemplateSurveyFoodTemplate1.jpg" />
                      </image>
                      <effect>
                         <Reflection />
@@ -110,7 +110,7 @@
                <graphic>
                   <ImageView fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/fxml/img/TemplateImages/TemplateSurveyFoodTemplate2.jpeg" />
+                        <Image url="@../img/TemplateImages/TemplateSurveyFoodTemplate2.jpeg" />
                      </image>
                      <effect>
                         <Reflection />
@@ -122,7 +122,7 @@
                <graphic>
                   <ImageView fitHeight="131.0" fitWidth="197.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/fxml/img/TemplateImages/TemplateSurveyFoodTemplate3.jpg" />
+                        <Image url="@../img/TemplateImages/TemplateSurveyFoodTemplate3.jpg" />
                      </image>
                      <effect>
                         <Reflection />
@@ -134,7 +134,7 @@
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/fxml/img/TemplateImages/TemplateSurveyFoodTemplate4.jpeg" />
+                        <Image url="@../img/TemplateImages/TemplateSurveyFoodTemplate4.jpeg" />
                      </image>
                      <effect>
                         <Reflection />
@@ -158,7 +158,7 @@
                <graphic>
                   <ImageView fitHeight="141.0" fitWidth="207.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/fxml/img/TemplateImages/TemplateSurveySportsTemplate1.png" />
+                        <Image url="@../img/TemplateImages/TemplateSurveySportsTemplate1.png" />
                      </image>
                      <effect>
                         <Reflection />
@@ -170,7 +170,7 @@
                <graphic>
                   <ImageView fitHeight="162.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/fxml/img/TemplateImages/TemplateSurveySportsTemplate2.jpg" />
+                        <Image url="@../img/TemplateImages/TemplateSurveySportsTemplate2.jpg" />
                      </image>
                      <effect>
                         <Reflection />
@@ -182,7 +182,7 @@
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" opacity="0.89" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/fxml/img/TemplateImages/TemplateSurveySportsTemplate3.jpg" />
+                        <Image url="@../img/TemplateImages/TemplateSurveySportsTemplate3.jpg" />
                      </image>
                      <effect>
                         <Reflection topOpacity="0.35" />
@@ -194,7 +194,7 @@
                <graphic>
                   <ImageView fitHeight="122.0" fitWidth="191.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/fxml/img/TemplateImages/TemplateSurveySportsTemplate4.jpeg" />
+                        <Image url="@../img/TemplateImages/TemplateSurveySportsTemplate4.jpeg" />
                      </image>
                      <effect>
                         <Reflection topOpacity="0.33" />
@@ -276,7 +276,7 @@
                <graphic>
                   <ImageView fitHeight="142.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/fxml/img/TemplateImages/TemplateSurveyBusinessTemplate1.jpg" />
+                        <Image url="@../img/TemplateImages/TemplateSurveyBusinessTemplate1.jpg" />
                      </image>
                      <effect>
                         <Reflection topOpacity="0.35" />
@@ -287,7 +287,7 @@
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/fxml/img/TemplateImages/TemplateSurveyBusinessTemplate2.jpg" />
+                        <Image url="@../img/TemplateImages/TemplateSurveyBusinessTemplate2.jpg" />
                      </image>
                      <effect>
                         <Reflection topOpacity="0.35" />
@@ -298,7 +298,7 @@
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/fxml/img/TemplateImages/TemplateSurveyBusinessTemplate3.png" />
+                        <Image url="@../img/TemplateImages/TemplateSurveyBusinessTemplate3.png" />
                      </image>
                      <effect>
                         <Reflection topOpacity="0.35" />
@@ -309,7 +309,7 @@
                <graphic>
                   <ImageView fitHeight="129.0" fitWidth="185.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@/fxml/img/TemplateImages/TemplateSurveyBusinessTemplate4.jpg" />
+                        <Image url="@../img/TemplateImages/TemplateSurveyBusinessTemplate4.jpg" />
                      </image>
                      <effect>
                         <Reflection topOpacity="0.35" />

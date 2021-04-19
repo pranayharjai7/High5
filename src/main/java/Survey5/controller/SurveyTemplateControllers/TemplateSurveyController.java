@@ -171,7 +171,7 @@ public class TemplateSurveyController {
 
     @FXML
     void AppSoftwareReviewSurveyTemplateButtonClicked(ActionEvent event) throws IOException {
-        MainApp.setRoot("/fxml/SurveyTemplates/BusinessTemplate2.fxml");
+        MainApp.setRoot("/fxml/SurveyTemplates/BusinessTemplate4.fxml");
     }
 
     public void backButtonClicked(ActionEvent actionEvent) throws IOException {
