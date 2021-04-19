@@ -1,20 +1,21 @@
 package Survey5.controller.SurveyTemplateControllers;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import Survey5.MainApp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import org.controlsfx.control.Rating;
+import org.controlsfx.validation.ValidationSupport;
+import org.controlsfx.validation.Validator;
 
-public class BusinessTemplate1Controller
-{
+public class BusinessTemplate1Controller {
 
     @FXML
     private AnchorPane FeedbackSurveyCanvas;
@@ -74,22 +75,8 @@ public class BusinessTemplate1Controller
     private Button backButton;
 
     @FXML
-    void EmailTextFeildClicked(ActionEvent event) {
-
-    }
-
-    @FXML
-    void NameTextFeildClicked(ActionEvent event) {
-
-    }
-
-    @FXML
-    void PhoneTextFeildClicked(ActionEvent event) {
-
-    }
-
-    @FXML
     void SubmitButtonClicked(ActionEvent event) throws IOException {
+
         MainApp.setRoot("/fxml/SurveyTemplates/TemplateSurvey.fxml");
     }
 
@@ -97,4 +84,5 @@ public class BusinessTemplate1Controller
     void backButtonClicked(ActionEvent event) throws IOException {
         MainApp.setRoot("/fxml/SurveyTemplates/TemplateSurvey.fxml");
     }
+
 }

@@ -29,6 +29,13 @@ public class LoginController {
     
     @FXML
     private void loginButtonClicked(ActionEvent event) throws IOException {
+        if(usernameTextField.getText().isEmpty() || passwordField.getText().isEmpty())
+            {   warn.setAlertType(Alert.AlertType.WARNING);
+                warn.setContentText("One of the text Fields might be empty");
+                warn.showAndWait();
+            }
+        else{
+
         flag = 0;
         dList = dm.getAllData();
         for (Data data: dList) {
@@ -49,6 +56,7 @@ public class LoginController {
             warn.setContentText("Either username or password was incorrect..\n Please try again..");
             warn.showAndWait();
         }
+    }
     }
     
     @FXML

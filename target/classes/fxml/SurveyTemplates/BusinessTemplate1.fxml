@@ -35,9 +35,9 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="NameTextField" layoutX="330.0" layoutY="98.0" onAction="#NameTextFeildClicked" promptText="Enter your Name" />
-                  <TextField fx:id="PhoneTextFeild" layoutX="330.0" layoutY="172.0" onAction="#PhoneTextFeildClicked" promptText="E.g(+36203..)" />
-                  <TextField fx:id="EmailTextFeild" layoutX="330.0" layoutY="133.0" onAction="#EmailTextFeildClicked" promptText="Enter Your Email" />
+                  <TextField fx:id="NameTextField" layoutX="330.0" layoutY="98.0" promptText="Enter your Name" />
+                  <TextField fx:id="PhoneTextField" layoutX="330.0" layoutY="172.0" promptText="E.g(+36203..)" />
+                  <TextField fx:id="EmailTextField" layoutX="330.0" layoutY="133.0" promptText="Enter Your Email" />
                   <Text layoutX="119.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How satisfied were you with the following services:">
                      <font>
                         <Font size="15.0" />

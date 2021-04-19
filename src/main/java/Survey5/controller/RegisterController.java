@@ -37,6 +37,12 @@ public class RegisterController{
     private void registerButtonClicked(ActionEvent actionEvent) throws Exception {
         flag = 0;
         dList = dm.getAllData();
+        if(nameField.getText().isEmpty() || emailField.getText().isEmpty() || usernameField.getText().isEmpty() || passwordField.getText().isEmpty() )
+            {   warn.setAlertType(Alert.AlertType.WARNING);
+                warn.setContentText("One of the text Fields might be empty");
+                warn.showAndWait();
+            }
+        else{
         for (Data data:dList) {
             if(data.getEmail().equals(emailField.getText())){
                 warn.setContentText("The Email you entered already exists!");
@@ -55,6 +61,7 @@ public class RegisterController{
             dm.close();
 
             MainApp.setRoot("/fxml/LoginScene.fxml");
+        }
         }
     }
 
