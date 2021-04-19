@@ -61,10 +61,9 @@ public class SavedSurveysController{
         }
         for (Survey survey:sList) {
             if(survey.getId()==SurveyId){
-                TemporaryTemplateController.setSurvey(survey);
                 System.out.println(survey.getId());
                 try {
-                    MainApp.setRoot("/fxml/SurveyTemplates/TemporaryTemplate.fxml");
+                    MainApp.setRoot("/fxml/SurveyTemplates/"+survey.getTypeOfTemplate()+".fxml");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

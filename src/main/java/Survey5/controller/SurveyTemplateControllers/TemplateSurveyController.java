@@ -1,6 +1,7 @@
 package Survey5.controller.SurveyTemplateControllers;
 
 import Survey5.MainApp;
+import Survey5.model.Data;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,6 +11,13 @@ import javafx.scene.control.TextField;
 import java.io.IOException;
 
 public class TemplateSurveyController {
+
+    private static Data userdata;
+
+    public static void setData(Data userdata){
+        TemplateSurveyController.userdata=userdata;
+    }
+
     @FXML
     private Label HealthAndSafetyLabel;
 
@@ -87,6 +95,7 @@ public class TemplateSurveyController {
 
     @FXML
     void GeneralHealthSurveyTemplateButtonClicked(ActionEvent event) throws IOException {
+        HealthTemplate1Controller.setData(userdata);
         MainApp.setRoot("/fxml/SurveyTemplates/HealthTemplate1.fxml");
     }
 

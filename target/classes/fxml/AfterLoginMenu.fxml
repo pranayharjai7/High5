@@ -3,35 +3,55 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.AfterLoginMenuController">
-    <children>
-        <Label layoutX="231.0" layoutY="48.0" text="SURVEY 5" AnchorPane.leftAnchor="231.0" AnchorPane.topAnchor="48.0">
-            <font>
-                <Font name="System Bold" size="30.0" />
-            </font>
-        </Label>
-        <Button fx:id="savedSurveyButton" layoutX="343.0" layoutY="163.0" mnemonicParsing="false" onAction="#savedSurveyButtonClicked" prefHeight="44.0" prefWidth="173.0" text="Saved Surveys">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Button>
-        <Button fx:id="profileButton" layoutX="82.0" layoutY="163.0" mnemonicParsing="false" onAction="#profileButtonClicked" prefHeight="44.0" prefWidth="166.0" text="My Profile">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Button>
-        <Button fx:id="answerSurveyButton" layoutX="343.0" layoutY="255.0" mnemonicParsing="false" onAction="#AnswerSurveyButtonClicked" text="Answer a Survey">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Button>
-        <Button fx:id="createSurveyButton" layoutX="82.0" layoutY="255.0" mnemonicParsing="false" onAction="#createSurveyButtonClicked" text="Create a Survey">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Button>
-      <Button fx:id="logoutButton" layoutX="515.0" layoutY="15.0" mnemonicParsing="false" onAction="#logoutButtonClicked" prefHeight="36.0" prefWidth="71.0" styleClass="addlogoutPic" stylesheets="@../styles/Modification.css" />
-    </children>
-</AnchorPane>
+<BorderPane prefHeight="750.0" prefWidth="900.0" styleClass="backgroundForPrimaryFxml" stylesheets="@../styles/Modification.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.AfterLoginMenuController">
+   <center>
+      <AnchorPane maxHeight="500.0" maxWidth="700.0" prefHeight="500.0" prefWidth="700.0" styleClass="backgroundForPrimaryFxml" stylesheets="@../styles/Modification.css">
+          <children>
+              <Label fx:id="AfterLoginMenuTitle" layoutX="280.0" layoutY="47.0" text="SURVEY 5" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="47.0">
+                  <font>
+                      <Font name="System Bold" size="30.0" />
+                  </font>
+              </Label>
+              <Button fx:id="savedSurveyButton" layoutX="429.0" layoutY="163.0" mnemonicParsing="false" onAction="#savedSurveyButtonClicked" prefHeight="44.0" prefWidth="173.0" style="-fx-background-color: #5e7b89;" styleClass="buttonBorders" stylesheets="@../styles/Modification.css" text="Saved Surveys" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="20.0" />
+                  </font>
+              </Button>
+              <Button fx:id="profileButton" layoutX="113.0" layoutY="163.0" mnemonicParsing="false" onAction="#profileButtonClicked" prefHeight="44.0" prefWidth="166.0" style="-fx-background-color: #5e7b89;" styleClass="buttonBorders" stylesheets="@../styles/Modification.css" text="My Profile" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="20.0" />
+                  </font>
+              </Button>
+              <Button fx:id="answerSurveyButton" layoutX="424.0" layoutY="285.0" mnemonicParsing="false" onAction="#AnswerSurveyButtonClicked" style="-fx-background-color: #5e7b89;" styleClass="buttonBorders" stylesheets="@../styles/Modification.css" text="Answer a Survey" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="20.0" />
+                  </font>
+              </Button>
+              <Button fx:id="createSurveyButton" layoutX="114.0" layoutY="285.0" mnemonicParsing="false" onAction="#createSurveyButtonClicked" style="-fx-background-color: #5e7b89;" styleClass="buttonBorders" stylesheets="@../styles/Modification.css" text="Create a Survey" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="20.0" />
+                  </font>
+              </Button>
+          </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="125.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="logoutButton" layoutX="790.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutButtonClicked" prefHeight="36.0" prefWidth="71.0" styleClass="addlogoutPic" stylesheets="@../styles/Modification.css" AnchorPane.rightAnchor="38.8" AnchorPane.topAnchor="14.0" />
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="125.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

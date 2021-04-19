@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="700.0" prefWidth="900.0" styleClass="HealthTemplate3BorderPaneBackground" stylesheets="@/fxml/SurveyTemplates/TemplateStyles/tempcss.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.HealthTemplate3Controller">
+<BorderPane prefHeight="700.0" prefWidth="900.0" styleClass="HealthTemplate3BorderPaneBackground" stylesheets="@TemplateStyles/tempcss.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.HealthTemplate3Controller">
    <center>
       <ScrollPane prefHeight="700.0" prefWidth="800.0" styleClass="HealthTemplate2" stylesheets="@/fxml/SurveyTemplates/TemplateStyles/tempcss.css">
          <content>
@@ -115,7 +115,7 @@
                   <Separator layoutX="65.0" layoutY="1132.0" prefHeight="5.0" prefWidth="705.0" />
                   <Separator layoutX="65.0" layoutY="1253.0" prefHeight="5.0" prefWidth="705.0" />
                   <Separator layoutX="68.0" layoutY="1349.0" prefHeight="5.0" prefWidth="705.0" />
-                  <Label alignment="CENTER" layoutX="154.0" layoutY="30.0" prefHeight="65.0" prefWidth="346.0" text="Covid Survey" textAlignment="CENTER" textFill="#0b0b0b">
+                  <Label fx:id="HealthTemplate3" alignment="CENTER" layoutX="154.0" layoutY="30.0" prefHeight="65.0" prefWidth="346.0" text="Covid Survey" textAlignment="CENTER" textFill="#0b0b0b">
                      <font>
                         <Font name="Bell MT" size="37.0" />
                      </font>

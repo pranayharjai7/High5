@@ -1,6 +1,7 @@
 package Survey5.controller;
 
 import Survey5.MainApp;
+import Survey5.controller.SurveyTemplateControllers.TemplateSurveyController;
 import Survey5.controller.SurveyTemplateControllers.TemporaryTemplateController;
 import Survey5.model.Data;
 import javafx.event.ActionEvent;
@@ -18,7 +19,7 @@ public class TemplateOrCreateController {
 
     @FXML
     private void templateButtonClicked(ActionEvent actionEvent) throws IOException {
-        TemporaryTemplateController.setData(userdata);
+        TemplateSurveyController.setData(userdata);
         MainApp.setRoot("/fxml/SurveyTemplates/TemplateSurvey.fxml");
     }
 

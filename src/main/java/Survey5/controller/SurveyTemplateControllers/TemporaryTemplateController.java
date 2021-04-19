@@ -10,7 +10,6 @@ import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 
 public class TemporaryTemplateController {
-
     private Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
     private static Data userdata;
     private static Survey survey;

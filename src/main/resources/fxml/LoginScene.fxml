@@ -5,35 +5,60 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.LoginController">
-    <children>
-      <Label alignment="CENTER" layoutX="45.0" layoutY="31.0" text="Survey5" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="31.0">
-         <font>
-            <Font name="HP Simplified Jpan Regular" size="53.0" />
-         </font>
-      </Label>
-      <Label fx:id="usernameLabel" layoutX="138.0" layoutY="128.0" text="User Name:" AnchorPane.rightAnchor="380.0" AnchorPane.topAnchor="130.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
-      <Label fx:id="passwordLabel" layoutX="143.0" layoutY="226.0" text="Password:" AnchorPane.rightAnchor="380.0" AnchorPane.topAnchor="180.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
-      <Button fx:id="loginButton" layoutX="277.0" layoutY="232.0" mnemonicParsing="false" onAction="#loginButtonClicked" text="Login" />
-      <TextField fx:id="usernameTextField" layoutX="252.0" layoutY="172.0" promptText="Enter User Name" AnchorPane.topAnchor="130.0" />
-      <PasswordField fx:id="passwordField" layoutX="252.0" layoutY="222.0" promptText="Enter Password" AnchorPane.topAnchor="180.0" />
-      <Label layoutX="266.0" layoutY="305.0" text="New User?" textFill="#4000ff">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Separator layoutX="50.0" layoutY="293.0" prefWidth="500.0" />
-      <Button fx:id="registerClassButton" layoutX="270.0" layoutY="341.0" mnemonicParsing="false" onAction="#registerClassOpenerClicked" text="Register" />
-   </children>
-</AnchorPane>
+<BorderPane prefHeight="750.0" prefWidth="900.0" styleClass="backgroundForPrimaryFxml" stylesheets="@../styles/Modification.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.LoginController">
+   <center>
+      <AnchorPane id="AnchorPane" maxHeight="500.0" maxWidth="700.0" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #5e7b89;">
+          <children>
+            <ImageView fitHeight="242.0" fitWidth="440.0" layoutX="153.0" pickOnBounds="true">
+               <image>
+                  <Image url="@img/gi.gif" />
+               </image>
+            </ImageView>
+            <Label fx:id="usernameLabel" layoutX="222.0" layoutY="210.0" text="User Name:" AnchorPane.rightAnchor="390.8" AnchorPane.topAnchor="210.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="passwordLabel" layoutX="228.0" layoutY="259.0" text="Password:" AnchorPane.rightAnchor="396.8" AnchorPane.topAnchor="259.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="loginButton" layoutX="313.0" layoutY="319.0" mnemonicParsing="false" onAction="#loginButtonClicked" prefHeight="37.0" prefWidth="73.0" styleClass="buttonBorders" stylesheets="@../styles/Modification.css" text="Login">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <TextField fx:id="usernameTextField" layoutX="350.0" layoutY="210.0" promptText="Enter User Name" styleClass="textBoxBorders" stylesheets="@../styles/Modification.css" AnchorPane.topAnchor="210.0" />
+            <PasswordField fx:id="passwordField" layoutX="350.0" layoutY="259.0" promptText="Enter Password" styleClass="textBoxBorders" stylesheets="@../styles/Modification.css" AnchorPane.topAnchor="259.0" />
+            <Label layoutX="317.0" layoutY="397.0" text="New User?" textFill="#4000ff">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="100.0" layoutY="378.0" prefWidth="500.0" />
+            <Button fx:id="registerClassButton" layoutX="310.0" layoutY="434.0" mnemonicParsing="false" onAction="#registerClassOpenerClicked" prefHeight="43.0" prefWidth="77.0" styleClass="buttonBorders" stylesheets="@../styles/Modification.css" text="Register">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane maxHeight="125.0" prefHeight="125.0" prefWidth="900.0" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="125.0" prefWidth="900.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <AnchorPane prefHeight="541.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

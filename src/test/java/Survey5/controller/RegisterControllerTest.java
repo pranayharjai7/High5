@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
@@ -70,7 +71,7 @@ class RegisterControllerTest{
         TextField testNameInput =  robot.lookup("#nameField").queryAs(TextField.class);
         TextField testUserNameInput =  robot.lookup("#usernameField").queryAs(TextField.class);
         TextField testEmailInput =  robot.lookup("#emailField").queryAs(TextField.class);
-        TextField testPasswordInput =  robot.lookup("#passwordField").queryAs(TextField.class);
+        TextField testPasswordInput =  robot.lookup("#passwordField").queryAs(PasswordField.class);
         robot.clickOn("#nameField");
         robot.write("testName");
         robot.clickOn("#usernameField");

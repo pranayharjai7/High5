@@ -3,17 +3,24 @@ package Survey5.controller.SurveyTemplateControllers;
 import java.io.IOException;
 
 import Survey5.MainApp;
+import Survey5.model.Data;
+import Survey5.model.Survey;
+import Survey5.model.SurveyManager;
+import Survey5.model.SurveysDaoInterface;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.text.Text;
 
 public class HealthTemplate1Controller
 {
- 
+    private Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
+    private static Data userdata;
+    SurveysDaoInterface surveyManager = new SurveyManager();
+
+    @FXML
+    private Label HealthTemplate1;
+
     @FXML
     private TextField AgeFeild;
 
@@ -92,11 +99,6 @@ public class HealthTemplate1Controller
     }
 
     @FXML
-    void HealthSurveySubmitted(ActionEvent event) throws IOException {
-        MainApp.setRoot("TemplateSurvey");
-    }
-
-    @FXML
     void MedicationYesClicked(ActionEvent event) {
 
     }
@@ -114,6 +116,24 @@ public class HealthTemplate1Controller
     @FXML
     void VaccineYesClicked(ActionEvent event) {
 
+    }
+
+    public static void setData(Data userdata) {
+        HealthTemplate1Controller.userdata=userdata;
+    }
+
+    @FXML
+    void HealthSurveySubmitted(ActionEvent event) throws Exception {
+        Survey survey = new Survey();
+        survey.setTypeOfTemplate(HealthTemplate1.getId());
+        survey.setTitle(HealthTemplate1.getText());
+        survey.setOwner(userdata);
+
+        surveyManager.setSurvey(survey);
+        surveyManager.close();
+        confirm.setContentText("Template Saved Successfully!!");
+        confirm.showAndWait();
+        MainApp.setRoot("/fxml/SurveyTemplates/TemplateSurvey.fxml");
     }
 
     public void backButtonClicked(ActionEvent actionEvent) throws IOException {
