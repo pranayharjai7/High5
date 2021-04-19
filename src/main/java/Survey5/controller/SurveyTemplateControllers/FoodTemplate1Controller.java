@@ -43,7 +43,7 @@ public class FoodTemplate1Controller
     private Text AgeFoodSurveyQuestion;
 
     @FXML
-    private Text PhyicalSatisfactionQuestion;
+    private Text PhysicalSatisfactionQuestion;
 
     @FXML
     private Text FoodAllergyQuestion;

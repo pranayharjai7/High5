@@ -9,17 +9,16 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import org.controlsfx.control.Rating;
 
 public class BusinessTemplate1Controller
 {
-    
+
     @FXML
     private AnchorPane FeedbackSurveyCanvas;
- 
+
     @FXML
     private Label PhoneLabel;
 
@@ -30,7 +29,7 @@ public class BusinessTemplate1Controller
     private Label NameLabel;
 
     @FXML
-    private TextField NameTextFeild;
+    private TextField NameTextField;
 
     @FXML
     private TextField PhoneTextFeild;
@@ -70,22 +69,9 @@ public class BusinessTemplate1Controller
 
     @FXML
     private Button SubmitButton;
-    
-    
-    @FXML
-    void CommunicationRatingClicked(MouseEvent event) {
-
-    }
 
     @FXML
-    void CustomerServiceRatingClicked(MouseEvent event) {
-
-    }
-
-    @FXML
-    void DeliveryRatingClicked(MouseEvent event) {
-
-    }
+    private Button backButton;
 
     @FXML
     void EmailTextFeildClicked(ActionEvent event) {
@@ -103,16 +89,12 @@ public class BusinessTemplate1Controller
     }
 
     @FXML
-    void ProductRatingClicked(MouseEvent event) {
-
+    void SubmitButtonClicked(ActionEvent event) throws IOException {
+        MainApp.setRoot("/fxml/SurveyTemplates/TemplateSurvey.fxml");
     }
 
     @FXML
-    void SubmitButtonClicked(ActionEvent event) throws IOException {
-        MainApp.setRoot("SurveyTemplates");
-    }
-
-    public void backButtonClicked(ActionEvent actionEvent) throws IOException {
+    void backButtonClicked(ActionEvent event) throws IOException {
         MainApp.setRoot("/fxml/SurveyTemplates/TemplateSurvey.fxml");
     }
 }
