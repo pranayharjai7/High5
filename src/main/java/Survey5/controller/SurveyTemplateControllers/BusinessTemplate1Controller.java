@@ -18,7 +18,7 @@ import org.controlsfx.validation.Validator;
 public class BusinessTemplate1Controller {
 
     @FXML
-    private AnchorPane FeedbackSurveyCanvas;
+    private AnchorPane BusinessTemplate1AnchorPane;
 
     @FXML
     private Label PhoneLabel;

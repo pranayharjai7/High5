@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import org.controlsfx.control.Rating;
 
@@ -15,12 +16,12 @@ import java.io.IOException;
 
 public class BusinessTemplate2Controller
 {
-    @FXML
-    private Button backButton;
-
 
     @FXML
-    private Label BuisnessTemplate2Label;
+    private AnchorPane BusinessTemplate2AnchorPane;
+
+    @FXML
+    private Label BusinessTemplate2Label;
 
     @FXML
     private Text WebsiteReviewIntroQ1;
@@ -110,10 +111,13 @@ public class BusinessTemplate2Controller
     private TextArea WebsiteReviewAnswerBox;
 
     @FXML
-    private Button BuisnessTemplate2SubmitButton;
+    private Button SubmitButton;
 
     @FXML
-    void BuisnessTemplate2SubmitButtonClicked(ActionEvent event) throws IOException {
+    private Button backButton;
+
+    @FXML
+    void SubmitButtonClicked(ActionEvent event) throws IOException {
 
         MainApp.setRoot("/fxml/SurveyTemplates/TemplateSurvey.fxml");
 

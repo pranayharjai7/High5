@@ -18,7 +18,7 @@
 <BorderPane prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: grey;" styleClass="BusinessTemplate1ScrollPaneBackground" stylesheets="@TemplateStyles/tempcss.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.BusinessTemplate1Controller">
    <center>
       <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="2000.0" stylesheets="@TemplateStyles/tempcss.css">
-            <AnchorPane fx:id="FeedbackSurveyCanvas" opacity="0.82" prefHeight="760.0" prefWidth="902.0" styleClass="BusinessTemplate1AnchorPaneBackground" stylesheets="@../SurveyTemplates/TemplateStyles/tempcss.css">
+            <AnchorPane fx:id="BusinessTemplate1AnchorPane" opacity="0.82" prefHeight="760.0" prefWidth="902.0" styleClass="BusinessTemplate1AnchorPaneBackground" stylesheets="@../SurveyTemplates/TemplateStyles/tempcss.css">
       
                   <Label fx:id="PhoneLabel" layoutX="198.0" layoutY="174.0" text="Phone:">
                      <font>

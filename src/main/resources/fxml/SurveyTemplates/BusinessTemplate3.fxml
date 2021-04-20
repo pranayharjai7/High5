@@ -20,7 +20,7 @@
     <center>
         <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="2000.0" style="-fx-border-color: white; -fx-border-width: 7px;">
             <content>
-                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1716.0" prefWidth="750.0">
+                <AnchorPane fx:id="BusinessTemplate3AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1716.0" prefWidth="750.0">
                     <children>
                         <WorldMapView opacity="0.64" prefHeight="262.0" prefWidth="750.0" />
                         <Label fx:id="BusinessTemplate3Label" layoutX="167.0" layoutY="94.0" text="Online Store Review" textFill="#060505">

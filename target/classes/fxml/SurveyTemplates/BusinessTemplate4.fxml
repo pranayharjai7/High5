@@ -15,13 +15,13 @@
 <?import javafx.scene.text.Text?>
 
 <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="750.0" prefWidth="900.0" styleClass="businessTemplate4" stylesheets="@../SurveyTemplates/TemplateStyles/tempcss.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.BusinessTemplate4Controller">
-    <AnchorPane prefHeight="2150.0" prefWidth="900.0">
+    <AnchorPane fx:id="BusinessTemplate4AnchorPane" prefHeight="2150.0" prefWidth="900.0">
 
         <ImageView fitHeight="345.0" fitWidth="555.0" layoutX="314.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/TemplateImages/BusinessTemplate3.png" />
          </image></ImageView>
-        <Label fx:id="BuisnessTemplate4Label" layoutX="24.0" layoutY="98.0" text="&quot; work and internship opportunities &quot;">
+        <Label fx:id="BusinessTemplate4Label" layoutX="24.0" layoutY="98.0" text="&quot; work and internship opportunities &quot;">
             <font>
                 <Font name="Bell MT" size="32.0" />
             </font>
@@ -39,33 +39,33 @@
                 <Font size="13.0" />
             </font>
         </Text>
-        <Text fx:id="SurevyQ1" layoutX="95.0" layoutY="637.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. What was the biggest challenge/hardship you encountered in the course of the application process?" />
-        <RadioButton fx:id="SurevyQ1Option1" layoutX="127.0" layoutY="653.0" mnemonicParsing="false" text="I had not encountered any hardships during the application process" />
-        <RadioButton fx:id="SurevyQ1Option2" layoutX="127.0" layoutY="682.0" mnemonicParsing="false" text="Communication with the organisation " />
-        <RadioButton fx:id="SurevyQ1Option3" layoutX="127.0" layoutY="713.0" mnemonicParsing="false" text="Communication with universities" />
-        <RadioButton fx:id="SurevyQ1Option4" layoutX="127.0" layoutY="741.0" mnemonicParsing="false" text="Meeting deadlines" />
+        <Text fx:id="SurveyQ1" layoutX="95.0" layoutY="637.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. What was the biggest challenge/hardship you encountered in the course of the application process?" />
+        <RadioButton fx:id="SurveyQ1Option1" layoutX="127.0" layoutY="653.0" mnemonicParsing="false" text="I had not encountered any hardships during the application process" />
+        <RadioButton fx:id="SurveyQ1Option2" layoutX="127.0" layoutY="682.0" mnemonicParsing="false" text="Communication with the organisation " />
+        <RadioButton fx:id="SurveyQ1Option3" layoutX="127.0" layoutY="713.0" mnemonicParsing="false" text="Communication with universities" />
+        <RadioButton fx:id="SurveyQ1Option4" layoutX="127.0" layoutY="741.0" mnemonicParsing="false" text="Meeting deadlines" />
         <TextField layoutX="216.0" layoutY="770.0" prefHeight="18.0" prefWidth="133.0" />
-        <RadioButton fx:id="SurevyQ1Option5TextField" layoutX="127.0" layoutY="774.0" mnemonicParsing="false" text="Other :" />
-        <Text fx:id="SurevyQ2" layoutX="95.0" layoutY="845.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Does your university have a career office, or any kind of facility/service related to job hunting?" />
-        <RadioButton fx:id="SurevyQ1Option2" layoutX="127.0" layoutY="898.0" mnemonicParsing="false" text="Yes, and I have used them" />
-        <RadioButton fx:id="SurevyQ2Option1" layoutX="127.0" layoutY="869.0" mnemonicParsing="false" text="Yes, but I have not used them yet" />
-        <RadioButton fx:id="SurevyQ1Option3" layoutX="127.0" layoutY="926.0" mnemonicParsing="false" text="No" />
-        <RadioButton fx:id="SurevyQ1Option4" layoutX="127.0" layoutY="954.0" mnemonicParsing="false" text="I don’t know" />
-        <Text fx:id="SurevyQ3" layoutX="95.0" layoutY="1014.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. . Does your university have any kind of facility/service related to internships?" />
-        <RadioButton fx:id="SurevyQ3Option1" layoutX="127.0" layoutY="1039.0" mnemonicParsing="false" text="Yes, but I have not used them yet" />
-        <RadioButton fx:id="SurevyQ3Option2" layoutX="127.0" layoutY="1070.0" mnemonicParsing="false" text="Yes, and I have used them" />
-        <RadioButton fx:id="SurevyQ3Option4" layoutX="127.0" layoutY="1128.0" mnemonicParsing="false" text="No" />
-        <RadioButton fx:id="SurevyQ3Option3" layoutX="127.0" layoutY="1100.0" mnemonicParsing="false" text="I don’t know" />
-        <Text fx:id="SurevyQ4" layoutX="95.0" layoutY="1173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4 . Does your university have any kind of facility/service related to internships?" />
-        <RadioButton fx:id="SurevyQ4Option2" layoutX="127.0" layoutY="1230.0" mnemonicParsing="false" text="I do not know anything about them" />
-        <RadioButton fx:id="SurevyQ4Option1" layoutX="127.0" layoutY="1205.0" mnemonicParsing="false" text="I know some of them, but do not have a comprehensive knowledge" />
-        <RadioButton fx:id="SurevyQ4Option3" layoutX="127.0" layoutY="1255.0" mnemonicParsing="false" text="I know many of these companies" />
-        <RadioButton fx:id="SurevyQ4Option4" layoutX="127.0" layoutY="1279.0" mnemonicParsing="false" text="I have comprehensive knowledge about the related companies" />
-        <Text fx:id="SurevyQ5" layoutX="95.0" layoutY="1334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5. Are you familiar with the regulations of entrepreneurship and starting a business in your country? " />
-        <RadioButton fx:id="SurevyQ5Option1" layoutX="128.0" layoutY="1364.0" mnemonicParsing="false" text="I have adequate knowledge of it" />
-        <RadioButton fx:id="SurevyQ5Option2" layoutX="127.0" layoutY="1392.0" mnemonicParsing="false" text="I have some knowledge of it" />
-        <RadioButton fx:id="SurevyQ5Option3" layoutX="127.0" layoutY="1419.0" mnemonicParsing="false" text="I am completely familiar with it" />
-        <RadioButton fx:id="SurevyQ5Option4" layoutX="127.0" layoutY="1444.0" mnemonicParsing="false" text="I have no knowledge of it" />
+        <RadioButton fx:id="SurveyQ1Option5TextField" layoutX="127.0" layoutY="774.0" mnemonicParsing="false" text="Other :" />
+        <Text fx:id="SurveyQ2" layoutX="95.0" layoutY="845.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Does your university have a career office, or any kind of facility/service related to job hunting?" />
+        <RadioButton fx:id="SurveyQ2Option2" layoutX="127.0" layoutY="898.0" mnemonicParsing="false" text="Yes, and I have used them" />
+        <RadioButton fx:id="SurveyQ2Option1" layoutX="127.0" layoutY="869.0" mnemonicParsing="false" text="Yes, but I have not used them yet" />
+        <RadioButton fx:id="SurveyQ2Option3" layoutX="127.0" layoutY="926.0" mnemonicParsing="false" text="No" />
+        <RadioButton fx:id="SurveyQ2Option4" layoutX="127.0" layoutY="954.0" mnemonicParsing="false" text="I don’t know" />
+        <Text fx:id="SurveyQ3" layoutX="95.0" layoutY="1014.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. . Does your university have any kind of facility/service related to internships?" />
+        <RadioButton fx:id="SurveyQ3Option1" layoutX="127.0" layoutY="1039.0" mnemonicParsing="false" text="Yes, but I have not used them yet" />
+        <RadioButton fx:id="SurveyQ3Option2" layoutX="127.0" layoutY="1070.0" mnemonicParsing="false" text="Yes, and I have used them" />
+        <RadioButton fx:id="SurveyQ3Option4" layoutX="127.0" layoutY="1128.0" mnemonicParsing="false" text="No" />
+        <RadioButton fx:id="SurveyQ3Option3" layoutX="127.0" layoutY="1100.0" mnemonicParsing="false" text="I don’t know" />
+        <Text fx:id="SurveyQ4" layoutX="95.0" layoutY="1173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4 . Does your university have any kind of facility/service related to internships?" />
+        <RadioButton fx:id="SurveyQ4Option2" layoutX="127.0" layoutY="1230.0" mnemonicParsing="false" text="I do not know anything about them" />
+        <RadioButton fx:id="SurveyQ4Option1" layoutX="127.0" layoutY="1205.0" mnemonicParsing="false" text="I know some of them, but do not have a comprehensive knowledge" />
+        <RadioButton fx:id="SurveyQ4Option3" layoutX="127.0" layoutY="1255.0" mnemonicParsing="false" text="I know many of these companies" />
+        <RadioButton fx:id="SurveyQ4Option4" layoutX="127.0" layoutY="1279.0" mnemonicParsing="false" text="I have comprehensive knowledge about the related companies" />
+        <Text fx:id="SurveyQ5" layoutX="95.0" layoutY="1334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5. Are you familiar with the regulations of entrepreneurship and starting a business in your country? " />
+        <RadioButton fx:id="SurveyQ5Option1" layoutX="128.0" layoutY="1364.0" mnemonicParsing="false" text="I have adequate knowledge of it" />
+        <RadioButton fx:id="SurveyQ5Option2" layoutX="127.0" layoutY="1392.0" mnemonicParsing="false" text="I have some knowledge of it" />
+        <RadioButton fx:id="SurveyQ5Option3" layoutX="127.0" layoutY="1419.0" mnemonicParsing="false" text="I am completely familiar with it" />
+        <RadioButton fx:id="SurveyQ5Option4" layoutX="127.0" layoutY="1444.0" mnemonicParsing="false" text="I have no knowledge of it" />
         <Text fx:id="SurveyQ6" layoutX="95.0" layoutY="1503.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6.Have you attended any events organised by any Chambers or employers’ organisations? " />
         <RadioButton fx:id="SurveyQ6Option1" layoutX="127.0" layoutY="1534.0" mnemonicParsing="false" text="Yes, many times" />
         <RadioButton fx:id="SurveyQ6Option2" layoutX="127.0" layoutY="1559.0" mnemonicParsing="false" text="Yes, one or two times" />
@@ -91,7 +91,7 @@
                 <Font name="System Bold" size="14.0" />
             </font>
         </Label>
-        <Button fx:id="BusinessRemplate4SubmitButton" layoutX="372.0" layoutY="2026.0" mnemonicParsing="false" onAction="#BusinessRemplate4SubmitButtonClicked" prefHeight="39.0" prefWidth="129.0" style="-fx-background-color: #e4dad1;" text="Submit">
+        <Button fx:id="BusinessTemplate4SubmitButton" layoutX="372.0" layoutY="2026.0" mnemonicParsing="false" onAction="#BusinessTemplate4SubmitButtonClicked" prefHeight="39.0" prefWidth="129.0" style="-fx-background-color: #e4dad1;" text="Submit">
             <effect>
                 <InnerShadow>
                     <color>

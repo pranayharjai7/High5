@@ -17,7 +17,7 @@
    <center>
       <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="622.0">
         <content>
-            <AnchorPane layoutX="29.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="641.0" prefWidth="800.0" styleClass="HealthTemplate1AnchorPaneBackground" stylesheets="@TemplateStyles/tempcss.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+            <AnchorPane fx:id="HealthTemplate1AnchorPane" layoutX="29.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="641.0" prefWidth="800.0" styleClass="HealthTemplate1AnchorPaneBackground" stylesheets="@TemplateStyles/tempcss.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
                 <children>
                     <Label fx:id="HealthTemplate1" layoutX="178.0" layoutY="22.0" text="Health &amp; Safety" textFill="#ebf3f5">
                         <font>

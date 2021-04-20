@@ -15,7 +15,7 @@
    <center>
       <ScrollPane prefHeight="700.0" prefWidth="800.0" styleClass="HealthTemplate2" stylesheets="@/fxml/SurveyTemplates/TemplateStyles/tempcss.css">
          <content>
-              <AnchorPane prefHeight="1639.0" prefWidth="821.0" style="-fx-background-color: #bcd0ea; -fx-border-color: white; -fx-border-width: 8px;" stylesheets="@/fxml/SurveyTemplates/TemplateStyles/tempcss.css">
+              <AnchorPane fx:id="HealthTemplate3AnchorPane" prefHeight="1639.0" prefWidth="821.0" style="-fx-background-color: #bcd0ea; -fx-border-color: white; -fx-border-width: 8px;" stylesheets="@/fxml/SurveyTemplates/TemplateStyles/tempcss.css">
                <children>
                               <Label layoutX="46.0" layoutY="119.0" prefHeight="27.0" prefWidth="656.0" text="1. What do you think about the lockdown measures and restrictions in Hungary ?">
                                  <font>

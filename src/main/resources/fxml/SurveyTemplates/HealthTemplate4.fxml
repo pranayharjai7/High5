@@ -18,7 +18,7 @@
    <center>
       <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" opacity="0.8" prefHeight="2000.0" prefWidth="850.0" style="-fx-border-color: #995726; -fx-border-width: 7px;" styleClass="DrugsSurveyAnchor">
+          <AnchorPane fx:id="HealthTemplate4AnchorPane" minHeight="0.0" minWidth="0.0" opacity="0.8" prefHeight="2000.0" prefWidth="850.0" style="-fx-border-color: #995726; -fx-border-width: 7px;" styleClass="DrugsSurveyAnchor">
                <children>
                   <Label fx:id="HealthTemplate4" layoutX="280.0" layoutY="19.0" text="Drug Test Survey" textFill="#ca1b61">
                      <font>

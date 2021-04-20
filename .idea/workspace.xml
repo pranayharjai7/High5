@@ -6,10 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="c50b5972-a33c-4cdd-b766-962239057992" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/RegisterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/BusinessTemplate1Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/BusinessTemplate1Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/BusinessTemplate2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/BusinessTemplate2Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/BusinessTemplate3Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/BusinessTemplate3Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/BusinessTemplate4Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/BusinessTemplate4Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate1Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate1Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate2Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate3Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate3Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate4Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate4Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/BusinessTemplate1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/BusinessTemplate1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/BusinessTemplate2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/BusinessTemplate2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/BusinessTemplate3.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/BusinessTemplate3.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/BusinessTemplate4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/BusinessTemplate4.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/HealthTemplate1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/HealthTemplate1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/HealthTemplate2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/HealthTemplate2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/HealthTemplate3.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/HealthTemplate3.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/HealthTemplate4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/HealthTemplate4.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userdata_db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/userdata_db.mv.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +89,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,7 +185,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b90f9607-f479-402b-b38f-edec38b461cf" name="Default Changelist" comment="" />
+      <changelist id="c50b5972-a33c-4cdd-b766-962239057992" name="Default Changelist" comment="" />
       <created>1616732700229</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -194,6 +217,7 @@
       <workItem from="1618163983127" duration="4940000" />
       <workItem from="1618395847287" duration="16070000" />
       <workItem from="1618747114137" duration="4564000" />
+      <workItem from="1618876691901" duration="1905000" />
     </task>
     <servers />
   </component>

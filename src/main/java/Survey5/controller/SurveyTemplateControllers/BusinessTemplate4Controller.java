@@ -6,12 +6,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
 
 public class BusinessTemplate4Controller
 {
+    @FXML
+    private AnchorPane BusinessTemplate4AnchorPane;
     @FXML
     private Label BusinessTemplate4Label;
 

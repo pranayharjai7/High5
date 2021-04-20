@@ -8,6 +8,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import org.controlsfx.control.Rating;
 
@@ -17,6 +18,8 @@ import java.io.IOException;
 public class BusinessTemplate3Controller {
 
 
+    @FXML
+    private AnchorPane BusinessTemplate3AnchorPane;
     @FXML
     private Label BusinessTemplate3Label;
 

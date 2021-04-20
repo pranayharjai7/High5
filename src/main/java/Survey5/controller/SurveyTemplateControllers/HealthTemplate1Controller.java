@@ -10,6 +10,7 @@ import Survey5.model.SurveysDaoInterface;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
 public class HealthTemplate1Controller
@@ -18,6 +19,8 @@ public class HealthTemplate1Controller
     private static Data userdata;
     SurveysDaoInterface surveyManager = new SurveyManager();
 
+    @FXML
+    private AnchorPane HealthTemplate1AnchorPane;
     @FXML
     private Label HealthTemplate1;
 

@@ -5,12 +5,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
 public class HealthTemplate2Controller
 {
-
+    @FXML
+    private AnchorPane HealthTemplate2AnchorPane;
     @FXML
     private Button q1Agree;
 
