@@ -20,7 +20,7 @@ public class TemporaryTemplateController {
     }
 
     SurveysDaoInterface surveyManager = new SurveyManager();
-    QnADaoInterface qnAManager = new QnAManager();
+    QuestionsDaoInterface qnAManager = new QuestionsManager();
 
     @FXML
     private AnchorPane temporaryTemplate;
@@ -51,13 +51,14 @@ public class TemporaryTemplateController {
 
     @FXML
     private void submitButtonClicked(ActionEvent actionEvent) throws Exception {
+        /*
         Survey survey = new Survey();
         survey.setTypeOfTemplate(temporaryTemplate.getId());
         survey.setTitle(titleLabel.getText());
         survey.setOwner(userdata);
 
-        QnA question1 = new QnA();
-        QnA question2 = new QnA();
+        Questions question1 = new Questions();
+        Questions question2 = new Questions();
         question1.setQuestion(question1Label.getText());
         question1.setSurveyTemplate(survey);
         question2.setQuestion(question2Label.getText());
@@ -71,6 +72,8 @@ public class TemporaryTemplateController {
         surveyManager.close();
         confirm.setContentText("Template Saved Successfully!!");
         confirm.showAndWait();
+
+         */
         MainApp.setRoot("/fxml/TemplateOrCreate.fxml");
     }
 

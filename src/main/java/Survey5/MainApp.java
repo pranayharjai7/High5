@@ -37,8 +37,6 @@ public class MainApp extends Application {
         return loader.load();
     }
 
-
-
     private static void startDatabase() throws SQLException {
         s.runTool("-tcp", "-web", "-ifNotExists");
     }

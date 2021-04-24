@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="750.0" prefWidth="900.0" styleClass="backgroundForPrimaryFxml" stylesheets="@../styles/Modification.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.AnswerSurveyController">
+   <center>
+      <ScrollPane maxHeight="500.0" maxWidth="700.0" prefHeight="500.0" prefWidth="700.0">
+         <content>
+            <AnchorPane fx:id="AnswerSurveyAnchorPane" maxHeight="-Infinity" maxWidth="700.0" prefHeight="500.0" prefWidth="700.0" styleClass="backgroundForPrimaryFxml" stylesheets="@../styles/Modification.css">
+               <children>
+                  <Label layoutX="276.0" layoutY="39.0" text="All Surveys">
+                     <font>
+                        <Font size="31.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="searchBarField" layoutX="226.0" layoutY="101.0" promptText="Search Surveys" styleClass="textBoxBorders" stylesheets="@../styles/Modification.css" />
+                  <Button fx:id="searchButton" layoutX="388.0" layoutY="100.0" mnemonicParsing="false" onAction="#searchButtonClicked" prefHeight="22.0" prefWidth="72.0" styleClass="buttonBorders" stylesheets="@../styles/Modification.css" text="Search" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="125.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="backButton" layoutX="9.0" layoutY="20.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../styles/Modification.css" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="125.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

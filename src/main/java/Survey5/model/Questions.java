@@ -3,20 +3,23 @@ package Survey5.model;
 import javax.persistence.*;
 
 @Entity
-public class QnA {
+public class Questions {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     @Column(nullable = false)
+    private int questionNumber;
+
+    @Column(nullable = false)
     private String question;
-
-    @Column
-    private String answer;
-
 
     @ManyToOne
     private Survey surveyTemplate;
+
+    @ManyToOne
+    private Data answeredByUser;
+
 
     public Survey getSurveyTemplate() {
         return surveyTemplate;
@@ -26,7 +29,7 @@ public class QnA {
         this.surveyTemplate = surveyTemplate;
     }
 
-    public QnA() {
+    public Questions() {
     }
 
     public int getId() {
@@ -45,11 +48,19 @@ public class QnA {
         this.question = question;
     }
 
-    public String getAnswer() {
-        return answer;
+    public int getQuestionNumber() {
+        return questionNumber;
     }
 
-    public void setAnswer(String answer) {
-        this.answer = answer;
+    public void setQuestionNumber(int questionNumber) {
+        this.questionNumber = questionNumber;
+    }
+
+    public Data getAnsweredByUser() {
+        return answeredByUser;
+    }
+
+    public void setAnsweredByUser(Data answeredByUser) {
+        this.answeredByUser = answeredByUser;
     }
 }

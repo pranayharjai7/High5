@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c50b5972-a33c-4cdd-b766-962239057992" name="Default Changelist" comment="" />
+    <list default="true" id="c50b5972-a33c-4cdd-b766-962239057992" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/AfterLoginMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/AfterLoginMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate1Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate1Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/TemporaryTemplateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/TemporaryTemplateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/model/QnA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/model/Questions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/model/QnADaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/model/QuestionsDaoInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/model/QnAManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/model/QuestionsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/HealthTemplate1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/HealthTemplate1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/controller/AfterLoginMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/controller/AfterLoginMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/controller/SurveyTemplateControllers/HealthTemplate1Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/controller/SurveyTemplateControllers/HealthTemplate1Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/controller/SurveyTemplateControllers/TemporaryTemplateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/controller/SurveyTemplateControllers/TemporaryTemplateController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/model/QnA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/model/QnADaoInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/model/QnAManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/SurveyTemplates/HealthTemplate1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/SurveyTemplates/HealthTemplate1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userdata_db.mv.db" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +45,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1qHNkdyw7GCEEL23tyD5tasPmzb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -33,7 +62,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/High5-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/Survey5/model" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -41,6 +70,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Pranay\Programs\GIT\High5\src\main\java\Survey5\model" />
       <recent name="C:\Pranay\Programs\GIT\High5\src\main\resources\fxml\img" />
       <recent name="C:\Pranay\Projects\IdeaProjects\SOFTWARE_PROJECT\High5\src\main\resources\fxml\img\TemplateImages" />
       <recent name="C:\Pranay\Projects\IdeaProjects\SOFTWARE_PROJECT\JavaFX11\src\main\resources\fxml" />
@@ -74,15 +104,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -168,7 +196,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b90f9607-f479-402b-b38f-edec38b461cf" name="Default Changelist" comment="" />
+      <changelist id="c50b5972-a33c-4cdd-b766-962239057992" name="Default Changelist" comment="" />
       <created>1616732700229</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -200,6 +228,8 @@
       <workItem from="1618163983127" duration="4940000" />
       <workItem from="1618395847287" duration="16070000" />
       <workItem from="1618747114137" duration="4564000" />
+      <workItem from="1619151230739" duration="765000" />
+      <workItem from="1619162979363" duration="19587000" />
     </task>
     <servers />
   </component>

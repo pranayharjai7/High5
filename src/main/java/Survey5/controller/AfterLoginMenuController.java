@@ -65,7 +65,9 @@ public class AfterLoginMenuController {
     }
 
     @FXML
-    private void AnswerSurveyButtonClicked(ActionEvent actionEvent) {
+    private void AnswerSurveyButtonClicked(ActionEvent actionEvent) throws IOException {
+        AnswerSurveyController.setUserdata(userdata);
+        MainApp.setRoot("/fxml/AnswerSurvey.fxml");
     }
 
     @FXML

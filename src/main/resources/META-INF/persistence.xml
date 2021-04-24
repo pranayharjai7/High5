@@ -4,7 +4,8 @@
     <description>Hibernate EntityManager Demo</description>
     <class>Survey5.model.Data</class>
     <class>Survey5.model.Survey</class>
-    <class>Survey5.model.QnA</class>
+    <class>Survey5.model.Questions</class>
+    <class>Survey5.model.Answers</class>
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <properties>
       <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
