@@ -48,6 +48,26 @@ public class QuestionsManager implements QuestionsDaoInterface {
     }
 
     @Override
+    public List<Questions> getUserQuestions(Data userdata){
+        TypedQuery<Questions> query = entityManager.createQuery("SELECT questions FROM Questions questions", Questions.class);
+        List<Questions> questionsList = query.getResultList().stream()
+                .filter(questions -> questions.getSurveyTemplate().getId()==userdata.getId())
+                .collect(Collectors.toList());
+        return questionsList;
+    }
+
+    @Deprecated
+    @Override
+    public List<Questions> getUserSurveyQuestions(Data userdata,Survey survey){
+        TypedQuery<Questions> query = entityManager.createQuery("SELECT questions FROM Questions questions", Questions.class);
+        List<Questions> questionsList = query.getResultList().stream()
+                .filter(questions -> questions.getSurveyTemplate().getId()==survey.getId())
+                .filter(questions -> questions.getSurveyTemplate().getId()==userdata.getId())
+                .collect(Collectors.toList());
+        return questionsList;
+    }
+
+    @Override
     public void close() throws Exception {
         entityManager.close();
         entityManagerFactory.close();

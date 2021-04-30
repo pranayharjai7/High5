@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Survey5.MainApp;
+import Survey5.controller.ShowAnswersController;
 import Survey5.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -80,7 +81,7 @@ public class HealthTemplate1Controller
     private String Answer6;
 
     @FXML
-    private DatePicker Answer7;
+    private TextField Answer7;
 
     @FXML
     private Text Question1;
@@ -129,11 +130,13 @@ public class HealthTemplate1Controller
         if(answer.equals("answer")){
             setAnswering();
         }
-        else
+        else if(answer.equals("create"))
             setCreating();
+        else
+            setShowAnswers();
     }
 
-    public void setAnswering(){
+    private void setAnswering(){
         saveButton.setText("Submit");
         saveButton.setOnAction(this::submitButtonClicked);
         backButton.setOnAction(this::backToAnswerButtonClicked);
@@ -143,6 +146,13 @@ public class HealthTemplate1Controller
         saveButton.setText("Save");
         saveButton.setOnAction(this::saveButtonClicked);
         backButton.setOnAction(this::backToTemplatesButtonClicked);
+    }
+
+    private void setShowAnswers(){
+        saveButton.setText("Show Answers");
+        saveButton.setPrefWidth(150);
+        saveButton.setOnAction(this::showAnswersClicked);
+        backButton.setOnAction(this::backToSavedSurveysButtonClicked);
     }
 
     //submitting Questions and answers to database
@@ -161,7 +171,7 @@ public class HealthTemplate1Controller
             warn.setContentText("You have already answered this Survey!");
             warn.showAndWait();
         }
-        else if(Answer1.getText().equals("") || Answer2.getText().equals("")){
+        else if(Answer1.getText().equals("") || Answer2.getText().equals("") || Answer7.getText().equals("")){
             warn.setContentText("You didn't submit all the answers!");
             warn.showAndWait();
         }
@@ -218,7 +228,7 @@ public class HealthTemplate1Controller
                     case 7: {
                         question.setQuestion(Question7.getText());
                         answer.setAnswersType("Textual");
-                        answer.setAnswerText(Answer6);
+                        answer.setAnswerText(Answer7.getText());
                         break;
                     }
                 }
@@ -304,6 +314,18 @@ public class HealthTemplate1Controller
         }
     }
 
+
+    //Shows saved Answers for the questions
+    private void showAnswersClicked(ActionEvent actionEvent) {
+        ShowAnswersController.setData(userdata,survey);
+        try {
+            MainApp.setRoot("/fxml/ShowAnswers.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     private void backToAnswerButtonClicked(ActionEvent actionEvent) {
         try {
             MainApp.setRoot("/fxml/AnswerSurvey.fxml");
@@ -316,6 +338,14 @@ public class HealthTemplate1Controller
     private void backToTemplatesButtonClicked(ActionEvent actionEvent){
         try {
             MainApp.setRoot("/fxml/SurveyTemplates/TemplateSurvey.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void backToSavedSurveysButtonClicked(ActionEvent actionEvent) {
+        try {
+            MainApp.setRoot("/fxml/SavedSurveys.fxml");
         } catch (IOException e) {
             e.printStackTrace();
         }

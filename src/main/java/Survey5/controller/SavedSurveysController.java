@@ -1,6 +1,7 @@
 package Survey5.controller;
 
 import Survey5.MainApp;
+import Survey5.controller.SurveyTemplateControllers.HealthTemplate1Controller;
 import Survey5.controller.SurveyTemplateControllers.TemporaryTemplateController;
 import Survey5.model.*;
 import javafx.event.ActionEvent;
@@ -34,7 +35,7 @@ public class SavedSurveysController{
     private Button searchButton;
 
     @FXML
-    private void searchButtonClicked(ActionEvent actionEvent) {
+    private void initialize(){
         sList = sm.getUserSurveys(userdata);
         for (Survey survey:sList) {
             buttonList.add(new Button(survey.getTitle()));
@@ -49,7 +50,10 @@ public class SavedSurveysController{
 
             MySurveysAnchorPane.getChildren().add(buttonList.get(buttonList.size()-1));
         }
+    }
 
+    @FXML
+    private void searchButtonClicked(ActionEvent actionEvent) {
     }
 
     private void savedSurveyClicked(ActionEvent actionEvent){
@@ -61,12 +65,22 @@ public class SavedSurveysController{
         }
         for (Survey survey:sList) {
             if(survey.getId()==SurveyId){
-                System.out.println(survey.getId());
+                switchTemplate(survey);
                 try {
                     MainApp.setRoot("/fxml/SurveyTemplates/"+survey.getTypeOfTemplate()+".fxml");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+            }
+        }
+    }
+
+    private void switchTemplate(Survey survey){
+        switch (survey.getTypeOfTemplate()){
+            case "HealthTemplate1": {
+                HealthTemplate1Controller.setData(userdata);
+                HealthTemplate1Controller.setCreateOrAnswerFunction("ShowAnswer",survey);
+                break;
             }
         }
     }
