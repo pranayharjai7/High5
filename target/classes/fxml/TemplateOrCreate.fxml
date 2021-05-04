@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane styleClass="backgroundForPrimaryFxml" stylesheets="@../styles/Modification.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.TemplateOrCreateController">
+   <center>
+      <AnchorPane maxHeight="500.0" maxWidth="700.0" prefHeight="500.0" prefWidth="700.0" styleClass="backgroundForPrimaryFxml" stylesheets="@../styles/Modification.css">
+      <children>
+          <Label layoutX="280.0" layoutY="59.0" text="SURVEY 5" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="59.0">
+              <font>
+                  <Font name="System Bold" size="30.0" />
+              </font>
+          </Label>
+            <Button fx:id="templateButton" layoutX="231.0" layoutY="189.0" mnemonicParsing="false" onAction="#templateButtonClicked" prefHeight="50.0" prefWidth="237.0" style="-fx-background-color: #5e7b89;" styleClass="buttonBorders" stylesheets="@../styles/Modification.css" text="Use Templates" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="createButton" layoutX="231.0" layoutY="298.0" mnemonicParsing="false" onAction="#createSurveyButtonClicked" prefHeight="50.0" prefWidth="237.0" style="-fx-background-color: #5e7b89;" styleClass="buttonBorders" stylesheets="@../styles/Modification.css" text="Create Own Survey" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Separator layoutX="258.0" layoutY="103.0" prefWidth="200.0" />
+      </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="125.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+          <Button fx:id="backButton" layoutX="18.0" layoutY="22.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../styles/Modification.css" AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="22.0" />
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="125.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

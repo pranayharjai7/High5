@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.Rating?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="800.0" prefWidth="900.0" styleClass="businessTemplate2" stylesheets="@TemplateStyles/tempcss.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.BusinessTemplate2Controller">
+   <center>
+      <ScrollPane prefHeight="755.0" prefWidth="755.0">
+         <content>
+            <AnchorPane prefHeight="1700.0" prefWidth="752.0">
+               <children>
+                  <Label id=" #ced6f1" layoutX="7.0" layoutY="5.0" prefHeight="242.0" prefWidth="802.0" style="-fx-background-color: #ced6f1;" styleClass="#8981d2" textFill="#7b75ba" />
+                  <ImageView fitHeight="234.0" fitWidth="325.0" layoutX="497.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/TemplateImages/website_Template3.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="BuisnessTemplate2Label" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="70.0" prefWidth="406.0" style="-fx-background-color: #cfd7f3;" text="Website Review Survey" textFill="#569984">
+                     <font>
+                        <Font name="Bell MT Italic" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label ellipsisString="" layoutX="263.0" layoutY="90.0" prefHeight="34.0" prefWidth="174.0" text="Let's Review a Website!!" textFill="#569984">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="68.0" layoutY="73.0" prefHeight="3.0" prefWidth="325.0" />
+                  <Separator layoutX="263.0" layoutY="122.0" prefHeight="3.0" prefWidth="145.0" style="-fx-background-color: #caddd8;" />
+                  <Text fill="#569984" layoutX="20.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thank you for taking some time to review our website and share your experiences with us. Your opinions mean a world to us and help us to get better everyday. Below are some questions to help us understand your experiences better." wrappingWidth="606.8118257522583">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="WebsiteReviewIntroQ1" fill="#569984" layoutX="101.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How Do You Know About Our Website?">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <ChoiceBox fx:id="WebsiteReviewIntroQ1ChoiceBox" layoutX="380.0" layoutY="362.0" prefWidth="150.0" />
+                  <Text fx:id="WebsiteReviewIntroQ2" fill="#569984" layoutX="101.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How often you Visit our Website?">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <ChoiceBox fx:id="WebsiteReviewIntroQ2ChoiceBox" layoutX="380.0" layoutY="404.0" prefWidth="150.0" />
+                  <Label alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="-2.0" layoutY="507.0" prefHeight="39.0" prefWidth="826.0" style="-fx-background-color: #ced6f1;" text="Website Design " textFill="#569984">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="UserInterfaceLabel" layoutX="170.0" layoutY="587.0" text="User-Interface" textFill="#569984">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ImagesLabelQ" layoutX="172.0" layoutY="673.0" text="Images" textFill="#569984">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ColourAndFontQLabel" layoutX="172.0" layoutY="633.0" text="Colours And Font" textFill="#569984">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="172.0" layoutY="720.0" text="Layout" textFill="#569984">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Rating fx:id="UserInterfaceLabelRating" layoutX="379.0" layoutY="580.0" rating="0.0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.33725491166114807" green="0.6000000238418579" blue="0.5176470875740051" />
+                           </color>
+                           <input>
+                              <Glow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                  </Rating>
+                  <Rating fx:id="ColourAndFontLabelRating" layoutX="379.0" layoutY="627.0" rating="0.0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.33725491166114807" green="0.6000000238418579" blue="0.5176470875740051" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Rating>
+                  <Rating fx:id="ImagesLabelRating" layoutX="379.0" layoutY="673.0" rating="0.0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.33725491166114807" green="0.6000000238418579" blue="0.5176470875740051" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Rating>
+                  <Rating fx:id="LayoutLabelRating" layoutX="379.0" layoutY="713.0" rating="0.0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.33725491166114807" green="0.6000000238418579" blue="0.5176470875740051" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Rating>
+                  <Label alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="-3.0" layoutY="810.0" prefHeight="39.0" prefWidth="827.0" style="-fx-background-color: #ced6f1;" text="General Working Of Website" textFill="#569984">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="EfficencyOfToolbarQ" layoutX="172.0" layoutY="935.0" text="Efficency Of Toolbar" textFill="#569984">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Rating fx:id="ComprehensivnessLabelRating" layoutX="380.0" layoutY="888.0" rating="0.0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.33725491166114807" green="0.6000000238418579" blue="0.5176470875740051" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Rating>
+                  <Label fx:id="ComprehensivnessLabelQ" layoutX="172.0" layoutY="894.0" text="Comprehensivness" textFill="#569984">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Rating fx:id="EfficencyOfToolbarRating" layoutX="380.0" layoutY="929.0" rating="0.0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.33725491166114807" green="0.6000000238418579" blue="0.5176470875740051" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Rating>
+                  <Label fx:id="HelpSystemLabelQ" layoutX="172.0" layoutY="980.0" text="Find The System Helpful" textFill="#569984">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Rating fx:id="HelpSystemLabelRating" layoutX="380.0" layoutY="974.0" rating="0.0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.33725491166114807" green="0.6000000238418579" blue="0.5176470875740051" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Rating>
+                  <Label fx:id="ControlledInteractionLabelQ" layoutX="172.0" layoutY="1020.0" text="In Control of Interactions" textFill="#569984">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Rating fx:id="ControlledInteractionLabelQRating" layoutX="380.0" layoutY="1014.0" rating="0.0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.33725491166114807" green="0.6000000238418579" blue="0.5176470875740051" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Rating>
+                  <Label alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="2.0" layoutY="1106.0" prefHeight="39.0" prefWidth="824.0" style="-fx-background-color: #ced6f1;" text="CONNECTION" textFill="#569984">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="EaseOfUSeConnectionQ" layoutX="170.0" layoutY="1234.0" text="Ease Of Use" textFill="#569984">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="EntryGuidanceConnectionQ" layoutX="172.0" layoutY="1266.0" text="Entry Guaidance" textFill="#569984">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="HyperlinkConnotationQ" layoutX="172.0" layoutY="1301.0" text="Hyperlink Connotation" textFill="#569984">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ConnectionSpeedQ" layoutX="173.0" layoutY="1193.0" text="Speed" textFill="#569984">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Rating fx:id="ConnectionSpeedRating" layoutX="380.0" layoutY="1177.0" rating="0.0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.33725491166114807" green="0.6000000238418579" blue="0.5176470875740051" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Rating>
+                  <Rating fx:id="EaseOfUSeConnectionQRating" layoutX="380.0" layoutY="1218.0" rating="0.0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.33725491166114807" green="0.6000000238418579" blue="0.5176470875740051" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Rating>
+                  <Rating fx:id="EntryGuidanceConnectionRating" layoutX="380.0" layoutY="1260.0" rating="0.0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.33725491166114807" green="0.6000000238418579" blue="0.5176470875740051" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Rating>
+                  <Rating fx:id="HyperlinkConnotationRating" layoutX="380.0" layoutY="1295.0" rating="0.0">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.33725491166114807" green="0.6000000238418579" blue="0.5176470875740051" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Rating>
+                  <Text fx:id="WebsiteReviewQ" fill="#569984" layoutX="30.0" layoutY="1408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thank you for your reviews. If you have any other  suggestion please enter them here">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="WebsiteReviewAnswerBox" layoutX="128.0" layoutY="1429.0" prefHeight="129.0" prefWidth="427.0" promptText="please enter your review/suggestions here.">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX">
+                           <color>
+                              <Color red="0.33725491166114807" green="0.6000000238418579" blue="0.5176470875740051" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
+                  </TextArea>
+                  <Button fx:id="BuisnessTemplate2SubmitButton" layoutX="338.0" layoutY="1596.0" mnemonicParsing="false" onAction="#BuisnessTemplate2SubmitButtonClicked" prefHeight="29.0" prefWidth="112.0" style="-fx-background-color: #569984;" text="Submit" textFill="#f2e4e4">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../../styles/Modification.css" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </center>
+   <top>
+      <VBox prefHeight="42.0" prefWidth="940.0" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <VBox prefHeight="2002.0" prefWidth="55.0" BorderPane.alignment="CENTER" />
+   </left>
+   <bottom>
+      <VBox prefHeight="56.0" prefWidth="940.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <right>
+      <VBox prefHeight="2002.0" prefWidth="54.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

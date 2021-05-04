@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.Rating?>
+
+<BorderPane prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: grey;" styleClass="BusinessTemplate1ScrollPaneBackground" stylesheets="@TemplateStyles/tempcss.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.BusinessTemplate1Controller">
+   <center>
+      <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="2000.0" stylesheets="@TemplateStyles/tempcss.css">
+            <AnchorPane fx:id="FeedbackSurveyCanvas" opacity="0.82" prefHeight="760.0" prefWidth="902.0" styleClass="BusinessTemplate1AnchorPaneBackground" stylesheets="@../SurveyTemplates/TemplateStyles/tempcss.css">
+      
+                  <Label fx:id="PhoneLabel" layoutX="198.0" layoutY="174.0" text="Phone:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="EmailLabel" layoutX="201.0" layoutY="135.0" text="Email:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="NameLabel" layoutX="198.0" layoutY="100.0" text="NAME:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="NameTextField" layoutX="330.0" layoutY="98.0" onAction="#NameTextFeildClicked" promptText="Enter your Name" />
+                  <TextField fx:id="PhoneTextFeild" layoutX="330.0" layoutY="172.0" onAction="#PhoneTextFeildClicked" promptText="E.g(+36203..)" />
+                  <TextField fx:id="EmailTextFeild" layoutX="330.0" layoutY="133.0" onAction="#EmailTextFeildClicked" promptText="Enter Your Email" />
+                  <Text layoutX="119.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How satisfied were you with the following services:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutX="289.0" layoutY="60.0" prefWidth="200.0" style="-fx-background-color: #b4b4b4;">
+               <effect>
+                  <DropShadow />
+               </effect></Separator>
+                  <Separator layoutX="71.0" layoutY="62.0" orientation="VERTICAL" prefHeight="158.0" prefWidth="0.0" style="-fx-background-color: #b4b4b4;" />
+                  <Separator layoutX="89.0" layoutY="230.0" prefHeight="3.0" prefWidth="483.0" style="-fx-background-color: #b4b4b4;" />
+                  <Text fx:id="ProductQuality" layoutX="112.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Quality">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="DeliverySpeed" layoutX="112.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Speed">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="CustomerService" layoutX="109.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer service">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="Communication" layoutX="110.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Communications">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Rating fx:id="ProductRating" layoutX="356.0" layoutY="305.0" />
+                  <Rating fx:id="DeliveryRating" layoutX="356.0" layoutY="343.0" />
+                  <Rating fx:id="CommunicationRating" layoutX="356.0" layoutY="384.0" />
+                  <Rating fx:id="CustomerServiceRating" layoutX="356.0" layoutY="423.0" />
+                  <Text fx:id="Review" layoutX="197.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Would you like to say something?">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="ReviewBox" layoutX="97.0" layoutY="527.0" prefHeight="100.0" prefWidth="466.0" promptText="Please enter your suggestions here" />
+                  <Separator layoutX="209.0" layoutY="472.0" prefWidth="200.0" />
+                  <Text layoutX="208.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(From Lowest to Highest)">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="SubmitButton" layoutX="351.0" layoutY="647.0" mnemonicParsing="false" onAction="#SubmitButtonClicked" prefHeight="32.0" prefWidth="76.0" text="Submit" />
+                  <Label layoutX="292.0" layoutY="23.0" text="Feedback Survey">
+                     <font>
+                        <Font name="System Bold Italic" size="27.0" />
+                     </font>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+                  </Label>
+            <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../../styles/Modification.css" />
+      
+            </AnchorPane>
+         <styleClass>
+            <String fx:value="BusinessTemplate1AnchorPaneBackground" />
+            <String fx:value="BusinessTemplate1ScrollPaneBackground" />
+         </styleClass>
+      
+      </ScrollPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="26.0" prefWidth="886.0" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <AnchorPane prefHeight="659.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <AnchorPane prefHeight="659.0" prefWidth="52.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="19.0" prefWidth="900.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

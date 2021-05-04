@@ -1,0 +1,85 @@
+.SportsTemplate1AnchorPaneBackground{
+    -fx-background-image:url("../../img/TemplateImages/SportsTemplate1pic1.jpg");
+    -fx-background-size: 100% 100%;
+   
+}
+.BusinessTemplate1AnchorPaneBackground{
+
+    -fx-background-image: url("../../img/TemplateImages/Grey_splash.png");
+
+
+}
+.BusinessTemplate1ScrollPaneBackground{
+    -fx-border-color: #3b2d2d;
+    -fx-border-width: 7px;
+}
+.businessTemplate3
+{
+    -fx-background-color:#62bad7;
+    -fx-border-color:white;
+    -fx-border-width: 7px;
+
+}
+.businessTemplate2
+{
+    -fx-background-color: #ced6f1;
+    -fx-border-color:white;
+    -fx-border-width: 7px;
+
+}
+.businessTemplate4
+{
+
+    -fx-border-color:#9a7a40;
+    -fx-border-width: 7px;
+
+}
+.FoodTemplate1BorderPaneBackground{
+    -fx-background-image:url("../../img/TemplateImages/dounuts.jpg");
+
+}
+.foodTemplate1
+{
+    -fx-background-image:url("../resources/fxml/img/TemplateImages/donut2.jpg");
+    -fx-background-size:100% 100%;
+}
+.foodTemplate1Scrollpane{
+    -fx-border-color: #642e23;
+    -fx-border-width: 6px;
+}
+
+
+
+.HealthTemplate1AnchorPaneBackground{
+    -fx-background-image:url("../../img/TemplateImages/HealthTemplate1pic1.jpeg");
+    -fx-background-size: 100% 100%;
+   
+    
+}
+.HealthTemplate3BorderPaneBackground{
+ -fx-background-image:url("../../img/TemplateImages/TemplateSurveyHealthTemplateImage3.jpg");
+  -fx-background-size: 100% 100%;
+}
+
+
+
+.HealthTemplate2BorderPaneBackground{
+    -fx-background-image:url("../../img/TemplateImages/HealthTemplate2pic1.jpg")
+
+}
+
+.SurveyButtons{
+    -fx-border-color: #dba2c7;
+}
+
+.SurveyButtonsNew{
+    -fx-border-color: #29a76c;
+}
+.HealthTemplate4BorderPaneBackground{
+    -fx-background-image: url("../../img/TemplateImages/HealthTemplate4pic1.jpg");
+
+}
+.DrugsSurveyAnchor{
+    -fx-background-color: rgba(236, 230, 230, 0.97);
+    -fx-background-size:100% 100%;
+}

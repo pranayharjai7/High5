@@ -1,0 +1,23 @@
+.addBackButtonPic{
+    -fx-background-image: url("../fxml/img/backButton.png");
+    -fx-background-size: 100% 100%;
+}
+
+.addlogoutPic{
+    -fx-background-image: url("../fxml/img/logout.png");
+    -fx-background-size: 100% 100%;
+}
+
+.buttonBorders{
+    -fx-background-color: #adb9e6;
+    -fx-background-radius:200;
+}
+
+.textBoxBorders{
+    -fx-background-radius:200;
+}
+
+.backgroundForPrimaryFxml{
+    -fx-background-image: url("../fxml/img/28.gif");
+    -fx-background-size: 100% 100%;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="750.0" maxWidth="900.0" prefHeight="750.0" prefWidth="900.0" styleClass="backgroundForPrimaryFxml" stylesheets="@../styles/Modification.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.PrimaryController">
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="750.0" layoutY="-2.0" pickOnBounds="true">
+               <image>
+                  <Image url="@img/SurveyLogo.gif" />
+               </image>
+            </ImageView>
+            <Button fx:id="startButton" layoutX="293.0" layoutY="505.0" mnemonicParsing="false" onAction="#startButtonClicked" prefHeight="56.0" prefWidth="162.0" styleClass="buttonBorders" stylesheets="@../styles/Modification.css" text="START" textFill="WHITE">
+               <font>
+                  <Font name="Candara Bold Italic" size="29.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="110.0" prefWidth="900.0" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <AnchorPane prefHeight="618.0" prefWidth="70.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <AnchorPane prefHeight="618.0" prefWidth="70.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="69.0" prefWidth="900.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
