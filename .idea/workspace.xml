@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c50b5972-a33c-4cdd-b766-962239057992" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/model/Survey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/model/Survey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/model/SurveyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/model/SurveyManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/controller/ShowAnswersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/controller/ShowAnswersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userdata_db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/userdata_db.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SavedSurveysController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SavedSurveysController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/TemporaryTemplateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/TemplateOrCreateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/TemplateOrCreateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/TemporaryTemplate.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -2,7 +2,6 @@ package Survey5.controller;
 
 import Survey5.MainApp;
 import Survey5.controller.SurveyTemplateControllers.HealthTemplate1Controller;
-import Survey5.controller.SurveyTemplateControllers.TemporaryTemplateController;
 import Survey5.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
