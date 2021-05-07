@@ -6,16 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c50b5972-a33c-4cdd-b766-962239057992" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SavedSurveysController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SavedSurveysController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate1Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate1Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/model/QuestionsDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/model/QuestionsDaoInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/model/QuestionsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/model/QuestionsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/HealthTemplate1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/HealthTemplate1.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/controller/SavedSurveysController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/controller/SavedSurveysController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/controller/SurveyTemplateControllers/HealthTemplate1Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/controller/SurveyTemplateControllers/HealthTemplate1Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/model/QuestionsDaoInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/model/QuestionsDaoInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/model/QuestionsManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/model/QuestionsManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/SurveyTemplates/HealthTemplate1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/SurveyTemplates/HealthTemplate1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/model/Survey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/model/Survey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/model/SurveyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/model/SurveyManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/controller/ShowAnswersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/controller/ShowAnswersController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userdata_db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/userdata_db.mv.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +45,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/Survey5/model" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/High-5/High5" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -76,6 +69,7 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Survey5.model" />
       <recent name="Survey5.controller" />
     </key>
   </component>
@@ -94,15 +88,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -117,21 +109,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="Survey5.model" />
       <option name="MAIN_CLASS_NAME" value="Survey5.model.DataManagerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="High5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Survey5.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Survey5.controller" />
-      <option name="MAIN_CLASS_NAME" value="Survey5.controller.LoginControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -152,17 +129,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegisterControllerTest.testInputRegisterController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SurveyManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="High5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Survey5.controller.*" />
+          <option name="PATTERN" value="Survey5.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Survey5.controller" />
-      <option name="MAIN_CLASS_NAME" value="Survey5.controller.RegisterControllerTest" />
-      <option name="METHOD_NAME" value="testInputRegisterController(org.testfx.api.FxRobot)" />
+      <option name="PACKAGE_NAME" value="Survey5.model" />
+      <option name="MAIN_CLASS_NAME" value="Survey5.model.SurveyManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SurveyManagerTest.testGetUserSurveys" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="High5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Survey5.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Survey5.model" />
+      <option name="MAIN_CLASS_NAME" value="Survey5.model.SurveyManagerTest" />
+      <option name="METHOD_NAME" value="testGetUserSurveys" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -171,17 +163,17 @@
     <list>
       <item itemvalue="Application.MainApp" />
       <item itemvalue="JUnit.DataManagerTest" />
-      <item itemvalue="JUnit.LoginControllerTest" />
       <item itemvalue="JUnit.RegisterControllerTest" />
-      <item itemvalue="JUnit.RegisterControllerTest.testInputRegisterController" />
+      <item itemvalue="JUnit.SurveyManagerTest" />
+      <item itemvalue="JUnit.SurveyManagerTest.testGetUserSurveys" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainApp" />
+        <item itemvalue="JUnit.SurveyManagerTest" />
+        <item itemvalue="JUnit.SurveyManagerTest.testGetUserSurveys" />
         <item itemvalue="JUnit.RegisterControllerTest" />
         <item itemvalue="JUnit.DataManagerTest" />
-        <item itemvalue="JUnit.LoginControllerTest" />
-        <item itemvalue="JUnit.RegisterControllerTest.testInputRegisterController" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +216,12 @@
       <workItem from="1619162979363" duration="19587000" />
       <workItem from="1619523693225" duration="2101000" />
       <workItem from="1619575174059" duration="12004000" />
-      <workItem from="1619726948943" duration="20765000" />
+      <workItem from="1619726948943" duration="21388000" />
+      <workItem from="1620035571798" duration="1572000" />
+      <workItem from="1620049309496" duration="4416000" />
+      <workItem from="1620153059979" duration="1525000" />
+      <workItem from="1620390515030" duration="29000" />
+      <workItem from="1620390579538" duration="1938000" />
     </task>
     <servers />
   </component>

@@ -1,10 +1,6 @@
 package Survey5.model;
 
-import org.hibernate.annotations.Cascade;
-
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 public class Survey {
