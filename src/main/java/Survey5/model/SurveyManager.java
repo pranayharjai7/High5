@@ -8,8 +8,18 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class SurveyManager implements SurveysDaoInterface{
-    final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Survey5");
-    final EntityManager entityManager = entityManagerFactory.createEntityManager();
+    final EntityManagerFactory entityManagerFactory;
+    final EntityManager entityManager;
+
+    public SurveyManager() {
+        entityManagerFactory = Persistence.createEntityManagerFactory("Survey5");
+        entityManager = entityManagerFactory.createEntityManager();
+    }
+
+    public SurveyManager(String dataBaseName) {
+        entityManagerFactory = Persistence.createEntityManagerFactory(dataBaseName);
+        entityManager = entityManagerFactory.createEntityManager();
+    }
 
     @Override
     public void setSurvey(Survey survey) {
@@ -48,9 +58,27 @@ public class SurveyManager implements SurveysDaoInterface{
         return surveyList;
     }
 
+    public Survey getSurveyByName(String surveyName) {
+        TypedQuery<Survey> query = entityManager.createQuery("SELECT survey FROM Survey survey where survey.title like : surveyName ",Survey.class).setParameter("surveyName", surveyName);
+        List<Survey> surveyList = query.getResultList();
+        return surveyList.get(0);
+    }
+
+    public int getSurveyID_ByName(String surveyName) {
+        TypedQuery<Survey> query = entityManager.createQuery("SELECT survey FROM Survey survey where survey.title like : surveyName ",Survey.class).setParameter("surveyName", surveyName);
+        List<Survey> surveyList = query.getResultList();
+        return surveyList.get(0).getId();
+    }
+
     @Override
     public void close() throws Exception {
         entityManager.close();
         entityManagerFactory.close();
     }
+
+    public void deleteAllRecords() {
+        entityManager.getTransaction().begin();
+        int query = entityManager.createQuery("DELETE FROM Survey").executeUpdate();
+        entityManager.getTransaction().commit();
+    }//added delete records function /Salma
 }
