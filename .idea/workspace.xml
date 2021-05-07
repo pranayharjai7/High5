@@ -73,7 +73,7 @@
       <recent name="Survey5.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SurveyManagerTest">
+  <component name="RunManager" selected="Application.MainApp">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Survey5.MainApp" />
       <module name="High5" />
@@ -169,9 +169,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainApp" />
         <item itemvalue="JUnit.SurveyManagerTest" />
         <item itemvalue="JUnit.SurveyManagerTest.testGetUserSurveys" />
-        <item itemvalue="Application.MainApp" />
         <item itemvalue="JUnit.RegisterControllerTest" />
         <item itemvalue="JUnit.DataManagerTest" />
       </list>
