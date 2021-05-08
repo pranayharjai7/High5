@@ -181,7 +181,7 @@ public class HealthTemplate3Controller
         backButton.setOnAction(this::backToSavedSurveysButtonClicked);
     }
 
-    public void saveButtonClicked(ActionEvent actionEvent) {
+    private void saveButtonClicked(ActionEvent actionEvent) {
         Survey survey = new Survey();
         survey.setTypeOfTemplate(HealthTemplate3.getId());
         survey.setTitle(HealthTemplate3.getText());
@@ -328,7 +328,7 @@ public class HealthTemplate3Controller
             Answer7 = answer7.getSelectedToggle().toString().substring(51,answer7.getSelectedToggle().toString().length()-1);
             Answer8 = answer8.getSelectedToggle().toString().substring(51,answer8.getSelectedToggle().toString().length()-1);
             Answer9 = answer9.getSelectedToggle().toString().substring(51,answer9.getSelectedToggle().toString().length()-1);
-            Answer10 = answer10.getSelectedToggle().toString().substring(51,answer10.getSelectedToggle().toString().length()-1);
+            Answer10 = answer10.getSelectedToggle().toString().substring(52,answer10.getSelectedToggle().toString().length()-1);
             return true;
         }
     }

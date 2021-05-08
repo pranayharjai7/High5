@@ -116,6 +116,8 @@ public class TemplateSurveyController {
 
     @FXML
     void DrugsStudySurveyTemplateButtonClicked(ActionEvent event) throws IOException {
+        HealthTemplate4Controller.setData(userdata);
+        HealthTemplate4Controller.setCreateOrAnswerFunction("create");
         MainApp.setRoot("/fxml/SurveyTemplates/HealthTemplate4.fxml");
     }
 

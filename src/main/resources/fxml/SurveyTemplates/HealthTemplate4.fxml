@@ -1,129 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="650.0" prefWidth="750.0" styleClass="HealthTemplate4BorderPaneBackground" stylesheets="@TemplateStyles/tempcss.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.HealthTemplate4Controller">
+<BorderPane prefHeight="700.0" prefWidth="900.0" styleClass="HealthTemplate4BorderPaneBackground" stylesheets="@TemplateStyles/tempcss.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.HealthTemplate4Controller">
    <center>
-      <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" opacity="0.8" prefHeight="2000.0" prefWidth="850.0" style="-fx-border-color: #995726; -fx-border-width: 7px;" styleClass="DrugsSurveyAnchor">
+      <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="800.0">
+         <content>
+            <AnchorPane fx:id="HealthTemplate4AnchorPane" minHeight="0.0" minWidth="0.0" opacity="0.8" prefHeight="2200.0" prefWidth="850.0" style="-fx-border-color: #995726; -fx-border-width: 7px;" styleClass="DrugsSurveyAnchor">
                <children>
-                  <Label fx:id="HealthTemplate4" layoutX="280.0" layoutY="19.0" text="Drug Test Survey" textFill="#ca1b61">
+                  <Label fx:id="HealthTemplate4" layoutX="258.0" layoutY="24.0" text="Drug Test Survey" textFill="#ca1b61">
                      <font>
                         <Font size="29.0" />
                      </font>
                   </Label>
-                  <Separator layoutX="273.0" layoutY="60.0" opacity="0.46" prefHeight="0.0" prefWidth="230.0" style="-fx-background-color: #995726;" />
-                  <Label layoutX="272.0" layoutY="119.0" text="Name" textFill="#5f8a46">
+                  <Separator layoutX="251.0" layoutY="65.0" opacity="0.46" prefHeight="0.0" prefWidth="230.0" style="-fx-background-color: #995726;" />
+                  <Label fx:id="Question1" layoutX="272.0" layoutY="119.0" text="Name" textFill="#5f8a46">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="280.0" layoutY="155.0" text="Age" textFill="#610505">
+                  <Label fx:id="Question2" layoutX="280.0" layoutY="155.0" text="Age" textFill="#610505">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="366.0" layoutY="116.0" />
-                  <ChoiceBox layoutX="365.0" layoutY="152.0" prefWidth="150.0" />
-                  <Label layoutX="275.0" layoutY="200.0" text="Drug" textFill="#3a3daa">
+                  <TextField fx:id="Answer1" layoutX="366.0" layoutY="116.0" />
+                  <Label fx:id="Question3" layoutX="275.0" layoutY="200.0" text="Drug" textFill="#3a3daa">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="366.0" layoutY="197.0" />
-                  <Text fill="#4b3a99" layoutX="55.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Have you failed to meet your responsibilities at home, work, or school, such as experiencing repeated absences or poor performance, because of your continuing Drug under study use?" wrappingWidth="580.604248046875">
+                  <TextField fx:id="Answer3" layoutX="366.0" layoutY="197.0" />
+                  <Text fx:id="Question4" fill="#4b3a99" layoutX="55.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Have you failed to meet your responsibilities at home, work, or school, such as experiencing repeated absences or poor performance, because of your continuing Drug under study use?" wrappingWidth="580.604248046875">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <RadioButton layoutX="76.0" layoutY="341.0" mnemonicParsing="false" text="Yes" textFill="#9a3939" />
-                  <RadioButton layoutX="77.0" layoutY="367.0" mnemonicParsing="false" text="No" textFill="#9a3939" />
-                  <Text fill="#3e9427" layoutX="57.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Do you spend a great deal of time involved in activities to obtain Drug, use it, or recover from its effects?" wrappingWidth="580.0">
+                  <RadioButton fx:id="Answer4_1" layoutX="76.0" layoutY="341.0" mnemonicParsing="false" text="Yes" textFill="#9a3939">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer4" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Answer4_2" layoutX="77.0" layoutY="367.0" mnemonicParsing="false" text="No" textFill="#9a3939" toggleGroup="$answer4" />
+                  <Text fx:id="Question5" fill="#3e9427" layoutX="57.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Do you spend a great deal of time involved in activities to obtain Drug, use it, or recover from its effects?" wrappingWidth="580.0">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <RadioButton layoutX="76.0" layoutY="478.0" mnemonicParsing="false" text="Yes" textFill="#5fac4a" />
-                  <RadioButton layoutX="76.0" layoutY="505.0" mnemonicParsing="false" text="No" textFill="#5fac4a" />
-                  <Text fill="#18268f" layoutX="57.0" layoutY="568.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Have you used the Drug when it was hazardous for you to do so, such as while driving your car or operating machinery?" wrappingWidth="580.0">
+                  <RadioButton fx:id="Answer5_1" layoutX="76.0" layoutY="478.0" mnemonicParsing="false" text="Yes" textFill="#5fac4a">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer5" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Answer5_2" layoutX="76.0" layoutY="505.0" mnemonicParsing="false" text="No" textFill="#5fac4a" toggleGroup="$answer5" />
+                  <Text fx:id="Question6" fill="#18268f" layoutX="57.0" layoutY="568.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Have you used the Drug when it was hazardous for you to do so, such as while driving your car or operating machinery?" wrappingWidth="580.0">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <RadioButton layoutX="76.0" layoutY="634.0" mnemonicParsing="false" text="Yes" textFill="#18268f" />
-                  <RadioButton layoutX="76.0" layoutY="664.0" mnemonicParsing="false" text="No" textFill="#18268f" />
-                  <Text fill="#9a3939" layoutX="57.0" layoutY="724.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4. Have you experienced social or relationship issues, such as fights or arguments, due to effects of  the Drug use and continued taking it anyway?" wrappingWidth="580.0">
+                  <RadioButton fx:id="Answer6_1" layoutX="76.0" layoutY="634.0" mnemonicParsing="false" text="Yes" textFill="#18268f">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer6" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="Answer6_2" layoutX="76.0" layoutY="664.0" mnemonicParsing="false" text="No" textFill="#18268f" toggleGroup="$answer6" />
+                  <Text fx:id="Question7" fill="#9a3939" layoutX="57.0" layoutY="724.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Have you experienced social or relationship issues, such as fights or arguments, due to effects of  the Drug use and continued taking it anyway?" wrappingWidth="580.0">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <RadioButton layoutX="76.0" layoutY="780.0" mnemonicParsing="false" text="Yes" textFill="#9a3939" />
-                  <RadioButton layoutX="76.0" layoutY="811.0" mnemonicParsing="false" text="No" textFill="#9a3939" />
-                  <Text fill="#3e9427" layoutX="57.0" layoutY="873.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5. Do you frequently take the Drug in greater amounts than you intended?" wrappingWidth="472.0">
+                  <RadioButton fx:id="Answer7_1" layoutX="76.0" layoutY="780.0" mnemonicParsing="false" text="Yes" textFill="#9a3939">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer7" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Answer7_2" layoutX="76.0" layoutY="811.0" mnemonicParsing="false" text="No" textFill="#9a3939" toggleGroup="$answer7" />
+                  <Text fx:id="Question8" fill="#3e9427" layoutX="57.0" layoutY="873.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Do you frequently take the Drug in greater amounts than you intended?" wrappingWidth="472.0">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <RadioButton layoutX="76.0" layoutY="908.0" mnemonicParsing="false" text="Yes" textFill="#3e9427" />
-                  <RadioButton layoutX="76.0" layoutY="937.0" mnemonicParsing="false" text="No" textFill="#3e9427" />
-                  <Text fill="#18268f" layoutX="57.0" layoutY="995.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6. Do you often take Xanax for longer periods of time than you meant to?" wrappingWidth="472.0">
+                  <RadioButton fx:id="Answer8_1" layoutX="76.0" layoutY="908.0" mnemonicParsing="false" text="Yes" textFill="#3e9427">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer8" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Answer8_2" layoutX="76.0" layoutY="937.0" mnemonicParsing="false" text="No" textFill="#3e9427" toggleGroup="$answer8" />
+                  <Text fx:id="Question9" fill="#18268f" layoutX="57.0" layoutY="995.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Do you often take Xanax for longer periods of time than you meant to?" wrappingWidth="472.0">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <RadioButton layoutX="76.0" layoutY="1022.0" mnemonicParsing="false" text="Yes" textFill="#18268f" />
-                  <RadioButton layoutX="76.0" layoutY="1057.0" mnemonicParsing="false" text="No" textFill="#18268f" />
-                  <Text fill="#9a3939" layoutX="55.0" layoutY="1115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7. Have you often wanted to cut down on your usage of Xanax?" wrappingWidth="472.0">
+                  <RadioButton fx:id="Answer9_1" layoutX="76.0" layoutY="1022.0" mnemonicParsing="false" text="Yes" textFill="#18268f">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer9" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Answer9_2" layoutX="76.0" layoutY="1057.0" mnemonicParsing="false" text="No" textFill="#18268f" toggleGroup="$answer9" />
+                  <Text fx:id="Question10" fill="#9a3939" layoutX="55.0" layoutY="1115.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Have you often wanted to cut down on your usage of Xanax?" wrappingWidth="472.0">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <RadioButton layoutX="76.0" layoutY="1152.0" mnemonicParsing="false" text="Yes" textFill="#9a3939" />
-                  <RadioButton layoutX="76.0" layoutY="1177.0" mnemonicParsing="false" text="No" textFill="#9a3939" />
-                  <Text fill="#3e9427" layoutX="55.0" layoutY="1235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8. Do you have powerful cravings or urges to use Xanax?" wrappingWidth="472.0">
+                  <RadioButton fx:id="Answer10_1" layoutX="76.0" layoutY="1152.0" mnemonicParsing="false" text="Yes" textFill="#9a3939">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer10" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Answer10_2" layoutX="76.0" layoutY="1177.0" mnemonicParsing="false" text="No" textFill="#9a3939" toggleGroup="$answer10" />
+                  <Text fx:id="Question11" fill="#3e9427" layoutX="55.0" layoutY="1235.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Do you have powerful cravings or urges to use Xanax?" wrappingWidth="472.0">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <RadioButton layoutX="76.0" layoutY="1267.0" mnemonicParsing="false" text="Yes" textFill="#3e9427" />
-                  <RadioButton layoutX="76.0" layoutY="1296.0" mnemonicParsing="false" text="No" textFill="#3e9427" />
-                  <Text fill="#18268f" layoutX="57.0" layoutY="1364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9. Have you reduced or abandoned your social or recreational activities due to your continued Xanax use?" wrappingWidth="472.0">
+                  <RadioButton fx:id="Answer11_1" layoutX="76.0" layoutY="1267.0" mnemonicParsing="false" text="Yes" textFill="#3e9427">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer11" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Answer11_2" layoutX="76.0" layoutY="1296.0" mnemonicParsing="false" text="No" textFill="#3e9427" toggleGroup="$answer11" />
+                  <Text fx:id="Question12" fill="#18268f" layoutX="57.0" layoutY="1364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Have you reduced or abandoned your social or recreational activities due to your continued Xanax use?" wrappingWidth="472.0">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <RadioButton layoutX="76.0" layoutY="1421.0" mnemonicParsing="false" text="Yes" textFill="#18268f" />
-                  <RadioButton layoutX="76.0" layoutY="1448.0" mnemonicParsing="false" text="No" textFill="#18268f" />
-                  <Text fill="#9a3939" layoutX="59.0" layoutY="1502.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10. After using the same dose of Xanax for a while, have you noticed a lessened effect? (Please answer “No” if you are only taking Xanax exclusively as directed under medical supervision.)" wrappingWidth="491.20001220703125">
+                  <RadioButton fx:id="Answer12_1" layoutX="76.0" layoutY="1421.0" mnemonicParsing="false" text="Yes" textFill="#18268f">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer12" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Answer12_2" layoutX="76.0" layoutY="1448.0" mnemonicParsing="false" text="No" textFill="#18268f" toggleGroup="$answer12" />
+                  <Text fx:id="Question13" fill="#9a3939" layoutX="59.0" layoutY="1502.0" strokeType="OUTSIDE" strokeWidth="0.0" text="After using the same dose of Xanax for a while, have you noticed a lessened effect? (Please answer “No” if you are only taking Xanax exclusively as directed under medical supervision.)" wrappingWidth="491.20001220703125">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <RadioButton layoutX="76.0" layoutY="1579.0" mnemonicParsing="false" text="Yes" textFill="#9a3939" />
-                  <RadioButton layoutX="76.0" layoutY="1607.0" mnemonicParsing="false" text="No" textFill="#9a3939" />
-                  <Text fill="#3e9427" layoutX="69.0" layoutY="1673.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11.When ceasing prolonged Xanax use, have you experienced rapid pulse, tremors in the hands, visual or auditory hallucinations, agitation, anxiety, sweating, insomnia, nausea, vomiting, or seizures? (Please answer “No” if you are only taking Xanax exclusively as directed under medical supervision.)" wrappingWidth="506.4000244140625">
+                  <RadioButton fx:id="Answer13_1" layoutX="76.0" layoutY="1579.0" mnemonicParsing="false" text="Yes" textFill="#9a3939">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer13" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Answer13_2" layoutX="76.0" layoutY="1607.0" mnemonicParsing="false" text="No" textFill="#9a3939" toggleGroup="$answer13" />
+                  <Text fx:id="Question14" fill="#3e9427" layoutX="70.0" layoutY="1696.0" strokeType="OUTSIDE" strokeWidth="0.0" text="When ceasing prolonged Xanax use, have you experienced rapid pulse, tremors in the hands, visual or auditory hallucinations, agitation, anxiety, sweating, insomnia, nausea, vomiting, or seizures?" wrappingWidth="506.4000244140625">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <RadioButton layoutX="76.0" layoutY="1778.0" mnemonicParsing="false" text="Yes" textFill="#3e9427" />
-                  <RadioButton layoutX="76.0" layoutY="1805.0" mnemonicParsing="false" text="No" textFill="#3e9427" />
-                  <Separator layoutX="723.0" layoutY="65.0" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: purple;" />
-                  <Separator layoutX="744.0" layoutY="19.0" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: black;" />
-                  <Separator layoutX="127.0" layoutY="250.0" prefHeight="3.0" prefWidth="565.0" style="-fx-background-color: grey;" />
+                  <RadioButton fx:id="Answer14_1" layoutX="76.0" layoutY="1778.0" mnemonicParsing="false" text="Yes" textFill="#3e9427">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer14" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Answer14_2" layoutX="76.0" layoutY="1805.0" mnemonicParsing="false" text="No" textFill="#3e9427" toggleGroup="$answer14" />
+                  <Separator layoutX="750.0" layoutY="65.0" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: purple;" />
+                  <Separator layoutX="775.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: black;" />
+                  <Separator layoutX="142.0" layoutY="250.0" prefHeight="3.0" prefWidth="565.0" style="-fx-background-color: grey;" />
                   <Separator layoutX="58.0" layoutY="458.0" prefHeight="0.0" prefWidth="558.0" />
                   <Separator layoutX="64.0" layoutY="16.0" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: green;" />
                   <Separator layoutX="84.0" layoutY="52.0" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #378a7c;" />
@@ -137,34 +178,38 @@
                   <Separator layoutX="59.0" layoutY="1552.0" prefHeight="0.0" prefWidth="463.0" />
                   <Separator layoutX="63.0" layoutY="1741.0" prefHeight="8.0" prefWidth="463.0" />
                   <Separator layoutX="55.0" layoutY="325.0" prefHeight="5.0" prefWidth="570.0" />
-                  <Text fill="#393da2" layoutX="69.0" layoutY="1871.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please feel free to write any unusual symptoms you might have felt or any feedback you like to give specifically about this drug" wrappingWidth="508.0">
+                  <Text fx:id="Question15" fill="#393da2" layoutX="69.0" layoutY="1871.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please feel free to write any unusual symptoms you might have felt or any feedback you like to give specifically about this drug" wrappingWidth="508.0">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <TextArea layoutX="72.0" layoutY="1905.0" prefHeight="127.0" prefWidth="530.0" promptText="Type here.." />
-                  <Button layoutX="323.0" layoutY="2085.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="87.0" text="Button" textFill="#f01924">
+                  <TextArea fx:id="Answer15" layoutX="72.0" layoutY="1905.0" prefHeight="127.0" prefWidth="530.0" promptText="Type here.." />
+                  <Button fx:id="saveButton" layoutX="323.0" layoutY="2085.0" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="30.0" prefWidth="87.0" text="Save" textFill="#f01924">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../../styles/Modification.css" />
+                  <TextField fx:id="Answer2" layoutX="366.0" layoutY="153.0" />
 
                </children>
             </AnchorPane>
-        </content>
+         </content>
       </ScrollPane>
    </center>
    <top>
-      <VBox prefHeight="120.0" prefWidth="1000.0" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="50.0" prefWidth="50.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="backButton" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" onAction="#backToTemplatesButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../../styles/Modification.css" />
+         </children>
+      </AnchorPane>
    </top>
    <left>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="600.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
    </left>
    <right>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="50.0" prefWidth="45.0" BorderPane.alignment="CENTER" />
    </right>
    <bottom>
-      <VBox prefHeight="142.0" prefWidth="1000.0" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="47.0" prefWidth="900.0" BorderPane.alignment="CENTER" />
    </bottom>
 </BorderPane>

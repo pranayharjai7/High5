@@ -4,6 +4,7 @@ import Survey5.MainApp;
 import Survey5.controller.SurveyTemplateControllers.HealthTemplate1Controller;
 import Survey5.controller.SurveyTemplateControllers.HealthTemplate2Controller;
 import Survey5.controller.SurveyTemplateControllers.HealthTemplate3Controller;
+import Survey5.controller.SurveyTemplateControllers.HealthTemplate4Controller;
 import Survey5.model.Data;
 import Survey5.model.Survey;
 import Survey5.model.SurveyManager;
@@ -91,6 +92,11 @@ public class AnswerSurveyController {
             case "HealthTemplate3": {
                 HealthTemplate3Controller.setData(userdata);
                 HealthTemplate3Controller.setCreateOrAnswerFunction("answer",survey);
+                break;
+            }
+            case "HealthTemplate4": {
+                HealthTemplate4Controller.setData(userdata);
+                HealthTemplate4Controller.setCreateOrAnswerFunction("answer",survey);
                 break;
             }
         }
