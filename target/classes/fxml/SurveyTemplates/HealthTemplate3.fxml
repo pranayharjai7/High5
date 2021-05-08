@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
@@ -15,96 +16,117 @@
    <center>
       <ScrollPane prefHeight="700.0" prefWidth="800.0" styleClass="HealthTemplate2" stylesheets="@/fxml/SurveyTemplates/TemplateStyles/tempcss.css">
          <content>
-              <AnchorPane prefHeight="1639.0" prefWidth="821.0" style="-fx-background-color: #bcd0ea; -fx-border-color: white; -fx-border-width: 8px;" stylesheets="@/fxml/SurveyTemplates/TemplateStyles/tempcss.css">
+            <AnchorPane fx:id="HealthTemplate3AnchorPane" prefHeight="1639.0" prefWidth="821.0" style="-fx-background-color: #bcd0ea; -fx-border-color: white; -fx-border-width: 8px;" stylesheets="@/fxml/SurveyTemplates/TemplateStyles/tempcss.css">
                <children>
-                              <Label layoutX="46.0" layoutY="119.0" prefHeight="27.0" prefWidth="656.0" text="1. What do you think about the lockdown measures and restrictions in Hungary ?">
-                                 <font>
-                                    <Font name="Bell MT" size="16.0" />
-                                 </font>
-                              </Label>
-                              <RadioButton layoutX="87.0" layoutY="215.0" mnemonicParsing="false" text="Agree" textFill="#2e2d2d">
-                                 <toggleGroup>
-                                    <ToggleGroup fx:id="group1" />
-                                 </toggleGroup>
-                              </RadioButton>
-                              <RadioButton layoutX="494.0" layoutY="158.0" mnemonicParsing="false" text="Strongly Disagree" toggleGroup="$group1" />
-                              <RadioButton layoutX="493.0" layoutY="206.0" mnemonicParsing="false" text="Disagree" toggleGroup="$group1" />
-                              <Label layoutX="54.0" layoutY="269.0" prefHeight="27.0" prefWidth="609.0" text="2. How was your mental health affected in the lockdown period ?" textFill="#0e0e0e">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <RadioButton layoutX="87.0" layoutY="319.0" mnemonicParsing="false" text="More short tempered ">
-                                 <toggleGroup>
-                                    <ToggleGroup fx:id="group2" />
-                                 </toggleGroup>
-                              </RadioButton>
-                              <RadioButton layoutX="87.0" layoutY="375.0" mnemonicParsing="false" text="More Stressful" toggleGroup="$group2" />
-                              <RadioButton layoutX="493.0" layoutY="319.0" mnemonicParsing="false" text="More Lonely" toggleGroup="$group2" />
-                              <RadioButton layoutX="493.0" layoutY="366.0" mnemonicParsing="false" text="No Major Changes" toggleGroup="$group2" />
-                              <Label layoutX="54.0" layoutY="437.0" prefHeight="27.0" prefWidth="609.0" text="3. What do you think of the Hungarian Health care ?">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <RadioButton layoutX="87.0" layoutY="486.0" mnemonicParsing="false" text="Excellent ">
-                                 <toggleGroup>
-                                    <ToggleGroup fx:id="group3" />
-                                 </toggleGroup>
-                              </RadioButton>
-                              <RadioButton layoutX="87.0" layoutY="541.0" mnemonicParsing="false" text="Good" toggleGroup="$group3" />
-                              <RadioButton layoutX="493.0" layoutY="495.0" mnemonicParsing="false" text="Fair" toggleGroup="$group3" />
-                              <RadioButton layoutX="493.0" layoutY="541.0" mnemonicParsing="false" text="Bad" toggleGroup="$group3" />
-                              <Button fx:id="submitButtonClicked" layoutX="328.0" layoutY="1409.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="122.0" text="Submit" />
-                  <Label layoutX="54.0" layoutY="594.0" prefHeight="32.0" prefWidth="767.0" text="4. Have you been vaccinated with the currently available Covid 19 vaccines (Pfizer vaccine for example) ?">
+                  <Label fx:id="Question1" layoutX="46.0" layoutY="119.0" prefHeight="27.0" prefWidth="656.0" text="1. What do you think about the lockdown measures and restrictions in Hungary ?">
+                     <font>
+                        <Font name="Bell MT" size="16.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="Answer1_2" layoutX="87.0" layoutY="215.0" mnemonicParsing="false" text="Agree" textFill="#2e2d2d">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer1" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Answer1_3" layoutX="494.0" layoutY="158.0" mnemonicParsing="false" text="Strongly Disagree" toggleGroup="$answer1" />
+                  <RadioButton fx:id="Answer1_4" layoutX="493.0" layoutY="206.0" mnemonicParsing="false" text="Disagree" toggleGroup="$answer1" />
+                  <Label fx:id="Question2" layoutX="54.0" layoutY="269.0" prefHeight="27.0" prefWidth="609.0" text="2. How was your mental health affected in the lockdown period ?" textFill="#0e0e0e">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <RadioButton layoutX="87.0" layoutY="647.0" mnemonicParsing="false" text="Yes" toggleGroup="$group3" />
-                  <RadioButton layoutX="493.0" layoutY="647.0" mnemonicParsing="false" text="No" toggleGroup="$group3" />
-                  <Label layoutX="61.0" layoutY="704.0" prefHeight="25.0" prefWidth="753.0" text="5. Do you properly follow the lockdown procedures and regulations (curfew, wearing a mask , ......) ?">
+                  <RadioButton fx:id="Answer2_1" layoutX="87.0" layoutY="319.0" mnemonicParsing="false" text="More short tempered ">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer2" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Answer2_2" layoutX="87.0" layoutY="375.0" mnemonicParsing="false" text="More Stressful" toggleGroup="$answer2" />
+                  <RadioButton fx:id="Answer2_3" layoutX="493.0" layoutY="319.0" mnemonicParsing="false" text="More Lonely" toggleGroup="$answer2" />
+                  <RadioButton fx:id="Answer2_4" layoutX="493.0" layoutY="366.0" mnemonicParsing="false" text="No Major Changes" toggleGroup="$answer2" />
+                  <Label fx:id="Question3" layoutX="54.0" layoutY="437.0" prefHeight="27.0" prefWidth="609.0" text="3. What do you think of the Hungarian Health care ?">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <RadioButton layoutX="87.0" layoutY="768.0" mnemonicParsing="false" text="Yes" toggleGroup="$group3" />
-                  <RadioButton layoutX="493.0" layoutY="768.0" mnemonicParsing="false" text="No" toggleGroup="$group3" />
-                  <Label layoutX="61.0" layoutY="818.0" prefHeight="25.0" prefWidth="719.0" text="6. Were you able to travel to your home country or Hungary during the Covid 19 pandemic ?">
+                  <RadioButton fx:id="Answer3_1" layoutX="87.0" layoutY="486.0" mnemonicParsing="false" text="Excellent ">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer3" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Answer3_2" layoutX="87.0" layoutY="541.0" mnemonicParsing="false" text="Good" toggleGroup="$answer3" />
+                  <RadioButton fx:id="Answer3_3" layoutX="493.0" layoutY="495.0" mnemonicParsing="false" text="Fair" toggleGroup="$answer3" />
+                  <RadioButton fx:id="Answer3_4" layoutX="493.0" layoutY="541.0" mnemonicParsing="false" text="Bad" toggleGroup="$answer3" />
+                  <Button fx:id="saveButton" layoutX="328.0" layoutY="1409.0" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="33.0" prefWidth="122.0" text="Save" />
+                  <Label fx:id="Question4" layoutX="54.0" layoutY="594.0" prefHeight="32.0" prefWidth="767.0" text="4. Have you been vaccinated with the currently available Covid 19 vaccines (Pfizer vaccine for example) ?">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <RadioButton layoutX="87.0" layoutY="869.0" mnemonicParsing="false" text="Yes" toggleGroup="$group3" />
-                  <RadioButton layoutX="493.0" layoutY="869.0" mnemonicParsing="false" text="No" toggleGroup="$group3" />
-                  <Label layoutX="61.0" layoutY="914.0" prefHeight="21.0" prefWidth="553.0" text="7. How was your Physical Health affected in the lockdown period ?">
+                  <RadioButton fx:id="Answer4_1" layoutX="87.0" layoutY="647.0" mnemonicParsing="false" text="Yes">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer4" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="Answer4_2" layoutX="493.0" layoutY="647.0" mnemonicParsing="false" text="No" toggleGroup="$answer4" />
+                  <Label fx:id="Question5" layoutX="61.0" layoutY="704.0" prefHeight="25.0" prefWidth="753.0" text="5. Do you properly follow the lockdown procedures and regulations (curfew, wearing a mask , ......) ?">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <RadioButton layoutX="493.0" layoutY="971.0" mnemonicParsing="false" text="Gained some Weight" toggleGroup="$group3" />
-                  <RadioButton layoutX="87.0" layoutY="967.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="171.0" text="Maintained balanced diet " toggleGroup="$group3" />
-                  <Label layoutX="61.0" layoutY="1023.0" prefHeight="25.0" prefWidth="712.0" text="8. Are you concerned about how the lockdown affects employment and the economy in general ?">
+                  <RadioButton fx:id="Answer5_1" layoutX="87.0" layoutY="768.0" mnemonicParsing="false" text="Yes">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer5" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="Answer5_2" layoutX="493.0" layoutY="768.0" mnemonicParsing="false" text="No" toggleGroup="$answer5" />
+                  <Label fx:id="Question6" layoutX="61.0" layoutY="818.0" prefHeight="25.0" prefWidth="719.0" text="6. Were you able to travel to your home country or Hungary during the Covid 19 pandemic ?">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <RadioButton layoutX="87.0" layoutY="1082.0" mnemonicParsing="false" text="Yes" toggleGroup="$group3" />
-                  <RadioButton layoutX="493.0" layoutY="1082.0" mnemonicParsing="false" text="No" toggleGroup="$group3" />
-                  <Label layoutX="61.0" layoutY="1155.0" prefHeight="21.0" prefWidth="679.0" text="9. Are you concerned about your family and loved ones getting infected by the Covid 19 Virus?">
+                  <RadioButton fx:id="Answer6_1" layoutX="87.0" layoutY="869.0" mnemonicParsing="false" text="Yes">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer6" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="Answer6_2" layoutX="493.0" layoutY="869.0" mnemonicParsing="false" text="No" toggleGroup="$answer6" />
+                  <Label fx:id="Question7" layoutX="61.0" layoutY="914.0" prefHeight="21.0" prefWidth="553.0" text="7. How was your Physical Health affected in the lockdown period ?">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <RadioButton layoutX="87.0" layoutY="1205.0" mnemonicParsing="false" text="Yes" toggleGroup="$group3" />
-                  <RadioButton layoutX="493.0" layoutY="1205.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="194.0" text="No, since they are vaccinated " toggleGroup="$group3" />
-                  <Label layoutX="61.0" layoutY="1265.0" text="10. Are the most recently developed vaccines available in your home country or in Hungary ?  ">
+                  <RadioButton fx:id="Answer7_2" layoutX="493.0" layoutY="971.0" mnemonicParsing="false" text="Gained some Weight">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer7" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="Answer7_1" layoutX="87.0" layoutY="967.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="171.0" text="Maintained balanced diet " toggleGroup="$answer7" />
+                  <Label fx:id="Question8" layoutX="61.0" layoutY="1023.0" prefHeight="25.0" prefWidth="712.0" text="8. Are you concerned about how the lockdown affects employment and the economy in general ?">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <RadioButton layoutX="87.0" layoutY="1305.0" mnemonicParsing="false" text="Yes" toggleGroup="$group3" />
-                  <RadioButton layoutX="493.0" layoutY="1305.0" mnemonicParsing="false" text="No" toggleGroup="$group3" />
+                  <RadioButton fx:id="Answer8_1" layoutX="87.0" layoutY="1082.0" mnemonicParsing="false" text="Yes">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer8" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="Answer8_2" layoutX="493.0" layoutY="1082.0" mnemonicParsing="false" text="No" toggleGroup="$answer8" />
+                  <Label fx:id="Question9" layoutX="61.0" layoutY="1155.0" prefHeight="21.0" prefWidth="679.0" text="9. Are you concerned about your family and loved ones getting infected by the Covid 19 Virus?">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="Answer9_1" layoutX="87.0" layoutY="1205.0" mnemonicParsing="false" text="Yes">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer9" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="Answer9_2" layoutX="493.0" layoutY="1205.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="194.0" text="No, since they are vaccinated " toggleGroup="$answer9" />
+                  <Label fx:id="Question10" layoutX="61.0" layoutY="1265.0" text="10. Are the most recently developed vaccines available in your home country or in Hungary ?  ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="Answer10_1" layoutX="87.0" layoutY="1305.0" mnemonicParsing="false" text="Yes">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer10" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="Answer10_2" layoutX="493.0" layoutY="1305.0" mnemonicParsing="false" text="No" toggleGroup="$answer10" />
                   <Separator layoutX="62.0" layoutY="253.0" prefHeight="5.0" prefWidth="705.0" />
                   <Separator layoutX="62.0" layoutY="408.0" prefHeight="5.0" prefWidth="705.0" />
                   <Separator layoutX="65.0" layoutY="576.0" prefHeight="5.0" prefWidth="705.0" />
@@ -120,9 +142,8 @@
                         <Font name="Bell MT" size="37.0" />
                      </font>
                   </Label>
-                  <RadioButton layoutX="87.0" layoutY="167.0" mnemonicParsing="false" text="Strongly Agree" />
+                  <RadioButton fx:id="Answer1_1" layoutX="87.0" layoutY="167.0" mnemonicParsing="false" text="Strongly Agree" toggleGroup="$answer1" />
                   <Separator layoutX="215.0" layoutY="93.0" prefHeight="0.0" prefWidth="225.0" style="-fx-background-color: #426a9f;" />
-                  <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../../styles/Modification.css" />
 
                </children>
             </AnchorPane>
@@ -130,7 +151,15 @@
       </ScrollPane>
    </center>
    <top>
-      <VBox prefHeight="69.0" prefWidth="900.0" BorderPane.alignment="CENTER" />
+      <VBox prefHeight="69.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#backToTemplatesButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../../styles/Modification.css" textFill="#030303">
+               <VBox.margin>
+                  <Insets left="15.0" top="15.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
    </top>
    <left>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
