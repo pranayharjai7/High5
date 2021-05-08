@@ -5,10 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c50b5972-a33c-4cdd-b766-962239057992" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/AnswerSurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/AnswerSurveyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SavedSurveysController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SavedSurveysController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/TemporaryTemplateController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/TemplateOrCreateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/TemplateOrCreateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/TemporaryTemplate.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate2Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/FoodTemplate2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/FoodTemplate2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/HealthTemplate2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/HealthTemplate2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/controller/AnswerSurveyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/controller/AnswerSurveyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/controller/SavedSurveysController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/controller/SavedSurveysController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/controller/SurveyTemplateControllers/HealthTemplate2Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/controller/SurveyTemplateControllers/HealthTemplate2Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/SurveyTemplates/FoodTemplate2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/SurveyTemplates/FoodTemplate2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/SurveyTemplates/HealthTemplate2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/SurveyTemplates/HealthTemplate2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userdata_db.mv.db" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +36,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1qHNkdyw7GCEEL23tyD5tasPmzb" />
   <component name="ProjectLevelVcsManager">
@@ -87,13 +94,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -221,6 +230,7 @@
       <workItem from="1620153059979" duration="1525000" />
       <workItem from="1620390515030" duration="29000" />
       <workItem from="1620390579538" duration="1938000" />
+      <workItem from="1620412392042" duration="11771000" />
     </task>
     <servers />
   </component>

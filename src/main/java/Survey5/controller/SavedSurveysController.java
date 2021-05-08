@@ -2,6 +2,7 @@ package Survey5.controller;
 
 import Survey5.MainApp;
 import Survey5.controller.SurveyTemplateControllers.HealthTemplate1Controller;
+import Survey5.controller.SurveyTemplateControllers.HealthTemplate2Controller;
 import Survey5.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -79,6 +80,11 @@ public class SavedSurveysController{
             case "HealthTemplate1": {
                 HealthTemplate1Controller.setData(userdata);
                 HealthTemplate1Controller.setCreateOrAnswerFunction("ShowAnswer",survey);
+                break;
+            }
+            case "HealthTemplate2": {
+                HealthTemplate2Controller.setData(userdata);
+                HealthTemplate2Controller.setCreateOrAnswerFunction("ShowAnswer",survey);
                 break;
             }
         }
