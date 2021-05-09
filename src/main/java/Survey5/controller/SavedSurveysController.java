@@ -39,11 +39,10 @@ public class SavedSurveysController{
         for (Survey survey:sList) {
             buttonList.add(new Button(survey.getTitle()));
             buttonList.get(buttonList.size()-1).setLayoutX(20);
-            if(buttonList.size()<=1){
+            if(buttonList.size()<=1)
                 buttonList.get(buttonList.size() - 1).setLayoutY(searchBarField.getLayoutY()+50);
-            }else {
+            else
                 buttonList.get(buttonList.size() - 1).setLayoutY(buttonList.get(buttonList.size() - 2).getLayoutY() + 50);
-            }
             buttonList.get(buttonList.size()-1).setId(survey.getId()+"");
             buttonList.get(buttonList.size() - 1).setOnAction(this::savedSurveyClicked);
 
