@@ -2,6 +2,9 @@
 
 import Survey5.MainApp;
 import Survey5.controller.SurveyTemplateControllers.HealthTemplate1Controller;
+import Survey5.controller.SurveyTemplateControllers.HealthTemplate2Controller;
+import Survey5.controller.SurveyTemplateControllers.HealthTemplate3Controller;
+import Survey5.controller.SurveyTemplateControllers.HealthTemplate4Controller;
 import Survey5.model.Data;
 import Survey5.model.Survey;
 import Survey5.model.SurveyManager;
@@ -16,17 +19,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-<span class="nc" id="L19">public class AnswerSurveyController {</span>
+<span class="nc" id="L22">public class AnswerSurveyController {</span>
 
 
-<span class="nc" id="L22">    private SurveysDaoInterface sm = new SurveyManager();</span>
+<span class="nc" id="L25">    private SurveysDaoInterface sm = new SurveyManager();</span>
     private List&lt;Survey&gt; sList;
-<span class="nc" id="L24">    private List&lt;Button&gt; buttonList = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L27">    private List&lt;Button&gt; buttonList = new ArrayList&lt;&gt;();</span>
     private static Data userdata;
 
     public static void setUserdata(Data userdata) {
-<span class="nc" id="L28">        AnswerSurveyController.userdata = userdata;</span>
-<span class="nc" id="L29">    }</span>
+<span class="nc" id="L31">        AnswerSurveyController.userdata = userdata;</span>
+<span class="nc" id="L32">    }</span>
 
     @FXML
     private AnchorPane AnswerSurveyAnchorPane;
@@ -39,59 +42,74 @@ import java.util.List;
 
     @FXML
     private void initialize(){
-<span class="nc" id="L42">        sList = sm.getAllSurveys();</span>
-<span class="nc bnc" id="L43" title="All 2 branches missed.">        for (Survey survey: sList) {</span>
-<span class="nc" id="L44">            buttonList.add(new Button(survey.getTitle()));</span>
-<span class="nc" id="L45">            buttonList.get(buttonList.size()-1).setLayoutX(20);</span>
-<span class="nc bnc" id="L46" title="All 2 branches missed.">            if(buttonList.size()&lt;=1)</span>
-<span class="nc" id="L47">                buttonList.get(buttonList.size()-1).setLayoutY(searchBarField.getLayoutY()+50);</span>
+<span class="nc" id="L45">        sList = sm.getAllSurveys();</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">        for (Survey survey: sList) {</span>
+<span class="nc" id="L47">            buttonList.add(new Button(survey.getTitle()));</span>
+<span class="nc" id="L48">            buttonList.get(buttonList.size()-1).setLayoutX(20);</span>
+<span class="nc bnc" id="L49" title="All 2 branches missed.">            if(buttonList.size()&lt;=1)</span>
+<span class="nc" id="L50">                buttonList.get(buttonList.size()-1).setLayoutY(searchBarField.getLayoutY()+50);</span>
             else
-<span class="nc" id="L49">                buttonList.get(buttonList.size() - 1).setLayoutY(buttonList.get(buttonList.size() - 2).getLayoutY() + 50);</span>
-<span class="nc" id="L50">            buttonList.get(buttonList.size()-1).setId(survey.getId()+&quot;&quot;);</span>
-<span class="nc" id="L51">            buttonList.get(buttonList.size()-1).setOnAction(this::answerTheSurveyClicked);</span>
+<span class="nc" id="L52">                buttonList.get(buttonList.size() - 1).setLayoutY(buttonList.get(buttonList.size() - 2).getLayoutY() + 50);</span>
+<span class="nc" id="L53">            buttonList.get(buttonList.size()-1).setId(survey.getId()+&quot;&quot;);</span>
+<span class="nc" id="L54">            buttonList.get(buttonList.size()-1).setOnAction(this::answerTheSurveyClicked);</span>
 
-<span class="nc" id="L53">            AnswerSurveyAnchorPane.getChildren().add(buttonList.get(buttonList.size()-1));</span>
-<span class="nc" id="L54">        }</span>
-<span class="nc" id="L55">    }</span>
+<span class="nc" id="L56">            AnswerSurveyAnchorPane.getChildren().add(buttonList.get(buttonList.size()-1));</span>
+<span class="nc" id="L57">        }</span>
+<span class="nc" id="L58">    }</span>
 
     private void answerTheSurveyClicked(ActionEvent actionEvent) {
-<span class="nc" id="L58">        int surveyId = -1;</span>
-<span class="nc bnc" id="L59" title="All 2 branches missed.">        for (Button button:buttonList) {</span>
-<span class="nc bnc" id="L60" title="All 2 branches missed.">            if(actionEvent.getSource().equals(button)){</span>
-<span class="nc" id="L61">                surveyId = Integer.parseInt(button.getId());</span>
+<span class="nc" id="L61">        int surveyId = -1;</span>
+<span class="nc bnc" id="L62" title="All 2 branches missed.">        for (Button button:buttonList) {</span>
+<span class="nc bnc" id="L63" title="All 2 branches missed.">            if(actionEvent.getSource().equals(button)){</span>
+<span class="nc" id="L64">                surveyId = Integer.parseInt(button.getId());</span>
             }
-<span class="nc" id="L63">        }</span>
-<span class="nc bnc" id="L64" title="All 2 branches missed.">        for (Survey survey:sList) {</span>
-<span class="nc bnc" id="L65" title="All 2 branches missed.">            if (survey.getId() == surveyId) {</span>
-<span class="nc" id="L66">                System.out.println(survey.getId());</span>
+<span class="nc" id="L66">        }</span>
+<span class="nc bnc" id="L67" title="All 2 branches missed.">        for (Survey survey:sList) {</span>
+<span class="nc bnc" id="L68" title="All 2 branches missed.">            if (survey.getId() == surveyId) {</span>
+<span class="nc" id="L69">                System.out.println(survey.getId());</span>
                 try {
-<span class="nc" id="L68">                    switchTemplate(survey);</span>
-<span class="nc" id="L69">                    MainApp.setRoot(&quot;/fxml/SurveyTemplates/&quot;+survey.getTypeOfTemplate()+&quot;.fxml&quot;);</span>
-<span class="nc" id="L70">                } catch (IOException e) {</span>
-<span class="nc" id="L71">                    e.printStackTrace();</span>
-<span class="nc" id="L72">                }</span>
+<span class="nc" id="L71">                    switchTemplate(survey);</span>
+<span class="nc" id="L72">                    MainApp.setRoot(&quot;/fxml/SurveyTemplates/&quot;+survey.getTypeOfTemplate()+&quot;.fxml&quot;);</span>
+<span class="nc" id="L73">                } catch (IOException e) {</span>
+<span class="nc" id="L74">                    e.printStackTrace();</span>
+<span class="nc" id="L75">                }</span>
             }
-<span class="nc" id="L74">        }</span>
-<span class="nc" id="L75">    }</span>
+<span class="nc" id="L77">        }</span>
+<span class="nc" id="L78">    }</span>
 
     private void switchTemplate(Survey survey){
-<span class="nc bnc" id="L78" title="All 2 branches missed.">        switch (survey.getTypeOfTemplate()){</span>
+<span class="nc bnc" id="L81" title="All 5 branches missed.">        switch (survey.getTypeOfTemplate()){</span>
             case &quot;HealthTemplate1&quot;: {
-<span class="nc" id="L80">                HealthTemplate1Controller.setData(userdata);</span>
-<span class="nc" id="L81">                HealthTemplate1Controller.setCreateOrAnswerFunction(&quot;answer&quot;,survey);</span>
+<span class="nc" id="L83">                HealthTemplate1Controller.setData(userdata);</span>
+<span class="nc" id="L84">                HealthTemplate1Controller.setCreateOrAnswerFunction(&quot;answer&quot;,survey);</span>
+<span class="nc" id="L85">                break;</span>
+            }
+            case &quot;HealthTemplate2&quot;: {
+<span class="nc" id="L88">                HealthTemplate2Controller.setData(userdata);</span>
+<span class="nc" id="L89">                HealthTemplate2Controller.setCreateOrAnswerFunction(&quot;answer&quot;,survey);</span>
+<span class="nc" id="L90">                break;</span>
+            }
+            case &quot;HealthTemplate3&quot;: {
+<span class="nc" id="L93">                HealthTemplate3Controller.setData(userdata);</span>
+<span class="nc" id="L94">                HealthTemplate3Controller.setCreateOrAnswerFunction(&quot;answer&quot;,survey);</span>
+<span class="nc" id="L95">                break;</span>
+            }
+            case &quot;HealthTemplate4&quot;: {
+<span class="nc" id="L98">                HealthTemplate4Controller.setData(userdata);</span>
+<span class="nc" id="L99">                HealthTemplate4Controller.setCreateOrAnswerFunction(&quot;answer&quot;,survey);</span>
                 break;
             }
         }
-<span class="nc" id="L85">    }</span>
+<span class="nc" id="L103">    }</span>
 
     @FXML
     private void searchButtonClicked(ActionEvent actionEvent) {
 
-<span class="nc" id="L90">    }</span>
+<span class="nc" id="L108">    }</span>
 
     @FXML
     private void backButtonClicked(ActionEvent actionEvent) throws IOException {
-<span class="nc" id="L94">        MainApp.setRoot(&quot;/fxml/AfterLoginMenu.fxml&quot;);</span>
-<span class="nc" id="L95">    }</span>
+<span class="nc" id="L112">        MainApp.setRoot(&quot;/fxml/AfterLoginMenu.fxml&quot;);</span>
+<span class="nc" id="L113">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

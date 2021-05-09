@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest" time="0" tests="1" errors="0" skipped="1" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest" time="7.614" tests="1" errors="1" skipped="0" failures="0">
   <properties>
+    <property name="jpda.address" value="49844"/>
     <property name="java.specification.version" value="15"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
@@ -9,14 +10,15 @@
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
-    <property name="user.timezone" value="Europe/Budapest"/>
+    <property name="forkMode" value="once"/>
     <property name="os.name" value="Windows 10"/>
     <property name="java.vm.specification.version" value="15"/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15\bin"/>
-    <property name="sun.java.command" value="C:\Users\L340\AppData\Local\Temp\surefire10260393159954182471\surefirebooter14737294675695806453.jar C:\Users\L340\AppData\Local\Temp\surefire10260393159954182471 2021-05-09T12-34-47_622-jvmRun1 surefire3028193780257088331tmp surefire_014403701369650542120tmp"/>
+    <property name="sun.java.command" value="C:\Users\L340\AppData\Local\Temp\surefire12667644434635098519\surefirebooter6131722893149085840.jar C:\Users\L340\AppData\Local\Temp\surefire12667644434635098519 2021-05-09T17-25-01_049-jvmRun1 surefire8086210026356403356tmp surefire_013463996234832323042tmp"/>
     <property name="jdk.debug" value="release"/>
+    <property name="test" value="Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest"/>
     <property name="surefire.test.class.path" value="E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\target\test-classes;E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\target\classes;C:\Users\L340\.m2\repository\org\hibernate\hibernate-entitymanager\5.4.4.Final\hibernate-entitymanager-5.4.4.Final.jar;C:\Users\L340\.m2\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;C:\Users\L340\.m2\repository\org\hibernate\hibernate-core\5.4.4.Final\hibernate-core-5.4.4.Final.jar;C:\Users\L340\.m2\repository\org\javassist\javassist\3.24.0-GA\javassist-3.24.0-GA.jar;C:\Users\L340\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\L340\.m2\repository\org\jboss\jandex\2.0.5.Final\jandex-2.0.5.Final.jar;C:\Users\L340\.m2\repository\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;C:\Users\L340\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\L340\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\L340\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.1\jaxb-runtime-2.3.1.jar;C:\Users\L340\.m2\repository\org\glassfish\jaxb\txw2\2.3.1\txw2-2.3.1.jar;C:\Users\L340\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.7\istack-commons-runtime-3.0.7.jar;C:\Users\L340\.m2\repository\org\jvnet\staxex\stax-ex\1.8\stax-ex-1.8.jar;C:\Users\L340\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.15\FastInfoset-1.2.15.jar;C:\Users\L340\.m2\repository\org\dom4j\dom4j\2.1.1\dom4j-2.1.1.jar;C:\Users\L340\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.0.Final\hibernate-commons-annotations-5.1.0.Final.jar;C:\Users\L340\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\L340\.m2\repository\net\bytebuddy\byte-buddy\1.9.11\byte-buddy-1.9.11.jar;C:\Users\L340\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\L340\.m2\repository\com\h2database\h2\1.4.199\h2-1.4.199.jar;C:\Users\L340\.m2\repository\org\openjfx\javafx-controls\16\javafx-controls-16.jar;C:\Users\L340\.m2\repository\org\openjfx\javafx-controls\16\javafx-controls-16-win.jar;C:\Users\L340\.m2\repository\org\openjfx\javafx-fxml\16\javafx-fxml-16.jar;C:\Users\L340\.m2\repository\org\openjfx\javafx-fxml\16\javafx-fxml-16-win.jar;C:\Users\L340\.m2\repository\org\openjfx\javafx-graphics\16\javafx-graphics-16.jar;C:\Users\L340\.m2\repository\org\openjfx\javafx-graphics\16\javafx-graphics-16-win.jar;C:\Users\L340\.m2\repository\org\openjfx\javafx-base\16\javafx-base-16.jar;C:\Users\L340\.m2\repository\org\openjfx\javafx-base\16\javafx-base-16-win.jar;C:\Users\L340\.m2\repository\org\controlsfx\controlsfx\11.1.0\controlsfx-11.1.0.jar;C:\Users\L340\.m2\repository\org\mockito\mockito-core\3.8.0\mockito-core-3.8.0.jar;C:\Users\L340\.m2\repository\net\bytebuddy\byte-buddy-agent\1.10.20\byte-buddy-agent-1.10.20.jar;C:\Users\L340\.m2\repository\org\objenesis\objenesis\3.1\objenesis-3.1.jar;C:\Users\L340\.m2\repository\org\seleniumhq\selenium\selenium-java\2.44.0\selenium-java-2.44.0.jar;C:\Users\L340\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\2.44.0\selenium-chrome-driver-2.44.0.jar;C:\Users\L340\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\2.44.0\selenium-remote-driver-2.44.0.jar;C:\Users\L340\.m2\repository\cglib\cglib-nodep\2.1_3\cglib-nodep-2.1_3.jar;C:\Users\L340\.m2\repository\com\google\code\gson\gson\2.3\gson-2.3.jar;C:\Users\L340\.m2\repository\org\seleniumhq\selenium\selenium-api\2.44.0\selenium-api-2.44.0.jar;C:\Users\L340\.m2\repository\org\seleniumhq\selenium\selenium-htmlunit-driver\2.44.0\selenium-htmlunit-driver-2.44.0.jar;C:\Users\L340\.m2\repository\net\sourceforge\htmlunit\htmlunit\2.15\htmlunit-2.15.jar;C:\Users\L340\.m2\repository\xalan\xalan\2.7.1\xalan-2.7.1.jar;C:\Users\L340\.m2\repository\xalan\serializer\2.7.1\serializer-2.7.1.jar;C:\Users\L340\.m2\repository\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;C:\Users\L340\.m2\repository\org\apache\commons\commons-lang3\3.3.2\commons-lang3-3.3.2.jar;C:\Users\L340\.m2\repository\org\apache\httpcomponents\httpmime\4.3.3\httpmime-4.3.3.jar;C:\Users\L340\.m2\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar;C:\Users\L340\.m2\repository\net\sourceforge\htmlunit\htmlunit-core-js\2.15\htmlunit-core-js-2.15.jar;C:\Users\L340\.m2\repository\xerces\xercesImpl\2.11.0\xercesImpl-2.11.0.jar;C:\Users\L340\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;C:\Users\L340\.m2\repository\net\sourceforge\nekohtml\nekohtml\1.9.21\nekohtml-1.9.21.jar;C:\Users\L340\.m2\repository\net\sourceforge\cssparser\cssparser\0.9.14\cssparser-0.9.14.jar;C:\Users\L340\.m2\repository\org\w3c\css\sac\1.3\sac-1.3.jar;C:\Users\L340\.m2\repository\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar;C:\Users\L340\.m2\repository\org\eclipse\jetty\jetty-websocket\8.1.15.v20140411\jetty-websocket-8.1.15.v20140411.jar;C:\Users\L340\.m2\repository\org\eclipse\jetty\jetty-util\8.1.15.v20140411\jetty-util-8.1.15.v20140411.jar;C:\Users\L340\.m2\repository\org\eclipse\jetty\jetty-io\8.1.15.v20140411\jetty-io-8.1.15.v20140411.jar;C:\Users\L340\.m2\repository\org\eclipse\jetty\jetty-http\8.1.15.v20140411\jetty-http-8.1.15.v20140411.jar;C:\Users\L340\.m2\repository\org\apache\httpcomponents\httpclient\4.3.4\httpclient-4.3.4.jar;C:\Users\L340\.m2\repository\org\apache\httpcomponents\httpcore\4.3.2\httpcore-4.3.2.jar;C:\Users\L340\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\2.44.0\selenium-firefox-driver-2.44.0.jar;C:\Users\L340\.m2\repository\commons-io\commons-io\2.4\commons-io-2.4.jar;C:\Users\L340\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\2.44.0\selenium-ie-driver-2.44.0.jar;C:\Users\L340\.m2\repository\net\java\dev\jna\jna\3.4.0\jna-3.4.0.jar;C:\Users\L340\.m2\repository\net\java\dev\jna\platform\3.4.0\platform-3.4.0.jar;C:\Users\L340\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\2.44.0\selenium-safari-driver-2.44.0.jar;C:\Users\L340\.m2\repository\org\seleniumhq\selenium\selenium-support\2.44.0\selenium-support-2.44.0.jar;C:\Users\L340\.m2\repository\org\webbitserver\webbit\0.4.14\webbit-0.4.14.jar;C:\Users\L340\.m2\repository\io\netty\netty\3.5.2.Final\netty-3.5.2.Final.jar;C:\Users\L340\.m2\repository\com\opera\operadriver\1.5\operadriver-1.5.jar;C:\Users\L340\.m2\repository\com\opera\operalaunchers\1.1\operalaunchers-1.1.jar;C:\Users\L340\.m2\repository\com\google\protobuf\protobuf-java\2.4.1\protobuf-java-2.4.1.jar;C:\Users\L340\.m2\repository\com\google\guava\guava\14.0\guava-14.0.jar;C:\Users\L340\.m2\repository\commons-jxpath\commons-jxpath\1.3\commons-jxpath-1.3.jar;C:\Users\L340\.m2\repository\org\apache\commons\commons-exec\1.1\commons-exec-1.1.jar;C:\Users\L340\.m2\repository\org\ini4j\ini4j\0.5.2\ini4j-0.5.2.jar;C:\Users\L340\.m2\repository\org\junit\platform\junit-platform-surefire-provider\1.2.0\junit-platform-surefire-provider-1.2.0.jar;C:\Users\L340\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\L340\.m2\repository\org\junit\platform\junit-platform-launcher\1.2.0\junit-platform-launcher-1.2.0.jar;C:\Users\L340\.m2\repository\org\apache\maven\surefire\surefire-api\2.21.0\surefire-api-2.21.0.jar;C:\Users\L340\.m2\repository\org\apache\maven\surefire\surefire-logger-api\2.21.0\surefire-logger-api-2.21.0.jar;C:\Users\L340\.m2\repository\org\apache\maven\surefire\common-java5\2.21.0\common-java5-2.21.0.jar;C:\Users\L340\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;C:\Users\L340\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\L340\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;C:\Users\L340\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.0\junit-jupiter-params-5.6.0.jar;C:\Users\L340\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;C:\Users\L340\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;C:\Users\L340\.m2\repository\org\testfx\testfx-core\4.0.16-alpha\testfx-core-4.0.16-alpha.jar;C:\Users\L340\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\L340\.m2\repository\org\assertj\assertj-core\3.13.2\assertj-core-3.13.2.jar;C:\Users\L340\.m2\repository\org\testfx\testfx-junit5\4.0.16-alpha\testfx-junit5-4.0.16-alpha.jar;C:\Users\L340\.m2\repository\org\testfx\testfx-internal-java8\4.0.12-alpha\testfx-internal-java8-4.0.12-alpha.jar;C:\Users\L340\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\L340\.m2\repository\org\mockito\mockito-junit-jupiter\3.9.0\mockito-junit-jupiter-3.9.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\L340"/>
@@ -30,7 +32,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\L340\AppData\Local\Temp\surefire10260393159954182471\surefirebooter14737294675695806453.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\L340\AppData\Local\Temp\surefire12667644434635098519\surefirebooter6131722893149085840.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="15+36-1562"/>
@@ -40,7 +42,7 @@
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="skipTests" value="false"/>
+    <property name="jpda.listen" value="true"/>
     <property name="maven.ext.class.path" value="C:\Program Files\NetBeans-12.3\netbeans\java\maven-nblib\netbeans-eventspy.jar"/>
     <property name="localRepository" value="C:\Users\L340\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
@@ -56,8 +58,388 @@
     <property name="java.vm.version" value="15+36-1562"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="59.0"/>
+    <property name="maven.surefire.debug" value="-agentlib:jdwp=transport=dt_socket,server=n,address=49844"/>
   </properties>
-  <testcase name="saveButtonClicked{FxRobot}" classname="Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest" time="0">
-    <skipped message="public void Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.saveButtonClicked(org.testfx.api.FxRobot) is @Disabled"/>
+  <testcase name="saveButtonClicked{FxRobot}" classname="Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest" time="7.573">
+    <error message="java.util.concurrent.ExecutionException: java.lang.reflect.InvocationTargetException" type="java.lang.RuntimeException">java.lang.RuntimeException: java.util.concurrent.ExecutionException: java.lang.reflect.InvocationTargetException
+	at Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.loadFXMLLoginController(HealthTemplate1ControllerTest.java:48)
+	at Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.startLoginController(HealthTemplate1ControllerTest.java:40)
+Caused by: java.lang.reflect.InvocationTargetException
+	at Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.loadFXMLLoginController(HealthTemplate1ControllerTest.java:48)
+	at Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.startLoginController(HealthTemplate1ControllerTest.java:40)
+Caused by: java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "Survey5.controller.SurveyTemplateControllers.HealthTemplate1Controller.answer" is null
+	at Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.loadFXMLLoginController(HealthTemplate1ControllerTest.java:48)
+	at Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.startLoginController(HealthTemplate1ControllerTest.java:40)
+</error>
+    <system-err><![CDATA[May 09, 2021 5:25:02 PM com.sun.javafx.application.PlatformImpl startup
+WARNING: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @1e81f4dc'
+May 09, 2021 5:25:05 PM org.hibernate.jpa.internal.util.LogHelper logPersistenceUnitInformation
+INFO: HHH000204: Processing PersistenceUnitInfo [name: Survey5]
+May 09, 2021 5:25:05 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {5.4.4.Final}
+May 09, 2021 5:25:05 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+May 09, 2021 5:25:06 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+WARN: HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+May 09, 2021 5:25:06 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:file:../High5/userdata_db]
+May 09, 2021 5:25:06 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001001: Connection properties: {user=sa}
+May 09, 2021 5:25:06 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001003: Autocommit mode: false
+May 09, 2021 5:25:06 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
+INFO: HHH000115: Hibernate connection pool size: 20 (min=1)
+May 09, 2021 5:25:06 PM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+May 09, 2021 5:25:08 PM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@53b4fad9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+May 09, 2021 5:25:08 PM org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator initiateService
+INFO: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+May 09, 2021 5:25:08 PM org.hibernate.jpa.internal.util.LogHelper logPersistenceUnitInformation
+INFO: HHH000204: Processing PersistenceUnitInfo [name: Survey5]
+May 09, 2021 5:25:08 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+WARN: HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+May 09, 2021 5:25:08 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:file:../High5/userdata_db]
+May 09, 2021 5:25:08 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001001: Connection properties: {user=sa}
+May 09, 2021 5:25:08 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001003: Autocommit mode: false
+May 09, 2021 5:25:08 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
+INFO: HHH000115: Hibernate connection pool size: 20 (min=1)
+May 09, 2021 5:25:08 PM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+May 09, 2021 5:25:08 PM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3d94e3d6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+May 09, 2021 5:25:08 PM org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator initiateService
+INFO: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+May 09, 2021 5:25:08 PM org.hibernate.jpa.internal.util.LogHelper logPersistenceUnitInformation
+INFO: HHH000204: Processing PersistenceUnitInfo [name: Survey5]
+May 09, 2021 5:25:08 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+WARN: HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+May 09, 2021 5:25:08 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:file:../High5/userdata_db]
+May 09, 2021 5:25:08 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001001: Connection properties: {user=sa}
+May 09, 2021 5:25:08 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001003: Autocommit mode: false
+May 09, 2021 5:25:08 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
+INFO: HHH000115: Hibernate connection pool size: 20 (min=1)
+May 09, 2021 5:25:08 PM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+May 09, 2021 5:25:08 PM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@924aa0c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+May 09, 2021 5:25:08 PM org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator initiateService
+INFO: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+May 09, 2021 5:25:08 PM org.hibernate.jpa.internal.util.LogHelper logPersistenceUnitInformation
+INFO: HHH000204: Processing PersistenceUnitInfo [name: Survey5]
+May 09, 2021 5:25:08 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+WARN: HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+May 09, 2021 5:25:08 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:file:../High5/userdata_db]
+May 09, 2021 5:25:08 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001001: Connection properties: {user=sa}
+May 09, 2021 5:25:08 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001003: Autocommit mode: false
+May 09, 2021 5:25:08 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
+INFO: HHH000115: Hibernate connection pool size: 20 (min=1)
+May 09, 2021 5:25:08 PM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+May 09, 2021 5:25:09 PM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@319d117c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+May 09, 2021 5:25:09 PM org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator initiateService
+INFO: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+--- Exception in Async Thread ---
+java.lang.reflect.InvocationTargetException: null
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	org.testfx.framework.junit5.ApplicationExtension$AnnotationBasedApplicationFixture.start(ApplicationExtension.java:158)
+	org.testfx.framework.junit5.ApplicationAdapter.start(ApplicationAdapter.java:37)
+	org.testfx.toolkit.impl.ApplicationServiceImpl.lambda$start$0(ApplicationServiceImpl.java:49)
+	java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:447)
+	java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:446)
+	com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+	com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	java.base/java.lang.Thread.run(Thread.java:832)
+javafx.fxml.LoadException: 
+/E:/Salma/Debrecen/Semester4/Software%20Dev/Project/High5/target/classes/fxml/SurveyTemplates/HealthTemplate1.fxml
+
+	javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2707)
+	javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2677)
+	javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
+	javafx.fxml.FXMLLoader.load(FXMLLoader.java:2517)
+	Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.loadFXMLLoginController(HealthTemplate1ControllerTest.java:48)
+	Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.startLoginController(HealthTemplate1ControllerTest.java:40)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	org.testfx.framework.junit5.ApplicationExtension$AnnotationBasedApplicationFixture.start(ApplicationExtension.java:158)
+	org.testfx.framework.junit5.ApplicationAdapter.start(ApplicationAdapter.java:37)
+	org.testfx.toolkit.impl.ApplicationServiceImpl.lambda$start$0(ApplicationServiceImpl.java:49)
+	java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:447)
+	java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:446)
+	com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+	com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	java.base/java.lang.Thread.run(Thread.java:832)
+java.lang.reflect.InvocationTargetException: null
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:76)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:273)
+	com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:83)
+	javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2673)
+	javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
+	javafx.fxml.FXMLLoader.load(FXMLLoader.java:2517)
+	Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.loadFXMLLoginController(HealthTemplate1ControllerTest.java:48)
+	Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.startLoginController(HealthTemplate1ControllerTest.java:40)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	org.testfx.framework.junit5.ApplicationExtension$AnnotationBasedApplicationFixture.start(ApplicationExtension.java:158)
+	org.testfx.framework.junit5.ApplicationAdapter.start(ApplicationAdapter.java:37)
+	org.testfx.toolkit.impl.ApplicationServiceImpl.lambda$start$0(ApplicationServiceImpl.java:49)
+	java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:447)
+	java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:446)
+	com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+	com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	java.base/java.lang.Thread.run(Thread.java:832)
+java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "Survey5.controller.SurveyTemplateControllers.HealthTemplate1Controller.answer" is null
+	Survey5.controller.SurveyTemplateControllers.HealthTemplate1Controller.initialize(HealthTemplate1Controller.java:130)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:76)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:273)
+	com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:83)
+	javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2673)
+	javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
+	javafx.fxml.FXMLLoader.load(FXMLLoader.java:2517)
+	Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.loadFXMLLoginController(HealthTemplate1ControllerTest.java:48)
+	Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.startLoginController(HealthTemplate1ControllerTest.java:40)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	org.testfx.framework.junit5.ApplicationExtension$AnnotationBasedApplicationFixture.start(ApplicationExtension.java:158)
+	org.testfx.framework.junit5.ApplicationAdapter.start(ApplicationAdapter.java:37)
+	org.testfx.toolkit.impl.ApplicationServiceImpl.lambda$start$0(ApplicationServiceImpl.java:49)
+	java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:447)
+	java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:446)
+	com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+	com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	java.base/java.lang.Thread.run(Thread.java:832)
+--- Trace of caller of unhandled exception in Async Thread ---
+	java.base/java.lang.Thread.getStackTrace(Thread.java:1598)
+	org.testfx.util.WaitForAsyncUtils$ASyncFXCallable.<init>(WaitForAsyncUtils.java:649)
+	org.testfx.util.WaitForAsyncUtils.asyncFx(WaitForAsyncUtils.java:257)
+	org.testfx.toolkit.impl.ApplicationServiceImpl.start(ApplicationServiceImpl.java:48)
+	org.testfx.toolkit.impl.ToolkitServiceImpl.lambda$setupApplication$6(ToolkitServiceImpl.java:127)
+	java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	java.base/java.lang.Thread.run(Thread.java:832)
+
+--- Exception in Async Thread ---
+java.util.concurrent.ExecutionException: java.lang.reflect.InvocationTargetException
+	java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
+	org.testfx.util.WaitForAsyncUtils$ASyncFXCallable.get(WaitForAsyncUtils.java:696)
+	org.testfx.toolkit.impl.ToolkitServiceImpl.lambda$setupApplication$6(ToolkitServiceImpl.java:127)
+	java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	java.base/java.lang.Thread.run(Thread.java:832)
+java.lang.reflect.InvocationTargetException: null
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	org.testfx.framework.junit5.ApplicationExtension$AnnotationBasedApplicationFixture.start(ApplicationExtension.java:158)
+	org.testfx.framework.junit5.ApplicationAdapter.start(ApplicationAdapter.java:37)
+	org.testfx.toolkit.impl.ApplicationServiceImpl.lambda$start$0(ApplicationServiceImpl.java:49)
+	java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:447)
+	java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:446)
+	com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+	com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	java.base/java.lang.Thread.run(Thread.java:832)
+javafx.fxml.LoadException: 
+/E:/Salma/Debrecen/Semester4/Software%20Dev/Project/High5/target/classes/fxml/SurveyTemplates/HealthTemplate1.fxml
+
+	javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2707)
+	javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2677)
+	javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
+	javafx.fxml.FXMLLoader.load(FXMLLoader.java:2517)
+	Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.loadFXMLLoginController(HealthTemplate1ControllerTest.java:48)
+	Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.startLoginController(HealthTemplate1ControllerTest.java:40)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	org.testfx.framework.junit5.ApplicationExtension$AnnotationBasedApplicationFixture.start(ApplicationExtension.java:158)
+	org.testfx.framework.junit5.ApplicationAdapter.start(ApplicationAdapter.java:37)
+	org.testfx.toolkit.impl.ApplicationServiceImpl.lambda$start$0(ApplicationServiceImpl.java:49)
+	java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:447)
+	java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:446)
+	com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+	com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	java.base/java.lang.Thread.run(Thread.java:832)
+java.lang.reflect.InvocationTargetException: null
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:76)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:273)
+	com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:83)
+	javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2673)
+	javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
+	javafx.fxml.FXMLLoader.load(FXMLLoader.java:2517)
+	Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.loadFXMLLoginController(HealthTemplate1ControllerTest.java:48)
+	Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.startLoginController(HealthTemplate1ControllerTest.java:40)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	org.testfx.framework.junit5.ApplicationExtension$AnnotationBasedApplicationFixture.start(ApplicationExtension.java:158)
+	org.testfx.framework.junit5.ApplicationAdapter.start(ApplicationAdapter.java:37)
+	org.testfx.toolkit.impl.ApplicationServiceImpl.lambda$start$0(ApplicationServiceImpl.java:49)
+	java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:447)
+	java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:446)
+	com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+	com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	java.base/java.lang.Thread.run(Thread.java:832)
+java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "Survey5.controller.SurveyTemplateControllers.HealthTemplate1Controller.answer" is null
+	Survey5.controller.SurveyTemplateControllers.HealthTemplate1Controller.initialize(HealthTemplate1Controller.java:130)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:76)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:273)
+	com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:83)
+	javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2673)
+	javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
+	javafx.fxml.FXMLLoader.load(FXMLLoader.java:2517)
+	Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.loadFXMLLoginController(HealthTemplate1ControllerTest.java:48)
+	Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.startLoginController(HealthTemplate1ControllerTest.java:40)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	org.testfx.framework.junit5.ApplicationExtension$AnnotationBasedApplicationFixture.start(ApplicationExtension.java:158)
+	org.testfx.framework.junit5.ApplicationAdapter.start(ApplicationAdapter.java:37)
+	org.testfx.toolkit.impl.ApplicationServiceImpl.lambda$start$0(ApplicationServiceImpl.java:49)
+	java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:447)
+	java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:446)
+	com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+	com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	java.base/java.lang.Thread.run(Thread.java:832)
+--- Trace of caller of unhandled exception in Async Thread ---
+	java.base/java.lang.Thread.getStackTrace(Thread.java:1598)
+	org.testfx.util.WaitForAsyncUtils$ASyncFXCallable.<init>(WaitForAsyncUtils.java:649)
+	org.testfx.util.WaitForAsyncUtils.async(WaitForAsyncUtils.java:192)
+	org.testfx.toolkit.impl.ToolkitServiceImpl.setupApplication(ToolkitServiceImpl.java:123)
+	org.testfx.api.FxToolkit.setupApplication(FxToolkit.java:153)
+	org.testfx.framework.junit5.ApplicationExtension.beforeEach(ApplicationExtension.java:85)
+	org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeEachCallbacks$1(TestMethodTestDescriptor.java:154)
+	org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeBeforeMethodsOrCallbacksUntilExceptionOccurs$5(TestMethodTestDescriptor.java:190)
+	org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeMethodsOrCallbacksUntilExceptionOccurs(TestMethodTestDescriptor.java:190)
+	org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeBeforeEachCallbacks(TestMethodTestDescriptor.java:153)
+	org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)
+	org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:71)
+	org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+	org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:170)
+	org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:154)
+	org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:90)
+	org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+]]></system-err>
   </testcase>
 </testsuite>

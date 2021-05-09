@@ -37,7 +37,7 @@ public class HealthTemplate1ControllerTest {
     private static Data userDataTest;
     @Start
         public void startLoginController(Stage stage) throws Exception {
-        Scene scene = new Scene(loadFXMLLoginController("/fxml.SurveyTemplates/HealthTemplate1.fxml"));
+        Scene scene = new Scene(loadFXMLLoginController("/fxml/SurveyTemplates/HealthTemplate1.fxml"));
         stage.setTitle("Survey5");
         stage.setScene(scene);
         stage.show();
@@ -66,11 +66,9 @@ public class HealthTemplate1ControllerTest {
     public void tearDown() {
     }
     @Test
-    @Disabled
     public void saveButtonClicked(FxRobot robot){
-    /*userDataTest = new Data("name", "email", "user", "password");
-    HealthTemplate1Controller.setData(userDataTest);
-    HealthTemplate1Controller.setCreateOrAnswerFunction("create");*/
+        HealthTemplate1Controller.setCreateOrAnswerFunction("create");
+
     
     
     }

@@ -1,4 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 s - in Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 7.614 s <<< FAILURE! - in Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest
+saveButtonClicked{FxRobot}  Time elapsed: 7.573 s  <<< ERROR!
+java.lang.RuntimeException: java.util.concurrent.ExecutionException: java.lang.reflect.InvocationTargetException
+	at Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.loadFXMLLoginController(HealthTemplate1ControllerTest.java:48)
+	at Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.startLoginController(HealthTemplate1ControllerTest.java:40)
+Caused by: java.lang.reflect.InvocationTargetException
+	at Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.loadFXMLLoginController(HealthTemplate1ControllerTest.java:48)
+	at Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.startLoginController(HealthTemplate1ControllerTest.java:40)
+Caused by: java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "Survey5.controller.SurveyTemplateControllers.HealthTemplate1Controller.answer" is null
+	at Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.loadFXMLLoginController(HealthTemplate1ControllerTest.java:48)
+	at Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest.startLoginController(HealthTemplate1ControllerTest.java:40)
+

@@ -1,3 +1,4 @@
+Survey5\controller\AfterLoginMenuControllerTest.class
 Survey5\controller\SurveyTemplateControllers\HealthTemplate1ControllerTest.class
 Survey5\model\QuestionsManagerTest.class
 Survey5\controller\NewSurveyControllerTest.class
@@ -5,6 +6,7 @@ Survey5\controller\MyProfileControllerTest.class
 Survey5\controller\RegisterControllerTest.class
 Survey5\controller\NewSurveyControllerTest2.class
 Survey5\model\SurveyManagerTest.class
+Survey5\controller\TemplateOrCreateControllerTest.class
 Survey5\controller\LoginControllerTest.class
 Survey5\model\DataManagerTest.class
 Survey5\model\AnswersManagerTest.class
