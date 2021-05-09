@@ -7,107 +7,114 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import org.controlsfx.control.Rating?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="900.0" styleClass="FoodTemplate1BorderPaneBackground" stylesheets="@../SurveyTemplates/TemplateStyles/tempcss.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.FoodTemplate1Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" styleClass="FoodTemplate1BorderPaneBackground" stylesheets="@../SurveyTemplates/TemplateStyles/tempcss.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.FoodTemplate1Controller">
     <center>
-        <ScrollPane prefHeight="678.0" prefWidth="670.0" styleClass="foodTemplate1Scrollpane" BorderPane.alignment="CENTER">
+        <ScrollPane prefHeight="600.0" prefWidth="700.0" styleClass="foodTemplate1Scrollpane" BorderPane.alignment="CENTER">
             <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="848.0" prefWidth="693.0" stylesheets="@TemplateStyles/tempcss.css">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="848.0" prefWidth="700.0" stylesheets="@TemplateStyles/tempcss.css">
                     <children>
-                  <ImageView fitHeight="844.0" fitWidth="1311.0" layoutX="-6.0" opacity="0.21" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/TemplateImages/donut2.jpg" />
-                     </image>
-                  </ImageView>
-                        <Label fx:id="FoodAndButritionLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="205.0" layoutY="14.0" prefHeight="40.0" prefWidth="234.0" text="Food &amp; Nutrition" textFill="#642e23">
+                        <ImageView fitHeight="844.0" fitWidth="1311.0" layoutX="-10.0" layoutY="2.0" opacity="0.21" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/TemplateImages/donut2.jpg" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="FoodTemplate1" alignment="CENTER" contentDisplay="CENTER" layoutX="227.0" layoutY="14.0" prefHeight="40.0" prefWidth="234.0" text="Food &amp; Nutrition" textFill="#642e23">
                             <font>
                                 <Font size="28.0" />
                             </font>
                             <effect>
-                        <DropShadow>
-                           <color>
-                              <Color red="0.29072442650794983" green="0.36052632331848145" blue="0.25837719440460205" />
-                           </color>
-                        </DropShadow>
+                                <DropShadow>
+                                    <color>
+                                        <Color red="0.29072442650794983" green="0.36052632331848145" blue="0.25837719440460205" />
+                                    </color>
+                                </DropShadow>
                             </effect>
                         </Label>
-                        <Text fx:id="AgeFoodSurveyQuestion" fill="#290c06" layoutX="104.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is your age?">
+                        <Text fx:id="Question1" fill="#290c06" layoutX="104.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is your age?">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Text>
-                        <TextField fx:id="AgeFoodBox" layoutX="110.0" layoutY="598.0" prefHeight="94.0" prefWidth="374.0" promptText="Please enter your allergies here">
+                        <TextField fx:id="Answer6" alignment="TOP_LEFT" layoutX="102.0" layoutY="597.0" prefHeight="98.0" prefWidth="428.0" promptText="Enter your allergies here">
                             <font>
                                 <Font size="11.0" />
                             </font>
                         </TextField>
-                        <Text fx:id="BMIFoodSurveyquestion" fill="#290c06" layoutX="103.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is your BMI?">
+                        <Text fx:id="Question2" fill="#290c06" layoutX="103.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is your BMI?">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Text>
-                        <TextField fx:id="BMIfeildFoodBox" layoutX="338.0" layoutY="108.0" prefHeight="21.0" prefWidth="144.0" promptText="Enter your age here" />
-                        <Text fx:id="FoodAllergyQuestion" fill="#290c06" layoutX="95.0" layoutY="581.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you have any Food Allergy?If yes please mention?" wrappingWidth="392.8624267578125">
+                        <TextField fx:id="Answer1" layoutX="338.0" layoutY="108.0" prefHeight="21.0" prefWidth="144.0" promptText="Enter your age here" />
+                        <Text fx:id="Question6" fill="#290c06" layoutX="101.0" layoutY="567.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you have any Food Allergy?If yes please mention?" wrappingWidth="392.8624267578125">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Text>
-                        <TextField fx:id="FoodAllergyAnswerBox" layoutX="336.0" layoutY="152.0" promptText="Enter your BMI here" />
-                        <Text fx:id="SupplementsQuestion" fill="#290c06" layoutX="98.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are you Currently Taking any Vitamins or Food Supplements?" wrappingWidth="276.0859375">
+                        <TextField fx:id="Answer2" layoutX="336.0" layoutY="152.0" promptText="Enter your BMI here" />
+                        <Text fx:id="Question4" fill="#290c06" layoutX="102.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are you Currently Taking any Vitamins or Food Supplements?" wrappingWidth="443.2859191894531">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Text>
-                        <RadioButton fx:id="VitaminsYes" layoutX="110.0" layoutY="376.0" mnemonicParsing="false" onAction="#supplementsYesClicked" text="YES" textFill="#290c06" />
-                        <RadioButton fx:id="VitaminsNo" layoutX="331.0" layoutY="376.0" mnemonicParsing="false" onAction="#supplementsNoClicked" text="NO" textFill="#290c06" />
-                        <Text fx:id="ExerciseQuestion" fill="#290c06" layoutX="102.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How Often You Exercise?(In a Week)" wrappingWidth="268.0000366210938">
+                        <RadioButton fx:id="Answer4_1" layoutX="117.0" layoutY="360.0" mnemonicParsing="false" text="YES" textFill="#290c06">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="answer4" />
+                     </toggleGroup></RadioButton>
+                        <RadioButton fx:id="Answer4_2" layoutX="117.0" layoutY="390.0" mnemonicParsing="false" text="NO" textFill="#290c06" toggleGroup="$answer4" />
+                        <Text fx:id="Question3" fill="#290c06" layoutX="102.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How Often You Exercise?(In a Week)" wrappingWidth="268.0000366210938">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Text>
-                        <Slider fx:id="ExerciseSliderbox" blockIncrement="1.0" layoutX="191.0" layoutY="261.0" max="7.0" showTickLabels="true" showTickMarks="true" />
-                        <Text fx:id="PhyicalSatisfactionQuestion" fill="#290c06" layoutX="95.0" layoutY="439.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How satisfied are you with your Physical Health?From(1star-&gt;notSatisfied to 5Stars-&gt;Very happy)" wrappingWidth="344.7999389648437">
+                        <Slider fx:id="Answer3" blockIncrement="1.0" layoutX="207.0" layoutY="266.0" max="7.0" showTickLabels="true" showTickMarks="true" />
+                        <Text fx:id="Question5" fill="#290c06" layoutX="107.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How satisfied are you with your Physical Health?From(1star-&gt;notSatisfied to 5Stars-&gt;Very happy)" wrappingWidth="479.19987182617183">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Text>
-                        <Separator layoutX="100.0" layoutY="134.0" prefHeight="0.0" prefWidth="133.0" />
-                        <Separator layoutX="95.0" layoutY="251.0" prefHeight="0.0" prefWidth="273.0" />
-                        <Separator layoutX="94.0" layoutY="587.0" prefHeight="2.0" prefWidth="373.0" />
-                        <Separator layoutX="97.0" layoutY="354.0" prefWidth="200.0" />
-                        <Separator layoutX="90.0" layoutY="177.0" prefHeight="4.0" prefWidth="154.0" />
-                        <Separator layoutX="195.0" layoutY="52.0" opacity="0.6" prefHeight="4.0" prefWidth="254.0" style="-fx-background-color: #642e23;" />
-                        <Rating layoutX="148.0" layoutY="504.0">
-                     <effect>
-                        <Glow level="1.0" />
-                     </effect></Rating>
-                        <Button layoutX="267.0" layoutY="707.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="77.0" text="All Done" />
+                        <Separator layoutX="100.0" layoutY="134.0" prefHeight="0.0" prefWidth="133.0" style="-fx-background-color: black;" />
+                        <Separator layoutX="95.0" layoutY="251.0" prefHeight="0.0" prefWidth="273.0" style="-fx-background-color: black;" />
+                        <Separator layoutX="103.0" layoutY="577.0" prefHeight="2.0" prefWidth="373.0" style="-fx-background-color: black;" />
+                        <Separator layoutX="103.0" layoutY="343.0" prefHeight="0.0" prefWidth="426.0" style="-fx-background-color: black;" />
+                        <Separator layoutX="90.0" layoutY="177.0" prefHeight="4.0" prefWidth="154.0" style="-fx-background-color: black;" />
+                        <Separator layoutX="219.0" layoutY="52.0" opacity="0.6" prefHeight="4.0" prefWidth="254.0" style="-fx-background-color: #642e23;" />
+                        <Rating fx:id="Answer5" layoutX="156.0" layoutY="493.0" prefHeight="28.0" prefWidth="215.0">
+                            <effect>
+                                <Glow level="1.0" />
+                            </effect></Rating>
+                        <Button fx:id="saveButton" layoutX="267.0" layoutY="707.0" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="30.0" prefWidth="77.0" text="Save" />
+                        <Separator layoutX="110.0" layoutY="475.0" prefHeight="2.0" prefWidth="373.0" style="-fx-background-color: black;" />
                     </children>
                 </AnchorPane>
             </content>
         </ScrollPane>
     </center>
+    <right>
+        <AnchorPane prefHeight="800.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
+    </right>
     <top>
-        <VBox prefHeight="82.0" prefWidth="900.0" BorderPane.alignment="CENTER" />
+        <AnchorPane prefHeight="50.0" prefWidth="50.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="backButton" mnemonicParsing="false" onAction="#backToTemplatesButtonClicked" prefHeight="34.0" prefWidth="54.0" styleClass="addBackButtonPic" stylesheets="@../../styles/Modification.css" />
+            </children></AnchorPane>
     </top>
     <left>
-        <VBox prefHeight="702.0" prefWidth="115.0" BorderPane.alignment="CENTER" />
+        <AnchorPane prefHeight="50.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
     </left>
-    <right>
-        <VBox prefHeight="702.0" prefWidth="115.0" BorderPane.alignment="CENTER" />
-    </right>
     <bottom>
-        <VBox prefHeight="38.0" prefWidth="700.0" BorderPane.alignment="CENTER" />
+        <AnchorPane prefHeight="50.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
     </bottom>
 </BorderPane>

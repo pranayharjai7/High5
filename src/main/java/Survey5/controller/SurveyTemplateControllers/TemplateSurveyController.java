@@ -123,6 +123,8 @@ public class TemplateSurveyController {
 
     @FXML
     void FoodSurveyTemplateButtonClicked(ActionEvent event) throws IOException {
+        FoodTemplate1Controller.setData(userdata);
+        FoodTemplate1Controller.setCreateOrAnswerFunction("create");
         MainApp.setRoot("/fxml/SurveyTemplates/FoodTemplate1.fxml");
     }
 

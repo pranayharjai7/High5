@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c50b5972-a33c-4cdd-b766-962239057992" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/AnswerSurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/AnswerSurveyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SavedSurveysController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SavedSurveysController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/FoodTemplate1Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/FoodTemplate1Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/FoodTemplate1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/FoodTemplate1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userdata_db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/userdata_db.mv.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +45,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/High-5/High5" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
@@ -67,7 +73,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.MainApp">
-    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="MainApp" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Survey5.MainApp" />
       <module name="High5" />
       <option name="VM_PARAMETERS" value="--module-path &quot;javafx-sdk-16/lib&quot; --add-modules javafx.controls,javafx.fxml" />
@@ -94,6 +100,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AnswersManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="High5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Survey5.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Survey5.model" />
+      <option name="MAIN_CLASS_NAME" value="Survey5.model.AnswersManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HealthTemplate1ControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="High5" />
       <extension name="coverage">
@@ -101,9 +122,14 @@
           <option name="PATTERN" value="Survey5.controller.SurveyTemplateControllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
+        <pattern>
+          <option name="PATTERN" value="Survey5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Survey5.controller.SurveyTemplateControllers" />
       <option name="MAIN_CLASS_NAME" value="Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,14 +182,15 @@
     </configuration>
     <list>
       <item itemvalue="Application.MainApp" />
-      <item itemvalue="JUnit.NewSurveyControllerTest2" />
-      <item itemvalue="JUnit.LoginControllerTest" />
-      <item itemvalue="JUnit.RegisterControllerTest" />
       <item itemvalue="JUnit.HealthTemplate1ControllerTest" />
+      <item itemvalue="JUnit.LoginControllerTest" />
+      <item itemvalue="JUnit.NewSurveyControllerTest2" />
+      <item itemvalue="JUnit.RegisterControllerTest" />
+      <item itemvalue="JUnit.AnswersManagerTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainApp" />
+        <item itemvalue="JUnit.AnswersManagerTest" />
         <item itemvalue="JUnit.HealthTemplate1ControllerTest" />
         <item itemvalue="JUnit.RegisterControllerTest" />
         <item itemvalue="JUnit.LoginControllerTest" />
