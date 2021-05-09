@@ -137,6 +137,8 @@ public class TemplateSurveyController {
 
     @FXML
     void MalnutritionSurveyTemplateButtonClicked(ActionEvent event) throws IOException {
+        FoodTemplate3Controller.setData(userdata);
+        FoodTemplate3Controller.setCreateOrAnswerFunction("create");
         MainApp.setRoot("/fxml/SurveyTemplates/FoodTemplate3.fxml");
     }
 

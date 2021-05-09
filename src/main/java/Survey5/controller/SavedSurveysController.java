@@ -123,6 +123,10 @@ public class SavedSurveysController{
                 FoodTemplate2Controller.setData(userdata);
                 FoodTemplate2Controller.setCreateOrAnswerFunction("ShowAnswer",survey);
                 break;
+            }case "FoodTemplate3": {
+                FoodTemplate3Controller.setData(userdata);
+                FoodTemplate3Controller.setCreateOrAnswerFunction("ShowAnswer",survey);
+                break;
             }
         }
     }
