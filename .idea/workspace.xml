@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c50b5972-a33c-4cdd-b766-962239057992" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/High5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/High5.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/AnswerSurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/AnswerSurveyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SavedSurveysController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SavedSurveysController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/BusinessTemplate1Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/BusinessTemplate1Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/BusinessTemplate1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/BusinessTemplate1.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/NewSurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/NewSurveyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/ShowAnswersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/ShowAnswersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Survey5/model/AnswersManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Survey5/model/AnswersManagerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userdata_db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/userdata_db.mv.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +71,7 @@
       <recent name="Survey5.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainApp">
+  <component name="RunManager" selected="JUnit.RegisterControllerTest">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Survey5.MainApp" />
       <module name="High5" />
@@ -101,16 +99,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="High5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Survey5.model.*" />
+          <option name="PATTERN" value="Survey5.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Survey5.model" />
-      <option name="MAIN_CLASS_NAME" value="Survey5.model.DataManagerTest" />
+      <option name="PACKAGE_NAME" value="Survey5.controller" />
+      <option name="MAIN_CLASS_NAME" value="Survey5.controller.LoginControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NewSurveyControllerTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="High5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Survey5.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Survey5.controller" />
+      <option name="MAIN_CLASS_NAME" value="Survey5.controller.NewSurveyControllerTest2" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -146,36 +159,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SurveyManagerTest.testGetUserSurveys" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="High5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Survey5.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Survey5.model" />
-      <option name="MAIN_CLASS_NAME" value="Survey5.model.SurveyManagerTest" />
-      <option name="METHOD_NAME" value="testGetUserSurveys" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.MainApp" />
-      <item itemvalue="JUnit.DataManagerTest" />
-      <item itemvalue="JUnit.RegisterControllerTest" />
       <item itemvalue="JUnit.SurveyManagerTest" />
-      <item itemvalue="JUnit.SurveyManagerTest.testGetUserSurveys" />
+      <item itemvalue="JUnit.NewSurveyControllerTest2" />
+      <item itemvalue="JUnit.LoginControllerTest" />
+      <item itemvalue="JUnit.RegisterControllerTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RegisterControllerTest" />
+        <item itemvalue="JUnit.LoginControllerTest" />
+        <item itemvalue="JUnit.NewSurveyControllerTest2" />
         <item itemvalue="Application.MainApp" />
         <item itemvalue="JUnit.SurveyManagerTest" />
-        <item itemvalue="JUnit.SurveyManagerTest.testGetUserSurveys" />
-        <item itemvalue="JUnit.RegisterControllerTest" />
-        <item itemvalue="JUnit.DataManagerTest" />
       </list>
     </recent_temporary>
   </component>

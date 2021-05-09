@@ -14,10 +14,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Disabled;
 
-/**
- *
- * @author L340
- */
 public class AnswersManagerTest {
     private static AnswersManager answersManagerTester;
     private static Data dataTest = new Data("name", "email", "usernameTest", "passwordTest");
