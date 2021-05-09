@@ -9,9 +9,18 @@ import java.util.stream.Collectors;
 
 public class AnswersManager implements AnswersDaoInterface{
     
-    final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Survey5");
-    final EntityManager entityManager = entityManagerFactory.createEntityManager();
+     EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Survey5");
+     EntityManager entityManager = entityManagerFactory.createEntityManager();
 
+    public AnswersManager() {
+        entityManagerFactory = Persistence.createEntityManagerFactory("Survey5");
+        entityManager = entityManagerFactory.createEntityManager();
+    }
+
+    public AnswersManager(String dataBaseName) {
+        entityManagerFactory = Persistence.createEntityManagerFactory(dataBaseName);
+        entityManager = entityManagerFactory.createEntityManager();
+    }
     @Override
     public void setAnswers(Answers ans) {
         entityManager.getTransaction().begin();
@@ -28,7 +37,9 @@ public class AnswersManager implements AnswersDaoInterface{
 
     @Override
     public void updateAnswers(Answers ans) {
-        setAnswers(ans);
+        entityManager.getTransaction().begin();//replaced by merge to check because it check if the record exists or not
+        entityManager.merge(ans);       //salma
+        entityManager.getTransaction().commit();
     }
 
     @Override

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>HealthTemplate2Controller.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">High5</a> &gt; <a href="index.source.html" class="el_package">Survey5.controller.SurveyTemplateControllers</a> &gt; <span class="el_source">HealthTemplate2Controller.java</span></div><h1>HealthTemplate2Controller.java</h1><pre class="source lang-java linenums">package Survey5.controller.SurveyTemplateControllers;
+
+import Survey5.MainApp;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+
+import java.io.IOException;
+
+<span class="nc" id="L11">public class HealthTemplate2Controller</span>
+{
+
+    @FXML
+    private Button q1Agree;
+
+    @FXML
+    private Button q1rta;
+
+    @FXML
+    private Button q1sDisagree;
+
+    @FXML
+    private Button q1sAgree;
+
+    @FXML
+    private Button q1Disagree;
+
+    @FXML
+    private TextField q1TextField;
+
+    @FXML
+    void q1AnswerClicked(ActionEvent event) {
+
+<span class="nc bnc" id="L35" title="All 2 branches missed.">        if(event.getSource().equals(q1Agree)) {</span>
+<span class="nc" id="L36">            q1TextField.setText(q1Agree.getText());</span>
+<span class="nc" id="L37">            q1Agree.getStyleClass().add(&quot;SurveyButtonsNew&quot;);</span>
+<span class="nc" id="L38">            q1Agree.getStyleClass().remove(&quot;SurveyButtons&quot;);</span>
+        }
+<span class="nc bnc" id="L40" title="All 2 branches missed.">        else if(event.getSource().equals(q1Disagree))</span>
+<span class="nc" id="L41">            q1TextField.setText(q1Disagree.getText());</span>
+
+
+<span class="nc" id="L44">    }</span>
+
+    public void backButtonClicked(ActionEvent actionEvent) throws IOException {
+<span class="nc" id="L47">        MainApp.setRoot(&quot;/fxml/SurveyTemplates/TemplateSurvey.fxml&quot;);</span>
+<span class="nc" id="L48">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -16,9 +16,9 @@ import java.util.List;
 
 public class LoginController {
 
-    private int flag;
-    private Alert warn = new Alert(Alert.AlertType.WARNING);
-    private Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
+    private static int flag;
+    private static Alert warn = new Alert(Alert.AlertType.WARNING);
+    private  static Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
     DataDaoInterface dm = new DataManager();
     List<Data> dList;
     
@@ -56,4 +56,18 @@ public class LoginController {
             MainApp.setRoot("/fxml/RegisterScene.fxml");
 
     }
+
+    public static int getFlag() {
+        return flag;
+    }
+
+    public static Alert getConfirm() {
+        return confirm;
+    }
+
+    
+    public static Alert getWarn() {
+        return warn;
+    }
+    
 }

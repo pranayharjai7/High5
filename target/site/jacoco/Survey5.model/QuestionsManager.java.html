@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>QuestionsManager.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">High5</a> &gt; <a href="index.source.html" class="el_package">Survey5.model</a> &gt; <span class="el_source">QuestionsManager.java</span></div><h1>QuestionsManager.java</h1><pre class="source lang-java linenums">package Survey5.model;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class QuestionsManager implements QuestionsDaoInterface {
+
+    final EntityManagerFactory entityManagerFactory;
+    final EntityManager entityManager;
+    
+<span class="nc" id="L15">    public QuestionsManager() {</span>
+<span class="nc" id="L16">        entityManagerFactory = Persistence.createEntityManagerFactory(&quot;Survey5&quot;);</span>
+<span class="nc" id="L17">        entityManager = entityManagerFactory.createEntityManager();</span>
+<span class="nc" id="L18">    }</span>
+
+<span class="fc" id="L20">    public QuestionsManager(String dataBaseName) {</span>
+<span class="fc" id="L21">        entityManagerFactory = Persistence.createEntityManagerFactory(dataBaseName);</span>
+<span class="fc" id="L22">        entityManager = entityManagerFactory.createEntityManager();</span>
+<span class="fc" id="L23">    }</span>
+
+    
+    @Override
+    public void setQuestions(Questions questions) {
+<span class="fc" id="L28">        entityManager.getTransaction().begin();</span>
+<span class="fc" id="L29">        entityManager.persist(questions);</span>
+<span class="fc" id="L30">        entityManager.getTransaction().commit();</span>
+<span class="fc" id="L31">    }</span>
+
+    @Override
+    public void deleteQuestions(Questions questions) {
+<span class="fc" id="L35">        entityManager.getTransaction().begin();</span>
+<span class="fc" id="L36">        entityManager.remove(questions);</span>
+<span class="fc" id="L37">        entityManager.getTransaction().commit();</span>
+<span class="fc" id="L38">    }</span>
+
+    @Override
+    public void updateQuestions(Questions questions) {
+<span class="fc" id="L42">        entityManager.getTransaction().begin();//replaced by merge to check because it check if the record exists or not</span>
+<span class="fc" id="L43">        entityManager.merge(questions);       //salma</span>
+<span class="fc" id="L44">        entityManager.getTransaction().commit();</span>
+<span class="fc" id="L45">    }</span>
+
+    @Override
+    public List&lt;Questions&gt; getAllQuestions() {
+<span class="fc" id="L49">        TypedQuery&lt;Questions&gt; query = entityManager.createQuery(&quot;SELECT questions FROM Questions questions&quot;, Questions.class);</span>
+<span class="fc" id="L50">        List&lt;Questions&gt; questionsList = query.getResultList();</span>
+<span class="fc" id="L51">        return questionsList;</span>
+    }
+
+    @Override
+    public List&lt;Questions&gt; getSurveyQuestions(Survey survey) {
+<span class="fc" id="L56">        TypedQuery&lt;Questions&gt; query = entityManager.createQuery(&quot;SELECT questions FROM Questions questions&quot;, Questions.class);</span>
+<span class="fc" id="L57">        List&lt;Questions&gt; questionsList = query.getResultList().stream()</span>
+<span class="fc bfc" id="L58" title="All 2 branches covered.">                .filter(questions -&gt; questions.getSurveyTemplate().getId()==survey.getId())</span>
+<span class="fc" id="L59">                .collect(Collectors.toList());</span>
+<span class="fc" id="L60">        return questionsList;</span>
+    }
+
+    @Override
+    public List&lt;Questions&gt; getUserQuestions(Data userdata){
+<span class="fc" id="L65">        TypedQuery&lt;Questions&gt; query = entityManager.createQuery(&quot;SELECT questions FROM Questions questions&quot;, Questions.class);</span>
+<span class="fc" id="L66">        List&lt;Questions&gt; questionsList = query.getResultList().stream()</span>
+<span class="fc bfc" id="L67" title="All 2 branches covered.">                .filter(questions -&gt; questions.getSurveyTemplate().getOwner().getId()==userdata.getId()) //Corrected this line //salma</span>
+<span class="fc" id="L68">                .collect(Collectors.toList());</span>
+<span class="fc" id="L69">        return questionsList;</span>
+    }
+
+
+
+    @Override
+    public void close() throws Exception {
+<span class="fc" id="L76">        entityManager.close();</span>
+<span class="fc" id="L77">        entityManagerFactory.close();</span>
+<span class="fc" id="L78">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

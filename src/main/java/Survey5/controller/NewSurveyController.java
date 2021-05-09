@@ -9,43 +9,45 @@ import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import javafx.collections.FXCollections;
 
 public class NewSurveyController {
 
-    private Alert warn = new Alert(Alert.AlertType.WARNING);
-    private Label titleLabel = new Label();
-    private TextField questionField = new TextField();
-    private Button questionOkButton = new Button("OK");
-    private List<Label> questionList = new ArrayList<>();
-    private ChoiceBox<String> questionChoice = new ChoiceBox<>();
-    private Button questionChoiceOkButton = new Button("OK");
-    private String qType1="Choose Type..";
-    private String qType2="Textual Answer";
-    private String qType3="Radio Button";
-    private String qType4="CheckBox";
-    Button addRadioButton = new Button("Add Option..");
-    Button radioDoneButton = new Button("Done");
+    private static Alert warn = new Alert(Alert.AlertType.WARNING);
+    private static Label titleLabel = new Label();
 
+
+    private static TextField questionField = new TextField();
+    private static Button questionOkButton = new Button("OK");
+    private static List<Label> questionList = new ArrayList<>();
+    private static ChoiceBox<String> questionChoice = new ChoiceBox<>();
+    private  static Button questionChoiceOkButton = new Button("OK");
+    private  String qType1="Choose Type..";
+    private  String qType2="Textual Answer";
+    private  String qType3="Radio Button";
+    private  String qType4="CheckBox";
+     Button addRadioButton = new Button("Add Option..");
+     Button radioDoneButton = new Button("Done");
 
 
     @FXML
-    private AnchorPane newSurveyAnchorPane;
+    private  AnchorPane newSurveyAnchorPane;
 
     @FXML
-    private TextField titleTextField;
+    private  TextField titleTextField;
 
     @FXML
-    private Button okButton;
+    private  Button okButton;
 
     @FXML
-    private Button addQuestionButton;
+    private  Button addQuestionButton;
 
     @FXML
-    private Button doneButton;
+    private  Button doneButton;
 
     //For Title
     @FXML
-    private void okButtonClicked(ActionEvent event) {
+    private  void okButtonClicked(ActionEvent event) {
         if(titleTextField.getText().equals("")){
             warn.setContentText("Title can't be empty..");
             warn.showAndWait();
@@ -62,7 +64,7 @@ public class NewSurveyController {
 
     //To Add Question in Survey
     @FXML
-    private void addQuestionButtonClicked(ActionEvent event) {
+    private  void addQuestionButtonClicked(ActionEvent event) {
         questionChoice.getItems().removeAll(qType1,qType2,qType3,qType4);
         questionChoice.getItems().addAll(qType1,qType2,qType3,qType4);
         questionChoice.setValue("Choose Type..");
@@ -94,7 +96,7 @@ public class NewSurveyController {
     }
 
     //After Choosing question type from drop down menu
-    private void questionChoiceOkButtonClicked(ActionEvent actionEvent) {
+    private  void questionChoiceOkButtonClicked(ActionEvent actionEvent) {
         if(questionChoice.getValue().equals(qType1)){
             warn.setContentText("You have to choose a type of question..");
             warn.showAndWait();
@@ -161,9 +163,9 @@ public class NewSurveyController {
     }
 
 
-    TextField radioField  = new TextField();
-    Button radioTextEnteredButton = new Button("Ok");
-    private List<RadioButton> rButtons = new ArrayList<>();
+     TextField radioField  = new TextField();
+     Button radioTextEnteredButton = new Button("Ok");
+    private  List<RadioButton> rButtons = new ArrayList<>();
     private List<List<RadioButton>> listOfrButtons = new ArrayList<>();
     private List<ToggleGroup> tgList = new ArrayList<>();
     //To add radio option
@@ -259,4 +261,43 @@ public class NewSurveyController {
     private void backButtonClicked(ActionEvent actionEvent) throws IOException {
         MainApp.setRoot("/fxml/TemplateOrCreate.fxml");
     }
+
+    public static Alert getWarn() {
+        return warn;
+    }
+    
+    public static Label getTitleLabel() {
+        return titleLabel;
+    }
+    
+
+    public static Button getQuestionChoiceOkButton() {
+        return questionChoiceOkButton;
+    }
+    
+
+    
+            public static ChoiceBox<String> getQuestionChoice() {
+        return questionChoice;
+    }
+
+    public static TextField getQuestionField() {
+        return questionField;
+    }
+
+    public static Button getQuestionOkButton() {
+        return questionOkButton;
+    }
+
+    public static List<Label> getQuestionList() {
+        return questionList;
+    }
+            
+    
+
+
+    
+
+        
+        
 }

@@ -20,10 +20,10 @@ public class MyProfileController {
     private DataDaoInterface dm = new DataManager();
     private static Data userdata;
 
-    private TextField nameField = new TextField();
-    private TextField usernameField = new TextField();
-    private TextField emailField = new TextField();
-    private TextField passwordField = new PasswordField();
+    private static TextField nameField = new TextField();
+    private static TextField usernameField = new TextField();
+    private static TextField emailField = new TextField();
+    private static TextField passwordField = new PasswordField();
     private Button doneButton = new Button("Done");
 
     public static void setData(Data data) {
@@ -33,19 +33,19 @@ public class MyProfileController {
     @FXML
     private AnchorPane myProfileAnchorPane;
     @FXML
-    private Label nameLabel;
+    private static Label nameLabel;
 
     @FXML
-    private Label usernameLabel;
+    private static Label usernameLabel;
 
     @FXML
-    private Label emailLabel;
+    private static Label emailLabel;
 
     @FXML
     private Button changeButton;
 
     @FXML
-    private void initialize(){
+    public static void initialize(){
         nameLabel.setText(userdata.getName());
         usernameLabel.setText(userdata.getUsername());
         emailLabel.setText(userdata.getEmail());
@@ -107,4 +107,43 @@ public class MyProfileController {
         myProfileAnchorPane.getChildren().removeAll(nameField,usernameField,emailField,doneButton);
         myProfileAnchorPane.getChildren().addAll(nameLabel,usernameLabel,emailLabel,changeButton);
     }
+
+    public static Label getNameLabel() {
+        return nameLabel;
+    }
+
+    public static Label getUsernameLabel() {
+        return usernameLabel;
+    }
+
+    public static Label getEmailLabel() {
+        return emailLabel;
+    }
+
+    public static void setNameLabel(String name) {
+        MyProfileController.nameLabel.setText(name); 
+    }
+
+    public static void setUsernameLabel(String username) {
+        MyProfileController.usernameLabel.setText(username);
+    }
+
+    public static void setEmailLabel(String email) {
+        MyProfileController.emailLabel.setText(email);
+    }
+
+    public static TextField getNameField() {
+        return nameField;
+    }
+
+    public static TextField getUsernameField() {
+        return usernameField;
+    }
+
+    public static TextField getEmailField() {
+        return emailField;
+    }
+    
+    
+    
 }

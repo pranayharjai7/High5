@@ -1,5 +1,7 @@
 package Survey5.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.*;
 
 @Entity
@@ -19,6 +21,9 @@ public class Data {
 
     @Basic(optional = false)
     private String password;
+    
+    @OneToMany(mappedBy = "Owner")
+    private List<Survey> surveys=  new ArrayList<Survey>();
 
     public Data() {
     }
@@ -30,6 +35,7 @@ public class Data {
         this.username = username;
         this.password = password;
     }
+    
 
     public String getEmail() {
         return email;

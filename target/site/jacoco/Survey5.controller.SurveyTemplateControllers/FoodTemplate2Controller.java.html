@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FoodTemplate2Controller.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">High5</a> &gt; <a href="index.source.html" class="el_package">Survey5.controller.SurveyTemplateControllers</a> &gt; <span class="el_source">FoodTemplate2Controller.java</span></div><h1>FoodTemplate2Controller.java</h1><pre class="source lang-java linenums">package Survey5.controller.SurveyTemplateControllers;
+
+import Survey5.MainApp;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
+import org.controlsfx.control.Rating;
+
+import java.io.IOException;
+
+
+<span class="nc" id="L14">public class FoodTemplate2Controller</span>
+{
+    @FXML
+    private TextField AgeFoodBox;
+    @FXML
+    private Label FoodAndNutritionLabel;
+    @FXML
+    private Button Back;
+    @FXML
+    private Button next1;
+    
+    @FXML
+    void agefoodboxclicked (ActionEvent event) throws IOException {
+                    
+<span class="nc" id="L28">} </span>
+    @FXML
+    private Rating stars;
+
+    void starsclicked (ActionEvent event) throws IOException {
+                
+
+<span class="nc" id="L35">    }</span>
+
+    @FXML
+    private RadioButton VitaminsYes;
+
+    @FXML
+    private RadioButton VitaminsNo;
+
+    @FXML
+    private Text ExerciseQuestion;
+
+    @FXML
+    private Text SupplementsQuestion;
+
+    @FXML
+    private Text BMIFoodSurveyquestion;
+    
+    @FXML
+    private TextField BMIfieldFoodBox;
+    
+    @FXML
+    void BMIclicked (ActionEvent event) throws IOException {
+                
+
+<span class="nc" id="L59">    }</span>
+
+    @FXML
+    private Text AgeFoodSurveyQuestion;
+
+    @FXML
+    private Text PhysicalSatisfactionQuestion;
+
+    @FXML
+    private Text FoodAllergyQuestion;
+
+
+    @FXML
+    private TextField FoodAllergyAnswerBox;
+    
+    @FXML
+    void Allergyclicked (ActionEvent event) throws IOException {
+                
+
+<span class="nc" id="L78">    }</span>
+    
+    @FXML
+    private Slider ExerciseSliderbox;
+
+    void sliderclicked (ActionEvent event) throws IOException {
+               
+<span class="nc" id="L85">    }</span>
+    
+
+    @FXML
+    void BackButtonClicked (ActionEvent event) throws IOException {
+<span class="nc" id="L90">                MainApp.setRoot(&quot;SurveyTemplates&quot;);</span>
+
+<span class="nc" id="L92">    }</span>
+    
+   
+     @FXML
+    void next1clicked (ActionEvent event) throws IOException {
+               
+
+<span class="nc" id="L99">    }</span>
+
+    @FXML
+    void supplementsNoClicked(ActionEvent event) {
+        
+<span class="nc" id="L104">    }</span>
+
+    @FXML
+    void supplementsYesClicked(ActionEvent event) {
+        
+<span class="nc" id="L109">    }</span>
+
+    @FXML
+    private void sliderclicked(MouseEvent event) {
+<span class="nc" id="L113">    }</span>
+
+    @FXML
+    private void starsclicked(MouseEvent event) {
+<span class="nc" id="L117">    }</span>
+
+    public void backButtonClicked(ActionEvent actionEvent) throws IOException {
+<span class="nc" id="L120">        MainApp.setRoot(&quot;/fxml/SurveyTemplates/TemplateSurvey.fxml&quot;);</span>
+<span class="nc" id="L121">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
