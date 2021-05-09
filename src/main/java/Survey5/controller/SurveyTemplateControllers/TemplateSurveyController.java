@@ -177,6 +177,8 @@ public class TemplateSurveyController {
 
     @FXML
     void ShopBusinessReviewSurveyTemplateButtonClicked(ActionEvent event) throws IOException {
+        BusinessTemplate3Controller.setData(userdata);
+        BusinessTemplate3Controller.setCreateOrAnswerFunction("create");
         MainApp.setRoot("/fxml/SurveyTemplates/BusinessTemplate3.fxml");
     }
 

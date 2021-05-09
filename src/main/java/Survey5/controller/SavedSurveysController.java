@@ -106,6 +106,11 @@ public class SavedSurveysController{
                 BusinessTemplate2Controller.setCreateOrAnswerFunction("ShowAnswer",survey);
                 break;
             }
+            case "BusinessTemplate3": {
+                BusinessTemplate3Controller.setData(userdata);
+                BusinessTemplate3Controller.setCreateOrAnswerFunction("ShowAnswer",survey);
+                break;
+            }
         }
     }
 
