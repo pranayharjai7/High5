@@ -8,10 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/AnswerSurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/AnswerSurveyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SavedSurveysController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SavedSurveysController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/FoodTemplate1Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/FoodTemplate1Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/FoodTemplate2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/FoodTemplate2Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/FoodTemplate1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/FoodTemplate1.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userdata_db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/userdata_db.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/FoodTemplate2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/FoodTemplate2.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

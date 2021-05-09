@@ -130,6 +130,8 @@ public class TemplateSurveyController {
 
     @FXML
     void FoodAllergyTemplateButtonClicked(ActionEvent event) throws IOException {
+        FoodTemplate2Controller.setData(userdata);
+        FoodTemplate2Controller.setCreateOrAnswerFunction("create");
         MainApp.setRoot("/fxml/SurveyTemplates/FoodTemplate2.fxml");
     }
 
