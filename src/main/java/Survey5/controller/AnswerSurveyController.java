@@ -1,10 +1,7 @@
 package Survey5.controller;
 
 import Survey5.MainApp;
-import Survey5.controller.SurveyTemplateControllers.HealthTemplate1Controller;
-import Survey5.controller.SurveyTemplateControllers.HealthTemplate2Controller;
-import Survey5.controller.SurveyTemplateControllers.HealthTemplate3Controller;
-import Survey5.controller.SurveyTemplateControllers.HealthTemplate4Controller;
+import Survey5.controller.SurveyTemplateControllers.*;
 import Survey5.model.Data;
 import Survey5.model.Survey;
 import Survey5.model.SurveyManager;
@@ -97,6 +94,11 @@ public class AnswerSurveyController {
             case "HealthTemplate4": {
                 HealthTemplate4Controller.setData(userdata);
                 HealthTemplate4Controller.setCreateOrAnswerFunction("answer",survey);
+                break;
+            }
+            case "BusinessTemplate1": {
+                BusinessTemplate1Controller.setData(userdata);
+                BusinessTemplate1Controller.setCreateOrAnswerFunction("answer",survey);
                 break;
             }
         }
