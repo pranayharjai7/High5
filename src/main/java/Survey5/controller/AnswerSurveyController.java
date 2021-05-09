@@ -111,6 +111,11 @@ public class AnswerSurveyController {
                 BusinessTemplate3Controller.setCreateOrAnswerFunction("answer",survey);
                 break;
             }
+            case "BusinessTemplate4": {
+                BusinessTemplate4Controller.setData(userdata);
+                BusinessTemplate4Controller.setCreateOrAnswerFunction("answer",survey);
+                break;
+            }
         }
     }
 
