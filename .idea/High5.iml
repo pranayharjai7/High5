@@ -117,5 +117,6 @@
     <orderEntry type="library" name="Maven: org.testfx:testfx-junit5:4.0.16-alpha" level="project" />
     <orderEntry type="library" name="Maven: org.testfx:testfx-internal-java8:4.0.12-alpha" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest:2.1" level="project" />
+    <orderEntry type="library" name="Maven: org.mockito:mockito-junit-jupiter:3.9.0" level="project" />
   </component>
 </module>

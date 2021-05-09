@@ -277,7 +277,7 @@ public class NewSurveyController {
     
 
     
-            public static ChoiceBox<String> getQuestionChoice() {
+    public static ChoiceBox<String> getQuestionChoice() {
         return questionChoice;
     }
 

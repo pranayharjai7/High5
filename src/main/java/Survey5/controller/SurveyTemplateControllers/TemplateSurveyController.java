@@ -163,21 +163,29 @@ public class TemplateSurveyController {
 
     @FXML
     void CustomerSatisfactionSurveyTemplateButtonClicked(ActionEvent event) throws IOException {
+        BusinessTemplate1Controller.setData(userdata);
+        BusinessTemplate1Controller.setCreateOrAnswerFunction("create");
         MainApp.setRoot("/fxml/SurveyTemplates/BusinessTemplate1.fxml");
     }
 
     @FXML
     void WebsiteReviewSurveyTemplateButtonClicked(ActionEvent event) throws IOException {
+        BusinessTemplate2Controller.setData(userdata);
+        BusinessTemplate2Controller.setCreateOrAnswerFunction("create");
         MainApp.setRoot("/fxml/SurveyTemplates/BusinessTemplate2.fxml");
     }
 
     @FXML
     void ShopBusinessReviewSurveyTemplateButtonClicked(ActionEvent event) throws IOException {
+        BusinessTemplate3Controller.setData(userdata);
+        BusinessTemplate3Controller.setCreateOrAnswerFunction("create");
         MainApp.setRoot("/fxml/SurveyTemplates/BusinessTemplate3.fxml");
     }
 
     @FXML
     void AppSoftwareReviewSurveyTemplateButtonClicked(ActionEvent event) throws IOException {
+        BusinessTemplate4Controller.setData(userdata);
+        BusinessTemplate4Controller.setCreateOrAnswerFunction("create");
         MainApp.setRoot("/fxml/SurveyTemplates/BusinessTemplate4.fxml");
     }
 

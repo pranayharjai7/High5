@@ -46,6 +46,11 @@ public class ShowAnswersController {
                 if(qList.isEmpty()){
                         warn.setContentText("No Answers yet!");
                         warn.showAndWait();
+                        try {
+                                MainApp.setRoot("/fxml/SavedSurveys.fxml");
+                        } catch (IOException e) {
+                                e.printStackTrace();
+                        }
                 }
                 else {
                         addQuestions();
