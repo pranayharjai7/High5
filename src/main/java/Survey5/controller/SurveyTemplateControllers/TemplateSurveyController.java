@@ -102,16 +102,22 @@ public class TemplateSurveyController {
 
     @FXML
     void workHealthSurveyTemplateButtonClicked(ActionEvent event) throws IOException {
+        HealthTemplate2Controller.setData(userdata);
+        HealthTemplate2Controller.setCreateOrAnswerFunction("create");
         MainApp.setRoot("/fxml/SurveyTemplates/HealthTemplate2.fxml");
     }
 
     @FXML
     void CoronaVaccineSurveyTemplateButtonClicked(ActionEvent event) throws IOException {
+        HealthTemplate3Controller.setData(userdata);
+        HealthTemplate3Controller.setCreateOrAnswerFunction("create");
         MainApp.setRoot("/fxml/SurveyTemplates/HealthTemplate3.fxml");
     }
 
     @FXML
     void DrugsStudySurveyTemplateButtonClicked(ActionEvent event) throws IOException {
+        HealthTemplate4Controller.setData(userdata);
+        HealthTemplate4Controller.setCreateOrAnswerFunction("create");
         MainApp.setRoot("/fxml/SurveyTemplates/HealthTemplate4.fxml");
     }
 
