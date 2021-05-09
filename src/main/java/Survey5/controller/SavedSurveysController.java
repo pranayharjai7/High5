@@ -119,13 +119,20 @@ public class SavedSurveysController{
                 FoodTemplate1Controller.setData(userdata);
                 FoodTemplate1Controller.setCreateOrAnswerFunction("ShowAnswer",survey);
                 break;
-            }case "FoodTemplate2": {
+            }
+            case "FoodTemplate2": {
                 FoodTemplate2Controller.setData(userdata);
                 FoodTemplate2Controller.setCreateOrAnswerFunction("ShowAnswer",survey);
                 break;
-            }case "FoodTemplate3": {
+            }
+            case "FoodTemplate3": {
                 FoodTemplate3Controller.setData(userdata);
                 FoodTemplate3Controller.setCreateOrAnswerFunction("ShowAnswer",survey);
+                break;
+            }
+            case "FoodTemplate4": {
+                FoodTemplate4Controller.setData(userdata);
+                FoodTemplate4Controller.setCreateOrAnswerFunction("ShowAnswer",survey);
                 break;
             }
         }
