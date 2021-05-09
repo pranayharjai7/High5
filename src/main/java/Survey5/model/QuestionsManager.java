@@ -9,9 +9,20 @@ import java.util.stream.Collectors;
 
 public class QuestionsManager implements QuestionsDaoInterface {
 
-    final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Survey5");
-    final EntityManager entityManager = entityManagerFactory.createEntityManager();
+    final EntityManagerFactory entityManagerFactory;
+    final EntityManager entityManager;
+    
+    public QuestionsManager() {
+        entityManagerFactory = Persistence.createEntityManagerFactory("Survey5");
+        entityManager = entityManagerFactory.createEntityManager();
+    }
 
+    public QuestionsManager(String dataBaseName) {
+        entityManagerFactory = Persistence.createEntityManagerFactory(dataBaseName);
+        entityManager = entityManagerFactory.createEntityManager();
+    }
+
+    
     @Override
     public void setQuestions(Questions questions) {
         entityManager.getTransaction().begin();
@@ -28,7 +39,9 @@ public class QuestionsManager implements QuestionsDaoInterface {
 
     @Override
     public void updateQuestions(Questions questions) {
-        setQuestions(questions);
+        entityManager.getTransaction().begin();//replaced by merge to check because it check if the record exists or not
+        entityManager.merge(questions);       //salma
+        entityManager.getTransaction().commit();
     }
 
     @Override
@@ -51,21 +64,12 @@ public class QuestionsManager implements QuestionsDaoInterface {
     public List<Questions> getUserQuestions(Data userdata){
         TypedQuery<Questions> query = entityManager.createQuery("SELECT questions FROM Questions questions", Questions.class);
         List<Questions> questionsList = query.getResultList().stream()
-                .filter(questions -> questions.getSurveyTemplate().getId()==userdata.getId())
+                .filter(questions -> questions.getSurveyTemplate().getOwner().getId()==userdata.getId()) //Corrected this line //salma
                 .collect(Collectors.toList());
         return questionsList;
     }
 
-    @Deprecated
-    @Override
-    public List<Questions> getUserSurveyQuestions(Data userdata,Survey survey){
-        TypedQuery<Questions> query = entityManager.createQuery("SELECT questions FROM Questions questions", Questions.class);
-        List<Questions> questionsList = query.getResultList().stream()
-                .filter(questions -> questions.getSurveyTemplate().getId()==survey.getId())
-                .filter(questions -> questions.getSurveyTemplate().getId()==userdata.getId())
-                .collect(Collectors.toList());
-        return questionsList;
-    }
+
 
     @Override
     public void close() throws Exception {

@@ -21,44 +21,31 @@ import org.testfx.api.FxRobot;
 import org.testfx.api.FxToolkit;
 import org.testfx.framework.junit5.ApplicationExtension;
 import org.testfx.framework.junit5.Start;
+import Survey5.controller.LoginController;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.junit.jupiter.api.Disabled;
 
 
 @ExtendWith(ApplicationExtension.class)
 class LoginControllerTest{
+    private static LoginController LogInTester;
     @Start
         public void startLoginController(Stage stage) throws Exception {
         Scene scene = new Scene(loadFXMLLoginController("/fxml/LoginScene.fxml"));
         stage.setTitle("Survey5");
         stage.setScene(scene);
         stage.show();
+        LogInTester = new LoginController();
     }
         public Parent loadFXMLLoginController(String fxml) throws IOException{
-        FXMLLoader loader = new FXMLLoader(LoginControllerTest.class.getResource(fxml));
+        FXMLLoader loader = new FXMLLoader(LoginController.class.getResource(fxml));
         return loader.load();
     } 
 
     @Test
-    public void testUserNameFieldLoginController(FxRobot robot) {
-    Label UserNameLable = robot.lookup("#usernameLabel").queryAs(Label.class);
-    assertNotNull(robot.lookup("#usernameTextField")); 
-    assertEquals("User Name:", UserNameLable.getText());
-    }
-    
-
-    @Test
-    public void testPasswordFiedLoginController(FxRobot robot) {
-    Label PasswordLable = robot.lookup("#passwordLabel").queryAs(Label.class);
-    assertNotNull(robot.lookup("#passwordField")); 
-    assertEquals("Password:", PasswordLable.getText());
-    }
-    
-    @Test
-    public void testLogInButtonIfExist(FxRobot robot) {
-    assertNotNull(robot.lookup("#loginButton")); 
-    }
-
-    @Test
     public void testInputLoginController(FxRobot robot){
+        clearOutInputFields(robot);
         TextField UserNameField =  robot.lookup("#usernameTextField").queryAs(TextField.class);
         PasswordField PasswordField =  robot.lookup("#passwordField").queryAs(PasswordField.class);
         robot.clickOn("#usernameTextField");
@@ -68,11 +55,41 @@ class LoginControllerTest{
         robot.clickOn("#loginButton");
         assertEquals("Unique username", UserNameField.getText());
         assertEquals("Password", PasswordField.getText());
+        assertEquals("Login was Successful!", LoginController.getConfirm().getContentText());
 
     }
     
+    @Test
+    @Disabled
+    public void testInputLoginController_WhenWrong_Username(FxRobot robot){
+        clearOutInputFields(robot);
+        TextField UserNameField =  robot.lookup("#usernameTextField").queryAs(TextField.class);
+        PasswordField PasswordField =  robot.lookup("#passwordField").queryAs(PasswordField.class);
+        robot.clickOn("#usernameTextField");
+        robot.write("wrong username");
+        robot.clickOn("#passwordField");
+        robot.write("Password");
+        robot.clickOn("#loginButton");
+        assertEquals("wrong username", UserNameField.getText());
+        assertEquals("Password", PasswordField.getText());
+        assertEquals("Either username or password was incorrect..\n Please try again..", LoginController.getWarn().getContentText());
+        } 
     
-    
+        @Test
+    public void testInputLoginController_WhenWrong_Password(FxRobot robot){
+        clearOutInputFields(robot);
+        TextField UserNameField =  robot.lookup("#usernameTextField").queryAs(TextField.class);
+        PasswordField PasswordField =  robot.lookup("#passwordField").queryAs(PasswordField.class);
+        robot.clickOn("#usernameTextField");
+        robot.write("Unique username");
+        robot.clickOn("#passwordField");
+        robot.write("Wrong Password");
+        robot.clickOn("#loginButton");
+        assertEquals("Unique username", UserNameField.getText());
+        assertEquals("Wrong Password", PasswordField.getText());
+        assertEquals("Either username or password was incorrect..\n Please try again..", LoginController.getWarn().getContentText());
+
+    } 
     public LoginControllerTest() {
     }
     
@@ -92,14 +109,21 @@ class LoginControllerTest{
     }
     
     @AfterEach
-    public void tearDown() throws TimeoutException {
+    public void tearDown(FxRobot robot) throws TimeoutException {
+        FxToolkit.hideStage();
+        robot.release(new KeyCode[0]);
+        robot.release(new javafx.scene.input.MouseButton[0]);
     }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
 
-
+    private void clearOutInputFields(FxRobot robot) {
+        final int NUM_CHARS_TO_ERASE = 20; // ensure fields are empty
+        robot.clickOn("#usernameTextField").eraseText(NUM_CHARS_TO_ERASE);
+        robot.clickOn("#passwordField").eraseText(NUM_CHARS_TO_ERASE);
+    }
    
 
 }

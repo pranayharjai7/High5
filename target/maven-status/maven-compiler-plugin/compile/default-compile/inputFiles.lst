@@ -1,37 +1,40 @@
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\LoginController.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\CreateSurveyController.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\model\SurveyManager.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\TemplateSurveyController.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\SportsTemplate4Controller.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\RegisterController.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\model\DataDaoInterface.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\FoodTemplate4Controller.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\HealthTemplate2Controller.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\TemplateOrCreateController.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\AfterLoginMenuController.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\BusinessTemplate1Controller.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\model\Survey.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\MyProfileController.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\FoodTemplate1Controller.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\SportsTemplate1Controller.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\model\QnADaoInterface.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\model\QnAManager.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\PrimaryController.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\model\DataManager.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\BusinessTemplate2Controller.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\TemporaryTemplateController.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\HealthTemplate3Controller.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\model\SurveysDaoInterface.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\FoodTemplate2Controller.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\NewSurveyController.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\SportsTemplate2Controller.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\BusinessTemplate3Controller.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\HealthTemplate4Controller.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\SavedSurveysController.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\FoodTemplate3Controller.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\SportsTemplate3Controller.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\MainApp.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\model\Data.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\BusinessTemplate4Controller.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\model\QnA.java
-C:\MARIA\Projects\GIT\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\HealthTemplate1Controller.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\model\Answers.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\SportsTemplate1Controller.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\model\DataManager.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\model\SurveysDaoInterface.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\NewSurveyController.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\FoodTemplate2Controller.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\AfterLoginMenuController.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\ShowAnswersController.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\MainApp.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\model\Data.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\BusinessTemplate3Controller.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\HealthTemplate3Controller.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\HealthTemplate2Controller.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\SavedSurveysController.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\TemplateSurveyController.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\SportsTemplate4Controller.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\FoodTemplate1Controller.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\BusinessTemplate2Controller.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\RegisterController.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\model\QuestionsManager.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\TemplateOrCreateController.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\SportsTemplate3Controller.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\model\AnswersManager.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\MyProfileController.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\model\QuestionsDaoInterface.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\model\SurveyManager.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\BusinessTemplate1Controller.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\FoodTemplate4Controller.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\HealthTemplate1Controller.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\AnswerSurveyController.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\PrimaryController.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\BusinessTemplate4Controller.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\LoginController.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\SportsTemplate2Controller.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\model\Questions.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\model\Survey.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\model\AnswersDaoInterface.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\HealthTemplate4Controller.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\controller\SurveyTemplateControllers\FoodTemplate3Controller.java
+E:\Salma\Debrecen\Semester4\Software Dev\Project\High5\src\main\java\Survey5\model\DataDaoInterface.java

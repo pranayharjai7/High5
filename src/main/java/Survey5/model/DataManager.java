@@ -69,9 +69,7 @@ public class DataManager implements DataDaoInterface{
         return true;
     }
 
-    public void rollBack() throws Exception {
-        entityManager.getTransaction().rollback();
-    }
+
 
     @Override
     public void close() throws Exception {

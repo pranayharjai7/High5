@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SportsTemplate1Controller.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">High5</a> &gt; <a href="index.source.html" class="el_package">Survey5.controller.SurveyTemplateControllers</a> &gt; <span class="el_source">SportsTemplate1Controller.java</span></div><h1>SportsTemplate1Controller.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Survey5.controller.SurveyTemplateControllers;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import Survey5.MainApp;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+
+/**
+ * FXML Controller class
+ *
+ * @author maria
+ */
+<span class="nc" id="L23">public class SportsTemplate1Controller {</span>
+
+        @FXML
+    private Button submitButton;
+
+    @FXML
+    void submitButtonClicked(ActionEvent event) throws IOException {
+<span class="nc" id="L30">        MainApp.setRoot(&quot;SurveyTemplates&quot;);</span>
+<span class="nc" id="L31">    }</span>
+
+    public void backButtonClicked(ActionEvent actionEvent) throws IOException {
+<span class="nc" id="L34">        MainApp.setRoot(&quot;/fxml/SurveyTemplates/TemplateSurvey.fxml&quot;);</span>
+<span class="nc" id="L35">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

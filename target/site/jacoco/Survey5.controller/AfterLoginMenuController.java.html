@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AfterLoginMenuController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">High5</a> &gt; <a href="index.source.html" class="el_package">Survey5.controller</a> &gt; <span class="el_source">AfterLoginMenuController.java</span></div><h1>AfterLoginMenuController.java</h1><pre class="source lang-java linenums">package Survey5.controller;
+
+import Survey5.MainApp;
+import Survey5.model.Data;
+import javafx.animation.Animation;
+import javafx.animation.FadeTransition;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
+import javafx.util.Duration;
+
+import java.io.IOException;
+
+<span class="nc" id="L15">public class AfterLoginMenuController {</span>
+
+    private static Data userdata;
+<span class="nc" id="L18">    private Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);</span>
+    private FadeTransition fadeTransition;
+    public static void setUserdata(Data userdata) {
+<span class="fc" id="L21">        AfterLoginMenuController.userdata = userdata;</span>
+<span class="fc" id="L22">    }</span>
+
+    @FXML
+    private Label AfterLoginMenuTitle;
+
+    @FXML
+    private void initialize(){
+<span class="nc" id="L29">        fadeTransition = new FadeTransition(Duration.seconds(1.0), AfterLoginMenuTitle);</span>
+<span class="nc" id="L30">        fadeTransition.setFromValue(1.0);</span>
+<span class="nc" id="L31">        fadeTransition.setToValue(0.0);</span>
+        //fadeTransition.setCycleCount(Animation.INDEFINITE);
+<span class="nc" id="L33">        fadeTransition.play();</span>
+<span class="nc" id="L34">        fadeTransition.setOnFinished(this::fadeFinished);</span>
+<span class="nc" id="L35">    }</span>
+    private void fadeFinished(ActionEvent actionEvent) {
+<span class="nc" id="L37">        fadeTransition.setFromValue(0.0);</span>
+<span class="nc" id="L38">        fadeTransition.setToValue(1.0);</span>
+<span class="nc" id="L39">        fadeTransition.play();</span>
+<span class="nc" id="L40">        fadeTransition.setOnFinished(this::fadeStart);</span>
+<span class="nc" id="L41">    }</span>
+    private void fadeStart(ActionEvent actionEvent) {
+<span class="nc" id="L43">        fadeTransition.setFromValue(1.0);</span>
+<span class="nc" id="L44">        fadeTransition.setToValue(0.0);</span>
+<span class="nc" id="L45">        fadeTransition.play();</span>
+<span class="nc" id="L46">        fadeTransition.setOnFinished(this::fadeFinished);</span>
+<span class="nc" id="L47">    }</span>
+
+    @FXML
+    private void profileButtonClicked(ActionEvent actionEvent) throws IOException {
+<span class="nc" id="L51">        MyProfileController.setData(userdata);</span>
+<span class="nc" id="L52">        MainApp.setRoot(&quot;/fxml/MyProfile.fxml&quot;);</span>
+<span class="nc" id="L53">    }</span>
+
+    @FXML
+    private void savedSurveyButtonClicked(ActionEvent actionEvent) throws IOException {
+<span class="nc" id="L57">        SavedSurveysController.setUserdata(userdata);</span>
+<span class="nc" id="L58">        MainApp.setRoot(&quot;/fxml/SavedSurveys.fxml&quot;);</span>
+<span class="nc" id="L59">    }</span>
+
+    @FXML
+    private void createSurveyButtonClicked(ActionEvent actionEvent) throws IOException {
+<span class="nc" id="L63">        TemplateOrCreateController.setData(userdata);</span>
+<span class="nc" id="L64">        MainApp.setRoot(&quot;/fxml/TemplateOrCreate.fxml&quot;);</span>
+<span class="nc" id="L65">    }</span>
+
+    @FXML
+    private void AnswerSurveyButtonClicked(ActionEvent actionEvent) throws IOException {
+<span class="nc" id="L69">        AnswerSurveyController.setUserdata(userdata);</span>
+<span class="nc" id="L70">        MainApp.setRoot(&quot;/fxml/AnswerSurvey.fxml&quot;);</span>
+<span class="nc" id="L71">    }</span>
+
+    @FXML
+    private void logoutButtonClicked(ActionEvent actionEvent) throws IOException {
+<span class="nc" id="L75">        confirm.setContentText(&quot;You have been logged out successfully&quot;);</span>
+<span class="nc" id="L76">        confirm.showAndWait();</span>
+<span class="nc" id="L77">        MainApp.setRoot(&quot;/fxml/LoginScene.fxml&quot;);</span>
+<span class="nc" id="L78">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

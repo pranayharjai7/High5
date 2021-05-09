@@ -15,7 +15,17 @@ public class Answers {
     @ManyToOne
     private Questions question;
 
+    public Answers(String answersType, String AnswerText, Questions question) {
+        this.answersType = answersType;
+        this.AnswerText = AnswerText;
+        this.question = question;
+    }
 
+    public Answers() {
+    }
+
+    
+    
     public int getId() {
         return id;
     }

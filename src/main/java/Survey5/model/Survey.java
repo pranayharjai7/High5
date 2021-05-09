@@ -14,6 +14,14 @@ public class Survey {
     @ManyToOne
     private Data Owner;
 
+    public Survey(String typeOfTemplate, String title, Data Owner) {
+        this.typeOfTemplate = typeOfTemplate;
+        this.title = title;
+        this.Owner = Owner;
+    }
+    
+    
+
     public Data getOwner() {
         return Owner;
     }

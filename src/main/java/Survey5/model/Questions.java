@@ -20,6 +20,13 @@ public class Questions {
     @ManyToOne
     private Data answeredByUser;
 
+    public Questions(int questionNumber, String question, Survey surveyTemplate, Data answeredByUser) {
+        this.questionNumber = questionNumber;
+        this.question = question;
+        this.surveyTemplate = surveyTemplate;
+        this.answeredByUser = answeredByUser;
+    }
+
 
     public Survey getSurveyTemplate() {
         return surveyTemplate;

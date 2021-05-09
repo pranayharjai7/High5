@@ -1,10 +1,13 @@
 package Survey5.controller;
 
+import Survey5.MainApp;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -18,24 +21,33 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.testfx.api.FxRobot;
 import org.testfx.api.FxToolkit;
 import org.testfx.framework.junit5.ApplicationExtension;
 import org.testfx.framework.junit5.Start;
+import Survey5.controller.RegisterController;
 
 
 @ExtendWith(ApplicationExtension.class)
-class RegisterControllerTest{
-    @Start
+@ExtendWith(MockitoExtension.class)
+class RegisterControllerTest{  
+    private static RegisterController registerControllerTester;
+        @Start
         public void startRegisterController(Stage stage) throws Exception {
         Scene scene = new Scene(loadFXMLRegisterController("/fxml/RegisterScene.fxml"));
         stage.setTitle("Survey5");
         stage.setScene(scene);
         stage.show();
+        registerControllerTester = new RegisterController();
     }
         
         public Parent loadFXMLRegisterController(String fxml) throws IOException{
-            FXMLLoader loader = new FXMLLoader(RegisterControllerTest.class.getResource(fxml));
+            //RegisterController registerControllerTester = new RegisterController();
+            FXMLLoader loader = new FXMLLoader(RegisterController.class.getResource(fxml));
             return loader.load();
     }
 
@@ -85,18 +97,12 @@ class RegisterControllerTest{
         assertEquals("Unique username", testUserNameInput.getText());
         assertEquals("email", testEmailInput.getText());
         assertEquals("Password", testPasswordInput.getText());
+        assertEquals("The Email you entered already exists!", RegisterController.getWarn().getContentText());
+        assertEquals(1, RegisterController.getFlag());
 
-
     }
     
     
-    
-    public RegisterControllerTest() {
-    }
-    
-    @BeforeAll
-    public static void setUpClass() {
-    }
     
     @AfterAll
     public static void tearDownClass(FxRobot robot) throws TimeoutException {
@@ -111,7 +117,8 @@ class RegisterControllerTest{
     }
     
     @AfterEach
-    public void tearDown() throws TimeoutException {
+    public void tearDown(FxRobot robot) throws TimeoutException {
+
     }
 
 

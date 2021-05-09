@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Questions.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">High5</a> &gt; <a href="index.source.html" class="el_package">Survey5.model</a> &gt; <span class="el_source">Questions.java</span></div><h1>Questions.java</h1><pre class="source lang-java linenums">package Survey5.model;
+
+import javax.persistence.*;
+
+@Entity
+public class Questions {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+
+    @Column(nullable = false)
+    private int questionNumber;
+
+    @Column(nullable = false)
+    private String question;
+
+    @ManyToOne
+    private Survey surveyTemplate;
+
+    @ManyToOne
+    private Data answeredByUser;
+
+<span class="fc" id="L23">    public Questions(int questionNumber, String question, Survey surveyTemplate, Data answeredByUser) {</span>
+<span class="fc" id="L24">        this.questionNumber = questionNumber;</span>
+<span class="fc" id="L25">        this.question = question;</span>
+<span class="fc" id="L26">        this.surveyTemplate = surveyTemplate;</span>
+<span class="fc" id="L27">        this.answeredByUser = answeredByUser;</span>
+<span class="fc" id="L28">    }</span>
+
+
+    public Survey getSurveyTemplate() {
+<span class="fc" id="L32">        return surveyTemplate;</span>
+    }
+
+    public void setSurveyTemplate(Survey surveyTemplate) {
+<span class="nc" id="L36">        this.surveyTemplate = surveyTemplate;</span>
+<span class="nc" id="L37">    }</span>
+
+<span class="fc" id="L39">    public Questions() {</span>
+<span class="fc" id="L40">    }</span>
+
+    public int getId() {
+<span class="fc" id="L43">        return id;</span>
+    }
+
+    public void setId(int id) {
+<span class="nc" id="L47">        this.id = id;</span>
+<span class="nc" id="L48">    }</span>
+
+    public String getQuestion() {
+<span class="fc" id="L51">        return question;</span>
+    }
+
+    public void setQuestion(String question) {
+<span class="fc" id="L55">        this.question = question;</span>
+<span class="fc" id="L56">    }</span>
+
+    public int getQuestionNumber() {
+<span class="fc" id="L59">        return questionNumber;</span>
+    }
+
+    public void setQuestionNumber(int questionNumber) {
+<span class="fc" id="L63">        this.questionNumber = questionNumber;</span>
+<span class="fc" id="L64">    }</span>
+
+    public Data getAnsweredByUser() {
+<span class="nc" id="L67">        return answeredByUser;</span>
+    }
+
+    public void setAnsweredByUser(Data answeredByUser) {
+<span class="nc" id="L71">        this.answeredByUser = answeredByUser;</span>
+<span class="nc" id="L72">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

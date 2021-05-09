@@ -38,7 +38,9 @@ public class SurveyManager implements SurveysDaoInterface{
 
     @Override
     public void updateSurvey(Survey survey) {
-        setSurvey(survey);
+        entityManager.getTransaction().begin(); //replaced by merge to check because it check if the record exists or not
+        entityManager.merge(survey);            //salma
+        entityManager.getTransaction().commit();
     }
 
     @Override
@@ -76,9 +78,5 @@ public class SurveyManager implements SurveysDaoInterface{
         entityManagerFactory.close();
     }
 
-    public void deleteAllRecords() {
-        entityManager.getTransaction().begin();
-        int query = entityManager.createQuery("DELETE FROM Survey").executeUpdate();
-        entityManager.getTransaction().commit();
-    }//added delete records function /Salma
+
 }
