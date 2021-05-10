@@ -65,7 +65,12 @@ public class SavedSurveysController{
             if(survey.getId()==SurveyId){
                 switchTemplate(survey);
                 try {
-                    MainApp.setRoot("/fxml/SurveyTemplates/"+survey.getTypeOfTemplate()+".fxml");
+                    if(survey.getTypeOfTemplate().equals("CreateOwnSurvey")){
+                        MainApp.setRoot("/fxml/NewSurvey.fxml");
+                    }
+                    else{
+                        MainApp.setRoot("/fxml/SurveyTemplates/"+survey.getTypeOfTemplate()+".fxml");
+                    }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -133,6 +138,11 @@ public class SavedSurveysController{
             case "FoodTemplate4": {
                 FoodTemplate4Controller.setData(userdata);
                 FoodTemplate4Controller.setCreateOrAnswerFunction("ShowAnswer",survey);
+                break;
+            }
+            case "CreateOwnSurvey": {
+                NewSurveyController.setData(userdata);
+                NewSurveyController.setCreateOrAnswerFunction("ShowAnswer",survey);
                 break;
             }
         }

@@ -4,30 +4,49 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.NewSurveyController">
-  <content>
-    <AnchorPane fx:id="newSurveyAnchorPane" prefHeight="400.0" prefWidth="600.0">
-         <children>
-            <TextField fx:id="titleTextField" layoutX="175.0" layoutY="19.0" promptText="Enter Survey Title" AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="19.0">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </TextField>
-            <Button fx:id="okButton" layoutX="432.0" layoutY="19.0" mnemonicParsing="false" onAction="#okButtonClicked" prefHeight="44.0" prefWidth="50.0" text="OK" AnchorPane.leftAnchor="432.0" AnchorPane.topAnchor="19.0" />
-            <Button fx:id="addQuestionButton" layoutX="142.0" layoutY="99.0" mnemonicParsing="false" onAction="#addQuestionButtonClicked" text="Add Question">
-               <font>
-                  <Font size="21.0" />
-               </font>
-            </Button>
-            <Button fx:id="doneButton" layoutX="331.0" layoutY="99.0" mnemonicParsing="false" onAction="#doneButtonClicked" text="Done">
-               <font>
-                  <Font size="21.0" />
-               </font>
-            </Button>
-             <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../styles/Modification.css" />
 
-         </children></AnchorPane>
-  </content>
-</ScrollPane>
+<BorderPane maxHeight="700.0" maxWidth="900.0" prefHeight="700.0" prefWidth="900.0" styleClass="backgroundForPrimaryFxml" stylesheets="@../styles/Modification.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.NewSurveyController">
+   <center>
+      <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0">
+        <content>
+          <AnchorPane fx:id="newSurveyAnchorPane" prefHeight="500.0" prefWidth="700.0" styleClass="backgroundForPrimaryFxml" stylesheets="@../styles/Modification.css">
+               <children>
+                  <TextField fx:id="titleTextField" layoutX="175.0" layoutY="19.0" promptText="Enter Survey Title" AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="19.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="okButton" layoutX="432.0" layoutY="19.0" mnemonicParsing="false" onAction="#okButtonClicked" prefHeight="44.0" prefWidth="50.0" text="OK" AnchorPane.leftAnchor="432.0" AnchorPane.topAnchor="19.0" />
+                  <Button fx:id="addQuestionButton" layoutX="142.0" layoutY="99.0" mnemonicParsing="false" onAction="#addQuestionButtonClicked" text="Add Question">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="saveButton" layoutX="331.0" layoutY="99.0" mnemonicParsing="false" onAction="#saveButtonClicked" text="Done">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+                   <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToTemplatesButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../styles/Modification.css" />
+      
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="100.0" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <AnchorPane prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <AnchorPane prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="100.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

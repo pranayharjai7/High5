@@ -1,6 +1,7 @@
 package Survey5.controller;
 
 import Survey5.MainApp;
+import Survey5.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -9,22 +10,27 @@ import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import javafx.collections.FXCollections;
+import java.util.stream.Collectors;
 
 public class NewSurveyController {
 
-    private static Alert warn = new Alert(Alert.AlertType.WARNING);
-    private static Label titleLabel = new Label();
-
-
-    private static TextField questionField = new TextField();
-    private static Button questionOkButton = new Button("OK");
-    private static List<Label> questionList = new ArrayList<>();
-    private static ChoiceBox<String> questionChoice = new ChoiceBox<>();
-    private  static Button questionChoiceOkButton = new Button("OK");
+    private Alert warn = new Alert(Alert.AlertType.WARNING);
+    private Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
+    private Label CreateOwnSurvey = new Label();
+    SurveysDaoInterface surveyManager = new SurveyManager();
+    QuestionsDaoInterface questionManager  = new QuestionsManager();
+    AnswersDaoInterface answerManager = new AnswersManager();
+    private static Data userdata;
+    private static Survey survey;
+    private static String answer;
+    private TextField questionField = new TextField();
+    private Button questionOkButton = new Button("OK");
+    private List<Label> questionList = new ArrayList<>();
+    private ChoiceBox<String> questionChoice = new ChoiceBox<>();
+    private Button questionChoiceOkButton = new Button("OK");
     private  String qType1="Choose Type..";
-    private  String qType2="Textual Answer";
-    private  String qType3="Radio Button";
+    private  String qType2="Textual";
+    private  String qType3="RadioButton";
     private  String qType4="CheckBox";
      Button addRadioButton = new Button("Add Option..");
      Button radioDoneButton = new Button("Done");
@@ -32,18 +38,243 @@ public class NewSurveyController {
 
     @FXML
     private  AnchorPane newSurveyAnchorPane;
-
     @FXML
     private  TextField titleTextField;
-
     @FXML
     private  Button okButton;
-
     @FXML
     private  Button addQuestionButton;
+    @FXML
+    private  Button saveButton;
+    @FXML
+    private Button backButton;
+
+    public static void setData(Data userdata) {
+        NewSurveyController.userdata=userdata;
+    }
+
+    public static void setCreateOrAnswerFunction(String answer){
+        NewSurveyController.answer=answer;
+    }
+
+    public static void setCreateOrAnswerFunction(String answer, Survey survey){
+        NewSurveyController.survey=survey;
+        NewSurveyController.answer=answer;
+    }
 
     @FXML
-    private  Button doneButton;
+    private void initialize(){
+        CreateOwnSurvey.setId("CreateOwnSurvey");
+        CreateOwnSurvey.setFont(titleTextField.getFont());
+        if(answer.equals("answer")){
+            setAnswering();
+        }
+        else if(answer.equals("create"))
+            setCreating();
+        else
+            setShowAnswers();
+    }
+    private void setCreating(){
+        saveButton.setText("Save");
+        saveButton.setOnAction(this::saveButtonClicked);
+        backButton.setOnAction(this::backToTemplatesButtonClicked);
+    }
+
+    List<Label> QuestionLabelList = new ArrayList<>();
+    List<TextArea> AnswerLabelList = new ArrayList<>();
+    private void setAnswering(){
+        saveButton.setText("Submit");
+        saveButton.setOnAction(this::submitButtonClicked);
+        backButton.setOnAction(this::backToAnswerButtonClicked);
+        newSurveyAnchorPane.getChildren().removeAll(titleTextField,okButton,addQuestionButton);
+        CreateOwnSurvey.setText(survey.getTitle());
+        CreateOwnSurvey.setLayoutX((newSurveyAnchorPane.getPrefWidth()/2)-(CreateOwnSurvey.getText().length()*11)/2);
+        CreateOwnSurvey.setLayoutY(titleTextField.getLayoutY());
+        newSurveyAnchorPane.getChildren().add(CreateOwnSurvey);
+        List<Questions> qList = new ArrayList<>();
+        qList = questionManager.getSurveyQuestions(survey);
+        Data user = qList.get(0).getAnsweredByUser();
+        qList = qList.stream()
+                .filter(questions -> questions.getAnsweredByUser().equals(user))
+                .collect(Collectors.toList());
+        for (Questions question:qList) {
+            Label questions = new Label(question.getQuestion());
+            questions.setLayoutX(20);
+            if(QuestionLabelList.isEmpty()){
+                questions.setLayoutY(CreateOwnSurvey.getLayoutY()+50);
+            }
+            else {
+                questions.setLayoutY(saveButton.getLayoutY());
+            }
+            QuestionLabelList.add(questions);
+            saveButton.setLayoutY(saveButton.getLayoutY()+50);
+
+            TextArea answerArea = new TextArea();
+            answerArea.setText("");
+            answerArea.setPromptText("Enter Answer here..");
+            answerArea.setPrefWidth(400);
+            answerArea.setPrefHeight(75);
+            answerArea.setLayoutX(20);
+            answerArea.setLayoutY(questions.getLayoutY()+30);
+
+            AnswerLabelList.add(answerArea);
+            saveButton.setLayoutY(saveButton.getLayoutY()+80);
+            newSurveyAnchorPane.getChildren().addAll(questions,answerArea);
+        }
+
+    }
+
+    private void setShowAnswers(){
+        saveButton.setText("Show Answers");
+        saveButton.setPrefWidth(200);
+        saveButton.setOnAction(this::showAnswersClicked);
+        backButton.setOnAction(this::backToSavedSurveysButtonClicked);
+        newSurveyAnchorPane.getChildren().removeAll(titleTextField,okButton,addQuestionButton);
+        CreateOwnSurvey.setText(survey.getTitle());
+        CreateOwnSurvey.setLayoutX((newSurveyAnchorPane.getPrefWidth()/2)-(CreateOwnSurvey.getText().length()*11)/2);
+        CreateOwnSurvey.setLayoutY(titleTextField.getLayoutY());
+        newSurveyAnchorPane.getChildren().add(CreateOwnSurvey);
+        List<Questions> qList = new ArrayList<>();
+        qList = questionManager.getSurveyQuestions(survey);
+        Data user = qList.get(0).getAnsweredByUser();
+        qList = qList.stream()
+                .filter(questions -> questions.getAnsweredByUser().equals(user))
+                .collect(Collectors.toList());
+        for (Questions question:qList) {
+            Label questions = new Label(question.getQuestion());
+            questions.setLayoutX(20);
+            if(QuestionLabelList.isEmpty()){
+                questions.setLayoutY(CreateOwnSurvey.getLayoutY()+50);
+            }
+            else {
+                questions.setLayoutY(saveButton.getLayoutY());
+            }
+            QuestionLabelList.add(questions);
+            saveButton.setLayoutY(saveButton.getLayoutY()+50);
+
+            TextArea answerArea = new TextArea();
+            answerArea.setText("");
+            answerArea.setPromptText("Enter Answer here..");
+            answerArea.setPrefWidth(400);
+            answerArea.setPrefHeight(75);
+            answerArea.setLayoutX(20);
+            answerArea.setLayoutY(questions.getLayoutY()+30);
+
+            AnswerLabelList.add(answerArea);
+            saveButton.setLayoutY(saveButton.getLayoutY()+80);
+            newSurveyAnchorPane.getChildren().addAll(questions,answerArea);
+        }
+    }
+
+    private void showAnswersClicked(ActionEvent actionEvent) {
+        ShowAnswersController.setData(userdata,survey);
+        try {
+            MainApp.setRoot("/fxml/ShowAnswers.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //Save Survey
+    @FXML
+    private void saveButtonClicked(ActionEvent event){
+        if(questionList.isEmpty()){
+            warn.setContentText("Please add Questions!");
+            warn.showAndWait();
+        }
+        else {
+            Survey survey = new Survey();
+            survey.setTypeOfTemplate(CreateOwnSurvey.getId());
+            survey.setTitle(CreateOwnSurvey.getText());
+            survey.setOwner(userdata);
+            surveyManager.setSurvey(survey);
+            int i = 1;
+            for (Label question : questionList) {
+                Questions questions = new Questions();
+                questions.setQuestion(question.getText());
+                questions.setQuestionNumber(i++);
+                questions.setAnsweredByUser(userdata);
+                questions.setSurveyTemplate(survey);
+                questionManager.setQuestions(questions);
+                Answers answers = new Answers();
+                answers.setQuestion(questions);
+                answers.setAnswersType("Textual");
+                answers.setAnswerText(" ");
+                answerManager.setAnswers(answers);
+            }
+
+
+            try {
+                questionManager.close();
+                answerManager.close();
+                surveyManager.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            confirm.setContentText("Template Saved Successfully!!");
+            confirm.showAndWait();
+            try {
+                MainApp.setRoot("/fxml/TemplateOrCreate.fxml");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    //submitting Questions and answers to database
+    private List<Questions> qList = new ArrayList<>();
+    private void submitButtonClicked(ActionEvent actionEvent) {
+        int flag = 0;
+        qList = questionManager.getSurveyQuestions(survey);
+        for (Questions question : qList) {
+            if (question.getAnsweredByUser().getId() == userdata.getId()) {
+                flag = 1;
+                break;
+            }
+        }
+        if (flag == 1) {
+            warn.setContentText("You have already answered this Survey!");
+            warn.showAndWait();
+        }
+        else if(qList.isEmpty() || flag==0){
+            for (TextArea answer:AnswerLabelList) {
+                if(answer.getText().equals("")){
+                    flag = 2;
+                    break;
+                }
+            }
+            if(flag==2){
+                warn.setContentText("Please Enter all The answers!");
+                warn.showAndWait();
+            }
+            else if(flag==0){
+                for (int i = 1; i <= QuestionLabelList.size(); i++) {
+                    Questions question = new Questions();
+                    question.setSurveyTemplate(survey);
+                    question.setQuestionNumber(i);
+                    question.setAnsweredByUser(userdata);
+                    question.setQuestion(QuestionLabelList.get(i - 1).getText());
+                    Answers answer = new Answers();
+                    answer.setAnswersType("Textual");
+                    answer.setAnswerText(AnswerLabelList.get(i - 1).getText());
+                    questionManager.setQuestions(question);
+                    answer.setQuestion(question);
+                    answerManager.setAnswers(answer);
+                }
+
+                confirm.setContentText("Answer Submitted Successfully!");
+                confirm.showAndWait();
+                try {
+                    questionManager.close();
+                    answerManager.close();
+                    MainApp.setRoot("/fxml/AnswerSurvey.fxml");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 
     //For Title
     @FXML
@@ -53,11 +284,11 @@ public class NewSurveyController {
             warn.showAndWait();
         }
         else{
-            titleLabel.setText(titleTextField.getText());
-            titleLabel.setFont(titleTextField.getFont());
-            titleLabel.setLayoutX((newSurveyAnchorPane.getPrefWidth()/2)-(titleLabel.getText().length()*11)/2);
-            titleLabel.setLayoutY(titleTextField.getLayoutY());
-            newSurveyAnchorPane.getChildren().add(titleLabel);
+            CreateOwnSurvey.setText(titleTextField.getText());
+            CreateOwnSurvey.setFont(titleTextField.getFont());
+            CreateOwnSurvey.setLayoutX((newSurveyAnchorPane.getPrefWidth()/2)-(CreateOwnSurvey.getText().length()*11)/2);
+            CreateOwnSurvey.setLayoutY(titleTextField.getLayoutY());
+            newSurveyAnchorPane.getChildren().add(CreateOwnSurvey);
             newSurveyAnchorPane.getChildren().removeAll(titleTextField,okButton);
         }
     }
@@ -65,8 +296,8 @@ public class NewSurveyController {
     //To Add Question in Survey
     @FXML
     private  void addQuestionButtonClicked(ActionEvent event) {
-        questionChoice.getItems().removeAll(qType1,qType2,qType3,qType4);
-        questionChoice.getItems().addAll(qType1,qType2,qType3,qType4);
+        questionChoice.getItems().removeAll(qType1,qType2);
+        questionChoice.getItems().addAll(qType1,qType2);
         questionChoice.setValue("Choose Type..");
         questionChoice.setLayoutX(20);
         questionChoice.setLayoutY(addQuestionButton.getLayoutY());
@@ -75,24 +306,9 @@ public class NewSurveyController {
         questionChoiceOkButton.setOnAction(this::questionChoiceOkButtonClicked);
 
         addQuestionButton.setLayoutY(addQuestionButton.getLayoutY()+50);
-        doneButton.setLayoutY(addQuestionButton.getLayoutY());
+        saveButton.setLayoutY(addQuestionButton.getLayoutY());
         newSurveyAnchorPane.getChildren().addAll(questionChoice,questionChoiceOkButton);
 
-        /*
-        questionField.setText("");
-        questionField.setPromptText("Enter Question Here");
-        questionField.setPrefWidth(200);
-        questionField.setLayoutX(20);
-        questionField.setLayoutY(addQuestionButton.getLayoutY());
-        questionOkButton.setLayoutY(questionField.getLayoutY());
-        questionOkButton.setLayoutX(questionField.getLayoutX()+questionField.getPrefWidth()+20);
-        questionOkButton.setOnAction(this::questionOkButtonClicked);
-
-        addQuestionButton.setLayoutY(addQuestionButton.getLayoutY()+50);
-        doneButton.setLayoutY(addQuestionButton.getLayoutY());
-        newSurveyAnchorPane.getChildren().addAll(questionField,questionOkButton);
-
-         */
     }
 
     //After Choosing question type from drop down menu
@@ -115,10 +331,13 @@ public class NewSurveyController {
 
             if(questionChoice.getValue().equals(qType2))
                 questionOkButton.setOnAction(this::textQuestionOkButtonClicked);
+            /*
             else if(questionChoice.getValue().equals(qType3))
                 questionOkButton.setOnAction(this::radioOkButtonClicked);
             else if(questionChoice.getValue().equals(qType4))
                 questionOkButton.setOnAction(this::checkboxOkButtonClicked);
+
+             */
         }
     }
 
@@ -126,14 +345,38 @@ public class NewSurveyController {
     AFTER ENTERING THE QUESTION
      */
 
-    //if answer has checkboxes
-    private void checkboxOkButtonClicked(ActionEvent actionEvent) {
+    //if answer is textual
+    private void textQuestionOkButtonClicked(ActionEvent actionEvent) {
+
         if(questionField.getText().equals("")){
             warn.setContentText("Question Can't be empty");
             warn.showAndWait();
         }
+        else {
+            Label question = new Label(questionField.getText());
+            question.setLayoutX(questionField.getLayoutX());
+            question.setLayoutY(questionField.getLayoutY());
+
+            TextArea answerArea = new TextArea();
+            answerArea.setText("");
+            answerArea.setPromptText("Enter Answer here..");
+            answerArea.setPrefWidth(400);
+            answerArea.setPrefHeight(75);
+            answerArea.setLayoutX(20);
+            answerArea.setLayoutY(questionField.getLayoutY()+30);
+
+            addQuestionButton.setLayoutY(addQuestionButton.getLayoutY()+80);
+            saveButton.setLayoutY(addQuestionButton.getLayoutY());
+
+            newSurveyAnchorPane.getChildren().removeAll(questionField, questionOkButton);
+            newSurveyAnchorPane.getChildren().addAll(question,answerArea);
+            questionList.add(question);
+        }
     }
 
+
+
+    /*
     //if answer has radio buttons
     private void radioOkButtonClicked(ActionEvent actionEvent) {
         if(questionField.getText().equals("")){
@@ -155,7 +398,7 @@ public class NewSurveyController {
 
 
             addQuestionButton.setLayoutY(addQuestionButton.getLayoutY()+50);
-            doneButton.setLayoutY(addQuestionButton.getLayoutY());
+            saveButton.setLayoutY(addQuestionButton.getLayoutY());
 
             newSurveyAnchorPane.getChildren().removeAll(questionField, questionOkButton);
             newSurveyAnchorPane.getChildren().addAll(question,addRadioButton,radioDoneButton);
@@ -189,7 +432,7 @@ public class NewSurveyController {
         addRadioButton.setLayoutY(radioButton.getLayoutY()+50);
         radioDoneButton.setLayoutY(addRadioButton.getLayoutY());
         addQuestionButton.setLayoutY(addQuestionButton.getLayoutY()+50);
-        doneButton.setLayoutY(addQuestionButton.getLayoutY());
+        saveButton.setLayoutY(addQuestionButton.getLayoutY());
 
         newSurveyAnchorPane.getChildren().addAll(radioButton,radioField,radioTextEnteredButton);
     }
@@ -218,85 +461,49 @@ public class NewSurveyController {
         }
 
         addQuestionButton.setLayoutY(addQuestionButton.getLayoutY()-50);
-        doneButton.setLayoutY(addQuestionButton.getLayoutY());
+        saveButton.setLayoutY(addQuestionButton.getLayoutY());
         newSurveyAnchorPane.getChildren().removeAll(addRadioButton,radioDoneButton);
     }
 
-    //if answer is textual
-    private void textQuestionOkButtonClicked(ActionEvent actionEvent) {
 
+
+
+    //if answer has checkboxes
+    private void checkboxOkButtonClicked(ActionEvent actionEvent) {
         if(questionField.getText().equals("")){
             warn.setContentText("Question Can't be empty");
             warn.showAndWait();
         }
-        else {
-            Label question = new Label(questionField.getText());
-            question.setLayoutX(questionField.getLayoutX());
-            question.setLayoutY(questionField.getLayoutY());
+    }
 
-            TextArea answerArea = new TextArea();
-            answerArea.setText("");
-            answerArea.setPromptText("Enter Answer here..");
-            answerArea.setPrefWidth(400);
-            answerArea.setPrefHeight(75);
-            answerArea.setLayoutX(20);
-            answerArea.setLayoutY(questionField.getLayoutY()+30);
 
-            addQuestionButton.setLayoutY(addQuestionButton.getLayoutY()+80);
-            doneButton.setLayoutY(addQuestionButton.getLayoutY());
+     */
 
-            newSurveyAnchorPane.getChildren().removeAll(questionField, questionOkButton);
-            newSurveyAnchorPane.getChildren().addAll(question,answerArea);
-            questionList.add(question);
+    @FXML
+    private void backToTemplatesButtonClicked(ActionEvent actionEvent){
+        try {
+            MainApp.setRoot("/fxml/SurveyTemplates/TemplateSurvey.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
-    //Submit Survey
-    @FXML
-    private void doneButtonClicked(ActionEvent event) throws IOException {
-        MainApp.setRoot("/fxml/TemplateOrCreate.fxml");
+
+    private void backToAnswerButtonClicked(ActionEvent actionEvent) {
+        try {
+            MainApp.setRoot("/fxml/AnswerSurvey.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    @FXML
-    private void backButtonClicked(ActionEvent actionEvent) throws IOException {
-        MainApp.setRoot("/fxml/TemplateOrCreate.fxml");
+    private void backToSavedSurveysButtonClicked(ActionEvent actionEvent) {
+        try {
+            MainApp.setRoot("/fxml/SavedSurveys.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-
-    public static Alert getWarn() {
-        return warn;
-    }
-    
-    public static Label getTitleLabel() {
-        return titleLabel;
-    }
-    
-
-    public static Button getQuestionChoiceOkButton() {
-        return questionChoiceOkButton;
-    }
-    
-
-    
-    public static ChoiceBox<String> getQuestionChoice() {
-        return questionChoice;
-    }
-
-    public static TextField getQuestionField() {
-        return questionField;
-    }
-
-    public static Button getQuestionOkButton() {
-        return questionOkButton;
-    }
-
-    public static List<Label> getQuestionList() {
-        return questionList;
-    }
-            
-    
-
-
-    
 
         
         

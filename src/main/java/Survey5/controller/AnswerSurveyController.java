@@ -66,7 +66,13 @@ public class AnswerSurveyController {
                 System.out.println(survey.getId());
                 try {
                     switchTemplate(survey);
-                    MainApp.setRoot("/fxml/SurveyTemplates/"+survey.getTypeOfTemplate()+".fxml");
+                    if(survey.getTypeOfTemplate().equals("CreateOwnSurvey")){
+                        MainApp.setRoot("/fxml/NewSurvey.fxml");
+                    }
+                    else{
+                        MainApp.setRoot("/fxml/SurveyTemplates/"+survey.getTypeOfTemplate()+".fxml");
+                    }
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -134,6 +140,11 @@ public class AnswerSurveyController {
             case "FoodTemplate4": {
                 FoodTemplate4Controller.setData(userdata);
                 FoodTemplate4Controller.setCreateOrAnswerFunction("answer",survey);
+                break;
+            }
+            case "CreateOwnSurvey": {
+                NewSurveyController.setData(userdata);
+                NewSurveyController.setCreateOrAnswerFunction("answer",survey);
                 break;
             }
         }
