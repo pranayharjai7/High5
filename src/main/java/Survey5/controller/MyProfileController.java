@@ -6,20 +6,21 @@ import Survey5.model.DataDaoInterface;
 import Survey5.model.DataManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MyProfileController {
     private DataDaoInterface dm = new DataManager();
     private static Data userdata;
 
+    private static Alert warn = new Alert(Alert.AlertType.WARNING);
+    private Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
     private TextField nameField = new TextField();
     private TextField usernameField = new TextField();
     private TextField emailField = new TextField();
@@ -82,29 +83,44 @@ public class MyProfileController {
 
     }
 
+    List<Data> usersData = new ArrayList<>();
     private void changeDoneClicked(ActionEvent actionEvent){
-        System.out.println(userdata);
-        if(!nameField.getText().equals("")) {
-            nameLabel.setText(nameField.getText());
-            userdata.setName(nameLabel.getText());
+        usersData = dm.getAllData();
+        int flag = 0;
+        for (Data data:usersData) {
+            if(usernameField.getText().equals(data.getUsername())||emailField.getText().equals(data.getEmail())){
+                flag = 1;
+                break;
+            }
         }
-        if(!usernameField.getText().equals("")) {
-            usernameLabel.setText(usernameField.getText());
-            userdata.setUsername(usernameLabel.getText());
+        if(flag==1){
+            warn.setContentText("Entered Username or Email Already exists!\nPlease try again..");
+            warn.showAndWait();
         }
-        if(!emailField.getText().equals("")) {
-            emailLabel.setText(emailField.getText());
-            userdata.setEmail(emailLabel.getText());
-        }
+        else {
+            if (!nameField.getText().equals("")) {
+                nameLabel.setText(nameField.getText());
+                userdata.setName(nameLabel.getText());
+            }
+            if (!usernameField.getText().equals("")) {
+                usernameLabel.setText(usernameField.getText());
+                userdata.setUsername(usernameLabel.getText());
+            }
+            if (!emailField.getText().equals("")) {
+                emailLabel.setText(emailField.getText());
+                userdata.setEmail(emailLabel.getText());
+            }
 
-        dm.updateData(userdata);
-        try {
-            dm.close();
-        } catch (Exception e) {
-            e.printStackTrace();
+            dm.updateData(userdata);
+            try {
+                dm.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            confirm.setContentText("Changes Applied!");
+            confirm.showAndWait();
+            myProfileAnchorPane.getChildren().removeAll(nameField, usernameField, emailField, doneButton);
+            myProfileAnchorPane.getChildren().addAll(nameLabel, usernameLabel, emailLabel, changeButton);
         }
-
-        myProfileAnchorPane.getChildren().removeAll(nameField,usernameField,emailField,doneButton);
-        myProfileAnchorPane.getChildren().addAll(nameLabel,usernameLabel,emailLabel,changeButton);
     }
 }

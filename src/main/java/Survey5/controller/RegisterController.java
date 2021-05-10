@@ -43,26 +43,40 @@ public class RegisterController {
 
     @FXML
     public void registerButtonClicked(ActionEvent actionEvent) throws Exception {
-        flag = 0;
-        dList = dm.getAllData();
-        for (Data data:dList) {
-            if(data.getEmail().equals(emailField.getText())){
-                flag = 1;
-                warn.setContentText("The Email you entered already exists!");
-                warn.showAndWait();
-                break;
-            }
+        if(nameField.getText().equals("")||emailField.getText().equals("")
+                ||usernameField.getText().equals("")|| passwordField.getText().equals("")){
+            warn.setContentText("Fields can't be Empty!");
+            warn.showAndWait();
         }
-        if(flag==0) {            
-            Data data = new Data();
-            data.setName(nameField.getText());
-            data.setEmail(emailField.getText());
-            data.setUsername(usernameField.getText());
-            data.setPassword(passwordField.getText());
-            dm.setData(data);
-            dm.close();
-
-            MainApp.setRoot("/fxml/LoginScene.fxml");
+        else {
+            flag = 0;
+            dList = dm.getAllData();
+            for (Data data : dList) {
+                if (data.getEmail().equals(emailField.getText())) {
+                    flag = 1;
+                    warn.setContentText("The Email you entered already exists!");
+                    warn.showAndWait();
+                    break;
+                }
+                if(data.getUsername().equals(usernameField.getText())){
+                    flag = 1;
+                    warn.setContentText("The UserName you entered already exists!");
+                    warn.showAndWait();
+                    break;
+                }
+            }
+            if (flag == 0) {
+                Data data = new Data();
+                data.setName(nameField.getText());
+                data.setEmail(emailField.getText());
+                data.setUsername(usernameField.getText());
+                data.setPassword(passwordField.getText());
+                dm.setData(data);
+                dm.close();
+                confirm.setContentText("You've been Registered successfully!");
+                confirm.showAndWait();
+                MainApp.setRoot("/fxml/LoginScene.fxml");
+            }
         }
     }
     
