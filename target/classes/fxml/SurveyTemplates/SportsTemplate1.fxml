@@ -7,221 +7,231 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="678.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.SportsTemplate1Controller">
-  <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1488.0" prefWidth="667.0" styleClass="SportsTemplate1AnchorPaneBackground" stylesheets="@/fxml/SurveyTemplates/TemplateStyles/tempcss.css">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.SportsTemplate1Controller">
+   <content>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1488.0" prefWidth="1200.0" styleClass="SportsTemplate1AnchorPaneBackground" stylesheets="@TemplateStyles/tempcss.css">
          <children>
-            <Label layoutX="184.0" text="Sports &amp; Fitness" textFill="#010101">
+            <Label fx:id="SportsTemplate1" layoutX="321.0" layoutY="7.0" text="Sports &amp; Fitness" textFill="#010101">
                <font>
                   <Font size="34.0" />
                </font>
             </Label>
-            <Separator layoutX="167.0" layoutY="48.0" prefHeight="3.0" prefWidth="278.0" style="-fx-background-color: black;" />
-            <Text layoutX="97.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sport &amp; Physical Activity Student Questionnaire" wrappingWidth="418.45703125">
+            <Separator layoutX="307.0" layoutY="55.0" prefHeight="3.0" prefWidth="278.0" style="-fx-background-color: black;" />
+            <Text layoutX="237.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sport &amp; Physical Activity Student Questionnaire" wrappingWidth="418.45703125">
                <font>
                   <Font size="20.0" />
                </font></Text>
-            <Text fill="#161616" layoutX="28.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This questionnaire will be used to access sport and physical activity participation levels at XYZ College.It will also collate information on the types of activities that students would like to participate in, in the future. This is your chance to help us to help you!" wrappingWidth="611.7706909179688">
+            <Text fill="#161616" layoutX="137.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This questionnaire will be used to access sport and physical activity participation levels at XYZ College.It will also collate information on the types of activities that students would like to participate in, in the future. This is your chance to help us to help you!" wrappingWidth="611.7706909179688">
                <font>
                   <Font size="15.0" />
                </font></Text>
-            <Text fill="#131313" layoutX="23.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" 1. Firstly can you please mention which Programme are you in?">
+            <Text fx:id="Question1" fill="#131313" layoutX="70.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" 1. Firstly can you please mention which Programme are you in?">
                <font>
                   <Font size="15.0" />
                </font></Text>
-            <RadioButton layoutX="32.0" layoutY="238.0" mnemonicParsing="false" text="Information Technology" textFill="#191818">
+            <RadioButton fx:id="Answer1_1" layoutX="76.0" layoutY="247.0" mnemonicParsing="false" text="Information Technology" textFill="#191818">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="answer1" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="Answer1_2" layoutX="76.0" layoutY="275.0" mnemonicParsing="false" text="Mathematics" textFill="#211f1f" toggleGroup="$answer1">
                <font>
                   <Font size="15.0" />
                </font></RadioButton>
-            <RadioButton layoutX="32.0" layoutY="266.0" mnemonicParsing="false" text="Mathematics" textFill="#211f1f">
+            <RadioButton fx:id="Answer1_3" layoutX="76.0" layoutY="302.0" mnemonicParsing="false" text="Buisness Administration &amp; Tourism" textFill="#212121" toggleGroup="$answer1">
                <font>
                   <Font size="15.0" />
                </font></RadioButton>
-            <RadioButton layoutX="32.0" layoutY="293.0" mnemonicParsing="false" text="Buisness Administration &amp; Tourism" textFill="#212121">
+            <RadioButton fx:id="Answer1_4" layoutX="346.0" layoutY="247.0" mnemonicParsing="false" text="Health &amp; Public Service" textFill="#2e2e2e" toggleGroup="$answer1">
                <font>
                   <Font size="15.0" />
                </font></RadioButton>
-            <RadioButton layoutX="302.0" layoutY="238.0" mnemonicParsing="false" text="Health &amp; Public Service" textFill="#2e2e2e">
+            <RadioButton fx:id="Answer1_5" layoutX="346.0" layoutY="275.0" mnemonicParsing="false" text="Creative &amp; Visual Arts" textFill="#292828" toggleGroup="$answer1">
                <font>
                   <Font size="15.0" />
                </font></RadioButton>
-            <RadioButton layoutX="302.0" layoutY="266.0" mnemonicParsing="false" text="Creative &amp; Visual Arts" textFill="#292828">
+            <RadioButton fx:id="Answer1_6" layoutX="346.0" layoutY="302.0" mnemonicParsing="false" text="Catering &amp; Hospitality" textFill="#191818" toggleGroup="$answer1">
                <font>
                   <Font size="15.0" />
                </font></RadioButton>
-            <RadioButton layoutX="302.0" layoutY="293.0" mnemonicParsing="false" text="Catering &amp; Hospitality" textFill="#191818">
+            <RadioButton fx:id="Answer1_7" layoutX="556.0" layoutY="247.0" mnemonicParsing="false" text="English Literature" textFill="#212020" toggleGroup="$answer1">
                <font>
                   <Font size="15.0" />
                </font></RadioButton>
-            <RadioButton layoutX="512.0" layoutY="238.0" mnemonicParsing="false" text="English Literature" textFill="#212020">
+            <RadioButton fx:id="Answer1_8" layoutX="556.0" layoutY="275.0" mnemonicParsing="false" text="Law" textFill="#242323" toggleGroup="$answer1">
                <font>
                   <Font size="15.0" />
                </font></RadioButton>
-            <RadioButton layoutX="512.0" layoutY="266.0" mnemonicParsing="false" text="Law" textFill="#242323">
+            <RadioButton fx:id="Answer1_9" layoutX="556.0" layoutY="302.0" mnemonicParsing="false" text="Medicien" textFill="#1c1a1a" toggleGroup="$answer1">
                <font>
                   <Font size="15.0" />
                </font></RadioButton>
-            <RadioButton layoutX="512.0" layoutY="293.0" mnemonicParsing="false" text="Medicien" textFill="#1c1a1a">
-               <font>
-                  <Font size="15.0" />
-               </font></RadioButton>
-            <Text fill="#262525" layoutX="23.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2.How often so you participate in sport or physical activity?">
+            <Text fx:id="Question2" fill="#262525" layoutX="67.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2.How often so you participate in sport or physical activity?">
                <font>
                   <Font size="15.0" />
                </font></Text>
-            <RadioButton layoutX="32.0" layoutY="381.0" mnemonicParsing="false" text="Daily" textFill="#2e2d2d">
+            <RadioButton fx:id="Answer2_1" layoutX="76.0" layoutY="390.0" mnemonicParsing="false" text="Daily" textFill="#2e2d2d">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="answer2" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="Answer2_2" layoutX="76.0" layoutY="424.0" mnemonicParsing="false" text="Weekly" textFill="#161515" toggleGroup="$answer2">
                <font>
                   <Font size="15.0" />
                </font></RadioButton>
-            <RadioButton layoutX="32.0" layoutY="415.0" mnemonicParsing="false" text="Weekly" textFill="#161515">
+            <RadioButton fx:id="Answer2_3" layoutX="76.0" layoutY="458.0" mnemonicParsing="false" text="Monthly" textFill="#212020" toggleGroup="$answer2">
                <font>
                   <Font size="15.0" />
                </font></RadioButton>
-            <RadioButton layoutX="32.0" layoutY="449.0" mnemonicParsing="false" text="Monthly" textFill="#212020">
+            <RadioButton fx:id="Answer2_4" layoutX="76.0" layoutY="490.0" mnemonicParsing="false" text="Yearly" textFill="#312f2f" toggleGroup="$answer2">
                <font>
                   <Font size="15.0" />
                </font></RadioButton>
-            <RadioButton layoutX="32.0" layoutY="481.0" mnemonicParsing="false" text="Yearly" textFill="#312f2f">
+            <RadioButton fx:id="Answer2_5" layoutX="76.0" layoutY="520.0" mnemonicParsing="false" text="Never" textFill="#212020" toggleGroup="$answer2">
                <font>
                   <Font size="15.0" />
                </font></RadioButton>
-            <RadioButton layoutX="32.0" layoutY="511.0" mnemonicParsing="false" text="Never" textFill="#212020">
-               <font>
-                  <Font size="15.0" />
-               </font></RadioButton>
-            <Text fill="#131313" layoutX="20.0" layoutY="559.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3.How many hours on an average do you participate in sport or any physical activity?">
+            <Text fx:id="Question3" fill="#131313" layoutX="64.0" layoutY="568.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3.How many hours on an average do you participate in sport or any physical activity?">
                <font>
                   <Font size="15.0" />
                </font></Text>
-            <RadioButton layoutX="32.0" layoutY="581.0" mnemonicParsing="false" text="1-2 hours">
+            <RadioButton fx:id="Answer3_1" layoutX="76.0" layoutY="590.0" mnemonicParsing="false" text="1-2 hours">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="answer3" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="Answer3_2" layoutX="76.0" layoutY="618.0" mnemonicParsing="false" text="2-3 hours" toggleGroup="$answer3">
                <font>
                   <Font size="15.0" />
                </font></RadioButton>
-            <RadioButton layoutX="32.0" layoutY="609.0" mnemonicParsing="false" text="2-3 hours">
+            <RadioButton fx:id="Answer3_3" layoutX="76.0" layoutY="647.0" mnemonicParsing="false" text="3-4 hours" toggleGroup="$answer3">
                <font>
                   <Font size="15.0" />
                </font></RadioButton>
-            <RadioButton layoutX="32.0" layoutY="638.0" mnemonicParsing="false" text="3-4 hours">
+            <RadioButton fx:id="Answer3_4" layoutX="76.0" layoutY="674.0" mnemonicParsing="false" text="4+ hours" toggleGroup="$answer3">
                <font>
                   <Font size="15.0" />
                </font></RadioButton>
-            <RadioButton layoutX="32.0" layoutY="665.0" mnemonicParsing="false" text="4+ hours">
+            <RadioButton fx:id="Answer3_5" layoutX="75.0" layoutY="703.0" mnemonicParsing="false" text="Not applicable" toggleGroup="$answer3">
                <font>
                   <Font size="15.0" />
                </font></RadioButton>
-            <RadioButton layoutX="31.0" layoutY="694.0" mnemonicParsing="false" text="Not applicable">
-               <font>
-                  <Font size="15.0" />
-               </font></RadioButton>
-            <Separator layoutX="97.0" layoutY="87.0" prefHeight="0.0" prefWidth="418.0" style="-fx-background-color: black;" />
-            <Text layoutX="33.0" layoutY="901.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4.Which sports would you like to play?">
+            <Separator layoutX="237.0" layoutY="84.0" prefHeight="0.0" prefWidth="418.0" style="-fx-background-color: black;" />
+            <Text fx:id="Question5" layoutX="77.0" layoutY="910.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5.Which sports would you like to play?">
                <font>
                   <Font size="15.0" />
                </font></Text>
-            <CheckBox layoutX="32.0" layoutY="924.0" mnemonicParsing="false" text="Archery">
+            <CheckBox fx:id="Answer5_1" layoutX="76.0" layoutY="933.0" mnemonicParsing="false" text="Archery">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox layoutX="32.0" layoutY="954.0" mnemonicParsing="false" text="Athletics">
+            <CheckBox fx:id="Answer5_2" layoutX="76.0" layoutY="963.0" mnemonicParsing="false" text="Athletics">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox layoutX="217.0" layoutY="1017.0" mnemonicParsing="false" text="Cycling">
+            <CheckBox fx:id="Answer5_8" layoutX="261.0" layoutY="1026.0" mnemonicParsing="false" text="Cycling">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox layoutX="217.0" layoutY="956.0" mnemonicParsing="false" text="Boxing">
+            <CheckBox fx:id="Answer5_6" layoutX="261.0" layoutY="965.0" mnemonicParsing="false" text="Boxing">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox layoutX="510.0" layoutY="1017.0" mnemonicParsing="false" text="Golf">
+            <CheckBox fx:id="Answer5_16" layoutX="554.0" layoutY="1026.0" mnemonicParsing="false" text="Golf">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox layoutX="510.0" layoutY="956.0" mnemonicParsing="false" text="Gymnastics">
+            <CheckBox fx:id="Answer5_14" layoutX="554.0" layoutY="965.0" mnemonicParsing="false" text="Gymnastics">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox layoutX="350.0" layoutY="985.0" mnemonicParsing="false" text="Sailing">
+            <CheckBox fx:id="Answer5_11" layoutX="394.0" layoutY="994.0" mnemonicParsing="false" text="Sailing">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox layoutX="350.0" layoutY="1017.0" mnemonicParsing="false" text="Squash">
+            <CheckBox fx:id="Answer5_12" layoutX="394.0" layoutY="1026.0" mnemonicParsing="false" text="Squash">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox layoutX="32.0" layoutY="1015.0" mnemonicParsing="false" text="Badminton">
+            <CheckBox fx:id="Answer5_4" layoutX="76.0" layoutY="1024.0" mnemonicParsing="false" text="Badminton">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox layoutX="217.0" layoutY="985.0" mnemonicParsing="false" text="Cricket">
+            <CheckBox fx:id="Answer5_7" layoutX="261.0" layoutY="994.0" mnemonicParsing="false" text="Cricket">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox layoutX="510.0" layoutY="985.0" mnemonicParsing="false" text="Hockey">
+            <CheckBox fx:id="Answer5_15" layoutX="554.0" layoutY="994.0" mnemonicParsing="false" text="Hockey">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox layoutX="350.0" layoutY="956.0" mnemonicParsing="false" text="Swimming">
+            <CheckBox fx:id="Answer5_10" layoutX="394.0" layoutY="965.0" mnemonicParsing="false" text="Swimming">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox layoutX="32.0" layoutY="983.0" mnemonicParsing="false" text="Basketball">
+            <CheckBox fx:id="Answer5_3" layoutX="76.0" layoutY="992.0" mnemonicParsing="false" text="Basketball">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox layoutX="217.0" layoutY="926.0" mnemonicParsing="false" text="Dance">
+            <CheckBox fx:id="Answer5_5" layoutX="261.0" layoutY="935.0" mnemonicParsing="false" text="Dance">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <Text layoutX="30.0" layoutY="775.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5.If you like to do activities at college when would you like to do them?">
+            <Text fx:id="Question4" layoutX="74.0" layoutY="784.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4.If you like to do activities at college when would you like to do them?">
                <font>
                   <Font size="15.0" />
                </font></Text>
-            <CheckBox layoutX="32.0" layoutY="788.0" mnemonicParsing="false" text="Lunch Time">
+            <CheckBox fx:id="Answer4_1" layoutX="76.0" layoutY="797.0" mnemonicParsing="false" text="LunchTime">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox layoutX="32.0" layoutY="815.0" mnemonicParsing="false" text="Straight After College">
+            <CheckBox fx:id="Answer4_2" layoutX="76.0" layoutY="824.0" mnemonicParsing="false" text="StraightAfterCollege">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox layoutX="32.0" layoutY="845.0" mnemonicParsing="false" text="Evening(!8.00-21.00)">
+            <CheckBox fx:id="Answer4_3" layoutX="76.0" layoutY="854.0" mnemonicParsing="false" text="Evening(!8.00-21.00)">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox layoutX="350.0" layoutY="926.0" mnemonicParsing="false" text="Rugby">
+            <CheckBox fx:id="Answer5_9" layoutX="394.0" layoutY="935.0" mnemonicParsing="false" text="Rugby">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox layoutX="510.0" layoutY="926.0" mnemonicParsing="false" text="Martial Arts">
+            <CheckBox fx:id="Answer5_13" layoutX="554.0" layoutY="935.0" mnemonicParsing="false" text="Martial Arts">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <Text layoutX="23.0" layoutY="1094.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6.Do you represent your country/region in any sports? if so please give details here.">
+            <Text fx:id="Question6" layoutX="68.0" layoutY="1093.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6.Do you represent your country/region in any sports? if so please give details here.">
                <font>
                   <Font size="15.0" />
                </font></Text>
-            <TextArea layoutX="32.0" layoutY="1108.0" prefHeight="82.0" prefWidth="546.0" />
-            <Text layoutX="28.0" layoutY="1217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7.Thank you for completing this survey.It will help us make provision for better college plus activities." wrappingWidth="644.363525390625">
+            <TextArea fx:id="Answer6" layoutX="76.0" layoutY="1117.0" prefHeight="82.0" prefWidth="546.0" />
+            <Text layoutX="72.0" layoutY="1235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7.Thank you for completing this survey.It will help us make provision for better college plus activities." wrappingWidth="644.363525390625">
                <font>
                   <Font size="15.0" />
                </font></Text>
-            <Text layoutX="94.0" layoutY="1237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you have any other suggestions please write them in the box below.">
+            <Text fx:id="Question7" layoutX="134.0" layoutY="1255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you have any other suggestions please write them in the box below.">
                <font>
                   <Font size="15.0" />
                </font></Text>
-            <TextArea layoutX="33.0" layoutY="1256.0" prefHeight="116.0" prefWidth="546.0" />
-            <Button fx:id="submitButton" layoutX="284.0" layoutY="1397.0" mnemonicParsing="false" onAction="#submitButtonClicked" prefHeight="35.0" prefWidth="98.0" text="Submit">
+            <TextArea fx:id="Answer7" layoutX="78.0" layoutY="1281.0" prefHeight="116.0" prefWidth="546.0" />
+            <Button fx:id="saveButton" layoutX="330.0" layoutY="1422.0" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="35.0" prefWidth="98.0" text="Save">
                <font>
                   <Font size="15.0" />
                </font></Button>
-            <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../../styles/Modification.css" />
+            <Button fx:id="backButton" layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onAction="#backToTemplatesButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../../styles/Modification.css" />
 
          </children></AnchorPane>
-  </content>
+   </content>
 </ScrollPane>

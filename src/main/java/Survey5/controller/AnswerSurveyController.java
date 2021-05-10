@@ -142,6 +142,11 @@ public class AnswerSurveyController {
                 FoodTemplate4Controller.setCreateOrAnswerFunction("answer",survey);
                 break;
             }
+            case "SportsTemplate1": {
+                SportsTemplate1Controller.setData(userdata);
+                SportsTemplate1Controller.setCreateOrAnswerFunction("answer",survey);
+                break;
+            }
             case "SportsTemplate2": {
                 SportsTemplate2Controller.setData(userdata);
                 SportsTemplate2Controller.setCreateOrAnswerFunction("answer",survey);
