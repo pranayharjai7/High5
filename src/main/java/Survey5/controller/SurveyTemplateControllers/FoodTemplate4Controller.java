@@ -3,6 +3,7 @@ package Survey5.controller.SurveyTemplateControllers;
 
 import Survey5.MainApp;
 import Survey5.controller.ShowAnswersController;
+import static Survey5.controller.SurveyTemplateControllers.FoodTemplate1Controller.answer;
 import Survey5.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,6 +26,14 @@ public class FoodTemplate4Controller {
     AnswersDaoInterface answerManager = new AnswersManager();
     static String answer;
     int NumberOfQuestions = 6;
+    int flag;
+    
+    public FoodTemplate4Controller() {
+        if(userdata == null && answer == null){
+        this.answer = "none";
+        this.userdata = new Data("none", "none", "none", "none");
+        }
+    }
     @FXML
     private AnchorPane FoodTemplate4AnchorPane;
     @FXML
@@ -77,7 +86,7 @@ public class FoodTemplate4Controller {
     }
 
     @FXML
-    private void initialize(){
+    public void initialize(){
         if(answer.equals("answer")){
             setAnswering();
         }
@@ -87,19 +96,19 @@ public class FoodTemplate4Controller {
             setShowAnswers();
     }
 
-    private void setCreating() {
+    public void setCreating() {
         saveButton.setText("Save");
         saveButton.setOnAction(this::saveButtonClicked);
         backButton.setOnAction(this::backToTemplatesButtonClicked);
     }
 
-    private void setAnswering(){
+    public void setAnswering(){
         saveButton.setText("Submit");
         saveButton.setOnAction(this::submitButtonClicked);
         backButton.setOnAction(this::backToAnswerButtonClicked);
     }
 
-    private void setShowAnswers(){
+    public void setShowAnswers(){
         saveButton.setText("Show Answers");
         saveButton.setPrefWidth(150);
         saveButton.setOnAction(this::showAnswersClicked);
@@ -108,7 +117,7 @@ public class FoodTemplate4Controller {
 
     //submitting template to database of current user
     @FXML
-    private void saveButtonClicked(ActionEvent event){
+    public void saveButtonClicked(ActionEvent event){
         Survey survey = new Survey();
         survey.setTypeOfTemplate(FoodTemplate4.getId());
         survey.setTitle(FoodTemplate4.getText());
@@ -132,7 +141,7 @@ public class FoodTemplate4Controller {
 
     //submitting Questions and answers to database
     private List<Questions> qList = new ArrayList<>();
-    private void submitButtonClicked(ActionEvent actionEvent) {
+    public void submitButtonClicked(ActionEvent actionEvent) {
 
         int flag = 0;
         qList = questionManager.getSurveyQuestions(survey);
@@ -221,7 +230,7 @@ public class FoodTemplate4Controller {
 
     }
 
-    private boolean setRadioButtons(){
+    public boolean setRadioButtons(){
         if(answer4.getSelectedToggle()==null){
             return false;
         }
@@ -232,7 +241,7 @@ public class FoodTemplate4Controller {
     }
 
     //Shows saved Answers for the questions
-    private void showAnswersClicked(ActionEvent actionEvent) {
+    public void showAnswersClicked(ActionEvent actionEvent) {
         ShowAnswersController.setData(userdata,survey);
         try {
             MainApp.setRoot("/fxml/ShowAnswers.fxml");
@@ -241,7 +250,7 @@ public class FoodTemplate4Controller {
         }
     }
 
-    private void backToAnswerButtonClicked(ActionEvent actionEvent) {
+    public void backToAnswerButtonClicked(ActionEvent actionEvent) {
         try {
             MainApp.setRoot("/fxml/AnswerSurvey.fxml");
         } catch (IOException e) {
@@ -250,7 +259,7 @@ public class FoodTemplate4Controller {
     }
 
     @FXML
-    private void backToTemplatesButtonClicked(ActionEvent actionEvent){
+    public void backToTemplatesButtonClicked(ActionEvent actionEvent){
         try {
             MainApp.setRoot("/fxml/SurveyTemplates/TemplateSurvey.fxml");
         } catch (IOException e) {
@@ -258,12 +267,26 @@ public class FoodTemplate4Controller {
         }
     }
 
-    private void backToSavedSurveysButtonClicked(ActionEvent actionEvent) {
+    public void backToSavedSurveysButtonClicked(ActionEvent actionEvent) {
         try {
             MainApp.setRoot("/fxml/SavedSurveys.fxml");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+        public static String getAnswer() {
+        return answer;
+    }
 
+    public Alert getConfirm() {
+        return confirm;
+    }
+
+    public int getFlag() {
+        return flag;
+    }
+
+    public Button getSaveButton() {
+        return saveButton;
+    }
 }
