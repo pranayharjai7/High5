@@ -4,65 +4,84 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import org.controlsfx.control.Rating?>
 
-<ScrollPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.SportsTemplate2Controller">
-   <content>
-      <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="SportsTemplate2AnchorPaneBackground" stylesheets="@/fxml/SurveyTemplates/TemplateStyles/tempcss1.css">
-         <children>
-                  <Label layoutX="32.0" layoutY="23.0" prefHeight="26.0" prefWidth="209.0" style="-fx-background-color: white;" text="1. Do you like Water Polo ?" textFill="#0cb0f7">
-                     <font>
+<ScrollPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.SportsTemplate2Controller">
+    <content>
+        <AnchorPane id="AnchorPane" fx:id="SportsTemplate2AnchorPane" prefHeight="1000.0" prefWidth="1500.0" styleClass="SportsTemplate2AnchorPaneBackground" stylesheets="@TemplateStyles/tempcss1.css">
+            <children>
+                <Label fx:id="Question1" layoutX="30.0" layoutY="64.0" prefHeight="26.0" prefWidth="209.0" text="1. Do you like Water Polo ?" textFill="#ebf3f5">
+                    <font>
                         <Font name="Arial Rounded MT Bold" size="16.0" />
-                     </font>
-                  </Label>
-                  <RadioButton layoutX="32.0" layoutY="69.0" mnemonicParsing="false" text="Yes" textFill="WHITE">
-                     <toggleGroup>
-                        <ToggleGroup fx:id="group1" />
-                     </toggleGroup>
-                  </RadioButton>
-                  <RadioButton layoutX="33.0" layoutY="106.0" mnemonicParsing="false" text="No" textFill="WHITE" toggleGroup="$group1" />
-                  <Label layoutX="33.0" layoutY="145.0" prefHeight="26.0" prefWidth="293.0" style="-fx-background-color: white;" text="2. Have you ever played Water Polo ?" textFill="#0cb0f7">
-                     <font>
+                    </font>
+                </Label>
+                <RadioButton fx:id="Answer1_1" layoutX="32.0" layoutY="105.0" mnemonicParsing="false" text="Yes" textFill="WHITE">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="answer1" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="Answer1_2" layoutX="33.0" layoutY="138.0" mnemonicParsing="false" text="No" textFill="WHITE" toggleGroup="$answer1" />
+                <Label fx:id="Question2" layoutX="30.0" layoutY="177.0" prefHeight="26.0" prefWidth="293.0" text="2. Have you ever played Water Polo ?" textFill="#ebf3f5">
+                    <font>
                         <Font name="Arial Rounded MT Bold" size="16.0" />
-                     </font>
-                  </Label>
-                  <RadioButton layoutX="32.0" layoutY="193.0" mnemonicParsing="false" text="Yes" textFill="WHITE" toggleGroup="$group1" />
-                  <RadioButton layoutX="33.0" layoutY="226.0" mnemonicParsing="false" text="No" textFill="WHITE" toggleGroup="$group1" />
-                  <Label layoutX="33.0" layoutY="273.0" prefHeight="26.0" prefWidth="450.0" style="-fx-background-color: white;" text="3. Are you familiar with Water Polo rules and regulations ?" textFill="#0cb0f7">
-                     <font>
+                    </font>
+                </Label>
+                <RadioButton fx:id="Answer2_1" layoutX="32.0" layoutY="224.0" mnemonicParsing="false" text="Yes" textFill="WHITE">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="answer2" />
+                    </toggleGroup></RadioButton>
+                <RadioButton fx:id="Answer2_2" layoutX="33.0" layoutY="256.0" mnemonicParsing="false" text="No" textFill="WHITE" toggleGroup="$answer2" />
+                <Label fx:id="Question3" layoutX="30.0" layoutY="298.0" prefHeight="26.0" prefWidth="450.0" text="3. Are you familiar with Water Polo rules and regulations ?" textFill="#ebf3f5">
+                    <font>
                         <Font name="Arial Rounded MT Bold" size="16.0" />
-                     </font>
-                  </Label>
-                  <RadioButton layoutX="32.0" layoutY="318.0" mnemonicParsing="false" text="Yes" textFill="WHITE" toggleGroup="$group1" />
-                  <RadioButton layoutX="33.0" layoutY="357.0" mnemonicParsing="false" text="No" textFill="WHITE" toggleGroup="$group1" />
-                  <Label layoutX="33.0" layoutY="399.0" prefHeight="26.0" prefWidth="551.0" style="-fx-background-color: white;" text="4. How willing are you to try waterpolo out if you have never played it ? " textFill="#0cb0f7">
-                     <font>
+                    </font>
+                </Label>
+                <RadioButton fx:id="Answer3_1" layoutX="32.0" layoutY="335.0" mnemonicParsing="false" text="Yes" textFill="WHITE">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="answer3" />
+                    </toggleGroup></RadioButton>
+                <RadioButton fx:id="Answer3_2" layoutX="33.0" layoutY="365.0" mnemonicParsing="false" text="No" textFill="WHITE" toggleGroup="$answer3" />
+                <Label fx:id="Question4" layoutX="30.0" layoutY="410.0" prefHeight="26.0" prefWidth="551.0" text="4. How willing are you to try waterpolo out if you have never played it ? " textFill="#ebf3f5">
+                    <font>
                         <Font name="Arial Rounded MT Bold" size="16.0" />
-                     </font>
-                  </Label>
-                  <Rating layoutX="187.0" layoutY="437.0" rating="3.0" updateOnHover="true" />
-                  <Label layoutX="32.0" layoutY="483.0" prefHeight="26.0" prefWidth="448.0" style="-fx-background-color: white;" text="5. Which volleyball national team do you support (if any) ?" textFill="#0cb0f7">
-                     <font>
+                    </font>
+                </Label>
+                <Rating fx:id="Answer4" layoutX="189.0" layoutY="452.0" rating="3.0" updateOnHover="true" />
+                <Label fx:id="Question5" layoutX="31.0" layoutY="509.0" prefHeight="26.0" prefWidth="448.0" style="=: white;" text="5. Which volleyball national team do you support (if any) ?" textFill="#ebf3f5">
+                    <font>
                         <Font name="Arial Rounded MT Bold" size="16.0" />
-                     </font>
-                  </Label>
-                  <TextField layoutX="45.0" layoutY="526.0" promptText="e.g Hungary" />
-                  <Label layoutX="31.0" layoutY="571.0" prefHeight="26.0" prefWidth="738.0" style="-fx-background-color: white;" text="6. Any additional Comments ? (Optional) " textFill="#0cb0f7">
-                     <font>
+                    </font>
+                </Label>
+                <TextField fx:id="Answer5" layoutX="46.0" layoutY="554.0" promptText="e.g Hungary" />
+                <Label fx:id="Question6" layoutX="32.0" layoutY="603.0" prefHeight="26.0" prefWidth="738.0" text="6. Any additional Comments ? (Optional) " textFill="#ebf3f5">
+                    <font>
                         <Font name="Arial Rounded MT Bold" size="16.0" />
-                     </font>
-                  </Label>
-                  <Button fx:id="back4" layoutX="33.0" layoutY="767.0" mnemonicParsing="false" onAction="#back4clicked" text="&lt;- back" />
-            <TextArea layoutX="32.0" layoutY="607.0" prefHeight="150.0" prefWidth="739.0" promptText="e.g What do you think of the Hungarian Water Polo National Team?" />
-            <Button fx:id="submitbutton" layoutX="717.0" layoutY="767.0" mnemonicParsing="false" onAction="#submitbuttonclicked" text="Submit" />
-             <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../../styles/Modification.css" />
+                    </font>
+                </Label>
+                <TextArea fx:id="Answer6" layoutX="45.0" layoutY="650.0" prefHeight="150.0" prefWidth="739.0" promptText="e.g What do you think of the Hungarian Water Polo National Team?" />
+                <Button fx:id="saveButton" contentDisplay="CENTER" layoutX="343.0" layoutY="863.0" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="38.0" prefWidth="145.0" style="-fx-background-color: #01688f; -fx-border-color: white;" text="Save" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <effect>
+                        <Reflection />
+                    </effect></Button>
+                <Button fx:id="backButton" layoutX="27.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../../styles/Modification.css" />
+                <Separator layoutX="341.0" layoutY="47.0" prefHeight="6.0" prefWidth="151.0" />
+                <Label fx:id="SportsTemplate2" layoutX="341.0" layoutY="10.0" text="Water Polo" textFill="#ebf3f5">
+                    <font>
+                        <Font name="System Bold Italic" size="28.0" />
+                    </font>
+                </Label>
 
-         </children>
-            </AnchorPane>
-         </content>
-      </ScrollPane>
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

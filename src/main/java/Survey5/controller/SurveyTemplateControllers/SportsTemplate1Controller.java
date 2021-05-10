@@ -172,12 +172,12 @@ public class SportsTemplate1Controller {
 
     @FXML
     void backButtonClicked(ActionEvent event) throws IOException {
-        MainApp.setRoot("../resources/fxml/SurveyTemplates/TemplateSurvey.fxml");
-
+        MainApp.setRoot("/fxml/SurveyTemplates/TemplateSurvey.fxml");
     }
 
     @FXML
-    void saveButtonClicked(ActionEvent event) {
+    void saveButtonClicked(ActionEvent event) throws IOException {
+        MainApp.setRoot("/fxml/SurveyTemplates/TemplateSurvey.fxml");
 
     }
 

@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
@@ -11,58 +12,72 @@
 <?import javafx.scene.text.Font?>
 <?import org.controlsfx.control.Rating?>
 
-<ScrollPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.SportsTemplate4Controller">
-   <content>
-      <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="802.0" styleClass="SportsTemplate4AnchorPaneBackground" stylesheets="@/fxml/SurveyTemplates/TemplateStyles/tempcss1.css">
-         <children>
-                  <Label layoutX="32.0" layoutY="23.0" prefHeight="26.0" prefWidth="209.0" style="-fx-background-color: white;" text=" 1. Do you like Volleyball ?" textFill="#fc9c00">
-                     <font>
+<ScrollPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.SportsTemplate4Controller">
+    <content>
+        <AnchorPane id="AnchorPane" fx:id="SportsTemplate4_anchorpane" prefHeight="1010.0" prefWidth="1500.0" styleClass="SportsTemplate4AnchorPaneBackground" stylesheets="@TemplateStyles/tempcss1.css">
+            <children>
+                <Label fx:id="Question1" layoutX="31.0" layoutY="87.0" prefHeight="26.0" prefWidth="209.0" style="-fx-background-color: white;" text=" 1. Do you like Volleyball ?" textFill="#fc9c00">
+                    <font>
                         <Font name="Arial Rounded MT Bold" size="16.0" />
-                     </font>
-                  </Label>
-                  <RadioButton layoutX="32.0" layoutY="69.0" mnemonicParsing="false" text="Yes" textFill="WHITE">
-                     <toggleGroup>
-                        <ToggleGroup fx:id="group1" />
-                     </toggleGroup>
-                  </RadioButton>
-                  <RadioButton layoutX="33.0" layoutY="106.0" mnemonicParsing="false" text="No" textFill="WHITE" toggleGroup="$group1" />
-                  <Label layoutX="33.0" layoutY="145.0" prefHeight="26.0" prefWidth="288.0" style="-fx-background-color: white;" text=" 2. Have you ever played Volleyball ?" textFill="#fc9c00">
-                     <font>
+                    </font>
+                </Label>
+                <RadioButton fx:id="Answer1_1" layoutX="32.0" layoutY="128.0" mnemonicParsing="false" text="Yes" textFill="WHITE">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="answer1" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="Answer1_2" layoutX="33.0" layoutY="163.0" mnemonicParsing="false" text="No" textFill="WHITE" toggleGroup="$answer1" />
+                <Label fx:id="Question2" layoutX="31.0" layoutY="209.0" prefHeight="26.0" prefWidth="288.0" style="-fx-background-color: white;" text=" 2. Have you ever played Volleyball ?" textFill="#fc9c00">
+                    <font>
                         <Font name="Arial Rounded MT Bold" size="16.0" />
-                     </font>
-                  </Label>
-                  <RadioButton layoutX="32.0" layoutY="193.0" mnemonicParsing="false" text="Yes" textFill="WHITE" toggleGroup="$group1" />
-                  <RadioButton layoutX="33.0" layoutY="226.0" mnemonicParsing="false" text="No" textFill="WHITE" toggleGroup="$group1" />
-                  <Label layoutX="33.0" layoutY="273.0" prefHeight="26.0" prefWidth="446.0" style="-fx-background-color: white;" text=" 3. Are you familiar with volleyball rules and regulations ?" textFill="#fc9c00">
-                     <font>
+                    </font>
+                </Label>
+                <RadioButton fx:id="Answer2_1" layoutX="32.0" layoutY="260.0" mnemonicParsing="false" text="Yes" textFill="WHITE">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="answer2" />
+                    </toggleGroup></RadioButton>
+                <RadioButton fx:id="Answer2_2" layoutX="33.0" layoutY="291.0" mnemonicParsing="false" text="No" textFill="WHITE" toggleGroup="$answer2" />
+                <Label fx:id="Question3" layoutX="32.0" layoutY="361.0" prefHeight="26.0" prefWidth="446.0" style="-fx-background-color: white;" text=" 3. Are you familiar with volleyball rules and regulations ?" textFill="#fc9c00">
+                    <font>
                         <Font name="Arial Rounded MT Bold" size="16.0" />
-                     </font>
-                  </Label>
-                  <RadioButton layoutX="32.0" layoutY="318.0" mnemonicParsing="false" text="Yes" textFill="WHITE" toggleGroup="$group1" />
-                  <RadioButton layoutX="33.0" layoutY="357.0" mnemonicParsing="false" text="No" textFill="WHITE" toggleGroup="$group1" />
-                  <Label layoutX="33.0" layoutY="399.0" prefHeight="26.0" prefWidth="548.0" style="-fx-background-color: white;" text=" 4. How willing are you to try volleyball out if you have never played it ? " textFill="#fc9c00">
-                     <font>
+                    </font>
+                </Label>
+                <RadioButton fx:id="Answer3_1" layoutX="39.0" layoutY="418.0" mnemonicParsing="false" text="Yes" textFill="WHITE">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="answer3" />
+                    </toggleGroup></RadioButton>
+                <RadioButton fx:id="Answer3_2" layoutX="40.0" layoutY="461.0" mnemonicParsing="false" text="No" textFill="WHITE" toggleGroup="$answer3" />
+                <Label fx:id="Question4" layoutX="32.0" layoutY="512.0" prefHeight="26.0" prefWidth="548.0" style="-fx-background-color: white;" text=" 4. How willing are you to try volleyball out if you have never played it ? " textFill="#fc9c00">
+                    <font>
                         <Font name="Arial Rounded MT Bold" size="16.0" />
-                     </font>
-                  </Label>
-                  <Rating layoutX="187.0" layoutY="437.0" rating="3.0" updateOnHover="true" />
-                  <Label layoutX="38.0" layoutY="486.0" prefHeight="26.0" prefWidth="448.0" style="-fx-background-color: white;" text=" 5. Which volleyball national team do you support (if any) ?" textFill="#fc9c00">
-                     <font>
+                    </font>
+                </Label>
+                <Rating fx:id="Answer4" layoutX="189.0" layoutY="554.0" rating="3.0" updateOnHover="true" />
+                <Label fx:id="Question5" layoutX="31.0" layoutY="622.0" prefHeight="26.0" prefWidth="448.0" style="-fx-background-color: white;" text=" 5. Which volleyball national team do you support (if any) ?" textFill="#fc9c00">
+                    <font>
                         <Font name="Arial Rounded MT Bold" size="16.0" />
-                     </font>
-                  </Label>
-                  <TextField layoutX="32.0" layoutY="525.0" promptText="e.g Brazil" />
-                  <Label layoutX="38.0" layoutY="569.0" prefHeight="26.0" prefWidth="316.0" style="-fx-background-color: white;" text=" 6. Any additional Comments ? (Optional)" textFill="#fc9c00">
-                     <font>
+                    </font>
+                </Label>
+                <TextField fx:id="Answer5" layoutX="39.0" layoutY="673.0" promptText="e.g Brazil" />
+                <Label fx:id="Question6" layoutX="31.0" layoutY="731.0" prefHeight="26.0" prefWidth="316.0" style="-fx-background-color: white;" text=" 6. Any additional Comments ? (Optional)" textFill="#fc9c00">
+                    <font>
                         <Font name="Arial Rounded MT Bold" size="16.0" />
-                     </font>
-                  </Label>
-                  <Button fx:id="back3" layoutX="41.0" layoutY="809.0" mnemonicParsing="false" onAction="#back3clicked" text=" &lt;- back" />
-            <TextArea layoutX="32.0" layoutY="607.0" prefHeight="150.0" prefWidth="726.0" />
-            <Button fx:id="next3" layoutX="674.0" layoutY="809.0" mnemonicParsing="false" onAction="#next3clicked" text="next -&gt;" />
-             <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../../styles/Modification.css" />
+                    </font>
+                </Label>
+                <TextArea fx:id="Answer6" layoutX="69.0" layoutY="776.0" prefHeight="128.0" prefWidth="555.0" />
+                <Button fx:id="saveButton" layoutX="306.0" layoutY="945.0" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="30.0" prefWidth="127.0" text="Save Button" textFill="#ffa20c">
+                    <font>
+                        <Font size="15.0" />
+                    </font></Button>
+                <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../../styles/Modification.css" />
+                <Label fx:id="SportsTemplate4" layoutX="321.0" layoutY="10.0" text="Volleyball">
+                    <font>
+                        <Font name="System Bold Italic" size="28.0" />
+                    </font>
+                </Label>
+                <Separator layoutX="318.0" layoutY="50.0" prefHeight="0.0" prefWidth="139.0" style="-fx-background-color: black;" />
 
-         </children>
-            </AnchorPane>
-         </content>
-      </ScrollPane>
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

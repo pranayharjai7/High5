@@ -13,9 +13,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.TemplateSurveyController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.TemplateSurveyController">
   <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1650.0" prefWidth="1200.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1650.0" prefWidth="1200.0" style="-fx-background-color: white;">
          <children>
             <Label fx:id="HealthAndSafetyLabel" layoutX="20.0" layoutY="178.0" text="Health And Safety">
                <font>
@@ -25,9 +25,9 @@
             <Separator layoutX="19.0" layoutY="206.0" opacity="0.31" prefHeight="2.0" prefWidth="194.0" style="-fx-background-color: black;" />
             <Button fx:id="GeneralHealthSurveyTemplateButton" layoutX="3.0" layoutY="236.0" mnemonicParsing="false" onAction="#GeneralHealthSurveyTemplateButtonClicked" prefHeight="157.0" prefWidth="218.0" style="-fx-background-color: WHITE;">
                <graphic>
-                  <ImageView fitHeight="136.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="125.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/TemplateImages/TemplateSurveyHealthTemplateImage1.jpeg" />
+                        <Image url="@../img/TemplateImages/HealthTemplate1pic1.jpeg" />
                      </image>
                      <effect>
                         <Reflection topOpacity="0.26" />
@@ -35,9 +35,9 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="workHealthSurveyTemplateButton" layoutX="233.0" layoutY="233.0" mnemonicParsing="false" onAction="#workHealthSurveyTemplateButtonClicked" prefHeight="157.0" prefWidth="218.0" style="-fx-background-color: WHITE;">
+            <Button fx:id="workHealthSurveyTemplateButton" layoutX="238.0" layoutY="236.0" mnemonicParsing="false" onAction="#workHealthSurveyTemplateButtonClicked" prefHeight="157.0" prefWidth="218.0" style="-fx-background-color: WHITE;">
                <graphic>
-                  <ImageView fitHeight="147.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="133.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/TemplateImages/TemplateSurveyHealthTemplate2.png" />
                      </image>
@@ -78,7 +78,7 @@
             </Button>
             <Separator layoutX="256.0" layoutY="80.0" opacity="0.56" prefHeight="0.0" prefWidth="347.0" style="-fx-background-color: black;" />
             <Text layoutX="34.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A General Survey Related to basic Health and  phyical conditions" wrappingWidth="173.1738576889038" />
-            <Text layoutX="264.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A basic Survey related to various factors that effect an individual work." wrappingWidth="168.80941772460938" />
+            <Text layoutX="274.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A basic Survey related to various factors that effect an individual work." wrappingWidth="168.80941772460938" />
             <Text layoutX="494.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Survey related to Corona virus ,the vaccines and its impact upon economy,society and individuals" wrappingWidth="201.8570556640625">
                <font>
                   <Font size="13.0" />
@@ -166,9 +166,9 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="WaterpoloSurveyTemplateButton" layoutX="278.0" layoutY="893.0" mnemonicParsing="false" onAction="#WaterpoloSurveyTemplateButtonClicked" prefHeight="154.0" prefWidth="217.0" style="-fx-background-color: WHITE;">
+            <Button fx:id="WaterpoloSurveyTemplateButton" layoutX="278.0" layoutY="886.0" mnemonicParsing="false" onAction="#WaterpoloSurveyTemplateButtonClicked" prefHeight="154.0" prefWidth="217.0" style="-fx-background-color: WHITE;">
                <graphic>
-                  <ImageView fitHeight="162.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="115.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/TemplateImages/TemplateSurveySportsTemplate2.jpg" />
                      </image>
@@ -192,9 +192,9 @@
             </Button>
             <Button fx:id="PhysicalSurveyTemplateButton" layoutX="752.0" layoutY="892.0" mnemonicParsing="false" onAction="#PhysicalSurveyTemplateButtonClicked" prefHeight="151.0" prefWidth="216.0" style="-fx-background-color: WHITE;">
                <graphic>
-                  <ImageView fitHeight="122.0" fitWidth="191.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="120.0" fitWidth="217.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/TemplateImages/TemplateSurveySportsTemplate4.jpeg" />
+                        <Image url="@../img/TemplateImages/volleyball.jpeg" />
                      </image>
                      <effect>
                         <Reflection topOpacity="0.33" />
@@ -215,13 +215,13 @@
             </Label>
             <Text layoutX="51.0" layoutY="1079.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A general Sports Survey related to Daily activity and Activness of the particiant" wrappingWidth="191.44183349609375" />
             <Text layoutX="536.0" layoutY="1080.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cycling can be a hobbby or support. wanna know more from an audience choose this" wrappingWidth="201.9058837890625" />
-            <Text layoutX="763.0" layoutY="1081.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Know if your audience like Gym or other method to fullfill their physical training requirments" wrappingWidth="198.72039794921875" />
+            <Text layoutX="763.0" layoutY="1081.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A general survey regarding users interest in volleyball" wrappingWidth="198.72039794921875" />
             <Label layoutX="578.0" layoutY="1042.0" text="Cycling Survey">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="785.0" layoutY="1042.0" text="Physical Activity survey">
+            <Label layoutX="785.0" layoutY="1042.0" text="Volley-Ball Survey">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -274,7 +274,7 @@
             </Label>
             <Button fx:id="CustomerSatisfactionSurveyTemplateButton" layoutX="39.0" layoutY="1241.0" mnemonicParsing="false" onAction="#CustomerSatisfactionSurveyTemplateButtonClicked" prefHeight="159.0" prefWidth="224.0" style="-fx-background-color: white;">
                <graphic>
-                  <ImageView fitHeight="142.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="139.0" fitWidth="219.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/TemplateImages/TemplateSurveyBusinessTemplate1.jpg" />
                      </image>
@@ -285,9 +285,9 @@
             </Button>
             <Button fx:id="WebsiteReviewSurveyTemplateButton" layoutX="291.0" layoutY="1241.0" mnemonicParsing="false" onAction="#WebsiteReviewSurveyTemplateButtonClicked" prefHeight="154.0" prefWidth="217.0" style="-fx-background-color: white;">
                <graphic>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="164.0" fitWidth="280.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/TemplateImages/TemplateSurveyBusinessTemplate2.jpg" />
+                        <Image url="@../img/TemplateImages/website_Template3.png" />
                      </image>
                      <effect>
                         <Reflection topOpacity="0.35" />
@@ -305,11 +305,11 @@
                      </effect></ImageView>
                </graphic>
             </Button>
-            <Button fx:id="AppSoftwareReviewSurveyTemplateButton" layoutX="773.0" layoutY="1241.0" mnemonicParsing="false" onAction="#AppSoftwareReviewSurveyTemplateButtonClicked" prefHeight="154.0" prefWidth="206.0">
+            <Button fx:id="AppSoftwareReviewSurveyTemplateButton" layoutX="773.0" layoutY="1241.0" mnemonicParsing="false" onAction="#AppSoftwareReviewSurveyTemplateButtonClicked" prefHeight="154.0" prefWidth="206.0" style="-fx-background-color: white;">
                <graphic>
-                  <ImageView fitHeight="129.0" fitWidth="185.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="127.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/TemplateImages/TemplateSurveyBusinessTemplate4.jpg" />
+                        <Image url="@../img/TemplateImages/BusinessTemplate3.png" />
                      </image>
                      <effect>
                         <Reflection topOpacity="0.35" />
@@ -328,14 +328,14 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <Label layoutX="798.0" layoutY="1400.0" text="App/software Reviews">
+            <Label layoutX="798.0" layoutY="1400.0" text="Work/Internship /opportunites">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
             <Text layoutX="51.0" layoutY="1431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A General survey showing how satisfied Are your customers from your services" wrappingWidth="199.97654724121094" />
             <Text layoutX="305.0" layoutY="1431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A survey about the Runnig and Functionality of Your Website" wrappingWidth="188.34027099609375" />
             <Text layoutX="576.0" layoutY="1431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A survey about the Thoughts and satisfaction of the people that visit you shop/buisness online/physicaly" wrappingWidth="169.78759765625" />
-            <Text layoutX="806.0" layoutY="1429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="App and Sotware clients/Users satisfaction Survey" wrappingWidth="128.3543701171875" />
+            <Text layoutX="799.0" layoutY="1431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In this survey, you will be asked about your experiences about the study programme, your experiences and plans regarding working and internships" wrappingWidth="169.9544677734375" />
             <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../../styles/Modification.css" />
 
          </children></AnchorPane>
