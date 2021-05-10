@@ -15,16 +15,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-<span class="nc" id="L18">public class BusinessTemplate3Controller {</span>
+public class BusinessTemplate3Controller {
     private static Survey survey;
-<span class="nc" id="L20">    private Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);</span>
-<span class="nc" id="L21">    private Alert warn = new Alert(Alert.AlertType.WARNING);</span>
+<span class="fc" id="L20">    private Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);</span>
+<span class="fc" id="L21">    private Alert warn = new Alert(Alert.AlertType.WARNING);</span>
     private static Data userdata;
-<span class="nc" id="L23">    SurveysDaoInterface surveyManager = new SurveyManager();</span>
-<span class="nc" id="L24">    QuestionsDaoInterface questionManager  = new QuestionsManager();</span>
-<span class="nc" id="L25">    AnswersDaoInterface answerManager = new AnswersManager();</span>
+<span class="fc" id="L23">    SurveysDaoInterface surveyManager = new SurveyManager();</span>
+<span class="fc" id="L24">    QuestionsDaoInterface questionManager  = new QuestionsManager();</span>
+<span class="fc" id="L25">    AnswersDaoInterface answerManager = new AnswersManager();</span>
     static String answer;
-<span class="nc" id="L27">    int NumberOfQuestions = 13;</span>
+<span class="fc" id="L27">    int NumberOfQuestions = 13;</span>
+    int flag;
+    
+<span class="fc" id="L30">        public BusinessTemplate3Controller() {</span>
+<span class="pc bpc" id="L31" title="1 of 4 branches missed.">        if(userdata == null &amp;&amp; answer == null){</span>
+<span class="fc" id="L32">        this.answer = &quot;none&quot;;</span>
+<span class="fc" id="L33">        this.userdata = new Data(&quot;none&quot;, &quot;none&quot;, &quot;none&quot;, &quot;none&quot;);</span>
+        }
+<span class="fc" id="L35">    }</span>
 
     @FXML
     private AnchorPane BusinessTemplate3AnchorPane;
@@ -89,197 +97,197 @@ import java.util.List;
     private Button backButton;
 
     public static void setData(Data userdata) {
-<span class="nc" id="L92">        BusinessTemplate3Controller.userdata=userdata;</span>
-<span class="nc" id="L93">    }</span>
+<span class="fc" id="L100">        BusinessTemplate3Controller.userdata=userdata;</span>
+<span class="fc" id="L101">    }</span>
 
     public static void setCreateOrAnswerFunction(String answer){
-<span class="nc" id="L96">        BusinessTemplate3Controller.answer=answer;</span>
-<span class="nc" id="L97">    }</span>
+<span class="fc" id="L104">        BusinessTemplate3Controller.answer=answer;</span>
+<span class="fc" id="L105">    }</span>
 
     public static void setCreateOrAnswerFunction(String answer, Survey survey){
-<span class="nc" id="L100">        BusinessTemplate3Controller.survey=survey;</span>
-<span class="nc" id="L101">        BusinessTemplate3Controller.answer=answer;</span>
-<span class="nc" id="L102">    }</span>
+<span class="fc" id="L108">        BusinessTemplate3Controller.survey=survey;</span>
+<span class="fc" id="L109">        BusinessTemplate3Controller.answer=answer;</span>
+<span class="fc" id="L110">    }</span>
 
     @FXML
-    private void initialize(){
-<span class="nc bnc" id="L106" title="All 2 branches missed.">        if(answer.equals(&quot;answer&quot;)){</span>
-<span class="nc" id="L107">            setAnswering();</span>
+    public void initialize(){
+<span class="pc bpc" id="L114" title="1 of 2 branches missed.">        if(answer.equals(&quot;answer&quot;)){</span>
+<span class="nc" id="L115">            setAnswering();</span>
         }
-<span class="nc bnc" id="L109" title="All 2 branches missed.">        else if(answer.equals(&quot;create&quot;))</span>
-<span class="nc" id="L110">            setCreating();</span>
+<span class="fc bfc" id="L117" title="All 2 branches covered.">        else if(answer.equals(&quot;create&quot;))</span>
+<span class="fc" id="L118">            setCreating();</span>
         else
-<span class="nc" id="L112">            setShowAnswers();</span>
+<span class="fc" id="L120">            setShowAnswers();</span>
 
-<span class="nc" id="L114">        Answer3.setRating(0);</span>
-<span class="nc" id="L115">        Answer4.setRating(0);</span>
-<span class="nc" id="L116">        Answer5.setRating(0);</span>
-<span class="nc" id="L117">        Answer6.setRating(0);</span>
-<span class="nc" id="L118">        Answer7.setRating(0);</span>
-<span class="nc" id="L119">        Answer8.setRating(0);</span>
-<span class="nc" id="L120">        Answer9.setRating(0);</span>
-<span class="nc" id="L121">        Answer10.setRating(0);</span>
-<span class="nc" id="L122">        Answer11.setRating(0);</span>
-<span class="nc" id="L123">        Answer12.setRating(0);</span>
-<span class="nc" id="L124">    }</span>
+<span class="fc" id="L122">        Answer3.setRating(0);</span>
+<span class="fc" id="L123">        Answer4.setRating(0);</span>
+<span class="fc" id="L124">        Answer5.setRating(0);</span>
+<span class="fc" id="L125">        Answer6.setRating(0);</span>
+<span class="fc" id="L126">        Answer7.setRating(0);</span>
+<span class="fc" id="L127">        Answer8.setRating(0);</span>
+<span class="fc" id="L128">        Answer9.setRating(0);</span>
+<span class="fc" id="L129">        Answer10.setRating(0);</span>
+<span class="fc" id="L130">        Answer11.setRating(0);</span>
+<span class="fc" id="L131">        Answer12.setRating(0);</span>
+<span class="fc" id="L132">    }</span>
 
-    private void setCreating() {
-<span class="nc" id="L127">        saveButton.setText(&quot;Save&quot;);</span>
-<span class="nc" id="L128">        saveButton.setOnAction(this::saveButtonClicked);</span>
-<span class="nc" id="L129">        backButton.setOnAction(this::backToTemplatesButtonClicked);</span>
-<span class="nc" id="L130">    }</span>
+    public void setCreating() {
+<span class="fc" id="L135">        saveButton.setText(&quot;Save&quot;);</span>
+<span class="fc" id="L136">        saveButton.setOnAction(this::saveButtonClicked);</span>
+<span class="fc" id="L137">        backButton.setOnAction(this::backToTemplatesButtonClicked);</span>
+<span class="fc" id="L138">    }</span>
 
-    private void setAnswering(){
-<span class="nc" id="L133">        saveButton.setText(&quot;Submit&quot;);</span>
-<span class="nc" id="L134">        saveButton.setOnAction(this::submitButtonClicked);</span>
-<span class="nc" id="L135">        backButton.setOnAction(this::backToAnswerButtonClicked);</span>
-<span class="nc" id="L136">    }</span>
+    public void setAnswering(){
+<span class="nc" id="L141">        saveButton.setText(&quot;Submit&quot;);</span>
+<span class="nc" id="L142">        saveButton.setOnAction(this::submitButtonClicked);</span>
+<span class="nc" id="L143">        backButton.setOnAction(this::backToAnswerButtonClicked);</span>
+<span class="nc" id="L144">    }</span>
 
-    private void setShowAnswers(){
-<span class="nc" id="L139">        saveButton.setText(&quot;Show Answers&quot;);</span>
-<span class="nc" id="L140">        saveButton.setPrefWidth(150);</span>
-<span class="nc" id="L141">        saveButton.setOnAction(this::showAnswersClicked);</span>
-<span class="nc" id="L142">        backButton.setOnAction(this::backToSavedSurveysButtonClicked);</span>
-<span class="nc" id="L143">    }</span>
+    public void setShowAnswers(){
+<span class="fc" id="L147">        saveButton.setText(&quot;Show Answers&quot;);</span>
+<span class="fc" id="L148">        saveButton.setPrefWidth(150);</span>
+<span class="fc" id="L149">        saveButton.setOnAction(this::showAnswersClicked);</span>
+<span class="fc" id="L150">        backButton.setOnAction(this::backToSavedSurveysButtonClicked);</span>
+<span class="fc" id="L151">    }</span>
 
     //submitting template to database of current user
     @FXML
-    private void saveButtonClicked(ActionEvent event){
-<span class="nc" id="L148">        Survey survey = new Survey();</span>
-<span class="nc" id="L149">        survey.setTypeOfTemplate(BusinessTemplate3.getId());</span>
-<span class="nc" id="L150">        survey.setTitle(BusinessTemplate3.getText());</span>
-<span class="nc" id="L151">        survey.setOwner(userdata);</span>
+    public void saveButtonClicked(ActionEvent event){
+<span class="fc" id="L156">        Survey survey = new Survey();</span>
+<span class="fc" id="L157">        survey.setTypeOfTemplate(BusinessTemplate3.getId());</span>
+<span class="fc" id="L158">        survey.setTitle(BusinessTemplate3.getText());</span>
+<span class="fc" id="L159">        survey.setOwner(userdata);</span>
 
-<span class="nc" id="L153">        surveyManager.setSurvey(survey);</span>
+<span class="fc" id="L161">        surveyManager.setSurvey(survey);</span>
         try {
-<span class="nc" id="L155">            surveyManager.close();</span>
-<span class="nc" id="L156">        } catch (Exception e) {</span>
-<span class="nc" id="L157">            e.printStackTrace();</span>
-<span class="nc" id="L158">        }</span>
-
-<span class="nc" id="L160">        confirm.setContentText(&quot;Template Saved Successfully!!&quot;);</span>
-<span class="nc" id="L161">        confirm.showAndWait();</span>
-        try {
-<span class="nc" id="L163">            MainApp.setRoot(&quot;/fxml/SurveyTemplates/TemplateSurvey.fxml&quot;);</span>
-<span class="nc" id="L164">        } catch (IOException e) {</span>
+<span class="fc" id="L163">            surveyManager.close();</span>
+<span class="nc" id="L164">        } catch (Exception e) {</span>
 <span class="nc" id="L165">            e.printStackTrace();</span>
-<span class="nc" id="L166">        }</span>
-<span class="nc" id="L167">    }</span>
+<span class="fc" id="L166">        }</span>
+
+<span class="fc" id="L168">        confirm.setContentText(&quot;Template Saved Successfully!!&quot;);</span>
+<span class="nc" id="L169">        confirm.showAndWait();</span>
+        try {
+<span class="nc" id="L171">            MainApp.setRoot(&quot;/fxml/SurveyTemplates/TemplateSurvey.fxml&quot;);</span>
+<span class="nc" id="L172">        } catch (IOException e) {</span>
+<span class="nc" id="L173">            e.printStackTrace();</span>
+<span class="nc" id="L174">        }</span>
+<span class="nc" id="L175">    }</span>
 
     //submitting Questions and answers to database
-<span class="nc" id="L170">    private List&lt;Questions&gt; qList = new ArrayList&lt;&gt;();</span>
-    private void submitButtonClicked(ActionEvent actionEvent) {
+<span class="fc" id="L178">    private List&lt;Questions&gt; qList = new ArrayList&lt;&gt;();</span>
+    public void submitButtonClicked(ActionEvent actionEvent) {
 
-<span class="nc" id="L173">        int flag = 0;</span>
-<span class="nc" id="L174">        qList = questionManager.getSurveyQuestions(survey);</span>
-<span class="nc bnc" id="L175" title="All 2 branches missed.">        for (Questions question : qList) {</span>
-<span class="nc bnc" id="L176" title="All 2 branches missed.">            if (question.getAnsweredByUser().getId() == userdata.getId()) {</span>
-<span class="nc" id="L177">                flag = 1;</span>
-<span class="nc" id="L178">                break;</span>
+<span class="nc" id="L181">        int flag = 0;</span>
+<span class="nc" id="L182">        qList = questionManager.getSurveyQuestions(survey);</span>
+<span class="nc bnc" id="L183" title="All 2 branches missed.">        for (Questions question : qList) {</span>
+<span class="nc bnc" id="L184" title="All 2 branches missed.">            if (question.getAnsweredByUser().getId() == userdata.getId()) {</span>
+<span class="nc" id="L185">                flag = 1;</span>
+<span class="nc" id="L186">                break;</span>
             }
-<span class="nc" id="L180">        }</span>
-<span class="nc bnc" id="L181" title="All 2 branches missed.">        if (flag == 1) {</span>
-<span class="nc" id="L182">            warn.setContentText(&quot;You have already answered this Survey!&quot;);</span>
-<span class="nc" id="L183">            warn.showAndWait();</span>
-        }
-<span class="nc bnc" id="L185" title="All 4 branches missed.">        else if(Answer1.getText().equals(&quot;&quot;) || Answer2.getText().equals(&quot;&quot;)){</span>
-<span class="nc" id="L186">            warn.setContentText(&quot;You didn't submit all the answers!&quot;);</span>
-<span class="nc" id="L187">            warn.showAndWait();</span>
-        }
-<span class="nc bnc" id="L189" title="All 2 branches missed.">        else if(!setRating()){</span>
-<span class="nc" id="L190">            warn.setContentText(&quot;You didn't submit all the answers!&quot;);</span>
+<span class="nc" id="L188">        }</span>
+<span class="nc bnc" id="L189" title="All 2 branches missed.">        if (flag == 1) {</span>
+<span class="nc" id="L190">            warn.setContentText(&quot;You have already answered this Survey!&quot;);</span>
 <span class="nc" id="L191">            warn.showAndWait();</span>
+        }
+<span class="nc bnc" id="L193" title="All 4 branches missed.">        else if(Answer1.getText().equals(&quot;&quot;) || Answer2.getText().equals(&quot;&quot;)){</span>
+<span class="nc" id="L194">            warn.setContentText(&quot;You didn't submit all the answers!&quot;);</span>
+<span class="nc" id="L195">            warn.showAndWait();</span>
+        }
+<span class="nc bnc" id="L197" title="All 2 branches missed.">        else if(!setRating()){</span>
+<span class="nc" id="L198">            warn.setContentText(&quot;You didn't submit all the answers!&quot;);</span>
+<span class="nc" id="L199">            warn.showAndWait();</span>
 
         }
-<span class="nc bnc" id="L194" title="All 4 branches missed.">        else if(qList.isEmpty() || flag==0){</span>
-<span class="nc bnc" id="L195" title="All 2 branches missed.">            for (int i = 1; i &lt;= NumberOfQuestions; i++) {</span>
-<span class="nc" id="L196">                Questions question = new Questions();</span>
-<span class="nc" id="L197">                question.setSurveyTemplate(survey);</span>
-<span class="nc" id="L198">                question.setQuestionNumber(i);</span>
-<span class="nc" id="L199">                question.setAnsweredByUser(userdata);</span>
+<span class="nc bnc" id="L202" title="All 4 branches missed.">        else if(qList.isEmpty() || flag==0){</span>
+<span class="nc bnc" id="L203" title="All 2 branches missed.">            for (int i = 1; i &lt;= NumberOfQuestions; i++) {</span>
+<span class="nc" id="L204">                Questions question = new Questions();</span>
+<span class="nc" id="L205">                question.setSurveyTemplate(survey);</span>
+<span class="nc" id="L206">                question.setQuestionNumber(i);</span>
+<span class="nc" id="L207">                question.setAnsweredByUser(userdata);</span>
 
-<span class="nc" id="L201">                Answers answer = new Answers();</span>
-<span class="nc bnc" id="L202" title="All 14 branches missed.">                switch (i) {</span>
+<span class="nc" id="L209">                Answers answer = new Answers();</span>
+<span class="nc bnc" id="L210" title="All 14 branches missed.">                switch (i) {</span>
                     case 1: {
-<span class="nc" id="L204">                        question.setQuestion(Question1.getText());</span>
-<span class="nc" id="L205">                        answer.setAnswersType(&quot;Textual&quot;);</span>
-<span class="nc" id="L206">                        answer.setAnswerText(Answer1.getText());</span>
-<span class="nc" id="L207">                        break;</span>
+<span class="nc" id="L212">                        question.setQuestion(Question1.getText());</span>
+<span class="nc" id="L213">                        answer.setAnswersType(&quot;Textual&quot;);</span>
+<span class="nc" id="L214">                        answer.setAnswerText(Answer1.getText());</span>
+<span class="nc" id="L215">                        break;</span>
                     }
                     case 2: {
-<span class="nc" id="L210">                        question.setQuestion(Question2.getText());</span>
-<span class="nc" id="L211">                        answer.setAnswersType(&quot;Textual&quot;);</span>
-<span class="nc" id="L212">                        answer.setAnswerText(Answer2.getText());</span>
-<span class="nc" id="L213">                        break;</span>
+<span class="nc" id="L218">                        question.setQuestion(Question2.getText());</span>
+<span class="nc" id="L219">                        answer.setAnswersType(&quot;Textual&quot;);</span>
+<span class="nc" id="L220">                        answer.setAnswerText(Answer2.getText());</span>
+<span class="nc" id="L221">                        break;</span>
                     }
                     case 3: {
-<span class="nc" id="L216">                        question.setQuestion(Question3.getText());</span>
-<span class="nc" id="L217">                        answer.setAnswersType(&quot;Rating&quot;);</span>
-<span class="nc" id="L218">                        answer.setAnswerText(&quot;Rating: &quot;+Answer3.getRating());</span>
-<span class="nc" id="L219">                        break;</span>
+<span class="nc" id="L224">                        question.setQuestion(Question3.getText());</span>
+<span class="nc" id="L225">                        answer.setAnswersType(&quot;Rating&quot;);</span>
+<span class="nc" id="L226">                        answer.setAnswerText(&quot;Rating: &quot;+Answer3.getRating());</span>
+<span class="nc" id="L227">                        break;</span>
                     }
                     case 4: {
-<span class="nc" id="L222">                        question.setQuestion(Question4.getText());</span>
-<span class="nc" id="L223">                        answer.setAnswersType(&quot;Rating&quot;);</span>
-<span class="nc" id="L224">                        answer.setAnswerText(&quot;Rating: &quot;+Answer4.getRating());</span>
-<span class="nc" id="L225">                        break;</span>
+<span class="nc" id="L230">                        question.setQuestion(Question4.getText());</span>
+<span class="nc" id="L231">                        answer.setAnswersType(&quot;Rating&quot;);</span>
+<span class="nc" id="L232">                        answer.setAnswerText(&quot;Rating: &quot;+Answer4.getRating());</span>
+<span class="nc" id="L233">                        break;</span>
                     }
                     case 5: {
-<span class="nc" id="L228">                        question.setQuestion(Question5.getText());</span>
-<span class="nc" id="L229">                        answer.setAnswersType(&quot;Rating&quot;);</span>
-<span class="nc" id="L230">                        answer.setAnswerText(&quot;Rating: &quot;+Answer5.getRating());</span>
-<span class="nc" id="L231">                        break;</span>
+<span class="nc" id="L236">                        question.setQuestion(Question5.getText());</span>
+<span class="nc" id="L237">                        answer.setAnswersType(&quot;Rating&quot;);</span>
+<span class="nc" id="L238">                        answer.setAnswerText(&quot;Rating: &quot;+Answer5.getRating());</span>
+<span class="nc" id="L239">                        break;</span>
                     }
                     case 6: {
-<span class="nc" id="L234">                        question.setQuestion(Question6.getText());</span>
-<span class="nc" id="L235">                        answer.setAnswersType(&quot;Rating&quot;);</span>
-<span class="nc" id="L236">                        answer.setAnswerText(&quot;Rating: &quot;+Answer6.getRating());</span>
-<span class="nc" id="L237">                        break;</span>
+<span class="nc" id="L242">                        question.setQuestion(Question6.getText());</span>
+<span class="nc" id="L243">                        answer.setAnswersType(&quot;Rating&quot;);</span>
+<span class="nc" id="L244">                        answer.setAnswerText(&quot;Rating: &quot;+Answer6.getRating());</span>
+<span class="nc" id="L245">                        break;</span>
                     }
                     case 7: {
-<span class="nc" id="L240">                        question.setQuestion(Question7.getText());</span>
-<span class="nc" id="L241">                        answer.setAnswersType(&quot;Rating&quot;);</span>
-<span class="nc" id="L242">                        answer.setAnswerText(&quot;Rating: &quot;+Answer7.getRating());</span>
-<span class="nc" id="L243">                        break;</span>
+<span class="nc" id="L248">                        question.setQuestion(Question7.getText());</span>
+<span class="nc" id="L249">                        answer.setAnswersType(&quot;Rating&quot;);</span>
+<span class="nc" id="L250">                        answer.setAnswerText(&quot;Rating: &quot;+Answer7.getRating());</span>
+<span class="nc" id="L251">                        break;</span>
                     }
                     case 8: {
-<span class="nc" id="L246">                        question.setQuestion(Question8.getText());</span>
-<span class="nc" id="L247">                        answer.setAnswersType(&quot;Rating&quot;);</span>
-<span class="nc" id="L248">                        answer.setAnswerText(&quot;Rating: &quot;+Answer8.getRating());</span>
-<span class="nc" id="L249">                        break;</span>
+<span class="nc" id="L254">                        question.setQuestion(Question8.getText());</span>
+<span class="nc" id="L255">                        answer.setAnswersType(&quot;Rating&quot;);</span>
+<span class="nc" id="L256">                        answer.setAnswerText(&quot;Rating: &quot;+Answer8.getRating());</span>
+<span class="nc" id="L257">                        break;</span>
                     }
                     case 9: {
-<span class="nc" id="L252">                        question.setQuestion(Question9.getText());</span>
-<span class="nc" id="L253">                        answer.setAnswersType(&quot;Rating&quot;);</span>
-<span class="nc" id="L254">                        answer.setAnswerText(&quot;Rating: &quot;+Answer9.getRating());</span>
-<span class="nc" id="L255">                        break;</span>
+<span class="nc" id="L260">                        question.setQuestion(Question9.getText());</span>
+<span class="nc" id="L261">                        answer.setAnswersType(&quot;Rating&quot;);</span>
+<span class="nc" id="L262">                        answer.setAnswerText(&quot;Rating: &quot;+Answer9.getRating());</span>
+<span class="nc" id="L263">                        break;</span>
                     }
                     case 10: {
-<span class="nc" id="L258">                        question.setQuestion(Question10.getText());</span>
-<span class="nc" id="L259">                        answer.setAnswersType(&quot;Rating&quot;);</span>
-<span class="nc" id="L260">                        answer.setAnswerText(&quot;Rating: &quot;+Answer10.getRating());</span>
-<span class="nc" id="L261">                        break;</span>
+<span class="nc" id="L266">                        question.setQuestion(Question10.getText());</span>
+<span class="nc" id="L267">                        answer.setAnswersType(&quot;Rating&quot;);</span>
+<span class="nc" id="L268">                        answer.setAnswerText(&quot;Rating: &quot;+Answer10.getRating());</span>
+<span class="nc" id="L269">                        break;</span>
                     }
                     case 11: {
-<span class="nc" id="L264">                        question.setQuestion(Question11.getText());</span>
-<span class="nc" id="L265">                        answer.setAnswersType(&quot;Rating&quot;);</span>
-<span class="nc" id="L266">                        answer.setAnswerText(&quot;Rating: &quot;+Answer11.getRating());</span>
-<span class="nc" id="L267">                        break;</span>
+<span class="nc" id="L272">                        question.setQuestion(Question11.getText());</span>
+<span class="nc" id="L273">                        answer.setAnswersType(&quot;Rating&quot;);</span>
+<span class="nc" id="L274">                        answer.setAnswerText(&quot;Rating: &quot;+Answer11.getRating());</span>
+<span class="nc" id="L275">                        break;</span>
                     }
                     case 12: {
-<span class="nc" id="L270">                        question.setQuestion(Question12.getText());</span>
-<span class="nc" id="L271">                        answer.setAnswersType(&quot;Rating&quot;);</span>
-<span class="nc" id="L272">                        answer.setAnswerText(&quot;Rating: &quot;+Answer12.getRating());</span>
-<span class="nc" id="L273">                        break;</span>
+<span class="nc" id="L278">                        question.setQuestion(Question12.getText());</span>
+<span class="nc" id="L279">                        answer.setAnswersType(&quot;Rating&quot;);</span>
+<span class="nc" id="L280">                        answer.setAnswerText(&quot;Rating: &quot;+Answer12.getRating());</span>
+<span class="nc" id="L281">                        break;</span>
                     }
                     case 13: {
-<span class="nc" id="L276">                        question.setQuestion(Question13.getText());</span>
-<span class="nc" id="L277">                        answer.setAnswersType(&quot;Textual&quot;);</span>
-<span class="nc bnc" id="L278" title="All 2 branches missed.">                        if(Answer13.getText().equals(&quot;&quot;)){</span>
-<span class="nc" id="L279">                            answer.setAnswerText(&quot;None&quot;);</span>
+<span class="nc" id="L284">                        question.setQuestion(Question13.getText());</span>
+<span class="nc" id="L285">                        answer.setAnswersType(&quot;Textual&quot;);</span>
+<span class="nc bnc" id="L286" title="All 2 branches missed.">                        if(Answer13.getText().equals(&quot;&quot;)){</span>
+<span class="nc" id="L287">                            answer.setAnswerText(&quot;None&quot;);</span>
                         }
                         else {
-<span class="nc" id="L282">                            answer.setAnswerText(Answer13.getText());</span>
+<span class="nc" id="L290">                            answer.setAnswerText(Answer13.getText());</span>
                         }
                         break;
                     }
@@ -287,67 +295,85 @@ import java.util.List;
                 }
 
 
-<span class="nc" id="L290">                questionManager.setQuestions(question);</span>
-<span class="nc" id="L291">                answer.setQuestion(question);</span>
-<span class="nc" id="L292">                answerManager.setAnswers(answer);</span>
+<span class="nc" id="L298">                questionManager.setQuestions(question);</span>
+<span class="nc" id="L299">                answer.setQuestion(question);</span>
+<span class="nc" id="L300">                answerManager.setAnswers(answer);</span>
             }
 
-<span class="nc" id="L295">            confirm.setContentText(&quot;Answer Submitted Successfully!&quot;);</span>
-<span class="nc" id="L296">            confirm.showAndWait();</span>
+<span class="nc" id="L303">            confirm.setContentText(&quot;Answer Submitted Successfully!&quot;);</span>
+<span class="nc" id="L304">            confirm.showAndWait();</span>
             try {
-<span class="nc" id="L298">                questionManager.close();</span>
-<span class="nc" id="L299">                answerManager.close();</span>
-<span class="nc" id="L300">                MainApp.setRoot(&quot;/fxml/AnswerSurvey.fxml&quot;);</span>
-<span class="nc" id="L301">            } catch (Exception e) {</span>
-<span class="nc" id="L302">                e.printStackTrace();</span>
-<span class="nc" id="L303">            }</span>
+<span class="nc" id="L306">                questionManager.close();</span>
+<span class="nc" id="L307">                answerManager.close();</span>
+<span class="nc" id="L308">                MainApp.setRoot(&quot;/fxml/AnswerSurvey.fxml&quot;);</span>
+<span class="nc" id="L309">            } catch (Exception e) {</span>
+<span class="nc" id="L310">                e.printStackTrace();</span>
+<span class="nc" id="L311">            }</span>
         }
-<span class="nc" id="L305">    }</span>
-    private boolean setRating() {
-<span class="nc bnc" id="L307" title="All 8 branches missed.">        if(Answer3.getRating()==0||Answer4.getRating()==0 || Answer5.getRating()==0|| Answer6.getRating()==0</span>
-<span class="nc bnc" id="L308" title="All 8 branches missed.">                || Answer7.getRating()==0|| Answer8.getRating()==0|| Answer9.getRating()==0|| Answer10.getRating()==0</span>
-<span class="nc bnc" id="L309" title="All 4 branches missed.">                || Answer11.getRating()==0 || Answer12.getRating()==0){</span>
-<span class="nc" id="L310">            warn.setContentText(&quot;Ratings can't be empty!!&quot;);</span>
-<span class="nc" id="L311">            warn.showAndWait();</span>
-<span class="nc" id="L312">            return false;</span>
+<span class="nc" id="L313">    }</span>
+    public boolean setRating() {
+<span class="nc bnc" id="L315" title="All 8 branches missed.">        if(Answer3.getRating()==0||Answer4.getRating()==0 || Answer5.getRating()==0|| Answer6.getRating()==0</span>
+<span class="nc bnc" id="L316" title="All 8 branches missed.">                || Answer7.getRating()==0|| Answer8.getRating()==0|| Answer9.getRating()==0|| Answer10.getRating()==0</span>
+<span class="nc bnc" id="L317" title="All 4 branches missed.">                || Answer11.getRating()==0 || Answer12.getRating()==0){</span>
+<span class="nc" id="L318">            warn.setContentText(&quot;Ratings can't be empty!!&quot;);</span>
+<span class="nc" id="L319">            warn.showAndWait();</span>
+<span class="nc" id="L320">            return false;</span>
         }
-<span class="nc" id="L314">        return true;</span>
+<span class="nc" id="L322">        return true;</span>
     }
 
     //Shows saved Answers for the questions
-    private void showAnswersClicked(ActionEvent actionEvent) {
-<span class="nc" id="L319">        ShowAnswersController.setData(userdata,survey);</span>
+    public void showAnswersClicked(ActionEvent actionEvent) {
+<span class="fc" id="L327">        ShowAnswersController.setData(userdata,survey);</span>
         try {
-<span class="nc" id="L321">            MainApp.setRoot(&quot;/fxml/ShowAnswers.fxml&quot;);</span>
-<span class="nc" id="L322">        } catch (IOException e) {</span>
-<span class="nc" id="L323">            e.printStackTrace();</span>
-<span class="nc" id="L324">        }</span>
-<span class="nc" id="L325">    }</span>
-
-    private void backToAnswerButtonClicked(ActionEvent actionEvent) {
-        try {
-<span class="nc" id="L329">            MainApp.setRoot(&quot;/fxml/AnswerSurvey.fxml&quot;);</span>
-<span class="nc" id="L330">        } catch (IOException e) {</span>
-<span class="nc" id="L331">            e.printStackTrace();</span>
+<span class="nc" id="L329">            MainApp.setRoot(&quot;/fxml/ShowAnswers.fxml&quot;);</span>
+<span class="fc" id="L330">        } catch (IOException e) {</span>
+<span class="fc" id="L331">            e.printStackTrace();</span>
 <span class="nc" id="L332">        }</span>
-<span class="nc" id="L333">    }</span>
+<span class="fc" id="L333">    }</span>
+
+    public void backToAnswerButtonClicked(ActionEvent actionEvent) {
+        try {
+<span class="nc" id="L337">            MainApp.setRoot(&quot;/fxml/AnswerSurvey.fxml&quot;);</span>
+<span class="nc" id="L338">        } catch (IOException e) {</span>
+<span class="nc" id="L339">            e.printStackTrace();</span>
+<span class="nc" id="L340">        }</span>
+<span class="nc" id="L341">    }</span>
 
     @FXML
-    private void backToTemplatesButtonClicked(ActionEvent actionEvent){
+    public void backToTemplatesButtonClicked(ActionEvent actionEvent){
         try {
-<span class="nc" id="L338">            MainApp.setRoot(&quot;/fxml/SurveyTemplates/TemplateSurvey.fxml&quot;);</span>
-<span class="nc" id="L339">        } catch (IOException e) {</span>
-<span class="nc" id="L340">            e.printStackTrace();</span>
-<span class="nc" id="L341">        }</span>
-<span class="nc" id="L342">    }</span>
-
-    private void backToSavedSurveysButtonClicked(ActionEvent actionEvent) {
-        try {
-<span class="nc" id="L346">            MainApp.setRoot(&quot;/fxml/SavedSurveys.fxml&quot;);</span>
+<span class="nc" id="L346">            MainApp.setRoot(&quot;/fxml/SurveyTemplates/TemplateSurvey.fxml&quot;);</span>
 <span class="nc" id="L347">        } catch (IOException e) {</span>
 <span class="nc" id="L348">            e.printStackTrace();</span>
 <span class="nc" id="L349">        }</span>
 <span class="nc" id="L350">    }</span>
 
+    public void backToSavedSurveysButtonClicked(ActionEvent actionEvent) {
+        try {
+<span class="nc" id="L354">            MainApp.setRoot(&quot;/fxml/SavedSurveys.fxml&quot;);</span>
+<span class="nc" id="L355">        } catch (IOException e) {</span>
+<span class="nc" id="L356">            e.printStackTrace();</span>
+<span class="nc" id="L357">        }</span>
+<span class="nc" id="L358">    }</span>
+ public static String getAnswer() {
+<span class="fc" id="L360">        return answer;</span>
+    }
+
+   
+
+    public Alert getConfirm() {
+<span class="nc" id="L366">        return confirm;</span>
+    }
+
+    public int getFlag() {
+<span class="nc" id="L370">        return flag;</span>
+    }
+
+    public Button getSaveButton() {
+<span class="fc" id="L374">        return saveButton;</span>
+    }
+    
+   
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

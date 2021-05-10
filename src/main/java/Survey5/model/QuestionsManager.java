@@ -9,8 +9,8 @@ import java.util.stream.Collectors;
 
 public class QuestionsManager implements QuestionsDaoInterface {
 
-    final EntityManagerFactory entityManagerFactory;
-    final EntityManager entityManager;
+    public EntityManagerFactory entityManagerFactory;
+    public EntityManager entityManager;
     
     public QuestionsManager() {
         entityManagerFactory = Persistence.createEntityManagerFactory("Survey5");

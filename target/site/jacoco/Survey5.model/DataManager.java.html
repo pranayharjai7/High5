@@ -5,8 +5,8 @@ import java.util.List;
 
 public class DataManager implements DataDaoInterface{
 
-    final EntityManagerFactory entityManagerFactory;
-    final EntityManager entityManager;
+    public EntityManagerFactory entityManagerFactory;
+    public EntityManager entityManager;
 
 <span class="fc" id="L11">    public DataManager() {</span>
 <span class="fc" id="L12">        this.entityManagerFactory = Persistence.createEntityManagerFactory(&quot;Survey5&quot;);</span>

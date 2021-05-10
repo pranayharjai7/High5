@@ -12,22 +12,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-<span class="nc" id="L15">public class ShowAnswersController {</span>
+<span class="fc" id="L15">public class ShowAnswersController {</span>
 
         private static Data userData;
         private static Survey survey;
-<span class="nc" id="L19">        private SurveysDaoInterface surveyManager = new SurveyManager();</span>
-<span class="nc" id="L20">        private QuestionsDaoInterface questionsManager = new QuestionsManager();</span>
-<span class="nc" id="L21">        private AnswersDaoInterface answersManager = new AnswersManager();</span>
-<span class="nc" id="L22">        private List&lt;Questions&gt; qList = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L23">        private List&lt;Questions&gt; qUserSurveyList = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L24">        private List&lt;Questions&gt; qNumSurveyList = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L25">        private List&lt;Answers&gt; aList = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L26">        private List&lt;Label&gt; qLabelList = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L27">        private List&lt;Label&gt; aLabelList = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L28">        private List&lt;Integer&gt; qNumberList = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L29">        private Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);</span>
-<span class="nc" id="L30">        private Alert warn = new Alert(Alert.AlertType.WARNING);</span>
+<span class="fc" id="L19">        private SurveysDaoInterface surveyManager = new SurveyManager();</span>
+<span class="fc" id="L20">        private QuestionsDaoInterface questionsManager = new QuestionsManager();</span>
+<span class="fc" id="L21">        private AnswersDaoInterface answersManager = new AnswersManager();</span>
+<span class="fc" id="L22">        private List&lt;Questions&gt; qList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L23">        private List&lt;Questions&gt; qUserSurveyList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L24">        private List&lt;Questions&gt; qNumSurveyList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L25">        private List&lt;Answers&gt; aList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L26">        private List&lt;Label&gt; qLabelList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L27">        private List&lt;Label&gt; aLabelList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L28">        private List&lt;Integer&gt; qNumberList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L29">        private Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);</span>
+<span class="fc" id="L30">        private Alert warn = new Alert(Alert.AlertType.WARNING);</span>
 
         @FXML
         private AnchorPane showAnswersAnchorPane;
@@ -36,9 +36,9 @@ import java.util.stream.Collectors;
         private Label titleLabel;
 
         public static void setData(Data userData, Survey survey){
-<span class="nc" id="L39">                ShowAnswersController.userData = userData;</span>
-<span class="nc" id="L40">                ShowAnswersController.survey = survey;</span>
-<span class="nc" id="L41">        }</span>
+<span class="fc" id="L39">                ShowAnswersController.userData = userData;</span>
+<span class="fc" id="L40">                ShowAnswersController.survey = survey;</span>
+<span class="fc" id="L41">        }</span>
 
         @FXML
         private void initialize(){

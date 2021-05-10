@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class SurveyManager implements SurveysDaoInterface{
-    final EntityManagerFactory entityManagerFactory;
-    final EntityManager entityManager;
+    public EntityManagerFactory entityManagerFactory;
+    public EntityManager entityManager;
 
     public SurveyManager() {
         entityManagerFactory = Persistence.createEntityManagerFactory("Survey5");

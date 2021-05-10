@@ -75,7 +75,7 @@ import java.util.List;
 <span class="nc" id="L75">    }</span>
 
     private void switchTemplate(Survey survey){
-<span class="nc bnc" id="L78" title="All 9 branches missed.">        switch (survey.getTypeOfTemplate()){</span>
+<span class="nc bnc" id="L78" title="All 13 branches missed.">        switch (survey.getTypeOfTemplate()){</span>
             case &quot;HealthTemplate1&quot;: {
 <span class="nc" id="L80">                HealthTemplate1Controller.setData(userdata);</span>
 <span class="nc" id="L81">                HealthTemplate1Controller.setCreateOrAnswerFunction(&quot;answer&quot;,survey);</span>
@@ -114,19 +114,39 @@ import java.util.List;
             case &quot;BusinessTemplate4&quot;: {
 <span class="nc" id="L115">                BusinessTemplate4Controller.setData(userdata);</span>
 <span class="nc" id="L116">                BusinessTemplate4Controller.setCreateOrAnswerFunction(&quot;answer&quot;,survey);</span>
+<span class="nc" id="L117">                break;</span>
+            }
+            case &quot;FoodTemplate1&quot;: {
+<span class="nc" id="L120">                FoodTemplate1Controller.setData(userdata);</span>
+<span class="nc" id="L121">                FoodTemplate1Controller.setCreateOrAnswerFunction(&quot;answer&quot;,survey);</span>
+<span class="nc" id="L122">                break;</span>
+            }
+            case &quot;FoodTemplate2&quot;: {
+<span class="nc" id="L125">                FoodTemplate2Controller.setData(userdata);</span>
+<span class="nc" id="L126">                FoodTemplate2Controller.setCreateOrAnswerFunction(&quot;answer&quot;,survey);</span>
+<span class="nc" id="L127">                break;</span>
+            }
+            case &quot;FoodTemplate3&quot;: {
+<span class="nc" id="L130">                FoodTemplate3Controller.setData(userdata);</span>
+<span class="nc" id="L131">                FoodTemplate3Controller.setCreateOrAnswerFunction(&quot;answer&quot;,survey);</span>
+<span class="nc" id="L132">                break;</span>
+            }
+            case &quot;FoodTemplate4&quot;: {
+<span class="nc" id="L135">                FoodTemplate4Controller.setData(userdata);</span>
+<span class="nc" id="L136">                FoodTemplate4Controller.setCreateOrAnswerFunction(&quot;answer&quot;,survey);</span>
                 break;
             }
         }
-<span class="nc" id="L120">    }</span>
+<span class="nc" id="L140">    }</span>
 
     @FXML
     private void searchButtonClicked(ActionEvent actionEvent) {
 
-<span class="nc" id="L125">    }</span>
+<span class="nc" id="L145">    }</span>
 
     @FXML
     private void backButtonClicked(ActionEvent actionEvent) throws IOException {
-<span class="nc" id="L129">        MainApp.setRoot(&quot;/fxml/AfterLoginMenu.fxml&quot;);</span>
-<span class="nc" id="L130">    }</span>
+<span class="nc" id="L149">        MainApp.setRoot(&quot;/fxml/AfterLoginMenu.fxml&quot;);</span>
+<span class="nc" id="L150">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

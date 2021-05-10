@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: Survey5.controller.SurveyTemplateControllers.BusinessTemplate3ControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.603 s - in Survey5.controller.SurveyTemplateControllers.BusinessTemplate3ControllerTest

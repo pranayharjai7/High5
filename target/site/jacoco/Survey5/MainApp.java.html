@@ -12,7 +12,7 @@ import org.h2.tools.Server;
 <span class="nc" id="L12">public class MainApp extends Application {</span>
 
     private static Scene scene;
-<span class="nc" id="L15">    private static Server s = new Server();</span>
+<span class="fc" id="L15">    private static Server s = new Server();</span>
 
     public static void main(String[] args) throws SQLException {
 <span class="nc" id="L18">        startDatabase();</span>
@@ -22,28 +22,30 @@ import org.h2.tools.Server;
 
     @Override
     public void start(Stage stage) throws Exception {
-<span class="nc" id="L25">        scene = new Scene(loadFXML(&quot;/fxml/primary.fxml&quot;));</span>
-<span class="nc" id="L26">        stage.setTitle(&quot;Survey5&quot;);</span>
-<span class="nc" id="L27">        stage.setScene(scene);</span>
-<span class="nc" id="L28">        stage.show();</span>
-<span class="nc" id="L29">    }</span>
+<span class="nc" id="L25">        FXMLLoader loader = new FXMLLoader(MainApp.class.getResource(&quot;/fxml/primary.fxml&quot;));</span>
+<span class="nc" id="L26">        scene = new Scene(loader.load());</span>
+<span class="nc" id="L27">        stage.setTitle(&quot;Survey5&quot;);</span>
+<span class="nc" id="L28">        stage.setScene(scene);</span>
+<span class="nc" id="L29">        stage.show();</span>
+<span class="nc" id="L30">    }</span>
     
     public static void setRoot(String fxml) throws IOException{
-<span class="nc" id="L32">        scene.setRoot(loadFXML(fxml));</span>
-<span class="nc" id="L33">    }</span>
+<span class="fc" id="L33">        FXMLLoader loader = new FXMLLoader(MainApp.class.getResource(fxml));</span>
+<span class="nc" id="L34">        scene.setRoot(loader.load());</span>
+<span class="nc" id="L35">    }</span>
     
-    private static Parent loadFXML(String fxml) throws IOException{
-<span class="nc" id="L36">        FXMLLoader loader = new FXMLLoader(MainApp.class.getResource(fxml));</span>
-<span class="nc" id="L37">        return loader.load();</span>
-    }
+    /*private static Parent loadFXML(String fxml) throws IOException{
+        FXMLLoader loader = new FXMLLoader(MainApp.class.getResource(fxml));
+        return loader.load();
+    }*/
 
     private static void startDatabase() throws SQLException {
-<span class="nc" id="L41">        s.runTool(&quot;-tcp&quot;, &quot;-web&quot;, &quot;-ifNotExists&quot;);</span>
-<span class="nc" id="L42">    }</span>
+<span class="nc" id="L43">        s.runTool(&quot;-tcp&quot;, &quot;-web&quot;, &quot;-ifNotExists&quot;);</span>
+<span class="nc" id="L44">    }</span>
 
     private static void stopDatabase()  {
-<span class="nc" id="L45">        s.shutdown();</span>
-<span class="nc" id="L46">    }</span>
+<span class="nc" id="L47">        s.shutdown();</span>
+<span class="nc" id="L48">    }</span>
     
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

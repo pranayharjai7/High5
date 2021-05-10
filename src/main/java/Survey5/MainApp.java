@@ -22,20 +22,22 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        scene = new Scene(loadFXML("/fxml/primary.fxml"));
+        FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/primary.fxml"));
+        scene = new Scene(loader.load());
         stage.setTitle("Survey5");
         stage.setScene(scene);
         stage.show();
     }
     
     public static void setRoot(String fxml) throws IOException{
-        scene.setRoot(loadFXML(fxml));
+        FXMLLoader loader = new FXMLLoader(MainApp.class.getResource(fxml));
+        scene.setRoot(loader.load());
     }
     
-    private static Parent loadFXML(String fxml) throws IOException{
+    /*private static Parent loadFXML(String fxml) throws IOException{
         FXMLLoader loader = new FXMLLoader(MainApp.class.getResource(fxml));
         return loader.load();
-    }
+    }*/
 
     private static void startDatabase() throws SQLException {
         s.runTool("-tcp", "-web", "-ifNotExists");

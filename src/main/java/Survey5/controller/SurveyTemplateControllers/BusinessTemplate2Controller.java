@@ -25,6 +25,14 @@ public class BusinessTemplate2Controller {
     AnswersDaoInterface answerManager = new AnswersManager();
     static String answer;
     int NumberOfQuestions = 15;
+    int flag;
+    
+        public BusinessTemplate2Controller() {
+        if(userdata == null && answer == null){
+        this.answer = "none";
+        this.userdata = new Data("none", "none", "none", "none");
+        }
+    }
 
     @FXML
     private AnchorPane BusinessTemplate2AnchorPane;
@@ -110,7 +118,7 @@ public class BusinessTemplate2Controller {
     }
 
     @FXML
-    private void initialize(){
+    public void initialize(){
         if(answer.equals("answer")){
             setAnswering();
         }
@@ -133,13 +141,13 @@ public class BusinessTemplate2Controller {
         Answer14.setRating(0);
     }
 
-    private void setCreating() {
+    public void setCreating() {
         saveButton.setText("Save");
         saveButton.setOnAction(this::saveButtonClicked);
         backButton.setOnAction(this::backToTemplatesButtonClicked);
     }
 
-    private void setAnswering(){
+    public void setAnswering(){
         saveButton.setText("Submit");
         saveButton.setOnAction(this::submitButtonClicked);
         backButton.setOnAction(this::backToAnswerButtonClicked);
@@ -154,7 +162,7 @@ public class BusinessTemplate2Controller {
 
     //submitting template to database of current user
     @FXML
-    private void saveButtonClicked(ActionEvent event){
+    public void saveButtonClicked(ActionEvent event){
         Survey survey = new Survey();
         survey.setTypeOfTemplate(BusinessTemplate2.getId());
         survey.setTitle(BusinessTemplate2.getText());
@@ -179,7 +187,7 @@ public class BusinessTemplate2Controller {
 
     //submitting Questions and answers to database
     private List<Questions> qList = new ArrayList<>();
-    private void submitButtonClicked(ActionEvent actionEvent) {
+    public void submitButtonClicked(ActionEvent actionEvent) {
 
         int flag = 0;
         qList = questionManager.getSurveyQuestions(survey);
@@ -324,7 +332,7 @@ public class BusinessTemplate2Controller {
             }
         }
     }
-    private boolean setRating() {
+    public boolean setRating() {
         if(Answer3.getRating()==0||Answer4.getRating()==0 || Answer5.getRating()==0|| Answer6.getRating()==0
                 || Answer7.getRating()==0|| Answer8.getRating()==0|| Answer9.getRating()==0|| Answer10.getRating()==0
                 || Answer11.getRating()==0 || Answer12.getRating()==0|| Answer13.getRating()==0|| Answer14.getRating()==0){
@@ -337,7 +345,7 @@ public class BusinessTemplate2Controller {
 
 
     //Shows saved Answers for the questions
-    private void showAnswersClicked(ActionEvent actionEvent) {
+    public void showAnswersClicked(ActionEvent actionEvent) {
         ShowAnswersController.setData(userdata,survey);
         try {
             MainApp.setRoot("/fxml/ShowAnswers.fxml");
@@ -346,7 +354,7 @@ public class BusinessTemplate2Controller {
         }
     }
 
-    private void backToAnswerButtonClicked(ActionEvent actionEvent) {
+    public void backToAnswerButtonClicked(ActionEvent actionEvent) {
         try {
             MainApp.setRoot("/fxml/AnswerSurvey.fxml");
         } catch (IOException e) {
@@ -355,7 +363,7 @@ public class BusinessTemplate2Controller {
     }
 
     @FXML
-    private void backToTemplatesButtonClicked(ActionEvent actionEvent){
+    public void backToTemplatesButtonClicked(ActionEvent actionEvent){
         try {
             MainApp.setRoot("/fxml/SurveyTemplates/TemplateSurvey.fxml");
         } catch (IOException e) {
@@ -363,11 +371,30 @@ public class BusinessTemplate2Controller {
         }
     }
 
-    private void backToSavedSurveysButtonClicked(ActionEvent actionEvent) {
+    public void backToSavedSurveysButtonClicked(ActionEvent actionEvent) {
         try {
             MainApp.setRoot("/fxml/SavedSurveys.fxml");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+    
+    public static String getAnswer() {
+        return answer;
+    }
+
+   
+
+    public Alert getConfirm() {
+        return confirm;
+    }
+
+    public int getFlag() {
+        return flag;
+    }
+
+    public Button getSaveButton() {
+        return saveButton;
+    }
+    
 }

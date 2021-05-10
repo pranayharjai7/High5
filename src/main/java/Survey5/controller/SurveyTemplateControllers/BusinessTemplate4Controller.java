@@ -24,6 +24,14 @@ public class BusinessTemplate4Controller {
     AnswersDaoInterface answerManager = new AnswersManager();
     static String answer;
     int NumberOfQuestions = 8;
+    int flag;
+    
+    public BusinessTemplate4Controller() {
+        if(userdata == null && answer == null){
+        this.answer = "none";
+        this.userdata = new Data("none", "none", "none", "none");
+        }
+    }
 
     @FXML
     private AnchorPane BusinessTemplate4AnchorPane;
@@ -153,7 +161,7 @@ public class BusinessTemplate4Controller {
     }
 
     @FXML
-    private void initialize(){
+    public void initialize(){
         if(answer.equals("answer")){
             setAnswering();
         }
@@ -163,19 +171,19 @@ public class BusinessTemplate4Controller {
             setShowAnswers();
     }
 
-    private void setCreating() {
+    public void setCreating() {
         saveButton.setText("Save");
         saveButton.setOnAction(this::saveButtonClicked);
         backButton.setOnAction(this::backToTemplatesButtonClicked);
     }
 
-    private void setAnswering(){
+    public void setAnswering(){
         saveButton.setText("Submit");
         saveButton.setOnAction(this::submitButtonClicked);
         backButton.setOnAction(this::backToAnswerButtonClicked);
     }
 
-    private void setShowAnswers(){
+    public void setShowAnswers(){
         saveButton.setText("Show Answers");
         saveButton.setPrefWidth(150);
         saveButton.setOnAction(this::showAnswersClicked);
@@ -184,7 +192,7 @@ public class BusinessTemplate4Controller {
 
     //submitting template to database of current user
     @FXML
-    private void saveButtonClicked(ActionEvent event){
+    public void saveButtonClicked(ActionEvent event){
         Survey survey = new Survey();
         survey.setTypeOfTemplate(BusinessTemplate4.getId());
         survey.setTitle(BusinessTemplate4.getText());
@@ -208,7 +216,7 @@ public class BusinessTemplate4Controller {
 
     //submitting Questions and answers to database
     private List<Questions> qList = new ArrayList<>();
-    private void submitButtonClicked(ActionEvent actionEvent) {
+    public void submitButtonClicked(ActionEvent actionEvent) {
 
         int flag = 0;
         qList = questionManager.getSurveyQuestions(survey);
@@ -303,7 +311,7 @@ public class BusinessTemplate4Controller {
         }
     }
 
-    private boolean setRadioButtons(){
+    public boolean setRadioButtons(){
         if(answer1.getSelectedToggle()==null||answer2.getSelectedToggle()==null||answer3.getSelectedToggle()==null||
                 answer4.getSelectedToggle()==null||answer5.getSelectedToggle()==null||answer6.getSelectedToggle()==null||
                 answer7.getSelectedToggle()==null||answer8.getSelectedToggle()==null){
@@ -323,7 +331,7 @@ public class BusinessTemplate4Controller {
     }
 
     //Shows saved Answers for the questions
-    private void showAnswersClicked(ActionEvent actionEvent) {
+    public void showAnswersClicked(ActionEvent actionEvent) {
         ShowAnswersController.setData(userdata,survey);
         try {
             MainApp.setRoot("/fxml/ShowAnswers.fxml");
@@ -332,7 +340,7 @@ public class BusinessTemplate4Controller {
         }
     }
 
-    private void backToAnswerButtonClicked(ActionEvent actionEvent) {
+    public void backToAnswerButtonClicked(ActionEvent actionEvent) {
         try {
             MainApp.setRoot("/fxml/AnswerSurvey.fxml");
         } catch (IOException e) {
@@ -341,7 +349,7 @@ public class BusinessTemplate4Controller {
     }
 
     @FXML
-    private void backToTemplatesButtonClicked(ActionEvent actionEvent){
+    public void backToTemplatesButtonClicked(ActionEvent actionEvent){
         try {
             MainApp.setRoot("/fxml/SurveyTemplates/TemplateSurvey.fxml");
         } catch (IOException e) {
@@ -349,12 +357,30 @@ public class BusinessTemplate4Controller {
         }
     }
 
-    private void backToSavedSurveysButtonClicked(ActionEvent actionEvent) {
+    public void backToSavedSurveysButtonClicked(ActionEvent actionEvent) {
         try {
             MainApp.setRoot("/fxml/SavedSurveys.fxml");
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    
+        public static String getAnswer() {
+        return answer;
+    }
+
+   
+
+    public Alert getConfirm() {
+        return confirm;
+    }
+
+    public int getFlag() {
+        return flag;
+    }
+
+    public Button getSaveButton() {
+        return saveButton;
     }
 }
 
