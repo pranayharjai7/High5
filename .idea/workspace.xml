@@ -5,17 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c50b5972-a33c-4cdd-b766-962239057992" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/High5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/High5.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/AnswerSurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/AnswerSurveyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SavedSurveysController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SavedSurveysController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/FoodTemplate4Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/FoodTemplate4Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/FoodTemplate4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/FoodTemplate4.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/High5-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/High5-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.AfterLoginMenuControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.AfterLoginMenuControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.LoginControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.LoginControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.MyProfileControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.MyProfileControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.NewSurveyControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.NewSurveyControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.RegisterControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.RegisterControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.SurveyTemplateControllers.BusinessTemplate1ControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.SurveyTemplateControllers.BusinessTemplate1ControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.SurveyTemplateControllers.BusinessTemplate2ControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.SurveyTemplateControllers.BusinessTemplate2ControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.SurveyTemplateControllers.BusinessTemplate3ControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.SurveyTemplateControllers.BusinessTemplate3ControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.SurveyTemplateControllers.BusinessTemplate4ControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.SurveyTemplateControllers.BusinessTemplate4ControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.SurveyTemplateControllers.FoodTemplate1ControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.SurveyTemplateControllers.FoodTemplate1ControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.SurveyTemplateControllers.FoodTemplate2ControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.SurveyTemplateControllers.FoodTemplate2ControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.TemplateOrCreateControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Survey5.controller.TemplateOrCreateControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Survey5.model.AnswersManagerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Survey5.model.AnswersManagerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Survey5.model.DataManagerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Survey5.model.DataManagerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Survey5.model.QuestionsManagerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Survey5.model.QuestionsManagerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.AfterLoginMenuControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.AfterLoginMenuControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.LoginControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.LoginControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.MyProfileControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.MyProfileControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.NewSurveyControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.NewSurveyControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.RegisterControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.RegisterControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.SurveyTemplateControllers.BusinessTemplate1ControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.SurveyTemplateControllers.BusinessTemplate1ControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.SurveyTemplateControllers.BusinessTemplate2ControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.SurveyTemplateControllers.BusinessTemplate2ControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.SurveyTemplateControllers.BusinessTemplate3ControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.SurveyTemplateControllers.BusinessTemplate3ControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.SurveyTemplateControllers.BusinessTemplate4ControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.SurveyTemplateControllers.BusinessTemplate4ControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.SurveyTemplateControllers.FoodTemplate1ControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.SurveyTemplateControllers.FoodTemplate1ControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.SurveyTemplateControllers.FoodTemplate2ControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.SurveyTemplateControllers.FoodTemplate2ControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.TemplateOrCreateControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.controller.TemplateOrCreateControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.model.AnswersManagerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.model.AnswersManagerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.model.DataManagerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.model.DataManagerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.model.QuestionsManagerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.model.QuestionsManagerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.model.SurveyManagerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Survey5.model.SurveyManagerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userdata_db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/userdata_db.mv.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -28,6 +64,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1qHNkdyw7GCEEL23tyD5tasPmzb" />
   <component name="ProjectLevelVcsManager">
@@ -72,6 +111,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.MainApp">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainApp" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Survey5.MainApp" />
       <module name="High5" />
@@ -82,19 +134,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

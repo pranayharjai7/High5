@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: Survey5.controller.NewSurveyControllerTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 22.632 s - in Survey5.controller.NewSurveyControllerTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 23.302 s - in Survey5.controller.NewSurveyControllerTest

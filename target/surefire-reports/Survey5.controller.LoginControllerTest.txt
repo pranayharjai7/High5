@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: Survey5.controller.LoginControllerTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 20.067 s - in Survey5.controller.LoginControllerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 21.278 s - in Survey5.controller.LoginControllerTest
