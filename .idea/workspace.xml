@@ -7,15 +7,10 @@
     <list default="true" id="c50b5972-a33c-4cdd-b766-962239057992" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/AnswerSurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/AnswerSurveyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/NewSurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/NewSurveyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SavedSurveysController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SavedSurveysController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/TemplateOrCreateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/TemplateOrCreateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/NewSurvey.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/NewSurvey.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Survey5/controller/NewSurveyControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Survey5/controller/NewSurveyControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Survey5/controller/NewSurveyControllerTest2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Survey5/controller/NewSurveyControllerTest2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/controller/AnswerSurveyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/controller/AnswerSurveyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/controller/SavedSurveysController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/controller/SavedSurveysController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userdata_db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/userdata_db.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/SportsTemplate2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/SportsTemplate2Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/TemplateSurveyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/SportsTemplate2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/SportsTemplate2.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +43,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/High-5/High5" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/High5-Maria" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
