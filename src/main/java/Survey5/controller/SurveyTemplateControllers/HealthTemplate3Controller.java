@@ -181,6 +181,7 @@ public class HealthTemplate3Controller
         backButton.setOnAction(this::backToSavedSurveysButtonClicked);
     }
 
+    @FXML
     private void saveButtonClicked(ActionEvent actionEvent) {
         Survey survey = new Survey();
         survey.setTypeOfTemplate(HealthTemplate3.getId());

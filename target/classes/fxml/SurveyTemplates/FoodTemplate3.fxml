@@ -15,11 +15,16 @@
 <?import javafx.scene.text.Text?>
 <?import org.controlsfx.control.Rating?>
 
-<ScrollPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.FoodTemplate3Controller">
+<ScrollPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.FoodTemplate3Controller">
    <content>
 
       <AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: white;" styleClass="FoodTemplate3AnchorpaneBackground" stylesheets="@/fxml/SurveyTemplates/TemplateStyles/tempcss1.css">
          <children>
+            <ImageView fitHeight="431.0" fitWidth="445.0" layoutX="-13.0" layoutY="110.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/TemplateImages/malnutrition.jpg" />
+               </image>
+            </ImageView>
             <Label fx:id="FoodTemplate3" layoutX="386.0" layoutY="10.0" style="-fx-background-color: white;" text="Malnutrion" textFill="#ca951b">
                <font>
                   <Font size="28.0" />
@@ -64,11 +69,6 @@
             <Separator layoutX="372.0" layoutY="44.0" prefHeight="3.0" prefWidth="158.0" style="-fx-background-position: center; -fx-background-color: #ca951b;" />
             <Rating fx:id="Answer7" layoutX="443.0" layoutY="617.0" prefHeight="26.0" prefWidth="166.0" />
             <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToTemplatesButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../../styles/Modification.css" />
-            <ImageView fitHeight="431.0" fitWidth="445.0" layoutX="-13.0" layoutY="110.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/TemplateImages/malnutrition.jpg" />
-               </image>
-            </ImageView>
             <RadioButton fx:id="Answer3_1" layoutX="403.0" layoutY="242.0" mnemonicParsing="false" text="YES">
                <toggleGroup>
                   <ToggleGroup fx:id="answer3" />

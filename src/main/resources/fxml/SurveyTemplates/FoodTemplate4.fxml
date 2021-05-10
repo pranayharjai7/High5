@@ -19,7 +19,7 @@
 <ScrollPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.FoodTemplate4Controller">
    <content>
 
-      <AnchorPane id="AnchorPane" fx:id="FoodTemplate4AnchorPane" prefHeight="750.0" prefWidth="1500.0" styleClass="FoodTemplate4AnchorpaneBackground" stylesheets="@/fxml/SurveyTemplates/TemplateStyles/tempcss1.css">
+      <AnchorPane id="AnchorPane" fx:id="FoodTemplate4AnchorPane" prefHeight="750.0" prefWidth="1500.0">
          <children>
             <ImageView fitHeight="600.0" fitWidth="601.0" layoutX="357.0" layoutY="27.0" opacity="0.16" pickOnBounds="true" preserveRatio="true">
                <image>
