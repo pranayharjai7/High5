@@ -170,6 +170,8 @@ public class TemplateSurveyController {
 
     @FXML
     void PhysicalSurveyTemplateButtonClicked(ActionEvent event) throws IOException {
+        SportsTemplate4Controller.setData(userdata);
+        SportsTemplate4Controller.setCreateOrAnswerFunction("create");
         MainApp.setRoot("/fxml/SurveyTemplates/SportsTemplate4.fxml");
     }
 
