@@ -23,7 +23,7 @@ public class SportsTemplate2Controller {
     QuestionsDaoInterface questionManager  = new QuestionsManager();
     AnswersDaoInterface answerManager = new AnswersManager();
     static String answer;
-    int NumberOfQuestions = 8;
+    int NumberOfQuestions = 6;
 
     @FXML
     private AnchorPane SportsTemplate2AnchorPane;

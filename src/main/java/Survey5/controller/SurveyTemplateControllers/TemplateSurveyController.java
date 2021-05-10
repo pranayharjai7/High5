@@ -163,6 +163,8 @@ public class TemplateSurveyController {
 
     @FXML
     void CyclingSurveyTemplateButtonClicked(ActionEvent event) throws IOException {
+        SportsTemplate3Controller.setData(userdata);
+        SportsTemplate3Controller.setCreateOrAnswerFunction("create");
         MainApp.setRoot("/fxml/SurveyTemplates/SportsTemplate3.fxml");
     }
 
