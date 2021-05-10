@@ -6,6 +6,7 @@ import java.util.List;
 
 import Survey5.MainApp;
 import Survey5.controller.ShowAnswersController;
+import static Survey5.controller.SurveyTemplateControllers.FoodTemplate4Controller.answer;
 import Survey5.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,8 +25,15 @@ public class HealthTemplate1Controller
     AnswersDaoInterface answerManager = new AnswersManager();
 
     int NumberOfQuestions = 7;
-
+    int flag;
     static String answer;
+    
+        public HealthTemplate1Controller() {
+        if(userdata == null && answer == null){
+        this.answer = "none";
+        this.userdata = new Data("none", "none", "none", "none");
+        }
+    }
 
     @FXML
     private Label HealthTemplate1;
@@ -126,7 +134,7 @@ public class HealthTemplate1Controller
         HealthTemplate1Controller.answer=answer;
     }
     @FXML
-    private void initialize(){
+    public void initialize(){
         if(answer.equals("answer")){
             setAnswering();
         }
@@ -157,7 +165,7 @@ public class HealthTemplate1Controller
 
     //submitting Questions and answers to database
     private List<Questions> qList = new ArrayList<>();
-    private void submitButtonClicked(ActionEvent actionEvent) {
+    public void submitButtonClicked(ActionEvent actionEvent) {
 
         int flag = 0;
         qList = questionManager.getSurveyQuestions(survey);
@@ -251,7 +259,7 @@ public class HealthTemplate1Controller
         }
     }
 
-    private boolean setRadioButtons(){
+    public boolean setRadioButtons(){
         if(Answer3_1.getToggleGroup().getSelectedToggle()==null||Answer4_1.getToggleGroup().getSelectedToggle()==null
             ||Answer5_1.getToggleGroup().getSelectedToggle()==null||Answer6_1.getToggleGroup().getSelectedToggle()==null){
             warn.setContentText("RadioButtons can't be empty!!");
@@ -292,7 +300,7 @@ public class HealthTemplate1Controller
 
     //submitting template to database of current user
     @FXML
-    private void saveButtonClicked(ActionEvent event){
+    public void saveButtonClicked(ActionEvent event){
         Survey survey = new Survey();
         survey.setTypeOfTemplate(HealthTemplate1.getId());
         survey.setTitle(HealthTemplate1.getText());
@@ -316,7 +324,7 @@ public class HealthTemplate1Controller
 
 
     //Shows saved Answers for the questions
-    private void showAnswersClicked(ActionEvent actionEvent) {
+    public void showAnswersClicked(ActionEvent actionEvent) {
         ShowAnswersController.setData(userdata,survey);
         try {
             MainApp.setRoot("/fxml/ShowAnswers.fxml");
@@ -326,7 +334,7 @@ public class HealthTemplate1Controller
     }
 
 
-    private void backToAnswerButtonClicked(ActionEvent actionEvent) {
+    public void backToAnswerButtonClicked(ActionEvent actionEvent) {
         try {
             MainApp.setRoot("/fxml/AnswerSurvey.fxml");
         } catch (IOException e) {
@@ -335,7 +343,7 @@ public class HealthTemplate1Controller
     }
 
     @FXML
-    private void backToTemplatesButtonClicked(ActionEvent actionEvent){
+    public void backToTemplatesButtonClicked(ActionEvent actionEvent){
         try {
             MainApp.setRoot("/fxml/SurveyTemplates/TemplateSurvey.fxml");
         } catch (IOException e) {
@@ -343,14 +351,29 @@ public class HealthTemplate1Controller
         }
     }
 
-    private void backToSavedSurveysButtonClicked(ActionEvent actionEvent) {
+    public void backToSavedSurveysButtonClicked(ActionEvent actionEvent) {
         try {
             MainApp.setRoot("/fxml/SavedSurveys.fxml");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    
+   
+            public static String getAnswer() {
+        return answer;
+    }
+
+    public Alert getConfirm() {
+        return confirm;
+    }
+
+    public int getFlag() {
+        return flag;
+    }
+
+    public Button getSaveButton() {
+        return saveButton;
+    }
     
 
 
