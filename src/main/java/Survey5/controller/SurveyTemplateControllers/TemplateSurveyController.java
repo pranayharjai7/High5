@@ -123,21 +123,29 @@ public class TemplateSurveyController {
 
     @FXML
     void FoodSurveyTemplateButtonClicked(ActionEvent event) throws IOException {
+        FoodTemplate1Controller.setData(userdata);
+        FoodTemplate1Controller.setCreateOrAnswerFunction("create");
         MainApp.setRoot("/fxml/SurveyTemplates/FoodTemplate1.fxml");
     }
 
     @FXML
     void FoodAllergyTemplateButtonClicked(ActionEvent event) throws IOException {
+        FoodTemplate2Controller.setData(userdata);
+        FoodTemplate2Controller.setCreateOrAnswerFunction("create");
         MainApp.setRoot("/fxml/SurveyTemplates/FoodTemplate2.fxml");
     }
 
     @FXML
     void MalnutritionSurveyTemplateButtonClicked(ActionEvent event) throws IOException {
+        FoodTemplate3Controller.setData(userdata);
+        FoodTemplate3Controller.setCreateOrAnswerFunction("create");
         MainApp.setRoot("/fxml/SurveyTemplates/FoodTemplate3.fxml");
     }
 
     @FXML
     void ObesitySurveyTemplateButtonClicked(ActionEvent event) throws IOException {
+        FoodTemplate4Controller.setData(userdata);
+        FoodTemplate4Controller.setCreateOrAnswerFunction("create");
         MainApp.setRoot("/fxml/SurveyTemplates/FoodTemplate4.fxml");
     }
 

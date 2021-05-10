@@ -116,6 +116,26 @@ public class AnswerSurveyController {
                 BusinessTemplate4Controller.setCreateOrAnswerFunction("answer",survey);
                 break;
             }
+            case "FoodTemplate1": {
+                FoodTemplate1Controller.setData(userdata);
+                FoodTemplate1Controller.setCreateOrAnswerFunction("answer",survey);
+                break;
+            }
+            case "FoodTemplate2": {
+                FoodTemplate2Controller.setData(userdata);
+                FoodTemplate2Controller.setCreateOrAnswerFunction("answer",survey);
+                break;
+            }
+            case "FoodTemplate3": {
+                FoodTemplate3Controller.setData(userdata);
+                FoodTemplate3Controller.setCreateOrAnswerFunction("answer",survey);
+                break;
+            }
+            case "FoodTemplate4": {
+                FoodTemplate4Controller.setData(userdata);
+                FoodTemplate4Controller.setCreateOrAnswerFunction("answer",survey);
+                break;
+            }
         }
     }
 

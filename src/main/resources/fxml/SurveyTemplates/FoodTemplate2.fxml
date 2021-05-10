@@ -5,70 +5,136 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<?import org.controlsfx.control.Rating?>
 
-<ScrollPane prefHeight="534.0" prefWidth="599.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.FoodTemplate2Controller">
+<ScrollPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Survey5.controller.SurveyTemplateControllers.FoodTemplate2Controller">
    <content>
-      
-<AnchorPane id="AnchorPane" prefHeight="530.0" prefWidth="599.0" styleClass="FoodTemplate2AnchorPaneBackground" stylesheets="@/fxml/SurveyTemplates/TemplateStyles/tempcss1.css">
-   <children>
-      <Label fx:id="FoodAndNutritionLabel" layoutX="246.0" layoutY="14.0" style="-fx-background-color: white;" text="Allergies" textFill="#1dccac">
-         <font>
-            <Font size="28.0" />
-         </font>
-      </Label>
-      <Text fx:id="AgeFoodSurveyQuestion" fill="#3d8f63" layoutX="26.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What are you allergic to ?">
-         <font>
-            <Font size="16.0" />
-         </font></Text>
-      <Separator layoutX="25.0" layoutY="104.0" prefHeight="5.0" prefWidth="225.0" />
-      <TextField fx:id="AgeFoodBox" layoutX="338.0" layoutY="73.0" onAction="#agefoodboxclicked" prefHeight="21.0" prefWidth="144.0">
-         <font>
-            <Font size="11.0" />
-         </font>
-      </TextField>
-      <Text fx:id="BMIFoodSurveyquestion" fill="#3d8f63" layoutX="27.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do your allergy symptoms bother you ?">
-         <font>
-            <Font size="16.0" />
-         </font></Text>
-      <TextField fx:id="BMIfieldFoodBox" layoutX="338.0" layoutY="123.0" onAction="#BMIclicked" prefHeight="21.0" prefWidth="144.0" />
-      <Text fx:id="FoodAllergyQuestion" fill="#3d8f63" layoutX="26.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you have any Food Allergy? " wrappingWidth="243.262451171875">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Text>
-      <TextField fx:id="FoodAllergyAnswerBox" layoutX="336.0" layoutY="169.0" onAction="#Allergyclicked" prefHeight="21.0" prefWidth="144.0" />
-      <Text fx:id="SupplementsQuestion" fill="#3d8f63" layoutX="26.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are you currently taking any allergy medications?" wrappingWidth="192.0859375">
-         <font>
-            <Font size="16.0" />
-         </font></Text>
-      <RadioButton fx:id="VitaminsYes" layoutX="329.0" layoutY="265.0" mnemonicParsing="false" onAction="#supplementsYesClicked" text="YES" />
-      <RadioButton fx:id="VitaminsNo" layoutX="440.0" layoutY="265.0" mnemonicParsing="false" onAction="#supplementsNoClicked" text="NO" />
-      <Text fx:id="ExerciseQuestion" fill="#3d8f63" layoutX="31.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How Often do you experience an allergic reaction? (Per Week)" wrappingWidth="232.79997863769535">
-         <font>
-            <Font size="16.0" />
-         </font></Text>
-      <Slider fx:id="ExerciseSliderbox" blockIncrement="1.0" layoutX="329.0" layoutY="324.0" max="7.0" onMouseClicked="#sliderclicked" prefHeight="50.0" prefWidth="144.0" showTickLabels="true" showTickMarks="true" />
-      <Text fx:id="PhysicalSatisfactionQuestion" fill="#3d8f63" layoutX="29.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall how would you now rate your allergy symptoms?" wrappingWidth="317.5999877929687">
-         <font>
-            <Font size="16.0" />
-         </font></Text>
-      <Separator layoutX="30.0" layoutY="218.0" prefHeight="3.0" prefWidth="475.0" />
-      <Separator layoutX="29.0" layoutY="308.0" prefHeight="3.0" prefWidth="475.0" />
-      <Separator layoutX="29.0" layoutY="385.0" prefHeight="3.0" prefWidth="475.0" />
-      <Separator prefWidth="200.0" />
-      <Separator layoutX="26.0" layoutY="149.0" prefHeight="3.0" prefWidth="179.0" />
-      <Separator layoutX="242.0" layoutY="51.0" prefHeight="4.0" prefWidth="115.0" style="-fx-background-position: center; -fx-background-color: #3d8f63;" />
-      <Rating fx:id="stars" layoutX="336.0" layoutY="430.0" onMouseClicked="#starsclicked" prefHeight="26.0" prefWidth="166.0" />
-      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="32.0" prefWidth="50.0" styleClass="addBackButtonPic" stylesheets="@../../styles/Modification.css" />
-            <Button fx:id="submitButton" layoutX="273.0" layoutY="481.0" mnemonicParsing="false" onAction="#submitButtonClicked" text="Submit" />
 
-   </children>
-            </AnchorPane>
-         </content>
-      </ScrollPane>
+      <AnchorPane id="AnchorPane" prefHeight="1350.0" prefWidth="1500.0" style="-fx-background-color: white;" styleClass="FoodTemplate2AnchorPaneBackground" stylesheets="@/fxml/SurveyTemplates/TemplateStyles/tempcss1.css">
+         <children>
+            <ImageView fitHeight="397.0" fitWidth="377.0" layoutX="494.0" layoutY="13.0" opacity="0.39" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/TemplateImages/allergy2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="291.0" fitWidth="304.0" layoutX="8.0" opacity="0.31" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/TemplateImages/allergyman.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="FoodTemplate2" layoutX="265.0" layoutY="29.0" prefHeight="60.0" prefWidth="173.0" text="ALLERGIES" textFill="#09177c">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="277.0" layoutY="89.0" text="&quot;I am not sick its just an allergy..&quot;" textFill="#09177c">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Separator layoutX="265.0" layoutY="75.0" opacity="0.35" prefHeight="0.0" prefWidth="174.0" style="-fx-background-color: #09177c;" />
+            <Separator layoutX="279.0" layoutY="113.0" opacity="0.36" prefHeight="2.0" prefWidth="241.0" style="-fx-background-color: #09177c;" />
+            <Label alignment="CENTER" layoutX="98.0" layoutY="308.0" prefHeight="22.0" prefWidth="637.0" style="-fx-background-color: #09177c;" text="INTRODUCTION" textFill="#bdd0fb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Text layoutX="103.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Allergies occur when your immune system reacts to a foreign substance — such as pollen, bee venom or pet dander — or a food that doesn't cause a reaction in most people.Your immune system produces substances known as antibodies. When you have allergies, your immune system makes antibodies that identify a particular allergen as harmful, even though it isn't." wrappingWidth="670.9559020996094">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="98.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The following survey will help us identify the common allergies and help us understand them better so that someones lives can be saved for the next time.Thank you for your participation." wrappingWidth="656.5851287841797" />
+            <Label layoutX="103.0" layoutY="472.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="Question1" layoutX="127.0" layoutY="547.0" text="Name" />
+            <Label fx:id="Question3" layoutX="461.0" layoutY="547.0" text="Age" />
+            <Label fx:id="Question2" layoutX="134.0" layoutY="587.0" text="Sex" />
+            <Label fx:id="Question4" layoutX="393.0" layoutY="587.0" text="Any Doctor Consulted" />
+            <TextField fx:id="Answer1" layoutX="207.0" layoutY="543.0" />
+            <TextField fx:id="Answer3" layoutX="523.0" layoutY="543.0" />
+            <TextField fx:id="Answer2" layoutX="205.0" layoutY="583.0" />
+            <TextField fx:id="Answer4" layoutX="523.0" layoutY="583.0" />
+            <Label alignment="CENTER" layoutX="98.0" layoutY="479.0" prefHeight="22.0" prefWidth="637.0" style="-fx-background-color: #09177c;" text="Personal Data." textFill="#bdd0fb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="98.0" layoutY="646.0" prefHeight="22.0" prefWidth="637.0" style="-fx-background-color: #09177c;" text="HABITS" textFill="#bdd0fb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="Question5" layoutX="114.0" layoutY="702.0" text="1.Do you smoke?" />
+            <RadioButton fx:id="Answer5_1" layoutX="115.0" layoutY="736.0" mnemonicParsing="false" text="yes">
+               <toggleGroup>
+                  <ToggleGroup fx:id="answer5" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="Answer5_2" layoutX="117.0" layoutY="770.0" mnemonicParsing="false" text="no" toggleGroup="$answer5" />
+            <Label fx:id="Question6" layoutX="343.0" layoutY="702.0" text="2.Do you drink?" />
+            <RadioButton fx:id="Answer6_1" layoutX="346.0" layoutY="736.0" mnemonicParsing="false" text="yes">
+               <toggleGroup>
+                  <ToggleGroup fx:id="answer6" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="Answer6_2" layoutX="345.0" layoutY="770.0" mnemonicParsing="false" text="no" toggleGroup="$answer6" />
+            <Label fx:id="Question7" layoutX="556.0" layoutY="702.0" text="2.Do you sleep well?" />
+            <RadioButton fx:id="Answer7_1" layoutX="558.0" layoutY="736.0" mnemonicParsing="false" text="yes">
+               <toggleGroup>
+                  <ToggleGroup fx:id="answer7" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="Answer7_2" layoutX="560.0" layoutY="770.0" mnemonicParsing="false" text="no" toggleGroup="$answer7" />
+            <Label alignment="CENTER" layoutX="91.0" layoutY="828.0" prefHeight="22.0" prefWidth="637.0" style="-fx-background-color: #09177c;" text="PSYCHOLOGICAL FACTORS" textFill="#bdd0fb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="Question8" layoutX="119.0" layoutY="877.0" text="1.Financial problems:" />
+            <RadioButton fx:id="Answer8_1" layoutX="125.0" layoutY="907.0" mnemonicParsing="false" text="little">
+               <toggleGroup>
+                  <ToggleGroup fx:id="answer8" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="Answer8_2" layoutX="124.0" layoutY="931.0" mnemonicParsing="false" text="average" toggleGroup="$answer8" />
+            <RadioButton fx:id="Answer8_3" layoutX="125.0" layoutY="955.0" mnemonicParsing="false" text="major" toggleGroup="$answer8" />
+            <Label fx:id="Question9" layoutX="342.0" layoutY="877.0" text="2.Nervous/Tension:" />
+            <RadioButton fx:id="Answer9_1" layoutX="347.0" layoutY="907.0" mnemonicParsing="false" text="little">
+               <toggleGroup>
+                  <ToggleGroup fx:id="answer9" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="Answer9_2" layoutX="347.0" layoutY="931.0" mnemonicParsing="false" text="average" toggleGroup="$answer9" />
+            <RadioButton fx:id="Answer9_3" layoutX="347.0" layoutY="955.0" mnemonicParsing="false" text="major" toggleGroup="$answer9" />
+            <Label fx:id="Question10" layoutX="554.0" layoutY="877.0" text="3.Marital adjustment:" />
+            <RadioButton fx:id="Answer10_1" layoutX="562.0" layoutY="902.0" mnemonicParsing="false" text="Easy">
+               <toggleGroup>
+                  <ToggleGroup fx:id="answer10" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="Answer10_2" layoutX="562.0" layoutY="926.0" mnemonicParsing="false" text="Difficult" toggleGroup="$answer10" />
+            <RadioButton fx:id="Answer10_3" layoutX="562.0" layoutY="953.0" mnemonicParsing="false" text="NONE" toggleGroup="$answer10" />
+            <Label alignment="CENTER" layoutX="89.0" layoutY="1010.0" prefHeight="22.0" prefWidth="637.0" style="-fx-background-color: #09177c;" text="PROBLEM" textFill="#bdd0fb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="Question11" layoutX="249.0" layoutY="1066.0" text="CHIEF COMPLAINT (what led you to consult an allergist)" />
+            <TextArea fx:id="Answer11" layoutX="154.0" layoutY="1103.0" prefHeight="106.0" prefWidth="492.0" />
+            <Button fx:id="saveButton" layoutX="366.0" layoutY="1247.0" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="31.0" prefWidth="86.0" style="-fx-background-color: #09177c;" text="Save" textFill="#bdd0fb" />
+            <Button fx:id="backButton" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#backToTemplatesButtonClicked" prefHeight="34.0" prefWidth="54.0" styleClass="addBackButtonPic" stylesheets="@../../styles/Modification.css" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

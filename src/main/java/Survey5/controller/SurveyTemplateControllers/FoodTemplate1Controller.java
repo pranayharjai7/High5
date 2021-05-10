@@ -1,77 +1,282 @@
 package Survey5.controller.SurveyTemplateControllers;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import Survey5.MainApp;
+import Survey5.controller.ShowAnswersController;
+import Survey5.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.Slider;
-import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.*;
 import javafx.scene.text.Text;
+import org.controlsfx.control.Rating;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-public class FoodTemplate1Controller
-{
-      @FXML
-    private TextField AgeFoodBox;
-
+public class FoodTemplate1Controller{
+    private static Survey survey;
+    private Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
+    private Alert warn = new Alert(Alert.AlertType.WARNING);
+    private static Data userdata;
+    SurveysDaoInterface surveyManager = new SurveyManager();
+    QuestionsDaoInterface questionManager  = new QuestionsManager();
+    AnswersDaoInterface answerManager = new AnswersManager();
+    static String answer;
+    int NumberOfQuestions = 6;
     @FXML
-    private TextField BMIfeildFoodBox;
-
+    private Label FoodTemplate1;
     @FXML
-    private RadioButton VitaminsYes;
-
+    private Text Question1;
     @FXML
-    private RadioButton VitaminsNo;
-
+    private Text Question2;
     @FXML
-    private Text ExerciseQuestion;
-
+    private Text Question3;
     @FXML
-    private Text SupplementsQuestion;
-
+    private Text Question4;
     @FXML
-    private Text BMIFoodSurveyquestion;
-
+    private Text Question5;
     @FXML
-    private Text AgeFoodSurveyQuestion;
-
+    private Text Question6;
     @FXML
-    private Text PhysicalSatisfactionQuestion;
-
+    private TextField Answer1;
     @FXML
-    private Text FoodAllergyQuestion;
-
+    private TextField Answer2;
     @FXML
-    private Button FoodSurveyButton;
-
+    private Slider Answer3;
     @FXML
-    private TextField FoodAllergyAnswerBox;
-
+    private ToggleGroup answer4;
     @FXML
-    private Slider ExerciseSliderbox;
-
+    private RadioButton Answer4_1;
     @FXML
-    void FoodSurveySubmitted(ActionEvent event) throws IOException {
-                MainApp.setRoot("SurveyTemplates");
+    private RadioButton Answer4_2;
+    @FXML
+    private Rating Answer5;
+    @FXML
+    private TextField Answer6;
+    @FXML
+    private Button saveButton;
+    @FXML
+    private Button backButton;
+    private String Answer4;
 
+
+    public static void setData(Data userdata) {
+        FoodTemplate1Controller.userdata=userdata;
+    }
+
+    public static void setCreateOrAnswerFunction(String answer){
+        FoodTemplate1Controller.answer=answer;
+    }
+
+    public static void setCreateOrAnswerFunction(String answer, Survey survey){
+        FoodTemplate1Controller.survey=survey;
+        FoodTemplate1Controller.answer=answer;
     }
 
     @FXML
-    void supplementsNoClicked(ActionEvent event) {
+    private void initialize(){
+        if(answer.equals("answer")){
+            setAnswering();
+        }
+        else if(answer.equals("create"))
+            setCreating();
+        else
+            setShowAnswers();
+
+        Answer5.setRating(0);
+    }
+
+    private void setCreating() {
+        saveButton.setText("Save");
+        saveButton.setOnAction(this::saveButtonClicked);
+        backButton.setOnAction(this::backToTemplatesButtonClicked);
+    }
+
+    private void setAnswering(){
+        saveButton.setText("Submit");
+        saveButton.setOnAction(this::submitButtonClicked);
+        backButton.setOnAction(this::backToAnswerButtonClicked);
+    }
+
+    private void setShowAnswers(){
+        saveButton.setText("Show Answers");
+        saveButton.setPrefWidth(150);
+        saveButton.setOnAction(this::showAnswersClicked);
+        backButton.setOnAction(this::backToSavedSurveysButtonClicked);
+    }
+
+    //submitting template to database of current user
+    @FXML
+    private void saveButtonClicked(ActionEvent event){
+        Survey survey = new Survey();
+        survey.setTypeOfTemplate(FoodTemplate1.getId());
+        survey.setTitle(FoodTemplate1.getText());
+        survey.setOwner(userdata);
+
+        surveyManager.setSurvey(survey);
+        try {
+            surveyManager.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        confirm.setContentText("Template Saved Successfully!!");
+        confirm.showAndWait();
+        try {
+            MainApp.setRoot("/fxml/SurveyTemplates/TemplateSurvey.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //submitting Questions and answers to database
+    private List<Questions> qList = new ArrayList<>();
+    private void submitButtonClicked(ActionEvent actionEvent) {
+
+        int flag = 0;
+        qList = questionManager.getSurveyQuestions(survey);
+        for (Questions question : qList) {
+            if (question.getAnsweredByUser().getId() == userdata.getId()) {
+                flag = 1;
+                break;
+            }
+        }
+        if (flag == 1) {
+            warn.setContentText("You have already answered this Survey!");
+            warn.showAndWait();
+        }
+        else if(Answer1.getText().equals("") || Answer2.getText().equals("")){
+            warn.setContentText("You didn't submit all the answers!");
+            warn.showAndWait();
+        }
+        else if(!setRadioButtons()){
+            warn.setContentText("You didn't submit all the answers!");
+            warn.showAndWait();
+        }
+        else if(!setRating()){
+            warn.setContentText("You didn't submit all the answers!");
+            warn.showAndWait();
+        }
+        else if(qList.isEmpty() || flag==0){
+            for (int i = 1; i <= NumberOfQuestions; i++) {
+                Questions question = new Questions();
+                question.setSurveyTemplate(survey);
+                question.setQuestionNumber(i);
+                question.setAnsweredByUser(userdata);
+
+                Answers answer = new Answers();
+                switch (i) {
+                    case 1: {
+                        question.setQuestion(Question1.getText());
+                        answer.setAnswersType("Textual");
+                        answer.setAnswerText(Answer1.getText());
+                        break;
+                    }
+                    case 2: {
+                        question.setQuestion(Question2.getText());
+                        answer.setAnswersType("Textual");
+                        answer.setAnswerText(Answer2.getText());
+                        break;
+                    }
+                    case 3: {
+                        question.setQuestion(Question3.getText());
+                        answer.setAnswersType("Slider");
+                        answer.setAnswerText("Value: "+(int)Answer3.getValue());
+                        break;
+                    }
+                    case 4: {
+                        question.setQuestion(Question4.getText());
+                        answer.setAnswersType("RadioButton");
+                        answer.setAnswerText(Answer4);
+                        break;
+                    }
+                    case 5: {
+                        question.setQuestion(Question5.getText());
+                        answer.setAnswersType("Rating");
+                        answer.setAnswerText("Rating: "+Answer5.getRating());
+                        break;
+                    }
+                    case 6: {
+                        question.setQuestion(Question6.getText());
+                        answer.setAnswersType("Textual");
+                        if(Answer6.getText().equals(""))
+                            answer.setAnswerText("None");
+                        else
+                            answer.setAnswerText(Answer6.getText());
+                        break;
+                    }
+                }
+
+
+                questionManager.setQuestions(question);
+                answer.setQuestion(question);
+                answerManager.setAnswers(answer);
+            }
+
+            confirm.setContentText("Answer Submitted Successfully!");
+            confirm.showAndWait();
+            try {
+                questionManager.close();
+                answerManager.close();
+                MainApp.setRoot("/fxml/AnswerSurvey.fxml");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+    private boolean setRadioButtons(){
+        if(answer4.getSelectedToggle()==null){
+            return false;
+        }
+        else{
+            Answer4 = answer4.getSelectedToggle().toString().substring(51,answer4.getSelectedToggle().toString().length()-1);
+            return true;
+        }
+    }
+
+    private boolean setRating() {
+        if(Answer5.getRating()==0){
+            warn.setContentText("Ratings can't be empty!!");
+            warn.showAndWait();
+            return false;
+        }
+        return true;
+    }
+
+    //Shows saved Answers for the questions
+    private void showAnswersClicked(ActionEvent actionEvent) {
+        ShowAnswersController.setData(userdata,survey);
+        try {
+            MainApp.setRoot("/fxml/ShowAnswers.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void backToAnswerButtonClicked(ActionEvent actionEvent) {
+        try {
+            MainApp.setRoot("/fxml/AnswerSurvey.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
-    void supplementsYesClicked(ActionEvent event) {
+    private void backToTemplatesButtonClicked(ActionEvent actionEvent){
+        try {
+            MainApp.setRoot("/fxml/SurveyTemplates/TemplateSurvey.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void backButtonClicked(ActionEvent actionEvent) throws IOException {
-        MainApp.setRoot("/fxml/SurveyTemplates/TemplateSurvey.fxml");
+    private void backToSavedSurveysButtonClicked(ActionEvent actionEvent) {
+        try {
+            MainApp.setRoot("/fxml/SavedSurveys.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
