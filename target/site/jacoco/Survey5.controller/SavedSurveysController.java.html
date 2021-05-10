@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SavedSurveysController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">High5</a> &gt; <a href="index.source.html" class="el_package">Survey5.controller</a> &gt; <span class="el_source">SavedSurveysController.java</span></div><h1>SavedSurveysController.java</h1><pre class="source lang-java linenums">package Survey5.controller;
 
 import Survey5.MainApp;
-import Survey5.controller.SurveyTemplateControllers.HealthTemplate1Controller;
-import Survey5.controller.SurveyTemplateControllers.HealthTemplate2Controller;
-import Survey5.controller.SurveyTemplateControllers.HealthTemplate3Controller;
-import Survey5.controller.SurveyTemplateControllers.HealthTemplate4Controller;
+import Survey5.controller.SurveyTemplateControllers.*;
 import Survey5.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,16 +13,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-<span class="nc" id="L19">public class SavedSurveysController{</span>
+<span class="nc" id="L16">public class SavedSurveysController{</span>
     private static Data userdata;
-<span class="nc" id="L21">    private SurveysDaoInterface sm = new SurveyManager();</span>
+<span class="nc" id="L18">    private SurveysDaoInterface sm = new SurveyManager();</span>
     private List&lt;Survey&gt; sList;
-<span class="nc" id="L23">    private List&lt;Button&gt; buttonList = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L20">    private List&lt;Button&gt; buttonList = new ArrayList&lt;&gt;();</span>
 
 
     public static void setUserdata(Data userdata) {
-<span class="nc" id="L27">        SavedSurveysController.userdata = userdata;</span>
-<span class="nc" id="L28">    }</span>
+<span class="nc" id="L24">        SavedSurveysController.userdata = userdata;</span>
+<span class="nc" id="L25">    }</span>
 
     @FXML
     private AnchorPane MySurveysAnchorPane;
@@ -38,73 +35,92 @@ import java.util.List;
 
     @FXML
     private void initialize(){
-<span class="nc" id="L41">        sList = sm.getUserSurveys(userdata);</span>
-<span class="nc bnc" id="L42" title="All 2 branches missed.">        for (Survey survey:sList) {</span>
-<span class="nc" id="L43">            buttonList.add(new Button(survey.getTitle()));</span>
-<span class="nc" id="L44">            buttonList.get(buttonList.size()-1).setLayoutX(20);</span>
-<span class="nc bnc" id="L45" title="All 2 branches missed.">            if(buttonList.size()&lt;=1){</span>
-<span class="nc" id="L46">                buttonList.get(buttonList.size() - 1).setLayoutY(searchBarField.getLayoutY()+50);</span>
-            }else {
-<span class="nc" id="L48">                buttonList.get(buttonList.size() - 1).setLayoutY(buttonList.get(buttonList.size() - 2).getLayoutY() + 50);</span>
-            }
-<span class="nc" id="L50">            buttonList.get(buttonList.size()-1).setId(survey.getId()+&quot;&quot;);</span>
-<span class="nc" id="L51">            buttonList.get(buttonList.size() - 1).setOnAction(this::savedSurveyClicked);</span>
+<span class="nc" id="L38">        sList = sm.getUserSurveys(userdata);</span>
+<span class="nc bnc" id="L39" title="All 2 branches missed.">        for (Survey survey:sList) {</span>
+<span class="nc" id="L40">            buttonList.add(new Button(survey.getTitle()));</span>
+<span class="nc" id="L41">            buttonList.get(buttonList.size()-1).setLayoutX(20);</span>
+<span class="nc bnc" id="L42" title="All 2 branches missed.">            if(buttonList.size()&lt;=1)</span>
+<span class="nc" id="L43">                buttonList.get(buttonList.size() - 1).setLayoutY(searchBarField.getLayoutY()+50);</span>
+            else
+<span class="nc" id="L45">                buttonList.get(buttonList.size() - 1).setLayoutY(buttonList.get(buttonList.size() - 2).getLayoutY() + 50);</span>
+<span class="nc" id="L46">            buttonList.get(buttonList.size()-1).setId(survey.getId()+&quot;&quot;);</span>
+<span class="nc" id="L47">            buttonList.get(buttonList.size() - 1).setOnAction(this::savedSurveyClicked);</span>
 
-<span class="nc" id="L53">            MySurveysAnchorPane.getChildren().add(buttonList.get(buttonList.size()-1));</span>
-<span class="nc" id="L54">        }</span>
-<span class="nc" id="L55">    }</span>
+<span class="nc" id="L49">            MySurveysAnchorPane.getChildren().add(buttonList.get(buttonList.size()-1));</span>
+<span class="nc" id="L50">        }</span>
+<span class="nc" id="L51">    }</span>
 
     @FXML
     private void searchButtonClicked(ActionEvent actionEvent) {
-<span class="nc" id="L59">    }</span>
+<span class="nc" id="L55">    }</span>
 
     private void savedSurveyClicked(ActionEvent actionEvent){
-<span class="nc" id="L62">        int SurveyId = -1;</span>
-<span class="nc bnc" id="L63" title="All 2 branches missed.">        for (Button button:buttonList) {</span>
-<span class="nc bnc" id="L64" title="All 2 branches missed.">            if(actionEvent.getSource().equals(button)){</span>
-<span class="nc" id="L65">                SurveyId = Integer.parseInt(button.getId());</span>
+<span class="nc" id="L58">        int SurveyId = -1;</span>
+<span class="nc bnc" id="L59" title="All 2 branches missed.">        for (Button button:buttonList) {</span>
+<span class="nc bnc" id="L60" title="All 2 branches missed.">            if(actionEvent.getSource().equals(button)){</span>
+<span class="nc" id="L61">                SurveyId = Integer.parseInt(button.getId());</span>
             }
-<span class="nc" id="L67">        }</span>
-<span class="nc bnc" id="L68" title="All 2 branches missed.">        for (Survey survey:sList) {</span>
-<span class="nc bnc" id="L69" title="All 2 branches missed.">            if(survey.getId()==SurveyId){</span>
-<span class="nc" id="L70">                switchTemplate(survey);</span>
+<span class="nc" id="L63">        }</span>
+<span class="nc bnc" id="L64" title="All 2 branches missed.">        for (Survey survey:sList) {</span>
+<span class="nc bnc" id="L65" title="All 2 branches missed.">            if(survey.getId()==SurveyId){</span>
+<span class="nc" id="L66">                switchTemplate(survey);</span>
                 try {
-<span class="nc" id="L72">                    MainApp.setRoot(&quot;/fxml/SurveyTemplates/&quot;+survey.getTypeOfTemplate()+&quot;.fxml&quot;);</span>
-<span class="nc" id="L73">                } catch (IOException e) {</span>
-<span class="nc" id="L74">                    e.printStackTrace();</span>
-<span class="nc" id="L75">                }</span>
+<span class="nc" id="L68">                    MainApp.setRoot(&quot;/fxml/SurveyTemplates/&quot;+survey.getTypeOfTemplate()+&quot;.fxml&quot;);</span>
+<span class="nc" id="L69">                } catch (IOException e) {</span>
+<span class="nc" id="L70">                    e.printStackTrace();</span>
+<span class="nc" id="L71">                }</span>
             }
-<span class="nc" id="L77">        }</span>
-<span class="nc" id="L78">    }</span>
+<span class="nc" id="L73">        }</span>
+<span class="nc" id="L74">    }</span>
 
     private void switchTemplate(Survey survey){
-<span class="nc bnc" id="L81" title="All 5 branches missed.">        switch (survey.getTypeOfTemplate()){</span>
+<span class="nc bnc" id="L77" title="All 9 branches missed.">        switch (survey.getTypeOfTemplate()){</span>
             case &quot;HealthTemplate1&quot;: {
-<span class="nc" id="L83">                HealthTemplate1Controller.setData(userdata);</span>
-<span class="nc" id="L84">                HealthTemplate1Controller.setCreateOrAnswerFunction(&quot;ShowAnswer&quot;,survey);</span>
-<span class="nc" id="L85">                break;</span>
+<span class="nc" id="L79">                HealthTemplate1Controller.setData(userdata);</span>
+<span class="nc" id="L80">                HealthTemplate1Controller.setCreateOrAnswerFunction(&quot;ShowAnswer&quot;,survey);</span>
+<span class="nc" id="L81">                break;</span>
             }
             case &quot;HealthTemplate2&quot;: {
-<span class="nc" id="L88">                HealthTemplate2Controller.setData(userdata);</span>
-<span class="nc" id="L89">                HealthTemplate2Controller.setCreateOrAnswerFunction(&quot;ShowAnswer&quot;,survey);</span>
-<span class="nc" id="L90">                break;</span>
+<span class="nc" id="L84">                HealthTemplate2Controller.setData(userdata);</span>
+<span class="nc" id="L85">                HealthTemplate2Controller.setCreateOrAnswerFunction(&quot;ShowAnswer&quot;,survey);</span>
+<span class="nc" id="L86">                break;</span>
             }
             case &quot;HealthTemplate3&quot;: {
-<span class="nc" id="L93">                HealthTemplate3Controller.setData(userdata);</span>
-<span class="nc" id="L94">                HealthTemplate3Controller.setCreateOrAnswerFunction(&quot;ShowAnswer&quot;,survey);</span>
-<span class="nc" id="L95">                break;</span>
+<span class="nc" id="L89">                HealthTemplate3Controller.setData(userdata);</span>
+<span class="nc" id="L90">                HealthTemplate3Controller.setCreateOrAnswerFunction(&quot;ShowAnswer&quot;,survey);</span>
+<span class="nc" id="L91">                break;</span>
             }
             case &quot;HealthTemplate4&quot;: {
-<span class="nc" id="L98">                HealthTemplate4Controller.setData(userdata);</span>
-<span class="nc" id="L99">                HealthTemplate4Controller.setCreateOrAnswerFunction(&quot;ShowAnswer&quot;,survey);</span>
+<span class="nc" id="L94">                HealthTemplate4Controller.setData(userdata);</span>
+<span class="nc" id="L95">                HealthTemplate4Controller.setCreateOrAnswerFunction(&quot;ShowAnswer&quot;,survey);</span>
+<span class="nc" id="L96">                break;</span>
+            }
+            case &quot;BusinessTemplate1&quot;: {
+<span class="nc" id="L99">                BusinessTemplate1Controller.setData(userdata);</span>
+<span class="nc" id="L100">                BusinessTemplate1Controller.setCreateOrAnswerFunction(&quot;ShowAnswer&quot;,survey);</span>
+<span class="nc" id="L101">                break;</span>
+            }
+            case &quot;BusinessTemplate2&quot;: {
+<span class="nc" id="L104">                BusinessTemplate2Controller.setData(userdata);</span>
+<span class="nc" id="L105">                BusinessTemplate2Controller.setCreateOrAnswerFunction(&quot;ShowAnswer&quot;,survey);</span>
+<span class="nc" id="L106">                break;</span>
+            }
+            case &quot;BusinessTemplate3&quot;: {
+<span class="nc" id="L109">                BusinessTemplate3Controller.setData(userdata);</span>
+<span class="nc" id="L110">                BusinessTemplate3Controller.setCreateOrAnswerFunction(&quot;ShowAnswer&quot;,survey);</span>
+<span class="nc" id="L111">                break;</span>
+            }
+            case &quot;BusinessTemplate4&quot;: {
+<span class="nc" id="L114">                BusinessTemplate4Controller.setData(userdata);</span>
+<span class="nc" id="L115">                BusinessTemplate4Controller.setCreateOrAnswerFunction(&quot;ShowAnswer&quot;,survey);</span>
                 break;
             }
         }
-<span class="nc" id="L103">    }</span>
+<span class="nc" id="L119">    }</span>
 
     @FXML
     private void backButtonClicked(ActionEvent actionEvent) throws IOException {
-<span class="nc" id="L107">        MainApp.setRoot(&quot;/fxml/AfterLoginMenu.fxml&quot;);</span>
-<span class="nc" id="L108">    }</span>
+<span class="nc" id="L123">        MainApp.setRoot(&quot;/fxml/AfterLoginMenu.fxml&quot;);</span>
+<span class="nc" id="L124">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

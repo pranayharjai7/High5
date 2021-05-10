@@ -20,6 +20,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.testfx.api.FxRobot;
 import org.testfx.api.FxToolkit;
@@ -32,26 +33,28 @@ import org.testfx.framework.junit5.Start;
  */
 @ExtendWith(ApplicationExtension.class)
 public class MyProfileControllerTest {
-        private static Data dTest;
-        private static MyProfileController myProfileControllerTester;
+        private static Data d;
+
         @Start
         public void startLoginController(Stage stage) throws Exception {
         Scene scene = new Scene(loadFXMLLoginController("/fxml/MyProfile.fxml"));
         stage.setTitle("Survey5");
         stage.setScene(scene);
         stage.show();
-        dTest = new Data("Test", "email", "username", "password");
-        MyProfileController.setData(dTest);
+
     }
         public Parent loadFXMLLoginController(String fxml) throws IOException{
-        FXMLLoader loader = new FXMLLoader(LoginController.class.getResource(fxml));
+        FXMLLoader loader = new FXMLLoader(MyProfileController.class.getResource(fxml));
         return loader.load();
+        
     } 
     
     
     
     @BeforeAll
     public static void setUpClass() {
+        d = new Data("name", "email", "uname", "password");
+        MyProfileController.setData(d);
     }
     
     @AfterAll
@@ -90,27 +93,12 @@ public class MyProfileControllerTest {
     public void testEmaillabel(FxRobot robot) {
     assertNotNull(robot.lookup("#emailLabel"));
     }
+    
     @Test
     public void testBackButton(FxRobot robot) {
     Button registerButtonTest = robot.lookup("#backButton").queryAs(Button.class);
     assertNotNull(registerButtonTest);
     }
         
-    @Test
-    public void initializeTest(FxRobot robot) {
-        //dTest = new Data("Test", "email", "username", "password");
-        //MyProfileController.setData(dTest);
-        //MyProfileController.setNameLabel(dTest.getName());
-        //MyProfileController.setUsernameLabel(dTest.getUsername());
-        //MyProfileController.setEmailLabel(dTest.getEmail());
-        //robot.clickOn("#changeButton");
-       /* robot.clickOn(MyProfileController.getNameField());
-        robot.write("new name");
-        robot.clickOn(MyProfileController.getEmailField());
-        robot.write("new email");
-        robot.clickOn(MyProfileController.getUsernameField());
-        robot.write("new uname");   */    
-        
-    }
     
 }

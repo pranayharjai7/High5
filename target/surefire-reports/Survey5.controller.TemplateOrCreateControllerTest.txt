@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: Survey5.controller.TemplateOrCreateControllerTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.739 s - in Survey5.controller.TemplateOrCreateControllerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.841 s - in Survey5.controller.TemplateOrCreateControllerTest

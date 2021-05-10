@@ -70,7 +70,7 @@ public class QuestionsManagerTest {
     @Test
     public void testSetQuestions() {
 
-        Questions qtest = new Questions(1, "Question Test", surveyTest, dataTest);
+        Questions qtest = new Questions("Question Test", 1,surveyTest, dataTest);
         questionsManagerTester.setQuestions(qtest);
         assertNotNull(qtest.getId());
         
@@ -81,7 +81,7 @@ public class QuestionsManagerTest {
      */
     @Test
     public void testDeleteQuestions() {
-        Questions qtest = new Questions(1, "Question Test", surveyTest, dataTest);
+        Questions qtest = new Questions("Question Test", 1, surveyTest, dataTest);
         questionsManagerTester.setQuestions(qtest);
         assertNotNull(qtest.getId());
         int id = qtest.getId();
@@ -96,7 +96,7 @@ public class QuestionsManagerTest {
      */
     @Test
     public void testUpdateQuestions() {
-        Questions qtest = new Questions(1, "Question Test", surveyTest, dataTest);
+        Questions qtest = new Questions("Question Test", 1, surveyTest, dataTest);
         questionsManagerTester.setQuestions(qtest);
         qtest.setQuestionNumber(1);
         qtest.setQuestion("new question");
@@ -110,7 +110,7 @@ public class QuestionsManagerTest {
     @Test
     public void testUpdateQuestions_IfNotExist() {
         //if
-        Questions qtest = new Questions(1, "Question Test", surveyTest, dataTest);//qtest object not added to the table
+        Questions qtest = new Questions("Question Test", 1, surveyTest, dataTest);//qtest object not added to the table
         qtest.setQuestionNumber(1);
         qtest.setQuestion("new question");;
         questionsManagerTester.updateQuestions(qtest);
@@ -125,11 +125,11 @@ public class QuestionsManagerTest {
      */
     @Test
     public void testGetAllQuestions() {
-        Questions qtest = new Questions(1, "Question Test1", surveyTest, dataTest);
+        Questions qtest = new Questions("Question Test1",1, surveyTest, dataTest);
         questionsManagerTester.setQuestions(qtest);       
-        Questions qtest2 = new Questions(2, "Question Test2", surveyTest, dataTest);
+        Questions qtest2 = new Questions("Question Test2",1, surveyTest, dataTest);
         questionsManagerTester.setQuestions(qtest2);
-        Questions qtest3 = new Questions(3, "Question Test3", surveyTest, dataTest);
+        Questions qtest3 = new Questions("Question Test3",1, surveyTest, dataTest);
         questionsManagerTester.setQuestions(qtest3);
         List<Questions> result = questionsManagerTester.getAllQuestions();
         assertFalse(result.isEmpty());
@@ -147,11 +147,11 @@ public class QuestionsManagerTest {
      */
     @Test
     public void testGetSurveyQuestions() {
-        Questions qtest = new Questions(1, "Question Test1", surveyTest, dataTest);
+        Questions qtest = new Questions("Question Test1", 1, surveyTest, dataTest);
         questionsManagerTester.setQuestions(qtest);       
-        Questions qtest2 = new Questions(2, "Question Test2", surveyTest, dataTest);
+        Questions qtest2 = new Questions("Question Test2", 1, surveyTest, dataTest);
         questionsManagerTester.setQuestions(qtest2);
-        Questions qtest3 = new Questions(3, "Question Test3", surveyTest2, dataTest2);
+        Questions qtest3 = new Questions("Question Test3", 1,surveyTest2, dataTest2);
         questionsManagerTester.setQuestions(qtest3);
         List<Questions> result = questionsManagerTester.getSurveyQuestions(surveyTest);
         assertFalse(result.isEmpty());
@@ -163,11 +163,11 @@ public class QuestionsManagerTest {
      */
     @Test
     public void testGetUserQuestions() {
-        Questions qtest = new Questions(1, "Question Test1", surveyTest, dataTest);
+        Questions qtest = new Questions("Question Test1", 1, surveyTest, dataTest);
         questionsManagerTester.setQuestions(qtest);       
-        Questions qtest2 = new Questions(2, "Question Test2", surveyTest, dataTest);
+        Questions qtest2 = new Questions("Question Test2", 1, surveyTest, dataTest);
         questionsManagerTester.setQuestions(qtest2);
-        Questions qtest3 = new Questions(3, "Question Test3", surveyTest2, dataTest2);
+        Questions qtest3 = new Questions("Question Test3", 1,surveyTest2, dataTest2);
         questionsManagerTester.setQuestions(qtest3);
         List<Questions> result1 = questionsManagerTester.getUserQuestions(dataTest);
         assertFalse(result1.isEmpty());

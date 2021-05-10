@@ -20,10 +20,10 @@ import java.io.IOException;
 <span class="fc" id="L20">    private DataDaoInterface dm = new DataManager();</span>
     private static Data userdata;
 
-<span class="fc" id="L23">    private static TextField nameField = new TextField();</span>
-<span class="fc" id="L24">    private static TextField usernameField = new TextField();</span>
-<span class="fc" id="L25">    private static TextField emailField = new TextField();</span>
-<span class="fc" id="L26">    private static TextField passwordField = new PasswordField();</span>
+<span class="fc" id="L23">    private TextField nameField = new TextField();</span>
+<span class="fc" id="L24">    private TextField usernameField = new TextField();</span>
+<span class="fc" id="L25">    private TextField emailField = new TextField();</span>
+<span class="fc" id="L26">    private TextField passwordField = new PasswordField();</span>
 <span class="fc" id="L27">    private Button doneButton = new Button(&quot;Done&quot;);</span>
 
     public static void setData(Data data) {
@@ -33,23 +33,23 @@ import java.io.IOException;
     @FXML
     private AnchorPane myProfileAnchorPane;
     @FXML
-    private static Label nameLabel;
+    private Label nameLabel;
 
     @FXML
-    private static Label usernameLabel;
+    private Label usernameLabel;
 
     @FXML
-    private static Label emailLabel;
+    private Label emailLabel;
 
     @FXML
     private Button changeButton;
 
     @FXML
-    public static void initialize(){
-<span class="nc" id="L49">        nameLabel.setText(userdata.getName());</span>
-<span class="nc" id="L50">        usernameLabel.setText(userdata.getUsername());</span>
-<span class="nc" id="L51">        emailLabel.setText(userdata.getEmail());</span>
-<span class="nc" id="L52">    }</span>
+    public void initialize(){
+<span class="fc" id="L49">        nameLabel.setText(userdata.getName());</span>
+<span class="fc" id="L50">        usernameLabel.setText(userdata.getUsername());</span>
+<span class="fc" id="L51">        emailLabel.setText(userdata.getEmail());</span>
+<span class="fc" id="L52">    }</span>
 
     @FXML
     private void backButtonClicked(ActionEvent actionEvent) throws IOException {
@@ -83,68 +83,32 @@ import java.io.IOException;
 <span class="nc" id="L83">    }</span>
 
     private void changeDoneClicked(ActionEvent actionEvent){
-<span class="nc" id="L86">        System.out.println(userdata);</span>
-<span class="nc bnc" id="L87" title="All 2 branches missed.">        if(!nameField.getText().equals(&quot;&quot;)) {</span>
-<span class="nc" id="L88">            nameLabel.setText(nameField.getText());</span>
-<span class="nc" id="L89">            userdata.setName(nameLabel.getText());</span>
+<span class="nc" id="L86">           System.out.println(userdata);</span>
+       
+<span class="nc bnc" id="L88" title="All 2 branches missed.">        if(!nameField.getText().equals(&quot;&quot;)) {</span>
+<span class="nc" id="L89">            nameLabel.setText(nameField.getText());</span>
+<span class="nc" id="L90">            userdata.setName(nameLabel.getText());</span>
         }
-<span class="nc bnc" id="L91" title="All 2 branches missed.">        if(!usernameField.getText().equals(&quot;&quot;)) {</span>
-<span class="nc" id="L92">            usernameLabel.setText(usernameField.getText());</span>
-<span class="nc" id="L93">            userdata.setUsername(usernameLabel.getText());</span>
+<span class="nc bnc" id="L92" title="All 2 branches missed.">        if(!usernameField.getText().equals(&quot;&quot;)) {</span>
+<span class="nc" id="L93">            usernameLabel.setText(usernameField.getText());</span>
+<span class="nc" id="L94">            userdata.setUsername(usernameLabel.getText());</span>
         }
-<span class="nc bnc" id="L95" title="All 2 branches missed.">        if(!emailField.getText().equals(&quot;&quot;)) {</span>
-<span class="nc" id="L96">            emailLabel.setText(emailField.getText());</span>
-<span class="nc" id="L97">            userdata.setEmail(emailLabel.getText());</span>
+<span class="nc bnc" id="L96" title="All 2 branches missed.">        if(!emailField.getText().equals(&quot;&quot;)) {</span>
+<span class="nc" id="L97">            emailLabel.setText(emailField.getText());</span>
+<span class="nc" id="L98">            userdata.setEmail(emailLabel.getText());</span>
         }
-
 <span class="nc" id="L100">        dm.updateData(userdata);</span>
         try {
 <span class="nc" id="L102">            dm.close();</span>
 <span class="nc" id="L103">        } catch (Exception e) {</span>
 <span class="nc" id="L104">            e.printStackTrace();</span>
 <span class="nc" id="L105">        }</span>
-
+    
 <span class="nc" id="L107">        myProfileAnchorPane.getChildren().removeAll(nameField,usernameField,emailField,doneButton);</span>
 <span class="nc" id="L108">        myProfileAnchorPane.getChildren().addAll(nameLabel,usernameLabel,emailLabel,changeButton);</span>
-<span class="nc" id="L109">    }</span>
-
-    public static Label getNameLabel() {
-<span class="nc" id="L112">        return nameLabel;</span>
-    }
-
-    public static Label getUsernameLabel() {
-<span class="nc" id="L116">        return usernameLabel;</span>
-    }
-
-    public static Label getEmailLabel() {
-<span class="nc" id="L120">        return emailLabel;</span>
-    }
-
-    public static void setNameLabel(String name) {
-<span class="nc" id="L124">        MyProfileController.nameLabel.setText(name); </span>
-<span class="nc" id="L125">    }</span>
-
-    public static void setUsernameLabel(String username) {
-<span class="nc" id="L128">        MyProfileController.usernameLabel.setText(username);</span>
-<span class="nc" id="L129">    }</span>
-
-    public static void setEmailLabel(String email) {
-<span class="nc" id="L132">        MyProfileController.emailLabel.setText(email);</span>
-<span class="nc" id="L133">    }</span>
-
-    public static TextField getNameField() {
-<span class="nc" id="L136">        return nameField;</span>
-    }
-
-    public static TextField getUsernameField() {
-<span class="nc" id="L140">        return usernameField;</span>
-    }
-
-    public static TextField getEmailField() {
-<span class="nc" id="L144">        return emailField;</span>
-    }
     
-    
-    
+
+<span class="nc" id="L111">    }</span>
 }
+    
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

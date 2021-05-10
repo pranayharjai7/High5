@@ -19,8 +19,10 @@ public class Questions {
 
     @ManyToOne
     private Data answeredByUser;
+    
+    
 
-    public Questions(int questionNumber, String question, Survey surveyTemplate, Data answeredByUser) {
+    public Questions(String question,int questionNumber, Survey surveyTemplate, Data answeredByUser) {
         this.questionNumber = questionNumber;
         this.question = question;
         this.surveyTemplate = surveyTemplate;

@@ -8,7 +8,7 @@ import javafx.fxml.FXML;
 
 import java.io.IOException;
 
-<span class="nc" id="L11">public class TemplateOrCreateController {</span>
+<span class="fc" id="L11">public class TemplateOrCreateController {</span>
 
     private static Data userdata;
 
@@ -24,12 +24,13 @@ import java.io.IOException;
 
     @FXML
     private void createSurveyButtonClicked(ActionEvent actionEvent) throws IOException {
-<span class="nc" id="L27">        MainApp.setRoot(&quot;/fxml/NewSurvey.fxml&quot;);</span>
-<span class="nc" id="L28">    }</span>
+<span class="nc" id="L27">        NewSurveyController.setUserdata(userdata);</span>
+<span class="nc" id="L28">        MainApp.setRoot(&quot;/fxml/NewSurvey.fxml&quot;);</span>
+<span class="nc" id="L29">    }</span>
 
     @FXML
     private void backButtonClicked(ActionEvent actionEvent) throws IOException {
-<span class="nc" id="L32">        MainApp.setRoot(&quot;/fxml/AfterLoginMenu.fxml&quot;);</span>
-<span class="nc" id="L33">    }</span>
+<span class="nc" id="L33">        MainApp.setRoot(&quot;/fxml/AfterLoginMenu.fxml&quot;);</span>
+<span class="nc" id="L34">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

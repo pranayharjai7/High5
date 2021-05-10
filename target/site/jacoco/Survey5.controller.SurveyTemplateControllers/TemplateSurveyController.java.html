@@ -163,26 +163,34 @@ import java.io.IOException;
 
     @FXML
     void CustomerSatisfactionSurveyTemplateButtonClicked(ActionEvent event) throws IOException {
-<span class="nc" id="L166">        MainApp.setRoot(&quot;/fxml/SurveyTemplates/BusinessTemplate1.fxml&quot;);</span>
-<span class="nc" id="L167">    }</span>
+<span class="nc" id="L166">        BusinessTemplate1Controller.setData(userdata);</span>
+<span class="nc" id="L167">        BusinessTemplate1Controller.setCreateOrAnswerFunction(&quot;create&quot;);</span>
+<span class="nc" id="L168">        MainApp.setRoot(&quot;/fxml/SurveyTemplates/BusinessTemplate1.fxml&quot;);</span>
+<span class="nc" id="L169">    }</span>
 
     @FXML
     void WebsiteReviewSurveyTemplateButtonClicked(ActionEvent event) throws IOException {
-<span class="nc" id="L171">        MainApp.setRoot(&quot;/fxml/SurveyTemplates/BusinessTemplate2.fxml&quot;);</span>
-<span class="nc" id="L172">    }</span>
+<span class="nc" id="L173">        BusinessTemplate2Controller.setData(userdata);</span>
+<span class="nc" id="L174">        BusinessTemplate2Controller.setCreateOrAnswerFunction(&quot;create&quot;);</span>
+<span class="nc" id="L175">        MainApp.setRoot(&quot;/fxml/SurveyTemplates/BusinessTemplate2.fxml&quot;);</span>
+<span class="nc" id="L176">    }</span>
 
     @FXML
     void ShopBusinessReviewSurveyTemplateButtonClicked(ActionEvent event) throws IOException {
-<span class="nc" id="L176">        MainApp.setRoot(&quot;/fxml/SurveyTemplates/BusinessTemplate3.fxml&quot;);</span>
-<span class="nc" id="L177">    }</span>
+<span class="nc" id="L180">        BusinessTemplate3Controller.setData(userdata);</span>
+<span class="nc" id="L181">        BusinessTemplate3Controller.setCreateOrAnswerFunction(&quot;create&quot;);</span>
+<span class="nc" id="L182">        MainApp.setRoot(&quot;/fxml/SurveyTemplates/BusinessTemplate3.fxml&quot;);</span>
+<span class="nc" id="L183">    }</span>
 
     @FXML
     void AppSoftwareReviewSurveyTemplateButtonClicked(ActionEvent event) throws IOException {
-<span class="nc" id="L181">        MainApp.setRoot(&quot;/fxml/SurveyTemplates/BusinessTemplate4.fxml&quot;);</span>
-<span class="nc" id="L182">    }</span>
+<span class="nc" id="L187">        BusinessTemplate4Controller.setData(userdata);</span>
+<span class="nc" id="L188">        BusinessTemplate4Controller.setCreateOrAnswerFunction(&quot;create&quot;);</span>
+<span class="nc" id="L189">        MainApp.setRoot(&quot;/fxml/SurveyTemplates/BusinessTemplate4.fxml&quot;);</span>
+<span class="nc" id="L190">    }</span>
 
     public void backButtonClicked(ActionEvent actionEvent) throws IOException {
-<span class="nc" id="L185">        MainApp.setRoot(&quot;/fxml/TemplateOrCreate.fxml&quot;);</span>
-<span class="nc" id="L186">    }</span>
+<span class="nc" id="L193">        MainApp.setRoot(&quot;/fxml/TemplateOrCreate.fxml&quot;);</span>
+<span class="nc" id="L194">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

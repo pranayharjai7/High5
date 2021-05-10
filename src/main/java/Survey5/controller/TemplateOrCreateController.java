@@ -24,6 +24,7 @@ public class TemplateOrCreateController {
 
     @FXML
     private void createSurveyButtonClicked(ActionEvent actionEvent) throws IOException {
+        NewSurveyController.setUserdata(userdata);
         MainApp.setRoot("/fxml/NewSurvey.fxml");
     }
 

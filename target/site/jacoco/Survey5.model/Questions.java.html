@@ -19,56 +19,58 @@ public class Questions {
 
     @ManyToOne
     private Data answeredByUser;
+    
+    
 
-<span class="fc" id="L23">    public Questions(int questionNumber, String question, Survey surveyTemplate, Data answeredByUser) {</span>
-<span class="fc" id="L24">        this.questionNumber = questionNumber;</span>
-<span class="fc" id="L25">        this.question = question;</span>
-<span class="fc" id="L26">        this.surveyTemplate = surveyTemplate;</span>
-<span class="fc" id="L27">        this.answeredByUser = answeredByUser;</span>
-<span class="fc" id="L28">    }</span>
+<span class="fc" id="L25">    public Questions(String question,int questionNumber, Survey surveyTemplate, Data answeredByUser) {</span>
+<span class="fc" id="L26">        this.questionNumber = questionNumber;</span>
+<span class="fc" id="L27">        this.question = question;</span>
+<span class="fc" id="L28">        this.surveyTemplate = surveyTemplate;</span>
+<span class="fc" id="L29">        this.answeredByUser = answeredByUser;</span>
+<span class="fc" id="L30">    }</span>
 
 
     public Survey getSurveyTemplate() {
-<span class="fc" id="L32">        return surveyTemplate;</span>
+<span class="fc" id="L34">        return surveyTemplate;</span>
     }
 
     public void setSurveyTemplate(Survey surveyTemplate) {
-<span class="nc" id="L36">        this.surveyTemplate = surveyTemplate;</span>
-<span class="nc" id="L37">    }</span>
+<span class="nc" id="L38">        this.surveyTemplate = surveyTemplate;</span>
+<span class="nc" id="L39">    }</span>
 
-<span class="fc" id="L39">    public Questions() {</span>
-<span class="fc" id="L40">    }</span>
+<span class="fc" id="L41">    public Questions() {</span>
+<span class="fc" id="L42">    }</span>
 
     public int getId() {
-<span class="fc" id="L43">        return id;</span>
+<span class="fc" id="L45">        return id;</span>
     }
 
     public void setId(int id) {
-<span class="nc" id="L47">        this.id = id;</span>
-<span class="nc" id="L48">    }</span>
+<span class="nc" id="L49">        this.id = id;</span>
+<span class="nc" id="L50">    }</span>
 
     public String getQuestion() {
-<span class="fc" id="L51">        return question;</span>
+<span class="fc" id="L53">        return question;</span>
     }
 
     public void setQuestion(String question) {
-<span class="fc" id="L55">        this.question = question;</span>
-<span class="fc" id="L56">    }</span>
+<span class="fc" id="L57">        this.question = question;</span>
+<span class="fc" id="L58">    }</span>
 
     public int getQuestionNumber() {
-<span class="fc" id="L59">        return questionNumber;</span>
+<span class="fc" id="L61">        return questionNumber;</span>
     }
 
     public void setQuestionNumber(int questionNumber) {
-<span class="fc" id="L63">        this.questionNumber = questionNumber;</span>
-<span class="fc" id="L64">    }</span>
+<span class="fc" id="L65">        this.questionNumber = questionNumber;</span>
+<span class="fc" id="L66">    }</span>
 
     public Data getAnsweredByUser() {
-<span class="nc" id="L67">        return answeredByUser;</span>
+<span class="nc" id="L69">        return answeredByUser;</span>
     }
 
     public void setAnsweredByUser(Data answeredByUser) {
-<span class="nc" id="L71">        this.answeredByUser = answeredByUser;</span>
-<span class="nc" id="L72">    }</span>
+<span class="nc" id="L73">        this.answeredByUser = answeredByUser;</span>
+<span class="nc" id="L74">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

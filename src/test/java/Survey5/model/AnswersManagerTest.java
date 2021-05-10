@@ -22,8 +22,8 @@ public class AnswersManagerTest {
     private static Survey surveyTest = new Survey("Health", "Health1", dataTest);
     private static SurveyManager smTest = new SurveyManager("Survey5Test");
     
-    private static Questions qtest = new Questions(1, "questionTest", surveyTest, dataTest);
-    private static Questions qtest2 = new Questions(1, "questionTest", surveyTest, dataTest);
+    private static Questions qtest = new Questions("Qtest1", 1, surveyTest, dataTest);
+    private static final Questions qtest2 = new Questions("Qtest2", 1, surveyTest, dataTest);
     private static QuestionsManager qmTest = new QuestionsManager("Survey5Test");
     public AnswersManagerTest() {
     }

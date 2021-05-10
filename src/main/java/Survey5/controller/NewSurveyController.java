@@ -1,15 +1,26 @@
 package Survey5.controller;
 
 import Survey5.MainApp;
+import Survey5.model.Data;
+import Survey5.model.Questions;
+import Survey5.model.QuestionsDaoInterface;
+import Survey5.model.QuestionsManager;
+import Survey5.model.Survey;
+import Survey5.model.SurveyManager;
+import Survey5.model.SurveysDaoInterface;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+import static java.sql.JDBCType.NULL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
+import java.lang.Object;
 
 public class NewSurveyController {
 
@@ -28,6 +39,13 @@ public class NewSurveyController {
     private  String qType4="CheckBox";
      Button addRadioButton = new Button("Add Option..");
      Button radioDoneButton = new Button("Done");
+     
+     
+             //model declarations
+    private SurveysDaoInterface sm = new SurveyManager();
+    private QuestionsDaoInterface qm = new QuestionsManager();
+    private Survey survey1;
+    private static Data userdata;
 
 
     @FXML
@@ -59,6 +77,15 @@ public class NewSurveyController {
             titleLabel.setLayoutY(titleTextField.getLayoutY());
             newSurveyAnchorPane.getChildren().add(titleLabel);
             newSurveyAnchorPane.getChildren().removeAll(titleTextField,okButton);
+            
+        if( userdata != null) {
+            
+        survey1 = new Survey(null, titleTextField.getText(), userdata);    
+        sm.setSurvey(survey1);
+            System.out.println(userdata.getName());
+            System.out.println("\n\nuserdata is not null\n\n");
+
+        }
         }
     }
 
@@ -254,6 +281,22 @@ public class NewSurveyController {
     //Submit Survey
     @FXML
     private void doneButtonClicked(ActionEvent event) throws IOException {
+       if(userdata != null) {
+           int i = 1;
+           for(Label qs : questionList){
+               Questions questionToBeAdded = new Questions(qs.getText(), i, survey1, userdata);
+               qm.setQuestions(questionToBeAdded);
+               System.out.println("data added");
+               i++;
+           }
+            System.out.println("\n\nuserdata is not null\n\n");
+           try {
+               qm.close();
+               sm.close();
+           } catch (Exception ex) {
+               Logger.getLogger(NewSurveyController.class.getName()).log(Level.SEVERE, null, ex);
+           }
+       } 
         MainApp.setRoot("/fxml/TemplateOrCreate.fxml");
     }
 
@@ -292,12 +335,11 @@ public class NewSurveyController {
     public static List<Label> getQuestionList() {
         return questionList;
     }
+
+    public static void setUserdata(Data userdata) {
+        NewSurveyController.userdata = userdata;
+    }
             
-    
-
-
-    
-
         
         
 }

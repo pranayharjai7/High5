@@ -83,7 +83,8 @@ public class MyProfileController {
     }
 
     private void changeDoneClicked(ActionEvent actionEvent){
-        System.out.println(userdata);
+           System.out.println(userdata);
+       
         if(!nameField.getText().equals("")) {
             nameLabel.setText(nameField.getText());
             userdata.setName(nameLabel.getText());
@@ -96,15 +97,17 @@ public class MyProfileController {
             emailLabel.setText(emailField.getText());
             userdata.setEmail(emailLabel.getText());
         }
-
         dm.updateData(userdata);
         try {
             dm.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+    
         myProfileAnchorPane.getChildren().removeAll(nameField,usernameField,emailField,doneButton);
         myProfileAnchorPane.getChildren().addAll(nameLabel,usernameLabel,emailLabel,changeButton);
+    
+
     }
 }
+    

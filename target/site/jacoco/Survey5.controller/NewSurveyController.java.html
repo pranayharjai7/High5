@@ -1,33 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NewSurveyController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">High5</a> &gt; <a href="index.source.html" class="el_package">Survey5.controller</a> &gt; <span class="el_source">NewSurveyController.java</span></div><h1>NewSurveyController.java</h1><pre class="source lang-java linenums">package Survey5.controller;
 
 import Survey5.MainApp;
+import Survey5.model.Data;
+import Survey5.model.Questions;
+import Survey5.model.QuestionsDaoInterface;
+import Survey5.model.QuestionsManager;
+import Survey5.model.Survey;
+import Survey5.model.SurveyManager;
+import Survey5.model.SurveysDaoInterface;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+import static java.sql.JDBCType.NULL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
+import java.lang.Object;
 
-<span class="fc" id="L14">public class NewSurveyController {</span>
+<span class="fc" id="L25">public class NewSurveyController {</span>
 
-<span class="fc" id="L16">    private static Alert warn = new Alert(Alert.AlertType.WARNING);</span>
-<span class="fc" id="L17">    private static Label titleLabel = new Label();</span>
+<span class="fc" id="L27">    private static Alert warn = new Alert(Alert.AlertType.WARNING);</span>
+<span class="fc" id="L28">    private static Label titleLabel = new Label();</span>
 
 
-<span class="fc" id="L20">    private static TextField questionField = new TextField();</span>
-<span class="fc" id="L21">    private static Button questionOkButton = new Button(&quot;OK&quot;);</span>
-<span class="fc" id="L22">    private static List&lt;Label&gt; questionList = new ArrayList&lt;&gt;();</span>
-<span class="fc" id="L23">    private static ChoiceBox&lt;String&gt; questionChoice = new ChoiceBox&lt;&gt;();</span>
-<span class="fc" id="L24">    private  static Button questionChoiceOkButton = new Button(&quot;OK&quot;);</span>
-<span class="fc" id="L25">    private  String qType1=&quot;Choose Type..&quot;;</span>
-<span class="fc" id="L26">    private  String qType2=&quot;Textual Answer&quot;;</span>
-<span class="fc" id="L27">    private  String qType3=&quot;Radio Button&quot;;</span>
-<span class="fc" id="L28">    private  String qType4=&quot;CheckBox&quot;;</span>
-<span class="fc" id="L29">     Button addRadioButton = new Button(&quot;Add Option..&quot;);</span>
-<span class="fc" id="L30">     Button radioDoneButton = new Button(&quot;Done&quot;);</span>
+<span class="fc" id="L31">    private static TextField questionField = new TextField();</span>
+<span class="fc" id="L32">    private static Button questionOkButton = new Button(&quot;OK&quot;);</span>
+<span class="fc" id="L33">    private static List&lt;Label&gt; questionList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L34">    private static ChoiceBox&lt;String&gt; questionChoice = new ChoiceBox&lt;&gt;();</span>
+<span class="fc" id="L35">    private  static Button questionChoiceOkButton = new Button(&quot;OK&quot;);</span>
+<span class="fc" id="L36">    private  String qType1=&quot;Choose Type..&quot;;</span>
+<span class="fc" id="L37">    private  String qType2=&quot;Textual Answer&quot;;</span>
+<span class="fc" id="L38">    private  String qType3=&quot;Radio Button&quot;;</span>
+<span class="fc" id="L39">    private  String qType4=&quot;CheckBox&quot;;</span>
+<span class="fc" id="L40">     Button addRadioButton = new Button(&quot;Add Option..&quot;);</span>
+<span class="fc" id="L41">     Button radioDoneButton = new Button(&quot;Done&quot;);</span>
+     
+     
+             //model declarations
+<span class="fc" id="L45">    private SurveysDaoInterface sm = new SurveyManager();</span>
+<span class="fc" id="L46">    private QuestionsDaoInterface qm = new QuestionsManager();</span>
+    private Survey survey1;
+    private static Data userdata;
 
 
     @FXML
@@ -48,35 +66,44 @@ import javafx.collections.FXCollections;
     //For Title
     @FXML
     private  void okButtonClicked(ActionEvent event) {
-<span class="pc bpc" id="L51" title="1 of 2 branches missed.">        if(titleTextField.getText().equals(&quot;&quot;)){</span>
-<span class="nc" id="L52">            warn.setContentText(&quot;Title can't be empty..&quot;);</span>
-<span class="nc" id="L53">            warn.showAndWait();</span>
+<span class="pc bpc" id="L69" title="1 of 2 branches missed.">        if(titleTextField.getText().equals(&quot;&quot;)){</span>
+<span class="nc" id="L70">            warn.setContentText(&quot;Title can't be empty..&quot;);</span>
+<span class="nc" id="L71">            warn.showAndWait();</span>
         }
         else{
-<span class="fc" id="L56">            titleLabel.setText(titleTextField.getText());</span>
-<span class="fc" id="L57">            titleLabel.setFont(titleTextField.getFont());</span>
-<span class="fc" id="L58">            titleLabel.setLayoutX((newSurveyAnchorPane.getPrefWidth()/2)-(titleLabel.getText().length()*11)/2);</span>
-<span class="fc" id="L59">            titleLabel.setLayoutY(titleTextField.getLayoutY());</span>
-<span class="fc" id="L60">            newSurveyAnchorPane.getChildren().add(titleLabel);</span>
-<span class="fc" id="L61">            newSurveyAnchorPane.getChildren().removeAll(titleTextField,okButton);</span>
+<span class="fc" id="L74">            titleLabel.setText(titleTextField.getText());</span>
+<span class="fc" id="L75">            titleLabel.setFont(titleTextField.getFont());</span>
+<span class="fc" id="L76">            titleLabel.setLayoutX((newSurveyAnchorPane.getPrefWidth()/2)-(titleLabel.getText().length()*11)/2);</span>
+<span class="fc" id="L77">            titleLabel.setLayoutY(titleTextField.getLayoutY());</span>
+<span class="fc" id="L78">            newSurveyAnchorPane.getChildren().add(titleLabel);</span>
+<span class="fc" id="L79">            newSurveyAnchorPane.getChildren().removeAll(titleTextField,okButton);</span>
+            
+<span class="pc bpc" id="L81" title="1 of 2 branches missed.">        if( userdata != null) {</span>
+            
+<span class="nc" id="L83">        survey1 = new Survey(null, titleTextField.getText(), userdata);    </span>
+<span class="nc" id="L84">        sm.setSurvey(survey1);</span>
+<span class="nc" id="L85">            System.out.println(userdata.getName());</span>
+<span class="nc" id="L86">            System.out.println(&quot;\n\nuserdata is not null\n\n&quot;);</span>
+
         }
-<span class="fc" id="L63">    }</span>
+        }
+<span class="fc" id="L90">    }</span>
 
     //To Add Question in Survey
     @FXML
     private  void addQuestionButtonClicked(ActionEvent event) {
-<span class="fc" id="L68">        questionChoice.getItems().removeAll(qType1,qType2,qType3,qType4);</span>
-<span class="fc" id="L69">        questionChoice.getItems().addAll(qType1,qType2,qType3,qType4);</span>
-<span class="fc" id="L70">        questionChoice.setValue(&quot;Choose Type..&quot;);</span>
-<span class="fc" id="L71">        questionChoice.setLayoutX(20);</span>
-<span class="fc" id="L72">        questionChoice.setLayoutY(addQuestionButton.getLayoutY());</span>
-<span class="fc" id="L73">        questionChoiceOkButton.setLayoutX(questionChoice.getLayoutX()+120);</span>
-<span class="fc" id="L74">        questionChoiceOkButton.setLayoutY(questionChoice.getLayoutY());</span>
-<span class="fc" id="L75">        questionChoiceOkButton.setOnAction(this::questionChoiceOkButtonClicked);</span>
+<span class="fc" id="L95">        questionChoice.getItems().removeAll(qType1,qType2,qType3,qType4);</span>
+<span class="fc" id="L96">        questionChoice.getItems().addAll(qType1,qType2,qType3,qType4);</span>
+<span class="fc" id="L97">        questionChoice.setValue(&quot;Choose Type..&quot;);</span>
+<span class="fc" id="L98">        questionChoice.setLayoutX(20);</span>
+<span class="fc" id="L99">        questionChoice.setLayoutY(addQuestionButton.getLayoutY());</span>
+<span class="fc" id="L100">        questionChoiceOkButton.setLayoutX(questionChoice.getLayoutX()+120);</span>
+<span class="fc" id="L101">        questionChoiceOkButton.setLayoutY(questionChoice.getLayoutY());</span>
+<span class="fc" id="L102">        questionChoiceOkButton.setOnAction(this::questionChoiceOkButtonClicked);</span>
 
-<span class="fc" id="L77">        addQuestionButton.setLayoutY(addQuestionButton.getLayoutY()+50);</span>
-<span class="fc" id="L78">        doneButton.setLayoutY(addQuestionButton.getLayoutY());</span>
-<span class="fc" id="L79">        newSurveyAnchorPane.getChildren().addAll(questionChoice,questionChoiceOkButton);</span>
+<span class="fc" id="L104">        addQuestionButton.setLayoutY(addQuestionButton.getLayoutY()+50);</span>
+<span class="fc" id="L105">        doneButton.setLayoutY(addQuestionButton.getLayoutY());</span>
+<span class="fc" id="L106">        newSurveyAnchorPane.getChildren().addAll(questionChoice,questionChoiceOkButton);</span>
 
         /*
         questionField.setText(&quot;&quot;);
@@ -93,34 +120,34 @@ import javafx.collections.FXCollections;
         newSurveyAnchorPane.getChildren().addAll(questionField,questionOkButton);
 
          */
-<span class="fc" id="L96">    }</span>
+<span class="fc" id="L123">    }</span>
 
     //After Choosing question type from drop down menu
     private  void questionChoiceOkButtonClicked(ActionEvent actionEvent) {
-<span class="pc bpc" id="L100" title="1 of 2 branches missed.">        if(questionChoice.getValue().equals(qType1)){</span>
-<span class="nc" id="L101">            warn.setContentText(&quot;You have to choose a type of question..&quot;);</span>
-<span class="nc" id="L102">            warn.showAndWait();</span>
+<span class="pc bpc" id="L127" title="1 of 2 branches missed.">        if(questionChoice.getValue().equals(qType1)){</span>
+<span class="nc" id="L128">            warn.setContentText(&quot;You have to choose a type of question..&quot;);</span>
+<span class="nc" id="L129">            warn.showAndWait();</span>
         }
         else{
-<span class="fc" id="L105">            questionField.setText(&quot;&quot;);</span>
-<span class="fc" id="L106">            questionField.setPromptText(&quot;Enter Question Here&quot;);</span>
-<span class="fc" id="L107">            questionField.setPrefWidth(200);</span>
-<span class="fc" id="L108">            questionField.setLayoutX(20);</span>
-<span class="fc" id="L109">            questionField.setLayoutY(questionChoice.getLayoutY());</span>
+<span class="fc" id="L132">            questionField.setText(&quot;&quot;);</span>
+<span class="fc" id="L133">            questionField.setPromptText(&quot;Enter Question Here&quot;);</span>
+<span class="fc" id="L134">            questionField.setPrefWidth(200);</span>
+<span class="fc" id="L135">            questionField.setLayoutX(20);</span>
+<span class="fc" id="L136">            questionField.setLayoutY(questionChoice.getLayoutY());</span>
 
-<span class="fc" id="L111">            questionOkButton.setLayoutX(questionField.getLayoutX()+questionField.getPrefWidth()+20);</span>
-<span class="fc" id="L112">            questionOkButton.setLayoutY(questionField.getLayoutY());</span>
-<span class="fc" id="L113">            newSurveyAnchorPane.getChildren().removeAll(questionChoice,questionChoiceOkButton);</span>
-<span class="fc" id="L114">            newSurveyAnchorPane.getChildren().addAll(questionField,questionOkButton);</span>
+<span class="fc" id="L138">            questionOkButton.setLayoutX(questionField.getLayoutX()+questionField.getPrefWidth()+20);</span>
+<span class="fc" id="L139">            questionOkButton.setLayoutY(questionField.getLayoutY());</span>
+<span class="fc" id="L140">            newSurveyAnchorPane.getChildren().removeAll(questionChoice,questionChoiceOkButton);</span>
+<span class="fc" id="L141">            newSurveyAnchorPane.getChildren().addAll(questionField,questionOkButton);</span>
 
-<span class="fc bfc" id="L116" title="All 2 branches covered.">            if(questionChoice.getValue().equals(qType2))</span>
-<span class="fc" id="L117">                questionOkButton.setOnAction(this::textQuestionOkButtonClicked);</span>
-<span class="fc bfc" id="L118" title="All 2 branches covered.">            else if(questionChoice.getValue().equals(qType3))</span>
-<span class="fc" id="L119">                questionOkButton.setOnAction(this::radioOkButtonClicked);</span>
-<span class="pc bpc" id="L120" title="1 of 2 branches missed.">            else if(questionChoice.getValue().equals(qType4))</span>
-<span class="fc" id="L121">                questionOkButton.setOnAction(this::checkboxOkButtonClicked);</span>
+<span class="fc bfc" id="L143" title="All 2 branches covered.">            if(questionChoice.getValue().equals(qType2))</span>
+<span class="fc" id="L144">                questionOkButton.setOnAction(this::textQuestionOkButtonClicked);</span>
+<span class="fc bfc" id="L145" title="All 2 branches covered.">            else if(questionChoice.getValue().equals(qType3))</span>
+<span class="fc" id="L146">                questionOkButton.setOnAction(this::radioOkButtonClicked);</span>
+<span class="pc bpc" id="L147" title="1 of 2 branches missed.">            else if(questionChoice.getValue().equals(qType4))</span>
+<span class="fc" id="L148">                questionOkButton.setOnAction(this::checkboxOkButtonClicked);</span>
         }
-<span class="fc" id="L123">    }</span>
+<span class="fc" id="L150">    }</span>
 
     /*
     AFTER ENTERING THE QUESTION
@@ -128,176 +155,191 @@ import javafx.collections.FXCollections;
 
     //if answer has checkboxes
     private void checkboxOkButtonClicked(ActionEvent actionEvent) {
-<span class="nc bnc" id="L131" title="All 2 branches missed.">        if(questionField.getText().equals(&quot;&quot;)){</span>
-<span class="nc" id="L132">            warn.setContentText(&quot;Question Can't be empty&quot;);</span>
-<span class="nc" id="L133">            warn.showAndWait();</span>
+<span class="nc bnc" id="L158" title="All 2 branches missed.">        if(questionField.getText().equals(&quot;&quot;)){</span>
+<span class="nc" id="L159">            warn.setContentText(&quot;Question Can't be empty&quot;);</span>
+<span class="nc" id="L160">            warn.showAndWait();</span>
         }
-<span class="nc" id="L135">    }</span>
+<span class="nc" id="L162">    }</span>
 
     //if answer has radio buttons
     private void radioOkButtonClicked(ActionEvent actionEvent) {
-<span class="fc bfc" id="L139" title="All 2 branches covered.">        if(questionField.getText().equals(&quot;&quot;)){</span>
-<span class="fc" id="L140">            warn.setContentText(&quot;Question Can't be empty&quot;);</span>
-<span class="nc" id="L141">            warn.showAndWait();</span>
+<span class="fc bfc" id="L166" title="All 2 branches covered.">        if(questionField.getText().equals(&quot;&quot;)){</span>
+<span class="fc" id="L167">            warn.setContentText(&quot;Question Can't be empty&quot;);</span>
+<span class="nc" id="L168">            warn.showAndWait();</span>
         }
         else{
-<span class="fc" id="L144">            Label question = new Label(questionField.getText());</span>
-<span class="fc" id="L145">            question.setLayoutX(questionField.getLayoutX());</span>
-<span class="fc" id="L146">            question.setLayoutY(questionField.getLayoutY());</span>
+<span class="fc" id="L171">            Label question = new Label(questionField.getText());</span>
+<span class="fc" id="L172">            question.setLayoutX(questionField.getLayoutX());</span>
+<span class="fc" id="L173">            question.setLayoutY(questionField.getLayoutY());</span>
 
-<span class="fc" id="L148">            addRadioButton.setLayoutX(20);</span>
-<span class="fc" id="L149">            addRadioButton.setLayoutY(question.getLayoutY()+30);</span>
-<span class="fc" id="L150">            addRadioButton.setOnAction(this::addRadioOptionClicked);</span>
+<span class="fc" id="L175">            addRadioButton.setLayoutX(20);</span>
+<span class="fc" id="L176">            addRadioButton.setLayoutY(question.getLayoutY()+30);</span>
+<span class="fc" id="L177">            addRadioButton.setOnAction(this::addRadioOptionClicked);</span>
 
-<span class="fc" id="L152">            radioDoneButton.setLayoutX(addRadioButton.getLayoutX()+100);</span>
-<span class="fc" id="L153">            radioDoneButton.setLayoutY(addRadioButton.getLayoutY());</span>
-<span class="fc" id="L154">            radioDoneButton.setOnAction(this::radioOptionsDoneClicked);</span>
+<span class="fc" id="L179">            radioDoneButton.setLayoutX(addRadioButton.getLayoutX()+100);</span>
+<span class="fc" id="L180">            radioDoneButton.setLayoutY(addRadioButton.getLayoutY());</span>
+<span class="fc" id="L181">            radioDoneButton.setOnAction(this::radioOptionsDoneClicked);</span>
 
 
-<span class="fc" id="L157">            addQuestionButton.setLayoutY(addQuestionButton.getLayoutY()+50);</span>
-<span class="fc" id="L158">            doneButton.setLayoutY(addQuestionButton.getLayoutY());</span>
+<span class="fc" id="L184">            addQuestionButton.setLayoutY(addQuestionButton.getLayoutY()+50);</span>
+<span class="fc" id="L185">            doneButton.setLayoutY(addQuestionButton.getLayoutY());</span>
 
-<span class="fc" id="L160">            newSurveyAnchorPane.getChildren().removeAll(questionField, questionOkButton);</span>
-<span class="fc" id="L161">            newSurveyAnchorPane.getChildren().addAll(question,addRadioButton,radioDoneButton);</span>
+<span class="fc" id="L187">            newSurveyAnchorPane.getChildren().removeAll(questionField, questionOkButton);</span>
+<span class="fc" id="L188">            newSurveyAnchorPane.getChildren().addAll(question,addRadioButton,radioDoneButton);</span>
         }
-<span class="fc" id="L163">    }</span>
+<span class="fc" id="L190">    }</span>
 
 
-<span class="fc" id="L166">     TextField radioField  = new TextField();</span>
-<span class="fc" id="L167">     Button radioTextEnteredButton = new Button(&quot;Ok&quot;);</span>
-<span class="fc" id="L168">    private  List&lt;RadioButton&gt; rButtons = new ArrayList&lt;&gt;();</span>
-<span class="fc" id="L169">    private List&lt;List&lt;RadioButton&gt;&gt; listOfrButtons = new ArrayList&lt;&gt;();</span>
-<span class="fc" id="L170">    private List&lt;ToggleGroup&gt; tgList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L193">     TextField radioField  = new TextField();</span>
+<span class="fc" id="L194">     Button radioTextEnteredButton = new Button(&quot;Ok&quot;);</span>
+<span class="fc" id="L195">    private  List&lt;RadioButton&gt; rButtons = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L196">    private List&lt;List&lt;RadioButton&gt;&gt; listOfrButtons = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L197">    private List&lt;ToggleGroup&gt; tgList = new ArrayList&lt;&gt;();</span>
     //To add radio option
     private void addRadioOptionClicked(ActionEvent actionEvent) {
-<span class="nc" id="L173">        RadioButton radioButton = new RadioButton();</span>
-<span class="nc" id="L174">        radioButton.setLayoutX(20);</span>
-<span class="nc" id="L175">        radioButton.setLayoutY(addRadioButton.getLayoutY());</span>
+<span class="nc" id="L200">        RadioButton radioButton = new RadioButton();</span>
+<span class="nc" id="L201">        radioButton.setLayoutX(20);</span>
+<span class="nc" id="L202">        radioButton.setLayoutY(addRadioButton.getLayoutY());</span>
 
-<span class="nc" id="L177">        radioField.setText(&quot;&quot;);</span>
-<span class="nc" id="L178">        radioField.setPromptText(&quot;Enter Option Text Here&quot;);</span>
-<span class="nc" id="L179">        radioField.setPrefWidth(200);</span>
-<span class="nc" id="L180">        radioField.setLayoutX(40);</span>
-<span class="nc" id="L181">        radioField.setLayoutY(radioButton.getLayoutY());</span>
+<span class="nc" id="L204">        radioField.setText(&quot;&quot;);</span>
+<span class="nc" id="L205">        radioField.setPromptText(&quot;Enter Option Text Here&quot;);</span>
+<span class="nc" id="L206">        radioField.setPrefWidth(200);</span>
+<span class="nc" id="L207">        radioField.setLayoutX(40);</span>
+<span class="nc" id="L208">        radioField.setLayoutY(radioButton.getLayoutY());</span>
 
-<span class="nc" id="L183">        rButtons.add(radioButton);</span>
+<span class="nc" id="L210">        rButtons.add(radioButton);</span>
 
-<span class="nc" id="L185">        radioTextEnteredButton.setLayoutX(radioField.getLayoutX()+radioField.getPrefWidth()+10);</span>
-<span class="nc" id="L186">        radioTextEnteredButton.setLayoutY(radioField.getLayoutY());</span>
-<span class="nc" id="L187">        radioTextEnteredButton.setOnAction(this::RadioOptionConfirmed);</span>
+<span class="nc" id="L212">        radioTextEnteredButton.setLayoutX(radioField.getLayoutX()+radioField.getPrefWidth()+10);</span>
+<span class="nc" id="L213">        radioTextEnteredButton.setLayoutY(radioField.getLayoutY());</span>
+<span class="nc" id="L214">        radioTextEnteredButton.setOnAction(this::RadioOptionConfirmed);</span>
 
-<span class="nc" id="L189">        addRadioButton.setLayoutY(radioButton.getLayoutY()+50);</span>
-<span class="nc" id="L190">        radioDoneButton.setLayoutY(addRadioButton.getLayoutY());</span>
-<span class="nc" id="L191">        addQuestionButton.setLayoutY(addQuestionButton.getLayoutY()+50);</span>
-<span class="nc" id="L192">        doneButton.setLayoutY(addQuestionButton.getLayoutY());</span>
+<span class="nc" id="L216">        addRadioButton.setLayoutY(radioButton.getLayoutY()+50);</span>
+<span class="nc" id="L217">        radioDoneButton.setLayoutY(addRadioButton.getLayoutY());</span>
+<span class="nc" id="L218">        addQuestionButton.setLayoutY(addQuestionButton.getLayoutY()+50);</span>
+<span class="nc" id="L219">        doneButton.setLayoutY(addQuestionButton.getLayoutY());</span>
 
-<span class="nc" id="L194">        newSurveyAnchorPane.getChildren().addAll(radioButton,radioField,radioTextEnteredButton);</span>
-<span class="nc" id="L195">    }</span>
+<span class="nc" id="L221">        newSurveyAnchorPane.getChildren().addAll(radioButton,radioField,radioTextEnteredButton);</span>
+<span class="nc" id="L222">    }</span>
 
     //option Confirmed
     private void RadioOptionConfirmed(ActionEvent actionEvent) {
-<span class="nc bnc" id="L199" title="All 2 branches missed.">        if(radioField.getText().equals(&quot;&quot;)){</span>
-<span class="nc" id="L200">            warn.setContentText(&quot;Option Can't be empty&quot;);</span>
-<span class="nc" id="L201">            warn.showAndWait();</span>
+<span class="nc bnc" id="L226" title="All 2 branches missed.">        if(radioField.getText().equals(&quot;&quot;)){</span>
+<span class="nc" id="L227">            warn.setContentText(&quot;Option Can't be empty&quot;);</span>
+<span class="nc" id="L228">            warn.showAndWait();</span>
         }
         else {
-<span class="nc" id="L204">            rButtons.get(rButtons.size() - 1).setText(radioField.getText());</span>
-<span class="nc" id="L205">            newSurveyAnchorPane.getChildren().removeAll(radioField, radioTextEnteredButton);</span>
+<span class="nc" id="L231">            rButtons.get(rButtons.size() - 1).setText(radioField.getText());</span>
+<span class="nc" id="L232">            newSurveyAnchorPane.getChildren().removeAll(radioField, radioTextEnteredButton);</span>
         }
-<span class="nc" id="L207">    }</span>
+<span class="nc" id="L234">    }</span>
 
     //To submit all the radio options
     private void radioOptionsDoneClicked(ActionEvent actionEvent) {
 
-<span class="nc" id="L212">        ToggleGroup tg = new ToggleGroup();</span>
-<span class="nc" id="L213">        tgList.add(tg);</span>
-<span class="nc" id="L214">        listOfrButtons.add(rButtons);</span>
-<span class="nc bnc" id="L215" title="All 2 branches missed.">        for(int i=0; i&lt;rButtons.size();i++)</span>
+<span class="nc" id="L239">        ToggleGroup tg = new ToggleGroup();</span>
+<span class="nc" id="L240">        tgList.add(tg);</span>
+<span class="nc" id="L241">        listOfrButtons.add(rButtons);</span>
+<span class="nc bnc" id="L242" title="All 2 branches missed.">        for(int i=0; i&lt;rButtons.size();i++)</span>
         {
-<span class="nc" id="L217">            listOfrButtons.get(listOfrButtons.size()-1).get(i).setToggleGroup(tgList.get(tgList.size()-1));</span>
+<span class="nc" id="L244">            listOfrButtons.get(listOfrButtons.size()-1).get(i).setToggleGroup(tgList.get(tgList.size()-1));</span>
         }
 
-<span class="nc" id="L220">        addQuestionButton.setLayoutY(addQuestionButton.getLayoutY()-50);</span>
-<span class="nc" id="L221">        doneButton.setLayoutY(addQuestionButton.getLayoutY());</span>
-<span class="nc" id="L222">        newSurveyAnchorPane.getChildren().removeAll(addRadioButton,radioDoneButton);</span>
-<span class="nc" id="L223">    }</span>
+<span class="nc" id="L247">        addQuestionButton.setLayoutY(addQuestionButton.getLayoutY()-50);</span>
+<span class="nc" id="L248">        doneButton.setLayoutY(addQuestionButton.getLayoutY());</span>
+<span class="nc" id="L249">        newSurveyAnchorPane.getChildren().removeAll(addRadioButton,radioDoneButton);</span>
+<span class="nc" id="L250">    }</span>
 
     //if answer is textual
     private void textQuestionOkButtonClicked(ActionEvent actionEvent) {
 
-<span class="pc bpc" id="L228" title="1 of 2 branches missed.">        if(questionField.getText().equals(&quot;&quot;)){</span>
-<span class="nc" id="L229">            warn.setContentText(&quot;Question Can't be empty&quot;);</span>
-<span class="nc" id="L230">            warn.showAndWait();</span>
+<span class="pc bpc" id="L255" title="1 of 2 branches missed.">        if(questionField.getText().equals(&quot;&quot;)){</span>
+<span class="nc" id="L256">            warn.setContentText(&quot;Question Can't be empty&quot;);</span>
+<span class="nc" id="L257">            warn.showAndWait();</span>
         }
         else {
-<span class="fc" id="L233">            Label question = new Label(questionField.getText());</span>
-<span class="fc" id="L234">            question.setLayoutX(questionField.getLayoutX());</span>
-<span class="fc" id="L235">            question.setLayoutY(questionField.getLayoutY());</span>
+<span class="fc" id="L260">            Label question = new Label(questionField.getText());</span>
+<span class="fc" id="L261">            question.setLayoutX(questionField.getLayoutX());</span>
+<span class="fc" id="L262">            question.setLayoutY(questionField.getLayoutY());</span>
 
-<span class="fc" id="L237">            TextArea answerArea = new TextArea();</span>
-<span class="fc" id="L238">            answerArea.setText(&quot;&quot;);</span>
-<span class="fc" id="L239">            answerArea.setPromptText(&quot;Enter Answer here..&quot;);</span>
-<span class="fc" id="L240">            answerArea.setPrefWidth(400);</span>
-<span class="fc" id="L241">            answerArea.setPrefHeight(75);</span>
-<span class="fc" id="L242">            answerArea.setLayoutX(20);</span>
-<span class="fc" id="L243">            answerArea.setLayoutY(questionField.getLayoutY()+30);</span>
+<span class="fc" id="L264">            TextArea answerArea = new TextArea();</span>
+<span class="fc" id="L265">            answerArea.setText(&quot;&quot;);</span>
+<span class="fc" id="L266">            answerArea.setPromptText(&quot;Enter Answer here..&quot;);</span>
+<span class="fc" id="L267">            answerArea.setPrefWidth(400);</span>
+<span class="fc" id="L268">            answerArea.setPrefHeight(75);</span>
+<span class="fc" id="L269">            answerArea.setLayoutX(20);</span>
+<span class="fc" id="L270">            answerArea.setLayoutY(questionField.getLayoutY()+30);</span>
 
-<span class="fc" id="L245">            addQuestionButton.setLayoutY(addQuestionButton.getLayoutY()+80);</span>
-<span class="fc" id="L246">            doneButton.setLayoutY(addQuestionButton.getLayoutY());</span>
+<span class="fc" id="L272">            addQuestionButton.setLayoutY(addQuestionButton.getLayoutY()+80);</span>
+<span class="fc" id="L273">            doneButton.setLayoutY(addQuestionButton.getLayoutY());</span>
 
-<span class="fc" id="L248">            newSurveyAnchorPane.getChildren().removeAll(questionField, questionOkButton);</span>
-<span class="fc" id="L249">            newSurveyAnchorPane.getChildren().addAll(question,answerArea);</span>
-<span class="fc" id="L250">            questionList.add(question);</span>
+<span class="fc" id="L275">            newSurveyAnchorPane.getChildren().removeAll(questionField, questionOkButton);</span>
+<span class="fc" id="L276">            newSurveyAnchorPane.getChildren().addAll(question,answerArea);</span>
+<span class="fc" id="L277">            questionList.add(question);</span>
         }
-<span class="fc" id="L252">    }</span>
+<span class="fc" id="L279">    }</span>
 
     //Submit Survey
     @FXML
     private void doneButtonClicked(ActionEvent event) throws IOException {
-<span class="nc" id="L257">        MainApp.setRoot(&quot;/fxml/TemplateOrCreate.fxml&quot;);</span>
-<span class="nc" id="L258">    }</span>
+<span class="nc bnc" id="L284" title="All 2 branches missed.">       if(userdata != null) {</span>
+<span class="nc" id="L285">           int i = 1;</span>
+<span class="nc bnc" id="L286" title="All 2 branches missed.">           for(Label qs : questionList){</span>
+<span class="nc" id="L287">               Questions questionToBeAdded = new Questions(qs.getText(), i, survey1, userdata);</span>
+<span class="nc" id="L288">               qm.setQuestions(questionToBeAdded);</span>
+<span class="nc" id="L289">               System.out.println(&quot;data added&quot;);</span>
+<span class="nc" id="L290">               i++;</span>
+<span class="nc" id="L291">           }</span>
+<span class="nc" id="L292">            System.out.println(&quot;\n\nuserdata is not null\n\n&quot;);</span>
+           try {
+<span class="nc" id="L294">               qm.close();</span>
+<span class="nc" id="L295">               sm.close();</span>
+<span class="nc" id="L296">           } catch (Exception ex) {</span>
+<span class="nc" id="L297">               Logger.getLogger(NewSurveyController.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="nc" id="L298">           }</span>
+       } 
+<span class="nc" id="L300">        MainApp.setRoot(&quot;/fxml/TemplateOrCreate.fxml&quot;);</span>
+<span class="nc" id="L301">    }</span>
 
     @FXML
     private void backButtonClicked(ActionEvent actionEvent) throws IOException {
-<span class="nc" id="L262">        MainApp.setRoot(&quot;/fxml/TemplateOrCreate.fxml&quot;);</span>
-<span class="nc" id="L263">    }</span>
+<span class="nc" id="L305">        MainApp.setRoot(&quot;/fxml/TemplateOrCreate.fxml&quot;);</span>
+<span class="nc" id="L306">    }</span>
 
     public static Alert getWarn() {
-<span class="fc" id="L266">        return warn;</span>
+<span class="fc" id="L309">        return warn;</span>
     }
     
     public static Label getTitleLabel() {
-<span class="nc" id="L270">        return titleLabel;</span>
+<span class="nc" id="L313">        return titleLabel;</span>
     }
     
 
     public static Button getQuestionChoiceOkButton() {
-<span class="fc" id="L275">        return questionChoiceOkButton;</span>
+<span class="fc" id="L318">        return questionChoiceOkButton;</span>
     }
     
 
     
-            public static ChoiceBox&lt;String&gt; getQuestionChoice() {
-<span class="fc" id="L281">        return questionChoice;</span>
+    public static ChoiceBox&lt;String&gt; getQuestionChoice() {
+<span class="fc" id="L324">        return questionChoice;</span>
     }
 
     public static TextField getQuestionField() {
-<span class="fc" id="L285">        return questionField;</span>
+<span class="fc" id="L328">        return questionField;</span>
     }
 
     public static Button getQuestionOkButton() {
-<span class="fc" id="L289">        return questionOkButton;</span>
+<span class="fc" id="L332">        return questionOkButton;</span>
     }
 
     public static List&lt;Label&gt; getQuestionList() {
-<span class="fc" id="L293">        return questionList;</span>
+<span class="fc" id="L336">        return questionList;</span>
     }
+
+    public static void setUserdata(Data userdata) {
+<span class="nc" id="L340">        NewSurveyController.userdata = userdata;</span>
+<span class="nc" id="L341">    }</span>
             
-    
-
-
-    
-
         
         
 }

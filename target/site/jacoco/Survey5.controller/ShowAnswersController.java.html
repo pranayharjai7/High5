@@ -46,70 +46,75 @@ import java.util.stream.Collectors;
 <span class="nc bnc" id="L46" title="All 2 branches missed.">                if(qList.isEmpty()){</span>
 <span class="nc" id="L47">                        warn.setContentText(&quot;No Answers yet!&quot;);</span>
 <span class="nc" id="L48">                        warn.showAndWait();</span>
+                        try {
+<span class="nc" id="L50">                                MainApp.setRoot(&quot;/fxml/SavedSurveys.fxml&quot;);</span>
+<span class="nc" id="L51">                        } catch (IOException e) {</span>
+<span class="nc" id="L52">                                e.printStackTrace();</span>
+<span class="nc" id="L53">                        }</span>
                 }
                 else {
-<span class="nc" id="L51">                        addQuestions();</span>
-<span class="nc" id="L52">                        addAnswers();</span>
+<span class="nc" id="L56">                        addQuestions();</span>
+<span class="nc" id="L57">                        addAnswers();</span>
                 }
-<span class="nc" id="L54">        }</span>
+<span class="nc" id="L59">        }</span>
 
         private void addQuestions(){
-<span class="nc" id="L57">                qUserSurveyList = qList.stream()</span>
-<span class="nc" id="L58">                        .filter(questions -&gt; questions.getAnsweredByUser().equals(qList.get(0).getAnsweredByUser()))</span>
-<span class="nc" id="L59">                        .collect(Collectors.toList());</span>
-<span class="nc bnc" id="L60" title="All 2 branches missed.">                for(int i = 0; i&lt;qUserSurveyList.size(); i++){</span>
-<span class="nc" id="L61">                        qLabelList.add(new Label());</span>
-<span class="nc" id="L62">                        qLabelList.get(qLabelList.size()-1).setText(qUserSurveyList.get(i).getQuestionNumber()+&quot; &quot;+qUserSurveyList.get(i).getQuestion());</span>
-<span class="nc" id="L63">                        qLabelList.get(qLabelList.size()-1).setId(qUserSurveyList.get(i).getQuestionNumber()+&quot;&quot;);</span>
-<span class="nc" id="L64">                        qLabelList.get(qLabelList.size()-1).setLayoutX(20);</span>
-<span class="nc bnc" id="L65" title="All 2 branches missed.">                        if(i==0){</span>
-<span class="nc" id="L66">                                qLabelList.get(qLabelList.size()-1).setLayoutY(titleLabel.getLayoutY()+50);</span>
+<span class="nc" id="L62">                qUserSurveyList = qList.stream()</span>
+<span class="nc" id="L63">                        .filter(questions -&gt; questions.getAnsweredByUser().equals(qList.get(0).getAnsweredByUser()))</span>
+<span class="nc" id="L64">                        .collect(Collectors.toList());</span>
+<span class="nc bnc" id="L65" title="All 2 branches missed.">                for(int i = 0; i&lt;qUserSurveyList.size(); i++){</span>
+<span class="nc" id="L66">                        qLabelList.add(new Label());</span>
+<span class="nc" id="L67">                        qLabelList.get(qLabelList.size()-1).setText(qUserSurveyList.get(i).getQuestionNumber()+&quot; &quot;+qUserSurveyList.get(i).getQuestion());</span>
+<span class="nc" id="L68">                        qLabelList.get(qLabelList.size()-1).setId(qUserSurveyList.get(i).getQuestionNumber()+&quot;&quot;);</span>
+<span class="nc" id="L69">                        qLabelList.get(qLabelList.size()-1).setLayoutX(20);</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">                        if(i==0){</span>
+<span class="nc" id="L71">                                qLabelList.get(qLabelList.size()-1).setLayoutY(titleLabel.getLayoutY()+50);</span>
                         }
                         else{
-<span class="nc" id="L69">                                qLabelList.get(qLabelList.size()-1).setLayoutY(qLabelList.get(qLabelList.size()-2).getLayoutY()+50);</span>
+<span class="nc" id="L74">                                qLabelList.get(qLabelList.size()-1).setLayoutY(qLabelList.get(qLabelList.size()-2).getLayoutY()+50);</span>
                         }
-<span class="nc" id="L71">                        showAnswersAnchorPane.getChildren().add(qLabelList.get(qLabelList.size()-1));</span>
+<span class="nc" id="L76">                        showAnswersAnchorPane.getChildren().add(qLabelList.get(qLabelList.size()-1));</span>
                 }
-<span class="nc" id="L73">        }</span>
+<span class="nc" id="L78">        }</span>
 
         //sort questions by question number
         private void addAnswers(){
-<span class="nc bnc" id="L77" title="All 2 branches missed.">                for (Questions question:qList) {</span>
-<span class="nc bnc" id="L78" title="All 2 branches missed.">                        if(!qNumberList.contains(question.getQuestionNumber())){</span>
-<span class="nc" id="L79">                                qNumberList.add(question.getQuestionNumber());</span>
+<span class="nc bnc" id="L82" title="All 2 branches missed.">                for (Questions question:qList) {</span>
+<span class="nc bnc" id="L83" title="All 2 branches missed.">                        if(!qNumberList.contains(question.getQuestionNumber())){</span>
+<span class="nc" id="L84">                                qNumberList.add(question.getQuestionNumber());</span>
                         }
-<span class="nc" id="L81">                }</span>
-<span class="nc bnc" id="L82" title="All 2 branches missed.">                for (Integer qNum:qNumberList) {</span>
-<span class="nc" id="L83">                        qNumSurveyList = qList.stream()</span>
-<span class="nc bnc" id="L84" title="All 2 branches missed.">                                        .filter(questions -&gt; questions.getQuestionNumber()==qNum)</span>
-<span class="nc" id="L85">                                        .collect(Collectors.toList());</span>
-<span class="nc" id="L86">                        aLabelList.clear();</span>
-<span class="nc bnc" id="L87" title="All 2 branches missed.">                        for (Questions question: qNumSurveyList) {</span>
-<span class="nc" id="L88">                                aList = answersManager.getQuestionAnswers(question);</span>
-<span class="nc bnc" id="L89" title="All 2 branches missed.">                                for (Answers answer:aList) {</span>
-<span class="nc bnc" id="L90" title="All 2 branches missed.">                                        for (Label qLabel: qLabelList) {</span>
-<span class="nc bnc" id="L91" title="All 2 branches missed.">                                                if(answer.getQuestion().getQuestionNumber()==Integer.parseInt(qLabel.getId())){</span>
-<span class="nc" id="L92">                                                        aLabelList.add(new Label());</span>
-<span class="nc" id="L93">                                                        aLabelList.get(aLabelList.size()-1).setText(answer.getAnswerText());</span>
-<span class="nc" id="L94">                                                        aLabelList.get(aLabelList.size()-1).setLayoutX(40);</span>
-<span class="nc bnc" id="L95" title="All 2 branches missed.">                                                        if(aLabelList.size()&lt;=1){</span>
-<span class="nc" id="L96">                                                                aLabelList.get(aLabelList.size()-1).setLayoutY(qLabel.getLayoutY()+30);</span>
+<span class="nc" id="L86">                }</span>
+<span class="nc bnc" id="L87" title="All 2 branches missed.">                for (Integer qNum:qNumberList) {</span>
+<span class="nc" id="L88">                        qNumSurveyList = qList.stream()</span>
+<span class="nc bnc" id="L89" title="All 2 branches missed.">                                        .filter(questions -&gt; questions.getQuestionNumber()==qNum)</span>
+<span class="nc" id="L90">                                        .collect(Collectors.toList());</span>
+<span class="nc" id="L91">                        aLabelList.clear();</span>
+<span class="nc bnc" id="L92" title="All 2 branches missed.">                        for (Questions question: qNumSurveyList) {</span>
+<span class="nc" id="L93">                                aList = answersManager.getQuestionAnswers(question);</span>
+<span class="nc bnc" id="L94" title="All 2 branches missed.">                                for (Answers answer:aList) {</span>
+<span class="nc bnc" id="L95" title="All 2 branches missed.">                                        for (Label qLabel: qLabelList) {</span>
+<span class="nc bnc" id="L96" title="All 2 branches missed.">                                                if(answer.getQuestion().getQuestionNumber()==Integer.parseInt(qLabel.getId())){</span>
+<span class="nc" id="L97">                                                        aLabelList.add(new Label());</span>
+<span class="nc" id="L98">                                                        aLabelList.get(aLabelList.size()-1).setText(answer.getAnswerText());</span>
+<span class="nc" id="L99">                                                        aLabelList.get(aLabelList.size()-1).setLayoutX(40);</span>
+<span class="nc bnc" id="L100" title="All 2 branches missed.">                                                        if(aLabelList.size()&lt;=1){</span>
+<span class="nc" id="L101">                                                                aLabelList.get(aLabelList.size()-1).setLayoutY(qLabel.getLayoutY()+30);</span>
                                                         }
                                                         else{
-<span class="nc" id="L99">                                                                aLabelList.get(aLabelList.size()-1)</span>
-<span class="nc" id="L100">                                                                        .setLayoutY(aLabelList.get(aLabelList.size()-2).getLayoutY()+30);</span>
+<span class="nc" id="L104">                                                                aLabelList.get(aLabelList.size()-1)</span>
+<span class="nc" id="L105">                                                                        .setLayoutY(aLabelList.get(aLabelList.size()-2).getLayoutY()+30);</span>
                                                         }
-<span class="nc bnc" id="L102" title="All 2 branches missed.">                                                        for (int i = qLabelList.indexOf(qLabel)+1; i&lt; qLabelList.size();i++){</span>
-<span class="nc" id="L103">                                                                qLabelList.get(i).setLayoutY(qLabelList.get(i).getLayoutY()+30);</span>
+<span class="nc bnc" id="L107" title="All 2 branches missed.">                                                        for (int i = qLabelList.indexOf(qLabel)+1; i&lt; qLabelList.size();i++){</span>
+<span class="nc" id="L108">                                                                qLabelList.get(i).setLayoutY(qLabelList.get(i).getLayoutY()+30);</span>
                                                         }
-<span class="nc" id="L105">                                                        showAnswersAnchorPane.getChildren().add(aLabelList.get(aLabelList.size()-1));</span>
+<span class="nc" id="L110">                                                        showAnswersAnchorPane.getChildren().add(aLabelList.get(aLabelList.size()-1));</span>
                                                 }
-<span class="nc" id="L107">                                        }</span>
-<span class="nc" id="L108">                                }</span>
-<span class="nc" id="L109">                        }</span>
-<span class="nc" id="L110">                }</span>
+<span class="nc" id="L112">                                        }</span>
+<span class="nc" id="L113">                                }</span>
+<span class="nc" id="L114">                        }</span>
+<span class="nc" id="L115">                }</span>
 
-<span class="nc" id="L112">        }</span>
+<span class="nc" id="L117">        }</span>
 
         //sort questions by user and then add to screen
         /*
@@ -155,10 +160,10 @@ import java.util.stream.Collectors;
 
         public void backButtonClicked(ActionEvent actionEvent) {
                 try {
-<span class="nc" id="L158">                        MainApp.setRoot(&quot;/fxml/SavedSurveys.fxml&quot;);</span>
-<span class="nc" id="L159">                } catch (IOException e) {</span>
-<span class="nc" id="L160">                        e.printStackTrace();</span>
-<span class="nc" id="L161">                }</span>
-<span class="nc" id="L162">        }</span>
+<span class="nc" id="L163">                        MainApp.setRoot(&quot;/fxml/SavedSurveys.fxml&quot;);</span>
+<span class="nc" id="L164">                } catch (IOException e) {</span>
+<span class="nc" id="L165">                        e.printStackTrace();</span>
+<span class="nc" id="L166">                }</span>
+<span class="nc" id="L167">        }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
