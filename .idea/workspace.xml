@@ -6,12 +6,30 @@
   <component name="ChangeListManager">
     <list default="true" id="c50b5972-a33c-4cdd-b766-962239057992" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate3Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate3Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/FoodTemplate2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/FoodTemplate2.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/FoodTemplate3.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/FoodTemplate3.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/FoodTemplate4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/SurveyTemplates/FoodTemplate4.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/controller/SurveyTemplateControllers/HealthTemplate3Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/controller/SurveyTemplateControllers/HealthTemplate3Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/SurveyTemplates/FoodTemplate2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/SurveyTemplates/FoodTemplate2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/BusinessTemplate1Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/BusinessTemplate1Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/BusinessTemplate2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/BusinessTemplate2Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/BusinessTemplate3Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/BusinessTemplate3Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/BusinessTemplate4Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/BusinessTemplate4Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/FoodTemplate1Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/FoodTemplate1Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/FoodTemplate2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/FoodTemplate2Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/FoodTemplate3Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/FoodTemplate3Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/FoodTemplate4Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/FoodTemplate4Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate1Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate1Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate4Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate4Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Survey5/model/Questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Survey5/model/Questions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Survey5/controller/AfterLoginMenuControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Survey5/controller/AfterLoginMenuControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Survey5/controller/MyProfileControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Survey5/controller/MyProfileControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate1ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Survey5/controller/SurveyTemplateControllers/HealthTemplate1ControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Survey5/model/AnswersManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Survey5/model/AnswersManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Survey5/model/QuestionsManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Survey5/model/QuestionsManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Survey5/model/SurveyManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Survey5/model/SurveyManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/controller/SurveyTemplateControllers/BusinessTemplate1Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/controller/SurveyTemplateControllers/BusinessTemplate1Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Survey5/model/Questions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Survey5/model/Questions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Survey5/controller/AfterLoginMenuControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Survey5/controller/AfterLoginMenuControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Survey5/controller/MyProfileControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Survey5/controller/MyProfileControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Survey5/model/AnswersManagerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Survey5/model/AnswersManagerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Survey5/model/QuestionsManagerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Survey5/model/QuestionsManagerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Survey5/model/SurveyManagerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Survey5/model/SurveyManagerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userdata_db.mv.db" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +66,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/fxml/img/TemplateImages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/Survey5/controller/SurveyTemplateControllers" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -56,11 +74,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Pranay\Programs\GIT\High5\src\test\java\Survey5\controller\SurveyTemplateControllers" />
       <recent name="C:\Pranay\Programs\GIT\High5\src\main\resources\fxml\img\TemplateImages" />
       <recent name="C:\Pranay\Programs\GIT\High5\src\main\java\Survey5\model" />
       <recent name="C:\Pranay\Programs\GIT\High5\src\main\resources\fxml\img" />
       <recent name="C:\Pranay\Projects\IdeaProjects\SOFTWARE_PROJECT\High5\src\main\resources\fxml\img\TemplateImages" />
-      <recent name="C:\Pranay\Projects\IdeaProjects\SOFTWARE_PROJECT\JavaFX11\src\main\resources\fxml" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Pranay\Projects\IdeaProjects\SOFTWARE_PROJECT\High5\src\main\resources\fxml\SurveyTemplates\Styles" />
@@ -72,6 +90,7 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Survey5.controller.SurveyTemplateControllers" />
       <recent name="Survey5.model" />
       <recent name="Survey5.controller" />
     </key>
@@ -91,114 +110,99 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AnswersManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="High5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Survey5.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Survey5.model" />
-      <option name="MAIN_CLASS_NAME" value="Survey5.model.AnswersManagerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HealthTemplate1ControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in High5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="High5" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BusinessTemplate3ControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="High5" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Survey5.controller.SurveyTemplateControllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Survey5.controller.SurveyTemplateControllers" />
+      <option name="MAIN_CLASS_NAME" value="Survey5.controller.SurveyTemplateControllers.BusinessTemplate3ControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BusinessTemplate4ControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="High5" />
+      <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Survey5.*" />
+          <option name="PATTERN" value="Survey5.controller.SurveyTemplateControllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Survey5.controller.SurveyTemplateControllers" />
-      <option name="MAIN_CLASS_NAME" value="Survey5.controller.SurveyTemplateControllers.HealthTemplate1ControllerTest" />
-      <option name="METHOD_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Survey5.controller.SurveyTemplateControllers.BusinessTemplate4ControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HealthTemplate4ControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="High5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Survey5.controller.*" />
+          <option name="PATTERN" value="Survey5.controller.SurveyTemplateControllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Survey5.controller" />
-      <option name="MAIN_CLASS_NAME" value="Survey5.controller.LoginControllerTest" />
+      <option name="PACKAGE_NAME" value="Survey5.controller.SurveyTemplateControllers" />
+      <option name="MAIN_CLASS_NAME" value="Survey5.controller.SurveyTemplateControllers.HealthTemplate4ControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NewSurveyControllerTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Survey5.controller.SurveyTemplateControllers in High5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="High5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Survey5.controller.*" />
+          <option name="PATTERN" value="Survey5.controller.SurveyTemplateControllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Survey5.controller" />
-      <option name="MAIN_CLASS_NAME" value="Survey5.controller.NewSurveyControllerTest2" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegisterControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="High5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Survey5.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Survey5.controller" />
-      <option name="MAIN_CLASS_NAME" value="Survey5.controller.RegisterControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="Survey5.controller.SurveyTemplateControllers" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.MainApp" />
-      <item itemvalue="JUnit.HealthTemplate1ControllerTest" />
-      <item itemvalue="JUnit.LoginControllerTest" />
-      <item itemvalue="JUnit.NewSurveyControllerTest2" />
-      <item itemvalue="JUnit.RegisterControllerTest" />
-      <item itemvalue="JUnit.AnswersManagerTest" />
+      <item itemvalue="JUnit.BusinessTemplate3ControllerTest" />
+      <item itemvalue="JUnit.BusinessTemplate4ControllerTest" />
+      <item itemvalue="JUnit.HealthTemplate4ControllerTest" />
+      <item itemvalue="JUnit.Survey5.controller.SurveyTemplateControllers in High5" />
+      <item itemvalue="JUnit.All in High5" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AnswersManagerTest" />
-        <item itemvalue="JUnit.HealthTemplate1ControllerTest" />
-        <item itemvalue="JUnit.RegisterControllerTest" />
-        <item itemvalue="JUnit.LoginControllerTest" />
-        <item itemvalue="JUnit.NewSurveyControllerTest2" />
+        <item itemvalue="JUnit.All in High5" />
+        <item itemvalue="JUnit.Survey5.controller.SurveyTemplateControllers in High5" />
+        <item itemvalue="JUnit.HealthTemplate4ControllerTest" />
+        <item itemvalue="JUnit.BusinessTemplate4ControllerTest" />
+        <item itemvalue="JUnit.BusinessTemplate3ControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -248,6 +252,7 @@
       <workItem from="1620390515030" duration="29000" />
       <workItem from="1620390579538" duration="1938000" />
       <workItem from="1620412392042" duration="26293000" />
+      <workItem from="1620678502557" duration="6278000" />
     </task>
     <servers />
   </component>
@@ -269,5 +274,9 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/High5$All_in_High5.ic" NAME="All in High5 Coverage Results" MODIFIED="1620689747299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/High5$All_in_High5__1_.ic" NAME="All in High5 (1) Coverage Results" MODIFIED="1620677625541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

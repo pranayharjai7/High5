@@ -25,6 +25,14 @@ public class BusinessTemplate3Controller {
     AnswersDaoInterface answerManager = new AnswersManager();
     static String answer;
     int NumberOfQuestions = 13;
+    int flag;
+
+    public BusinessTemplate3Controller() {
+        if(userdata == null && answer == null){
+            this.answer = "none";
+            this.userdata = new Data("none", "none", "none", "none");
+        }
+    }
 
     @FXML
     private AnchorPane BusinessTemplate3AnchorPane;
@@ -102,7 +110,7 @@ public class BusinessTemplate3Controller {
     }
 
     @FXML
-    private void initialize(){
+    public void initialize(){
         if(answer.equals("answer")){
             setAnswering();
         }
@@ -144,7 +152,7 @@ public class BusinessTemplate3Controller {
 
     //submitting template to database of current user
     @FXML
-    private void saveButtonClicked(ActionEvent event){
+    public void saveButtonClicked(ActionEvent event){
         Survey survey = new Survey();
         survey.setTypeOfTemplate(BusinessTemplate3.getId());
         survey.setTitle(BusinessTemplate3.getText());
@@ -168,9 +176,9 @@ public class BusinessTemplate3Controller {
 
     //submitting Questions and answers to database
     private List<Questions> qList = new ArrayList<>();
-    private void submitButtonClicked(ActionEvent actionEvent) {
+    public void submitButtonClicked(ActionEvent actionEvent) {
 
-        int flag = 0;
+        flag = 0;
         qList = questionManager.getSurveyQuestions(survey);
         for (Questions question : qList) {
             if (question.getAnsweredByUser().getId() == userdata.getId()) {
@@ -303,7 +311,7 @@ public class BusinessTemplate3Controller {
             }
         }
     }
-    private boolean setRating() {
+    public boolean setRating() {
         if(Answer3.getRating()==0||Answer4.getRating()==0 || Answer5.getRating()==0|| Answer6.getRating()==0
                 || Answer7.getRating()==0|| Answer8.getRating()==0|| Answer9.getRating()==0|| Answer10.getRating()==0
                 || Answer11.getRating()==0 || Answer12.getRating()==0){
@@ -315,7 +323,7 @@ public class BusinessTemplate3Controller {
     }
 
     //Shows saved Answers for the questions
-    private void showAnswersClicked(ActionEvent actionEvent) {
+    public void showAnswersClicked(ActionEvent actionEvent) {
         ShowAnswersController.setData(userdata,survey);
         try {
             MainApp.setRoot("/fxml/ShowAnswers.fxml");
@@ -324,7 +332,7 @@ public class BusinessTemplate3Controller {
         }
     }
 
-    private void backToAnswerButtonClicked(ActionEvent actionEvent) {
+    public void backToAnswerButtonClicked(ActionEvent actionEvent) {
         try {
             MainApp.setRoot("/fxml/AnswerSurvey.fxml");
         } catch (IOException e) {
@@ -333,7 +341,7 @@ public class BusinessTemplate3Controller {
     }
 
     @FXML
-    private void backToTemplatesButtonClicked(ActionEvent actionEvent){
+    public void backToTemplatesButtonClicked(ActionEvent actionEvent){
         try {
             MainApp.setRoot("/fxml/SurveyTemplates/TemplateSurvey.fxml");
         } catch (IOException e) {
@@ -341,7 +349,7 @@ public class BusinessTemplate3Controller {
         }
     }
 
-    private void backToSavedSurveysButtonClicked(ActionEvent actionEvent) {
+    public void backToSavedSurveysButtonClicked(ActionEvent actionEvent) {
         try {
             MainApp.setRoot("/fxml/SavedSurveys.fxml");
         } catch (IOException e) {
@@ -349,4 +357,19 @@ public class BusinessTemplate3Controller {
         }
     }
 
+    public static String getAnswer() {
+        return answer;
+    }
+
+    public Alert getConfirm() {
+        return confirm;
+    }
+
+    public int getFlag() {
+        return flag;
+    }
+
+    public Button getSaveButton() {
+        return saveButton;
+    }
 }

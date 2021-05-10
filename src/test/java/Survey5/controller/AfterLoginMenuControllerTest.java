@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Survey5.controller;
 
 import Survey5.MainApp;
@@ -29,10 +24,6 @@ import org.testfx.api.FxToolkit;
 import org.testfx.framework.junit5.ApplicationExtension;
 import org.testfx.framework.junit5.Start;
 
-/**
- *
- * @author L340
- */
 @ExtendWith(ApplicationExtension.class)
 
 public class AfterLoginMenuControllerTest {

@@ -19,27 +19,27 @@ import org.junit.jupiter.api.Disabled;
  * @author L340
  */
 public class QuestionsManagerTest {
-    
+
     private static QuestionsManager questionsManagerTester;
     private static Data dataTest = new Data("name", "email", "usernameTest", "passwordTest");
     private static Data dataTest2 = new Data("name2", "email2", "usernameTest2", "passwordTest2");
 
     private static DataManager dmTest = new DataManager("Survey5Test");
-    
+
     private static Survey surveyTest = new Survey("Health", "Health1", dataTest);
     private static Survey surveyTest2 = new Survey("Health2", "Health2", dataTest2);
 
-    private static SurveyManager smTest = new SurveyManager("Survey5Test");    
-        
-    
+    private static SurveyManager smTest = new SurveyManager("Survey5Test");
+
+
     public QuestionsManagerTest() {
     }
-    
+
     @BeforeAll
     public static void setUpClass() {
         questionsManagerTester = new QuestionsManager("Survey5Test");
     }
-    
+
     @AfterAll
     public static void tearDownClass() throws Exception {
         dmTest.entityManager.remove(dataTest);
@@ -48,7 +48,7 @@ public class QuestionsManagerTest {
         smTest.entityManager.remove(surveyTest2);
         questionsManagerTester.close();
     }
-    
+
     @BeforeEach
     public void setUp() {
         dmTest.setData(dataTest);
@@ -56,7 +56,7 @@ public class QuestionsManagerTest {
         dmTest.setData(dataTest2);
         smTest.setSurvey(surveyTest2);
     }
-    
+
     @AfterEach
     public void tearDown() {
         questionsManagerTester.entityManager.getTransaction().begin();
@@ -70,10 +70,10 @@ public class QuestionsManagerTest {
     @Test
     public void testSetQuestions() {
 
-        Questions qtest = new Questions(1, "Question Test", surveyTest, dataTest);
+        Questions qtest = new Questions("Question Test", 1,surveyTest, dataTest);
         questionsManagerTester.setQuestions(qtest);
         assertNotNull(qtest.getId());
-        
+
     }
 
     /**
@@ -81,14 +81,14 @@ public class QuestionsManagerTest {
      */
     @Test
     public void testDeleteQuestions() {
-        Questions qtest = new Questions(1, "Question Test", surveyTest, dataTest);
+        Questions qtest = new Questions("Question Test", 1, surveyTest, dataTest);
         questionsManagerTester.setQuestions(qtest);
         assertNotNull(qtest.getId());
         int id = qtest.getId();
         questionsManagerTester.deleteQuestions(qtest);
         Questions q_after_delete = questionsManagerTester.entityManager.find(Questions.class, id);
-        assertNull(q_after_delete);   
-    
+        assertNull(q_after_delete);
+
     }
 
     /**
@@ -96,7 +96,7 @@ public class QuestionsManagerTest {
      */
     @Test
     public void testUpdateQuestions() {
-        Questions qtest = new Questions(1, "Question Test", surveyTest, dataTest);
+        Questions qtest = new Questions("Question Test", 1, surveyTest, dataTest);
         questionsManagerTester.setQuestions(qtest);
         qtest.setQuestionNumber(1);
         qtest.setQuestion("new question");
@@ -106,17 +106,17 @@ public class QuestionsManagerTest {
         assertEquals("new question", qAfterUpdate.getQuestion());
         assertSame(qtest, qAfterUpdate);
     }
-    
+
     @Test
     public void testUpdateQuestions_IfNotExist() {
         //if
-        Questions qtest = new Questions(1, "Question Test", surveyTest, dataTest);//qtest object not added to the table
+        Questions qtest = new Questions("Question Test", 1, surveyTest, dataTest);//qtest object not added to the table
         qtest.setQuestionNumber(1);
         qtest.setQuestion("new question");;
         questionsManagerTester.updateQuestions(qtest);
         Questions qAfterUpdate = questionsManagerTester.entityManager.find((Questions.class), qtest.getId());
         //then
-        assertNull(qAfterUpdate);   
+        assertNull(qAfterUpdate);
 
     }
 
@@ -125,17 +125,17 @@ public class QuestionsManagerTest {
      */
     @Test
     public void testGetAllQuestions() {
-        Questions qtest = new Questions(1, "Question Test1", surveyTest, dataTest);
-        questionsManagerTester.setQuestions(qtest);       
-        Questions qtest2 = new Questions(2, "Question Test2", surveyTest, dataTest);
+        Questions qtest = new Questions("Question Test1",1, surveyTest, dataTest);
+        questionsManagerTester.setQuestions(qtest);
+        Questions qtest2 = new Questions("Question Test2",1, surveyTest, dataTest);
         questionsManagerTester.setQuestions(qtest2);
-        Questions qtest3 = new Questions(3, "Question Test3", surveyTest, dataTest);
+        Questions qtest3 = new Questions("Question Test3",1, surveyTest, dataTest);
         questionsManagerTester.setQuestions(qtest3);
         List<Questions> result = questionsManagerTester.getAllQuestions();
         assertFalse(result.isEmpty());
         assertEquals(3, result.size());
     }
-    
+
     @Test
     public void testGetAllQuestions_IfEmpty() {
         List<Questions> result = questionsManagerTester.getAllQuestions();
@@ -147,11 +147,11 @@ public class QuestionsManagerTest {
      */
     @Test
     public void testGetSurveyQuestions() {
-        Questions qtest = new Questions(1, "Question Test1", surveyTest, dataTest);
-        questionsManagerTester.setQuestions(qtest);       
-        Questions qtest2 = new Questions(2, "Question Test2", surveyTest, dataTest);
+        Questions qtest = new Questions("Question Test1", 1, surveyTest, dataTest);
+        questionsManagerTester.setQuestions(qtest);
+        Questions qtest2 = new Questions("Question Test2", 1, surveyTest, dataTest);
         questionsManagerTester.setQuestions(qtest2);
-        Questions qtest3 = new Questions(3, "Question Test3", surveyTest2, dataTest2);
+        Questions qtest3 = new Questions("Question Test3", 1,surveyTest2, dataTest2);
         questionsManagerTester.setQuestions(qtest3);
         List<Questions> result = questionsManagerTester.getSurveyQuestions(surveyTest);
         assertFalse(result.isEmpty());
@@ -163,11 +163,11 @@ public class QuestionsManagerTest {
      */
     @Test
     public void testGetUserQuestions() {
-        Questions qtest = new Questions(1, "Question Test1", surveyTest, dataTest);
-        questionsManagerTester.setQuestions(qtest);       
-        Questions qtest2 = new Questions(2, "Question Test2", surveyTest, dataTest);
+        Questions qtest = new Questions("Question Test1", 1, surveyTest, dataTest);
+        questionsManagerTester.setQuestions(qtest);
+        Questions qtest2 = new Questions("Question Test2", 1, surveyTest, dataTest);
         questionsManagerTester.setQuestions(qtest2);
-        Questions qtest3 = new Questions(3, "Question Test3", surveyTest2, dataTest2);
+        Questions qtest3 = new Questions("Question Test3", 1,surveyTest2, dataTest2);
         questionsManagerTester.setQuestions(qtest3);
         List<Questions> result1 = questionsManagerTester.getUserQuestions(dataTest);
         assertFalse(result1.isEmpty());
@@ -177,5 +177,5 @@ public class QuestionsManagerTest {
         assertEquals(1, result2.size());
     }
 
-    
+
 }

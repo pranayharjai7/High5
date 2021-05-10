@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Survey5.model;
 
 import java.util.List;
@@ -18,21 +13,21 @@ public class AnswersManagerTest {
     private static AnswersManager answersManagerTester;
     private static Data dataTest = new Data("name", "email", "usernameTest", "passwordTest");
     private static DataManager dmTest = new DataManager("Survey5Test");
-    
+
     private static Survey surveyTest = new Survey("Health", "Health1", dataTest);
     private static SurveyManager smTest = new SurveyManager("Survey5Test");
-    
-    private static Questions qtest = new Questions(1, "questionTest", surveyTest, dataTest);
-    private static Questions qtest2 = new Questions(1, "questionTest", surveyTest, dataTest);
+
+    private static Questions qtest = new Questions("Qtest1", 1, surveyTest, dataTest);
+    private static final Questions qtest2 = new Questions("Qtest2", 1, surveyTest, dataTest);
     private static QuestionsManager qmTest = new QuestionsManager("Survey5Test");
     public AnswersManagerTest() {
     }
-    
+
     @BeforeAll
     public static void setUpClass() {
-    answersManagerTester = new AnswersManager("Survey5Test");
+        answersManagerTester = new AnswersManager("Survey5Test");
     }
-    
+
     @AfterAll
     public static void tearDownClass() throws Exception {
         dmTest.entityManager.remove(dataTest);
@@ -41,7 +36,7 @@ public class AnswersManagerTest {
         qmTest.entityManager.remove(qtest2);
         answersManagerTester.close();
     }
-    
+
     @BeforeEach
     public void setUp() {
         dmTest.setData(dataTest);
@@ -51,7 +46,7 @@ public class AnswersManagerTest {
 
 
     }
-    
+
     @AfterEach
     public void tearDown() {
         answersManagerTester.entityManager.getTransaction().begin();
@@ -80,7 +75,7 @@ public class AnswersManagerTest {
         int id = ansTest.getId();
         answersManagerTester.deleteAnswers(ansTest);
         Answers ans_after_delete = answersManagerTester.entityManager.find(Answers.class, id);
-        assertNull(ans_after_delete);  
+        assertNull(ans_after_delete);
     }
 
     /**
@@ -99,17 +94,17 @@ public class AnswersManagerTest {
         assertSame(ansUpdated, ansTest);
     }
 
-    
+
     @Test
     public void testUpdateAnswers_IfNotExist() {
         Answers ansTest = new Answers("typeTest", "Answer", qtest);
         ansTest.setAnswerText("new ans");
-        ansTest.setAnswersType("new type");        
+        ansTest.setAnswersType("new type");
         answersManagerTester.updateAnswers(ansTest);
         Answers ansUpdated = answersManagerTester.entityManager.find(Answers.class, ansTest.getId());
         assertNull(ansUpdated);
-        
-    }    
+
+    }
     /**
      * Test of getAllAnswers method, of class AnswersManager.
      */
@@ -137,15 +132,15 @@ public class AnswersManagerTest {
         answersManagerTester.setAnswers(ansTest2);
         Answers ansTest3 = new Answers("typeTest3", "Answer3", qtest2);
         answersManagerTester.setAnswers(ansTest3);
-        List<Answers> result = answersManagerTester.getQuestionAnswers(qtest);        
+        List<Answers> result = answersManagerTester.getQuestionAnswers(qtest);
         assertFalse(result.isEmpty());
         assertEquals(2, result.size());
-        
-        List<Answers> result2 = answersManagerTester.getQuestionAnswers(qtest2);        
+
+        List<Answers> result2 = answersManagerTester.getQuestionAnswers(qtest2);
         assertFalse(result2.isEmpty());
         assertEquals(1, result2.size());
     }
 
 
-    
+
 }
